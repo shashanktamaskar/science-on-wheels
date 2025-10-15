@@ -1,0 +1,150 @@
+{
+  "lastUpdated": "2025-01-14",
+  "projectInfo": {
+    "title": "Science on Wheels for Punjab",
+    "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
+    "duration": "73 days",
+    "startDate": "2025-10-15",
+    "endDate": "2026-01-30",
+    "status": "planned"
+  },
+  "mission": {
+    "schoolsCovered": {
+      "current": 0,
+      "total": 235
+    },
+    "districtsCovered": {
+      "current": 0,
+      "total": 16
+    },
+    "studentsImpacted": 0,
+    "distanceTravelled": 0,
+    "targetAudience": "Students from Classes 6-12"
+  },
+  "vehicles": [
+    {
+      "id": 1,
+      "name": "Vehicle 1",
+      "currentLocation": {
+        "name": "Ready to Deploy",
+        "district": "SAS Nagar",
+        "lat": 30.7046,
+        "lng": 76.7179,
+        "date": "2025-10-15",
+        "status": "planned"
+      },
+      "schedule": [
+        {"district": "SAS Nagar", "schools": 17, "startDate": "2025-10-15", "endDate": "2025-10-25", "lat": 30.7046, "lng": 76.7179},
+        {"district": "Fatehgarh Sahib", "schools": 6, "startDate": "2025-10-25", "endDate": "2025-10-30", "lat": 30.6444, "lng": 76.3965},
+        {"district": "Roopnagar", "schools": 7, "startDate": "2025-11-01", "endDate": "2025-11-04", "lat": 31.0374, "lng": 76.5265},
+        {"district": "Ludhiana", "schools": 24, "startDate": "2025-11-10", "endDate": "2025-11-20", "lat": 30.9010, "lng": 75.8573},
+        {"district": "Sangroor", "schools": 18, "startDate": "2025-11-20", "endDate": "2025-11-30", "lat": 30.2458, "lng": 75.8421},
+        {"district": "Mansa", "schools": 15, "startDate": "2025-12-01", "endDate": "2025-12-07", "lat": 29.9988, "lng": 75.3936},
+        {"district": "Barnala", "schools": 11, "startDate": "2025-12-08", "endDate": "2025-12-15", "lat": 30.3784, "lng": 75.5489},
+        {"district": "Bathinda", "schools": 26, "startDate": "2025-12-30", "endDate": "2026-01-13", "lat": 30.2084, "lng": 74.9456},
+        {"district": "Mukatsar Sahib", "schools": 10, "startDate": "2026-01-13", "endDate": "2026-01-30", "lat": 30.4755, "lng": 74.5151}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Vehicle 2",
+      "currentLocation": {
+        "name": "Ready to Deploy",
+        "district": "Patiala",
+        "lat": 30.3398,
+        "lng": 76.3869,
+        "date": "2025-10-15",
+        "status": "planned"
+      },
+      "schedule": [
+        {"district": "Patiala", "schools": 29, "startDate": "2025-10-15", "endDate": "2025-10-30", "lat": 30.3398, "lng": 76.3869},
+        {"district": "Malerkotla", "schools": 7, "startDate": "2025-11-01", "endDate": "2025-11-04", "lat": 30.5311, "lng": 75.8819},
+        {"district": "Fazilka", "schools": 13, "startDate": "2025-11-05", "endDate": "2025-11-10", "lat": 30.4028, "lng": 74.0281},
+        {"district": "Ferozepur", "schools": 17, "startDate": "2025-11-10", "endDate": "2025-11-20", "lat": 30.9191, "lng": 74.8750},
+        {"district": "Faridkot", "schools": 9, "startDate": "2025-11-20", "endDate": "2025-11-30", "lat": 30.6705, "lng": 74.7570},
+        {"district": "Moga", "schools": 13, "startDate": "2025-12-01", "endDate": "2025-12-10", "lat": 30.8158, "lng": 75.1705},
+        {"district": "Pathankot", "schools": 13, "startDate": "2025-12-30", "endDate": "2026-01-13", "lat": 32.2746, "lng": 75.6521}
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Space Technology Education",
+      "description": "Awareness session on Antariksh Gyaan Abhiyaan with space tech education equipment",
+      "duration": "~45 mins"
+    },
+    {
+      "title": "Robotics Workshops",
+      "description": "Hands-on robotics demonstrations with application modules and interactive kits",
+      "duration": "~60 mins"
+    },
+    {
+      "title": "Water Testing Station",
+      "description": "Testing basic water quality parameters (pH, TDS, etc.) and environmental awareness",
+      "duration": "~45 mins"
+    },
+    {
+      "title": "Sustainability Education",
+      "description": "Interactive sustainability education models and team-based projects",
+      "duration": "~30 mins"
+    }
+  ],
+  "teamMembers": {
+    "plaksha": [
+      {
+        "name": "Dr. Rucha Joshi",
+        "designation": "Associate Professor (Principal Investigator)",
+        "email": "rucha.joshi@plaksha.edu.in",
+        "phone": "+91 7901851024"
+      },
+      {
+        "name": "Dr. Shashank Tamaskar",
+        "designation": "Associate Professor (Co-Principal Investigator)",
+        "email": "shashank.tamaskar@plaksha.edu.in",
+        "phone": "+91 9041791024"
+      }
+    ],
+    "iitMandi": [
+      {
+        "name": "Dr. Harshad Kulkarni",
+        "designation": "Assistant Professor (Co-Principal Investigator)",
+        "email": "harshad@iitmandi.ac.in",
+        "phone": "+91 7018308782",
+        "location": "IIT Mandi, Kamand, Himachal Pradesh"
+      }
+    ],
+    "idym": [
+      {
+        "name": "Mr. Ratnesh Mishra",
+        "designation": "Co-Founder & Principal Investigator, IDYM Foundation",
+        "email": "ratneshidymfoundation@gmail.com",
+        "phone": "+91 8879476341",
+        "organization": "Igniting Dreams of Young Minds Foundation (ISRO's Space Tutor)"
+      }
+    ]
+  },
+  "contact": {
+    "website": "www.plaksha.edu.in",
+    "email": "rucha.joshi@plaksha.edu.in",
+    "phone": "+91 7901851024",
+    "address": "Plaksha University, Alpha Sector 101, IT City Road, S.A.S. Nagar, Punjab 140306"
+  },
+  "partners": [
+    {
+      "name": "Plaksha University",
+      "role": "Principal Organization"
+    },
+    {
+      "name": "IIT Mandi",
+      "role": "Academic Partner"
+    },
+    {
+      "name": "IDYM Foundation",
+      "role": "Implementation Partner (ISRO's Space Tutor)"
+    },
+    {
+      "name": "SCERT Punjab",
+      "role": "PM Shri Schools Partner"
+    }
+  ]
+}
