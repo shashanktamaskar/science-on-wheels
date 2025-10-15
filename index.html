@@ -63,6 +63,7 @@
                     <button onclick="navigateTo('home')" class="nav-link hover:text-cyan-300 transition text-cyan-300 font-bold" data-page="home">Home</button>
                     <button onclick="navigateTo('plan')" class="nav-link hover:text-cyan-300 transition" data-page="plan">Our Plan</button>
                     <button onclick="navigateTo('team')" class="nav-link hover:text-cyan-300 transition" data-page="team">The Team</button>
+                    <button onclick="navigateTo('whatsnext')" class="nav-link hover:text-cyan-300 transition" data-page="whatsnext">What's Next?</button>
                     <button onclick="navigateTo('contact')" class="nav-link hover:text-cyan-300 transition" data-page="contact">Contact Us</button>
                     <button onclick="navigateTo('supporters')" class="nav-link hover:text-cyan-300 transition" data-page="supporters">Partners</button>
                 </div>
@@ -78,6 +79,7 @@
                 <button onclick="navigateTo('home'); toggleMobileMenu();" class="block w-full text-left py-2">Home</button>
                 <button onclick="navigateTo('plan'); toggleMobileMenu();" class="block w-full text-left py-2">Our Plan</button>
                 <button onclick="navigateTo('team'); toggleMobileMenu();" class="block w-full text-left py-2">The Team</button>
+                <button onclick="navigateTo('whatsnext'); toggleMobileMenu();" class="block w-full text-left py-2">What's Next?</button>
                 <button onclick="navigateTo('contact'); toggleMobileMenu();" class="block w-full text-left py-2">Contact Us</button>
                 <button onclick="navigateTo('supporters'); toggleMobileMenu();" class="block w-full text-left py-2">Partners</button>
             </div>
@@ -213,9 +215,11 @@
                         <p class="font-bold text-lg text-cyan-600">16 Districts Across Punjab</p>
                         <p class="text-sm">Focus on rural, border, and underserved PM Shri schools</p>
                         <ul class="text-sm space-y-1">
-                            <li>• SAS Nagar, Ludhiana, Patiala</li>
-                            <li>• Bathinda, Ferozepur, Fazilka</li>
-                            <li>• Pathankot, Moga, and more</li>
+                            <li>• SAS Nagar, Patiala, Ludhiana</li>
+                            <li>• Fatehgarh Sahib, Roopnagar, Sangroor</li>
+                            <li>• Mansa, Barnala, Bathinda</li>
+                            <li>• Mukatsar Sahib, Malerkotla, Fazilka</li>
+                            <li>• Ferozepur, Faridkot, Moga, Pathankot</li>
                         </ul>
                     </div>
                 </div>
@@ -280,6 +284,9 @@
         <!-- Team Page -->
         <div id="team" class="page-section space-y-12"></div>
 
+        <!-- What's Next Page -->
+        <div id="whatsnext" class="page-section space-y-12"></div>
+
         <!-- Contact Page -->
         <div id="contact" class="page-section space-y-12"></div>
 
@@ -297,8 +304,8 @@
                     scienceonwheels@plaksha.edu.in
                 </a>
                 <span>|</span>
-                <a href="tel:8879476341" class="hover:text-cyan-300 transition">
-                    8879476341
+                <a href="tel:+918358082703" class="hover:text-cyan-300 transition">
+                    +91 8358082703
                 </a>
             </div>
             <p class="text-xs text-cyan-300 mt-4">© 2025 Plaksha University. All rights reserved.</p>
@@ -416,61 +423,64 @@
             const vehicle1Color = '#ef4444'; // red
             const vehicle2Color = '#3b82f6'; // blue
 
-            // Plot Vehicle 1 route
+            // Plaksha University coordinates - starting location for both vehicles
+            const plakshaLat = 30.6310588;
+            const plakshaLng = 76.7255981;
+
+            // Create custom van icons - red and blue
+            const redBusIcon = L.divIcon({
+                className: 'custom-van-icon',
+                html: `<div style="font-size: 32px; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.7));">🚐</div>`,
+                iconSize: [40, 40],
+                iconAnchor: [20, 20],
+                popupAnchor: [0, -20]
+            });
+
+            const blueBusIcon = L.divIcon({
+                className: 'custom-van-icon',
+                html: `<div style="font-size: 32px; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.7)); color: #3b82f6;">🚐</div>`,
+                iconSize: [40, 40],
+                iconAnchor: [20, 20],
+                popupAnchor: [0, -20]
+            });
+
+            // Plot Vehicle 1 route (polyline only, no markers at each stop)
             if (projectData.vehicles[0] && projectData.vehicles[0].schedule) {
                 const v1Coords = projectData.vehicles[0].schedule.map(s => [s.lat, s.lng]);
                 if (v1Coords.length > 0) {
-                    L.polyline(v1Coords, { color: vehicle1Color, weight: 3, opacity: 0.7, dashArray: '10, 10' }).addTo(map);
-
-                    projectData.vehicles[0].schedule.forEach((stop, idx) => {
-                        const marker = L.circleMarker([stop.lat, stop.lng], {
-                            radius: 8,
-                            fillColor: vehicle1Color,
-                            color: '#fff',
-                            weight: 2,
-                            opacity: 1,
-                            fillOpacity: 0.8
-                        }).addTo(map);
-
-                        marker.bindPopup(`
-                            <div class="p-2">
-                                <strong class="text-red-600">Vehicle 1 - Stop ${idx + 1}</strong><br>
-                                <strong>${stop.district}</strong><br>
-                                Schools: ${stop.schools}<br>
-                                ${stop.startDate} to ${stop.endDate}
-                            </div>
-                        `);
-                    });
+                    L.polyline(v1Coords, { color: vehicle1Color, weight: 5, opacity: 0.8, dashArray: '10, 10' }).addTo(map);
                 }
             }
 
-            // Plot Vehicle 2 route
+            // Plot Vehicle 2 route (polyline only, no markers at each stop)
             if (projectData.vehicles[1] && projectData.vehicles[1].schedule) {
                 const v2Coords = projectData.vehicles[1].schedule.map(s => [s.lat, s.lng]);
                 if (v2Coords.length > 0) {
-                    L.polyline(v2Coords, { color: vehicle2Color, weight: 3, opacity: 0.7, dashArray: '10, 10' }).addTo(map);
-
-                    projectData.vehicles[1].schedule.forEach((stop, idx) => {
-                        const marker = L.circleMarker([stop.lat, stop.lng], {
-                            radius: 8,
-                            fillColor: vehicle2Color,
-                            color: '#fff',
-                            weight: 2,
-                            opacity: 1,
-                            fillOpacity: 0.8
-                        }).addTo(map);
-
-                        marker.bindPopup(`
-                            <div class="p-2">
-                                <strong class="text-blue-600">Vehicle 2 - Stop ${idx + 1}</strong><br>
-                                <strong>${stop.district}</strong><br>
-                                Schools: ${stop.schools}<br>
-                                ${stop.startDate} to ${stop.endDate}
-                            </div>
-                        `);
-                    });
+                    L.polyline(v2Coords, { color: vehicle2Color, weight: 5, opacity: 0.8, dashArray: '10, 10' }).addTo(map);
                 }
             }
+
+            // Add Vehicle 1 (Red Bus) marker at Plaksha - slightly offset
+            const vehicle1Marker = L.marker([plakshaLat + 0.002, plakshaLng - 0.002], { icon: redBusIcon }).addTo(map);
+            vehicle1Marker.bindPopup(`
+                <div class="p-2">
+                    <strong class="text-red-600">🚐 Vehicle 1 (Red Bus)</strong><br>
+                    <strong>Current Location: Plaksha University</strong><br>
+                    Status: Ready to start journey<br>
+                    Will cover: ${projectData.vehicles[0].schedule.length} districts
+                </div>
+            `);
+
+            // Add Vehicle 2 (Blue Bus) marker at Plaksha - slightly offset
+            const vehicle2Marker = L.marker([plakshaLat - 0.002, plakshaLng + 0.002], { icon: blueBusIcon }).addTo(map);
+            vehicle2Marker.bindPopup(`
+                <div class="p-2">
+                    <strong class="text-blue-600">🚐 Vehicle 2 (Blue Bus)</strong><br>
+                    <strong>Current Location: Plaksha University</strong><br>
+                    Status: Ready to start journey<br>
+                    Will cover: ${projectData.vehicles[1].schedule.length} districts
+                </div>
+            `);
         }
 
         function renderOtherPages() {
@@ -610,11 +620,11 @@
                         <div class="bg-gradient-to-br from-cyan-50 to-blue-50 p-4 rounded-lg">
                             <div class="text-xs font-bold text-plaksha-teal mb-2 text-center">PLAKSHA UNIVERSITY</div>
                             <img src="graphics/Rucha_Joshi_profile_picture.png" alt="Dr. Rucha Joshi" class="w-32 h-32 mx-auto mb-3 object-cover rounded-full border-4 border-teal-600">
-                            <h4 class="font-bold text-lg text-blue-900 text-center">Dr. Rucha Joshi</h4>
+                            <h4 class="font-bold text-base text-blue-900 text-center">Dr. Rucha Joshi</h4>
                             <p class="text-xs text-gray-600 text-center mb-1">Principal Investigator</p>
                             <p class="text-xs text-gray-500 text-center mb-2">Associate Professor</p>
                             <div class="text-center">
-                                <p class="text-xs text-gray-500">+91 7901851024</p>
+                                <p class="text-xs text-gray-500">+91 8358082703</p>
                                 <a href="mailto:rucha.joshi@plaksha.edu.in" class="text-cyan-600 text-xs hover:underline block">
                                     rucha.joshi@plaksha.edu.in
                                 </a>
@@ -624,7 +634,7 @@
                         <div class="bg-gradient-to-br from-cyan-50 to-blue-50 p-4 rounded-lg">
                             <div class="text-xs font-bold text-plaksha-teal mb-2 text-center">PLAKSHA UNIVERSITY</div>
                             <img src="graphics/Shashank_Tamaskar_profile_picture.png" alt="Dr. Shashank Tamaskar" class="w-32 h-32 mx-auto mb-3 object-cover rounded-full border-4 border-teal-600">
-                            <h4 class="font-bold text-lg text-blue-900 text-center">Dr. Shashank Tamaskar</h4>
+                            <h4 class="font-bold text-base text-blue-900 text-center">Dr. Shashank Tamaskar</h4>
                             <p class="text-xs text-gray-600 text-center mb-1">Co-Principal Investigator</p>
                             <p class="text-xs text-gray-500 text-center mb-2">Associate Professor</p>
                             <div class="text-center">
@@ -639,7 +649,7 @@
                         <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-4 rounded-lg">
                             <div class="text-xs font-bold text-plaksha-teal mb-2 text-center">IIT MANDI</div>
                             <img src="graphics/Harshad_Vijay_Kulkarni_profile_picture.jpg" alt="Dr. Harshad Kulkarni" class="w-32 h-32 mx-auto mb-3 object-cover rounded-full border-4 border-teal-600">
-                            <h4 class="font-bold text-lg text-blue-900 text-center">Dr. Harshad Kulkarni</h4>
+                            <h4 class="font-bold text-base text-blue-900 text-center">Dr. Harshad Kulkarni</h4>
                             <p class="text-xs text-gray-600 text-center mb-1">Co-Principal Investigator</p>
                             <p class="text-xs text-gray-500 text-center mb-2">Assistant Professor</p>
                             <div class="text-center">
@@ -654,7 +664,7 @@
                         <div class="bg-gradient-to-br from-green-50 to-cyan-50 p-4 rounded-lg">
                             <div class="text-xs font-bold text-plaksha-teal mb-2 text-center">IDYM FOUNDATION</div>
                             <img src="graphics/Ratnesh_Mishra_profile_picture.jpg" alt="Mr. Ratnesh Mishra" class="w-32 h-32 mx-auto mb-3 object-cover rounded-full border-4 border-teal-600">
-                            <h4 class="font-bold text-lg text-blue-900 text-center">Mr. Ratnesh Mishra</h4>
+                            <h4 class="font-bold text-base text-blue-900 text-center">Mr. Ratnesh Mishra</h4>
                             <p class="text-xs text-gray-600 text-center mb-1">Principal Investigator</p>
                             <p class="text-xs text-gray-500 text-center mb-2">ISRO Space Tutor</p>
                             <div class="text-center">
@@ -665,6 +675,138 @@
                             </div>
                         </div>
                     </div>
+                </section>
+            `;
+
+            // Render What's Next Page
+            document.getElementById('whatsnext').innerHTML = `
+                <!-- Hero Section -->
+                <section class="plaksha-teal text-white rounded-lg shadow-xl p-12 text-center mb-8">
+                    <h2 class="text-5xl font-bold mb-4">What's Next?</h2>
+                    <p class="text-xl max-w-3xl mx-auto">
+                        Your journey into science and technology doesn't stop here! Explore these exciting opportunities to continue learning, innovating, and making a difference.
+                    </p>
+                </section>
+
+                <!-- Opportunities Grid -->
+                <section class="grid md:grid-cols-2 gap-8 mb-8">
+                    <!-- YTS Card -->
+                    <div class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg shadow-xl p-8 hover-scale">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-cyan-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl">
+                                🎓
+                            </div>
+                            <h3 class="text-3xl font-bold text-blue-900">Young Technology Scholars (YTS)</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            A <strong>two-week residential summer program</strong> at Plaksha University's Mohali campus. Tackle complex real-world problems through hands-on learning in hardware technologies, robotics, electronics & programming. No prior experience required—everything is taught during the program!
+                        </p>
+                        <div class="bg-white p-4 rounded-lg mb-4">
+                            <p class="text-sm font-bold text-cyan-700">📅 Timeline</p>
+                            <p class="text-gray-600">Applications likely to open in January–February 2026</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg mb-4">
+                            <p class="text-sm font-bold text-cyan-700">🎯 Eligibility</p>
+                            <p class="text-gray-600">Classes 9-12 students (high school graduation year 2026-2029)</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg mb-4">
+                            <p class="text-sm font-bold text-cyan-700">💰 Financial Aid</p>
+                            <p class="text-gray-600">Scholarships available for deserving students</p>
+                        </div>
+                        <a href="https://plaksha.edu.in/hs/young-technology-scholars" target="_blank"
+                           class="block w-full text-center bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition">
+                            Learn More & Apply →
+                        </a>
+                    </div>
+
+                    <!-- YCL Card -->
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg shadow-xl p-8 hover-scale">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl">
+                                💡
+                            </div>
+                            <h3 class="text-3xl font-bold text-purple-900">Young Creators League (YCL)</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            A <strong>high-school innovation challenge</strong> where students (classes 8–12) design real-world prototypes tackling issues like food security, water conservation, clean energy, healthcare, and AI for good. Submit a 3-minute video and showcase at the Grand Exhibition on Plaksha campus!
+                        </p>
+                        <div class="bg-white p-4 rounded-lg mb-4">
+                            <p class="text-sm font-bold text-purple-700">📅 Timeline</p>
+                            <p class="text-gray-600">Registration deadline: December 7, 2025<br>Grand Exhibition: January 26, 2026</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg mb-4">
+                            <p class="text-sm font-bold text-purple-700">🎯 Eligibility</p>
+                            <p class="text-gray-600">Students in classes 8-12 with innovative ideas</p>
+                        </div>
+                        <a href="https://www.youngcreatorsleague.in/" target="_blank"
+                           class="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition">
+                            Learn More & Apply →
+                        </a>
+                    </div>
+
+                    <!-- NCSC Card -->
+                    <div class="bg-gradient-to-br from-green-50 to-cyan-50 rounded-lg shadow-xl p-8 hover-scale">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl">
+                                🔬
+                            </div>
+                            <h3 class="text-3xl font-bold text-green-900">National Children's Science Congress (NCSC)</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            An <strong>annual science initiative</strong> by India's Department of Science & Technology. Conduct research on real-world issues related to ecosystems, health, well-being, and sustainability. Present your findings at district, state, and national levels. International students from Gulf countries also participate!
+                        </p>
+                        <div class="bg-white p-4 rounded-lg mb-4">
+                            <p class="text-sm font-bold text-green-700">📅 Timeline</p>
+                            <p class="text-gray-600">32nd edition: February–March 2026</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg mb-4">
+                            <p class="text-sm font-bold text-green-700">🎯 Eligibility</p>
+                            <p class="text-gray-600">Children aged 10-17 (formal school & out-of-school students)</p>
+                        </div>
+                        <a href="http://www.ncsc.co.in/" target="_blank"
+                           class="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition">
+                            Learn More & Apply →
+                        </a>
+                    </div>
+
+                    <!-- Avishkaar League Card -->
+                    <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg shadow-xl p-8 hover-scale">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="bg-orange-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl">
+                                🤖
+                            </div>
+                            <h3 class="text-3xl font-bold text-orange-900">Avishkaar League</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            The <strong>largest international STEM competition</strong> with 300,000+ teams worldwide! Compete in IRC League (Robotics & Coding), Avishkaar Makeathon (Innovation), or Game League (AI Game Design). 2025 theme: "Code of Duty"—design super-bots, decode signals, and reclaim technology!
+                        </p>
+                        <div class="bg-white p-4 rounded-lg mb-4">
+                            <p class="text-sm font-bold text-orange-700">📅 Timeline</p>
+                            <p class="text-gray-600">January 10-11, 2025 at Yamuna Sports Complex, Delhi</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg mb-4">
+                            <p class="text-sm font-bold text-orange-700">🎯 Eligibility</p>
+                            <p class="text-gray-600">Students across all grades (Primary to Senior categories)</p>
+                        </div>
+                        <a href="https://community.avishkaar.cc/avishkaar-league-2025" target="_blank"
+                           class="block w-full text-center bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg transition">
+                            Learn More & Apply →
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Call to Action Section -->
+                <section class="plaksha-teal text-white rounded-lg shadow-xl p-12 text-center">
+                    <h3 class="text-4xl font-bold mb-6">Keep Exploring, Keep Learning!</h3>
+                    <p class="text-xl max-w-4xl mx-auto mb-8">
+                        Science on Wheels is just the beginning of your journey. These programs offer you the chance to dive deeper into STEM,
+                        connect with mentors and peers, and turn your ideas into reality. Don't let your curiosity stop here—take the next step!
+                    </p>
+                    <p class="text-lg text-cyan-200">
+                        For more information about these opportunities, contact Dr. Rucha Joshi at
+                        <a href="mailto:rucha.joshi@plaksha.edu.in" class="underline hover:text-white">rucha.joshi@plaksha.edu.in</a>
+                        or call <a href="tel:+918358082703" class="underline hover:text-white">+91 8358082703</a>
+                    </p>
                 </section>
             `;
 
@@ -690,8 +832,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                             </svg>
                             <h3 class="font-bold text-xl text-blue-900 mb-3">Phone</h3>
-                            <a href="tel:+917901851024" class="text-cyan-600 hover:underline block">
-                                +91 7901851024
+                            <a href="tel:+918358082703" class="text-cyan-600 hover:underline block">
+                                +91 8358082703
                             </a>
                         </div>
 
@@ -755,7 +897,7 @@
 
                     <div class="bg-gradient-to-br from-green-50 to-cyan-50 rounded-lg shadow-xl p-8 hover-scale">
                         <h3 class="text-3xl font-bold text-green-700 mb-4">IDYM Foundation</h3>
-                        <p class="text-gray-700 mb-4">Implementation Partner (ISRO's Space Tutor)</p>
+                        <p class="text-gray-700 mb-4">Implementation Partner (ISRO designated Space Tutor)</p>
                         <p class="text-sm text-gray-600 leading-relaxed">
                             Providing mobile vans, space technology modules, trained facilitators, and connection to ISRO's space expert network.
                         </p>
@@ -763,7 +905,7 @@
 
                     <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg shadow-xl p-8 hover-scale">
                         <h3 class="text-3xl font-bold text-orange-700 mb-4">SCERT Punjab</h3>
-                        <p class="text-gray-700 mb-4">PM Shri Schools Partner</p>
+                        <p class="text-gray-700 mb-4">Project Sponsor</p>
                         <p class="text-sm text-gray-600 leading-relaxed">
                             Coordinating access to 235 PM Shri schools across 16 districts in Punjab.
                         </p>
