@@ -146,5 +146,45 @@
       "name": "SCERT Punjab",
       "role": "PM Shri Schools Partner"
     }
-  ]
+  ],
+  "demographics": {
+    "tribal": 6,
+    "rural": 4,
+    "semiUrban": 3,
+    "urban": 3
+  },
+  "gallery": [
+    {
+      "district": "SAS Nagar",
+      "images": []
+    },
+    {
+      "district": "Ludhiana",
+      "images": []
+    },
+    {
+      "district": "Patiala",
+      "images": []
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Sample Student",
+      "school": "PM Shri School, Ludhiana",
+      "text": "The robotics workshop was amazing! I learned so much about coding and building robots.",
+      "date": "2025-10-20"
+    },
+    {
+      "name": "Sample Teacher",
+      "school": "PM Shri School, Patiala",
+      "text": "This program has inspired our students to pursue science and technology. Thank you!",
+      "date": "2025-10-18"
+    }
+  ],
+  "helpline": {
+    "feedbackForm": "https://forms.gle/your-form-link",
+    "website": "https://shashanktamaskar.github.io/science-on-wheels/",
+    "email": "rucha.joshi@plaksha.edu.in",
+    "phone": "+91 8358082703"
+  }
 }
