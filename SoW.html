@@ -62,10 +62,9 @@
                 <div class="hidden md:flex items-center gap-6">
                     <button onclick="navigateTo('home')" class="nav-link hover:text-cyan-300 transition text-cyan-300 font-bold" data-page="home">Home</button>
                     <button onclick="navigateTo('plan')" class="nav-link hover:text-cyan-300 transition" data-page="plan">Our Plan</button>
-                    <button onclick="navigateTo('team')" class="nav-link hover:text-cyan-300 transition" data-page="team">The Team</button>
+                    <button onclick="navigateTo('team')" class="nav-link hover:text-cyan-300 transition" data-page="team">Team & Partners</button>
                     <button onclick="navigateTo('whatsnext')" class="nav-link hover:text-cyan-300 transition" data-page="whatsnext">What's Next?</button>
                     <button onclick="navigateTo('contact')" class="nav-link hover:text-cyan-300 transition" data-page="contact">Contact Us</button>
-                    <button onclick="navigateTo('supporters')" class="nav-link hover:text-cyan-300 transition" data-page="supporters">Partners</button>
                 </div>
 
                 <button onclick="toggleMobileMenu()" class="md:hidden">
@@ -78,10 +77,9 @@
             <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
                 <button onclick="navigateTo('home'); toggleMobileMenu();" class="block w-full text-left py-2">Home</button>
                 <button onclick="navigateTo('plan'); toggleMobileMenu();" class="block w-full text-left py-2">Our Plan</button>
-                <button onclick="navigateTo('team'); toggleMobileMenu();" class="block w-full text-left py-2">The Team</button>
+                <button onclick="navigateTo('team'); toggleMobileMenu();" class="block w-full text-left py-2">Team & Partners</button>
                 <button onclick="navigateTo('whatsnext'); toggleMobileMenu();" class="block w-full text-left py-2">What's Next?</button>
                 <button onclick="navigateTo('contact'); toggleMobileMenu();" class="block w-full text-left py-2">Contact Us</button>
-                <button onclick="navigateTo('supporters'); toggleMobileMenu();" class="block w-full text-left py-2">Partners</button>
             </div>
         </div>
     </nav>
@@ -281,7 +279,7 @@
         <!-- Our Plan Page -->
         <div id="plan" class="page-section space-y-12"></div>
 
-        <!-- Team Page -->
+        <!-- Team & Partners Page -->
         <div id="team" class="page-section space-y-12"></div>
 
         <!-- What's Next Page -->
@@ -289,9 +287,6 @@
 
         <!-- Contact Page -->
         <div id="contact" class="page-section space-y-12"></div>
-
-        <!-- Supporters/Partners Page -->
-        <div id="supporters" class="page-section space-y-12"></div>
     </div>
 
     <!-- Footer -->
@@ -610,8 +605,68 @@
                 </section>
             `;
 
-            // Render Team Page
+            // Render Team & Partners Page
             document.getElementById('team').innerHTML = `
+                <!-- Partners Section -->
+                <section class="bg-white rounded-lg shadow-xl p-12 text-center mb-8">
+                    <h2 class="text-4xl font-bold text-blue-900 mb-6">Our Partners</h2>
+                    <p class="text-xl text-gray-700 mb-8">Science on Wheels is a collaborative initiative supported by:</p>
+
+                    <!-- Partner Logos -->
+                    <div class="flex flex-wrap justify-center items-center gap-8 mb-8">
+                        <img src="graphics/Punjab_SCERT_Logo.jpg" alt="SCERT Punjab" class="partner-logo hover-scale">
+                        <img src="graphics/ISRO_logo.png" alt="ISRO" class="partner-logo hover-scale">
+                        <img src="graphics/plaksha_logo.png" alt="Plaksha University" class="partner-logo hover-scale">
+                        <img src="graphics/DS_BRAR_GWIST_logo.png" alt="DS Brar GWIST" class="partner-logo hover-scale">
+                        <img src="graphics/IDYM_Logo.png" alt="IDYM Foundation" class="partner-logo hover-scale">
+                        <img src="graphics/IIT_mandi_logo.png" alt="IIT Mandi" class="partner-logo hover-scale">
+                        <img src="graphics/avishkaar_logo.png" alt="Avishkaar" class="partner-logo hover-scale">
+                    </div>
+                </section>
+
+                <section class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg shadow-xl p-8 hover-scale">
+                        <h3 class="text-3xl font-bold text-blue-700 mb-4">Plaksha University</h3>
+                        <p class="text-gray-700 mb-4">Principal Organization</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Leading the initiative with technical expertise, educational content development, and faculty mentorship.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg shadow-xl p-8 hover-scale">
+                        <h3 class="text-3xl font-bold text-purple-700 mb-4">IIT Mandi</h3>
+                        <p class="text-gray-700 mb-4">Academic Partner</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Providing expertise in environmental engineering, water testing, and sustainability education.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-cyan-50 rounded-lg shadow-xl p-8 hover-scale">
+                        <h3 class="text-3xl font-bold text-green-700 mb-4">IDYM Foundation</h3>
+                        <p class="text-gray-700 mb-4">Implementation Partner (ISRO designated Space Tutor)</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Providing mobile vans, space technology modules, trained facilitators, and connection to ISRO's space expert network.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg shadow-xl p-8 hover-scale">
+                        <h3 class="text-3xl font-bold text-orange-700 mb-4">SCERT Punjab</h3>
+                        <p class="text-gray-700 mb-4">Project Sponsor</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Coordinating access to 235 PM Shri schools across 16 districts in Punjab.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="plaksha-teal text-white rounded-lg shadow-xl p-12 text-center mb-8">
+                    <h2 class="text-4xl font-bold mb-6">A Collaborative Vision</h2>
+                    <p class="text-xl max-w-4xl mx-auto leading-relaxed">
+                        This initiative brings together the best of academia, implementation expertise, and government support
+                        to deliver world-class STEM education to students in rural and underserved areas of Punjab.
+                    </p>
+                </section>
+
+                <!-- Team Section -->
                 <section class="bg-white rounded-lg shadow-xl p-8">
                     <h2 class="text-3xl font-bold text-plaksha-teal text-center mb-8">Meet Our Team</h2>
 
@@ -856,67 +911,6 @@
                     </p>
                     <p class="text-center text-cyan-100">
                         For coordination and schedule details, please contact Dr. Rucha Joshi or the SCERT Punjab office.
-                    </p>
-                </section>
-            `;
-
-            // Render Partners Page
-            document.getElementById('supporters').innerHTML = `
-                <section class="bg-white rounded-lg shadow-xl p-12 text-center">
-                    <h2 class="text-4xl font-bold text-blue-900 mb-6">Our Partners</h2>
-                    <p class="text-xl text-gray-700 mb-8">Science on Wheels is a collaborative initiative supported by:</p>
-
-                    <!-- Partner Logos -->
-                    <div class="flex flex-wrap justify-center items-center gap-8 mb-8">
-                        <img src="graphics/Punjab_SCERT_Logo.jpg" alt="SCERT Punjab" class="partner-logo hover-scale">
-                        <img src="graphics/ISRO_logo.png" alt="ISRO" class="partner-logo hover-scale">
-                        <img src="graphics/plaksha_logo.png" alt="Plaksha University" class="partner-logo hover-scale">
-                        <img src="graphics/DS_BRAR_GWIST_logo.png" alt="DS Brar GWIST" class="partner-logo hover-scale">
-                        <img src="graphics/IDYM_Logo.png" alt="IDYM Foundation" class="partner-logo hover-scale">
-                        <img src="graphics/IIT_mandi_logo.png" alt="IIT Mandi" class="partner-logo hover-scale">
-                        <img src="graphics/avishkaar_logo.png" alt="Avishkaar" class="partner-logo hover-scale">
-                    </div>
-                </section>
-
-                <section class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg shadow-xl p-8 hover-scale">
-                        <h3 class="text-3xl font-bold text-blue-700 mb-4">Plaksha University</h3>
-                        <p class="text-gray-700 mb-4">Principal Organization</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Leading the initiative with technical expertise, educational content development, and faculty mentorship.
-                        </p>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg shadow-xl p-8 hover-scale">
-                        <h3 class="text-3xl font-bold text-purple-700 mb-4">IIT Mandi</h3>
-                        <p class="text-gray-700 mb-4">Academic Partner</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Providing expertise in environmental engineering, water testing, and sustainability education.
-                        </p>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-green-50 to-cyan-50 rounded-lg shadow-xl p-8 hover-scale">
-                        <h3 class="text-3xl font-bold text-green-700 mb-4">IDYM Foundation</h3>
-                        <p class="text-gray-700 mb-4">Implementation Partner (ISRO designated Space Tutor)</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Providing mobile vans, space technology modules, trained facilitators, and connection to ISRO's space expert network.
-                        </p>
-                    </div>
-
-                    <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg shadow-xl p-8 hover-scale">
-                        <h3 class="text-3xl font-bold text-orange-700 mb-4">SCERT Punjab</h3>
-                        <p class="text-gray-700 mb-4">Project Sponsor</p>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Coordinating access to 235 PM Shri schools across 16 districts in Punjab.
-                        </p>
-                    </div>
-                </section>
-
-                <section class="plaksha-teal text-white rounded-lg shadow-xl p-12 text-center">
-                    <h2 class="text-4xl font-bold mb-6">A Collaborative Vision</h2>
-                    <p class="text-xl max-w-4xl mx-auto leading-relaxed">
-                        This initiative brings together the best of academia, implementation expertise, and government support
-                        to deliver world-class STEM education to students in rural and underserved areas of Punjab.
                     </p>
                 </section>
             `;
