@@ -42,6 +42,23 @@
             max-height: 80px;
             object-fit: contain;
         }
+        .gallery-embed-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .gallery-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-gray-50">
@@ -63,6 +80,7 @@
                     <button onclick="navigateTo('home')" class="nav-link hover:text-cyan-300 transition text-cyan-300 font-bold" data-page="home">Home</button>
                     <button onclick="navigateTo('plan')" class="nav-link hover:text-cyan-300 transition" data-page="plan">Our Plan</button>
                     <button onclick="navigateTo('team')" class="nav-link hover:text-cyan-300 transition" data-page="team">The Team</button>
+                    <button onclick="navigateTo('gallery')" class="nav-link hover:text-cyan-300 transition" data-page="gallery">Gallery</button>
                     <button onclick="navigateTo('whatsnext')" class="nav-link hover:text-cyan-300 transition" data-page="whatsnext">What's Next?</button>
                     <button onclick="navigateTo('contact')" class="nav-link hover:text-cyan-300 transition" data-page="contact">Contact Us</button>
                     <button onclick="navigateTo('supporters')" class="nav-link hover:text-cyan-300 transition" data-page="supporters">Partners</button>
