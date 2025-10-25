@@ -1,0 +1,130 @@
+{
+  "schools": [
+    {
+      "name": "PM Shri Senior Secondary School",
+      "district": "SAS Nagar",
+      "village": "Mohali",
+      "visitDate": "2025-10-25",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO1"
+    },
+    {
+      "name": "PM Shri Government High School",
+      "district": "SAS Nagar",
+      "village": "Kharar",
+      "visitDate": "2025-10-24",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO2"
+    },
+    {
+      "name": "PM Shri Model Senior Secondary School",
+      "district": "SAS Nagar",
+      "village": "Kurali",
+      "visitDate": "2025-10-23",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO3"
+    },
+    {
+      "name": "PM Shri Government Senior Secondary School",
+      "district": "SAS Nagar",
+      "village": "Mohali",
+      "visitDate": "2025-10-22",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO4"
+    },
+    {
+      "name": "PM Shri Girls High School",
+      "district": "Ludhiana",
+      "village": "Raikot",
+      "visitDate": "2025-10-21",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO5"
+    },
+    {
+      "name": "PM Shri Senior Secondary School",
+      "district": "Ludhiana",
+      "village": "Jagraon",
+      "visitDate": "2025-10-20",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO6"
+    },
+    {
+      "name": "PM Shri Government School",
+      "district": "Ludhiana",
+      "village": "Khanna",
+      "visitDate": "2025-10-19",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO7"
+    },
+    {
+      "name": "PM Shri Model High School",
+      "district": "Ludhiana",
+      "village": "Raikot",
+      "visitDate": "2025-10-18",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO8"
+    },
+    {
+      "name": "PM Shri Public School",
+      "district": "Ludhiana",
+      "village": "Samrala",
+      "visitDate": "2025-10-17",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO9"
+    },
+    {
+      "name": "PM Shri Rajkiya Senior Secondary School",
+      "district": "Patiala",
+      "village": "Patiala",
+      "visitDate": "2025-10-16",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO10"
+    },
+    {
+      "name": "PM Shri Government High School",
+      "district": "Patiala",
+      "village": "Rajpura",
+      "visitDate": "2025-10-15",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO11"
+    },
+    {
+      "name": "PM Shri Senior Secondary School",
+      "district": "Patiala",
+      "village": "Nabha",
+      "visitDate": "2025-10-14",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO12"
+    },
+    {
+      "name": "PM Shri Girls Senior Secondary School",
+      "district": "Patiala",
+      "village": "Patiala",
+      "visitDate": "2025-10-13",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO13"
+    },
+    {
+      "name": "PM Shri Model School",
+      "district": "Patiala",
+      "village": "Samana",
+      "visitDate": "2025-10-12",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO14"
+    },
+    {
+      "name": "PM Shri Government Senior Secondary School",
+      "district": "Fatehgarh Sahib",
+      "village": "Sirhind",
+      "visitDate": "2025-10-11",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO15"
+    },
+    {
+      "name": "PM Shri High School",
+      "district": "Fatehgarh Sahib",
+      "village": "Bassi Pathana",
+      "visitDate": "2025-10-10",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO16"
+    },
+    {
+      "name": "PM Shri Senior Secondary School",
+      "district": "Fatehgarh Sahib",
+      "village": "Amloh",
+      "visitDate": "2025-10-09",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO17"
+    },
+    {
+      "name": "PM Shri Government School",
+      "district": "Fatehgarh Sahib",
+      "village": "Sirhind",
+      "visitDate": "2025-10-08",
+      "embedUrl": "https://onedrive.live.com/embed?resid=DEMO18"
+    }
+  ]
+}
