@@ -97,6 +97,7 @@
                 <button onclick="navigateTo('home'); toggleMobileMenu();" class="block w-full text-left py-2">Home</button>
                 <button onclick="navigateTo('plan'); toggleMobileMenu();" class="block w-full text-left py-2">Our Plan</button>
                 <button onclick="navigateTo('team'); toggleMobileMenu();" class="block w-full text-left py-2">The Team</button>
+                <button onclick="navigateTo('gallery'); toggleMobileMenu();" class="block w-full text-left py-2">Gallery</button>
                 <button onclick="navigateTo('whatsnext'); toggleMobileMenu();" class="block w-full text-left py-2">What's Next?</button>
                 <button onclick="navigateTo('contact'); toggleMobileMenu();" class="block w-full text-left py-2">Contact Us</button>
                 <button onclick="navigateTo('supporters'); toggleMobileMenu();" class="block w-full text-left py-2">Partners</button>
@@ -301,6 +302,9 @@
 
         <!-- Team Page -->
         <div id="team" class="page-section space-y-12"></div>
+
+        <!-- Gallery Page -->
+        <div id="gallery" class="page-section space-y-12"></div>
 
         <!-- What's Next Page -->
         <div id="whatsnext" class="page-section space-y-12"></div>
@@ -624,6 +628,106 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
+            `;
+
+            // Render Gallery Page
+            document.getElementById('gallery').innerHTML = `
+                <!-- Hero Section -->
+                <section class="plaksha-teal text-white rounded-lg shadow-xl p-12 text-center mb-8">
+                    <h2 class="text-5xl font-bold mb-4">Photo Gallery</h2>
+                    <p class="text-xl max-w-3xl mx-auto">
+                        Explore photos from Science on Wheels as we bring STEM education to schools across Punjab.
+                        See students engaging with robotics, space technology, water testing, and interactive science exhibits!
+                    </p>
+                </section>
+
+                <!-- OneDrive Gallery Embed Section -->
+                <section class="bg-white rounded-lg shadow-xl p-8 mb-8">
+                    <div class="gallery-embed-container">
+                        <!-- REPLACE THE IFRAME BELOW WITH YOUR ONEDRIVE EMBED CODE -->
+                        <!-- To get your OneDrive embed code:
+                             1. Go to OneDrive and select your photo album/folder
+                             2. Click "Embed" or "Share" > "Embed"
+                             3. Copy the <iframe> code
+                             4. Replace the iframe below with your code
+                        -->
+                        <iframe
+                            src="about:blank"
+                            frameborder="0"
+                            scrolling="no"
+                            allowfullscreen>
+                        </iframe>
+                        <!-- Placeholder message when no embed is configured -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-cyan-50 to-blue-50">
+                            <div class="text-center p-8">
+                                <svg class="mx-auto mb-4 text-cyan-600" width="64" height="64" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <h3 class="text-2xl font-bold text-blue-900 mb-3">Gallery Coming Soon!</h3>
+                                <p class="text-gray-600 mb-2">Upload your photos to OneDrive and embed them here.</p>
+                                <p class="text-sm text-gray-500">See HOW_TO_UPDATE_GALLERY.md for instructions</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Instructions Section -->
+                <section class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6 flex items-center gap-3">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        How to Update This Gallery
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-cyan-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-blue-900 mb-2">Upload Photos to OneDrive</h4>
+                                    <p class="text-gray-700 text-sm">Create a folder in your OneDrive account and upload all your Science on Wheels photos. Organize them by district or event if desired.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-cyan-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-blue-900 mb-2">Get the Embed Code</h4>
+                                    <p class="text-gray-700 text-sm mb-2">In OneDrive, select your photo folder, click the "..." menu, then choose "Embed". Copy the &lt;iframe&gt; code that appears.</p>
+                                    <p class="text-xs text-gray-500 italic">Alternative: Right-click folder → "Embed" → Copy code</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-cyan-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-blue-900 mb-2">Update index.html</h4>
+                                    <p class="text-gray-700 text-sm mb-2">Open <code class="bg-gray-100 px-2 py-1 rounded text-cyan-700">index.html</code> and find the Gallery section in the JavaScript (search for "REPLACE THE IFRAME").</p>
+                                    <p class="text-gray-700 text-sm">Replace the placeholder &lt;iframe&gt; with your OneDrive embed code.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-cyan-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">4</div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-blue-900 mb-2">Commit and Push</h4>
+                                    <p class="text-gray-700 text-sm">Save the file, commit your changes to Git, and push to GitHub. The gallery will update automatically!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 bg-cyan-600 text-white p-4 rounded-lg">
+                        <p class="text-sm flex items-start gap-2">
+                            <svg class="flex-shrink-0 mt-0.5" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span><strong>Tip:</strong> OneDrive automatically creates a beautiful photo gallery viewer with slideshow, zoom, and download features. Your photos will update automatically when you add new ones to the OneDrive folder!</span>
+                        </p>
                     </div>
                 </section>
             `;
