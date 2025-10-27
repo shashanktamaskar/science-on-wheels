@@ -96,9 +96,9 @@
 
             <!-- Project Status Banner -->
             <div class="plaksha-teal text-white rounded-lg shadow-xl p-6 mb-8 text-center">
-                <span class="status-badge bg-white text-blue-900">Project Status: Planned</span>
-                <h2 class="text-3xl font-bold mt-4">73-Day Journey Across Punjab</h2>
-                <p class="text-lg mt-2" id="projectTimeline">October 15, 2025 - January 30, 2026</p>
+                <span class="status-badge bg-green-100 text-green-900">Project Status: Active</span>
+                <h2 class="text-3xl font-bold mt-4">67-Day Journey Across Punjab</h2>
+                <p class="text-lg mt-2" id="projectTimeline">October 27, 2025 - January 31, 2026</p>
                 <p class="text-sm mt-2 opacity-90">235 PM Shri Schools | 16 Districts | Classes 6-12</p>
             </div>
 
@@ -337,10 +337,10 @@
         function getDefaultData() {
             return {
                 mission: {
-                    schoolsCovered: { current: 0, total: 235 },
+                    schoolsCovered: { current: 2, total: 235 },
                     districtsCovered: { current: 0, total: 16 },
-                    studentsImpacted: 0,
-                    distanceTravelled: 0
+                    studentsImpacted: 834,
+                    distanceTravelled: 24
                 },
                 vehicles: [
                     {
@@ -348,7 +348,7 @@
                         name: "Vehicle 1",
                         currentLocation: { name: "Ready to Deploy", lat: 30.7046, lng: 76.7179 },
                         schedule: [
-                            {district: "SAS Nagar", schools: 17, startDate: "2025-10-15", endDate: "2025-10-25", lat: 30.7046, lng: 76.7179},
+                            {district: "SAS Nagar", schools: 17, startDate: "2025-10-27", endDate: "2025-10-25", lat: 30.7046, lng: 76.7179},
                             {district: "Fatehgarh Sahib", schools: 6, startDate: "2025-10-25", endDate: "2025-10-30", lat: 30.6444, lng: 76.3965},
                             {district: "Roopnagar", schools: 7, startDate: "2025-11-01", endDate: "2025-11-04", lat: 31.0374, lng: 76.5265},
                             {district: "Ludhiana", schools: 24, startDate: "2025-11-10", endDate: "2025-11-20", lat: 30.9010, lng: 75.8573},
@@ -364,7 +364,7 @@
                         name: "Vehicle 2",
                         currentLocation: { name: "Ready to Deploy", lat: 30.3398, lng: 76.3869 },
                         schedule: [
-                            {district: "Patiala", schools: 29, startDate: "2025-10-15", endDate: "2025-10-30", lat: 30.3398, lng: 76.3869},
+                            {district: "Patiala", schools: 29, startDate: "2025-10-27", endDate: "2025-10-30", lat: 30.3398, lng: 76.3869},
                             {district: "Malerkotla", schools: 7, startDate: "2025-11-01", endDate: "2025-11-04", lat: 30.5311, lng: 75.8819},
                             {district: "Fazilka", schools: 13, startDate: "2025-11-05", endDate: "2025-11-10", lat: 30.4028, lng: 74.0281},
                             {district: "Ferozepur", schools: 17, startDate: "2025-11-10", endDate: "2025-11-20", lat: 30.9191, lng: 74.8750},
@@ -550,7 +550,7 @@
                                 </div>
                                 <div class="bg-white p-4 rounded-lg shadow">
                                     <div class="text-sm text-gray-600">Total Project Days</div>
-                                    <div class="text-3xl font-bold text-blue-900">73 Days</div>
+                                    <div class="text-3xl font-bold text-blue-900">67 Days</div>
                                 </div>
                             </div>
                         </div>
