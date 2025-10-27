@@ -42,23 +42,6 @@
             max-height: 80px;
             object-fit: contain;
         }
-        .gallery-embed-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 75%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        .gallery-embed-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
     </style>
 </head>
 <body class="min-h-screen bg-gray-50">
@@ -967,287 +950,93 @@
                 <section class="plaksha-teal text-white rounded-lg shadow-xl p-12 text-center mb-8">
                     <h2 class="text-5xl font-bold mb-4">📸 Photo Gallery</h2>
                     <p class="text-xl max-w-3xl mx-auto">
-                        Explore photos from Science on Wheels as we bring STEM education to schools across Punjab.
-                        See students engaging with robotics, space technology, water testing, and interactive science exhibits!
+                        View photos from our school visits across Punjab. Click "View Photos" to see the complete photo album for each school.
                     </p>
                 </section>
 
-                <!-- Recently Visited Section -->
-                <section id="recentlyVisited" class="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg shadow-xl p-8 mb-8">
-                    <div class="flex items-center gap-3 mb-6">
-                        <svg class="text-cyan-600" width="32" height="32" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
-                        </svg>
-                        <h3 class="text-3xl font-bold text-blue-900">⭐ Recently Visited</h3>
+                <!-- Schools Table Section -->
+                <section class="bg-white rounded-lg shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">
+                        School Visits (<span id="schoolCount">0</span> schools)
+                    </h3>
+
+                    <!-- Table Container with horizontal scroll on mobile -->
+                    <div class="overflow-x-auto">
+                        <table id="schoolsTable" class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
+                                    <th class="px-6 py-4 text-left font-bold">Date</th>
+                                    <th class="px-6 py-4 text-left font-bold">School Name</th>
+                                    <th class="px-6 py-4 text-left font-bold">District</th>
+                                    <th class="px-6 py-4 text-center font-bold">Photos</th>
+                                </tr>
+                            </thead>
+                            <tbody id="schoolsTableBody">
+                                <tr>
+                                    <td colspan="4" class="px-6 py-8 text-center text-gray-500">
+                                        Loading schools...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div id="recentSchoolsList" class="space-y-3">
-                        <p class="text-gray-600 text-center py-8">Loading recent visits...</p>
-                    </div>
-                </section>
-
-                <!-- Find Your School Section -->
-                <section class="bg-white rounded-lg shadow-xl p-8 mb-8">
-                    <div class="flex items-center gap-3 mb-6">
-                        <svg class="text-cyan-600" width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                        <h3 class="text-3xl font-bold text-blue-900">🔍 Find Your School</h3>
-                    </div>
-
-                    <div class="space-y-4">
-                        <!-- District Filter -->
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Step 1: Select Your District</label>
-                            <select id="districtFilter"
-                                    onchange="updateVillageFilter()"
-                                    class="w-full p-4 text-lg border-2 border-gray-300 rounded-lg focus:border-cyan-500 focus:outline-none">
-                                <option value="">Choose your district...</option>
-                            </select>
-                        </div>
-
-                        <!-- Village Filter -->
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Step 2: Select Your Village</label>
-                            <select id="villageFilter"
-                                    onchange="updateSchoolFilter()"
-                                    disabled
-                                    class="w-full p-4 text-lg border-2 border-gray-300 rounded-lg focus:border-cyan-500 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed">
-                                <option value="">First select your district above</option>
-                            </select>
-                        </div>
-
-                        <!-- School Filter -->
-                        <div>
-                            <label class="block text-sm font-bold text-gray-700 mb-2">Step 3: Select Your School</label>
-                            <select id="schoolFilter"
-                                    onchange="displaySchoolGallery()"
-                                    disabled
-                                    class="w-full p-4 text-lg border-2 border-gray-300 rounded-lg focus:border-cyan-500 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed">
-                                <option value="">First select your village above</option>
-                            </select>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Gallery Display Section -->
-                <section id="galleryDisplay" class="hidden bg-white rounded-lg shadow-xl p-8">
-                    <!-- Gallery will be injected here when school is selected -->
                 </section>
             `;
 
-            // Load gallery data and populate filters
+            // Load gallery data and populate table
             loadGalleryData().then(data => {
                 if (data.schools.length > 0) {
-                    populateDistrictFilter(data.schools);
-                    renderRecentlyVisited(data.schools);
+                    renderSchoolsTable(data.schools);
                 } else {
-                    document.getElementById('recentSchoolsList').innerHTML = `
-                        <div class="text-center py-8">
-                            <svg class="mx-auto mb-4 text-gray-400" width="64" height="64" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                            </svg>
-                            <h4 class="text-xl font-bold text-gray-700 mb-2">No Schools Visited Yet</h4>
-                            <p class="text-gray-600">Check back soon as we begin visiting schools across Punjab!</p>
-                        </div>
+                    document.getElementById('schoolsTableBody').innerHTML = `
+                        <tr>
+                            <td colspan="4" class="px-6 py-12 text-center">
+                                <svg class="mx-auto mb-4 text-gray-400" width="64" height="64" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <h4 class="text-xl font-bold text-gray-700 mb-2">No Schools Visited Yet</h4>
+                                <p class="text-gray-600">Check back soon as we begin visiting schools across Punjab!</p>
+                            </td>
+                        </tr>
                     `;
+                    document.getElementById('schoolCount').textContent = '0';
                 }
             });
         }
 
-        function populateDistrictFilter(schools) {
-            const districtSelect = document.getElementById('districtFilter');
-            const districts = [...new Set(schools.map(s => s.district))].sort();
+        function renderSchoolsTable(schools) {
+            // Sort by date (newest first)
+            const sortedSchools = schools.sort((a, b) => new Date(b.visitDate) - new Date(a.visitDate));
 
-            districts.forEach(district => {
-                const option = document.createElement('option');
-                option.value = district;
-                option.textContent = district;
-                districtSelect.appendChild(option);
-            });
-        }
+            // Update count
+            document.getElementById('schoolCount').textContent = sortedSchools.length;
 
-        function updateVillageFilter() {
-            const districtSelect = document.getElementById('districtFilter');
-            const villageSelect = document.getElementById('villageFilter');
-            const schoolSelect = document.getElementById('schoolFilter');
-            const selectedDistrict = districtSelect.value;
-
-            // Reset village and school dropdowns
-            villageSelect.innerHTML = '<option value="">Choose your village...</option>';
-            schoolSelect.innerHTML = '<option value="">First select your village above</option>';
-            schoolSelect.disabled = true;
-
-            // Hide gallery
-            document.getElementById('galleryDisplay').classList.add('hidden');
-
-            if (!selectedDistrict) {
-                villageSelect.disabled = true;
-                villageSelect.innerHTML = '<option value="">First select your district above</option>';
-                return;
-            }
-
-            // Get villages for selected district
-            const villages = [...new Set(
-                galleryData.schools
-                    .filter(s => s.district === selectedDistrict)
-                    .map(s => s.village)
-            )].sort();
-
-            villages.forEach(village => {
-                const option = document.createElement('option');
-                option.value = village;
-                option.textContent = village;
-                villageSelect.appendChild(option);
-            });
-
-            villageSelect.disabled = false;
-        }
-
-        function updateSchoolFilter() {
-            const districtSelect = document.getElementById('districtFilter');
-            const villageSelect = document.getElementById('villageFilter');
-            const schoolSelect = document.getElementById('schoolFilter');
-            const selectedDistrict = districtSelect.value;
-            const selectedVillage = villageSelect.value;
-
-            schoolSelect.innerHTML = '<option value="">Choose your school...</option>';
-
-            // Hide gallery
-            document.getElementById('galleryDisplay').classList.add('hidden');
-
-            if (!selectedVillage) {
-                schoolSelect.disabled = true;
-                schoolSelect.innerHTML = '<option value="">First select your village above</option>';
-                return;
-            }
-
-            // Get schools for selected district and village
-            const schools = galleryData.schools
-                .filter(s => s.district === selectedDistrict && s.village === selectedVillage)
-                .sort((a, b) => a.name.localeCompare(b.name));
-
-            schools.forEach((school, index) => {
-                const option = document.createElement('option');
-                option.value = index;
-                option.dataset.schoolData = JSON.stringify(school);
-                option.textContent = school.name;
-                schoolSelect.appendChild(option);
-            });
-
-            schoolSelect.disabled = false;
-        }
-
-        function displaySchoolGallery() {
-            const schoolSelect = document.getElementById('schoolFilter');
-            const selectedOption = schoolSelect.options[schoolSelect.selectedIndex];
-
-            if (!selectedOption || !selectedOption.dataset.schoolData) {
-                document.getElementById('galleryDisplay').classList.add('hidden');
-                return;
-            }
-
-            const school = JSON.parse(selectedOption.dataset.schoolData);
-            const galleryDisplay = document.getElementById('galleryDisplay');
-
-            galleryDisplay.innerHTML = `
-                <div class="mb-6">
-                    <h3 class="text-3xl font-bold text-blue-900 mb-2">${school.name}</h3>
-                    <div class="flex flex-wrap gap-4 text-gray-600">
-                        <span class="flex items-center gap-2">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+            // Generate table rows
+            const tableBody = document.getElementById('schoolsTableBody');
+            tableBody.innerHTML = sortedSchools.map((school, index) => `
+                <tr class="${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-blue-50 transition">
+                    <td class="px-6 py-4 whitespace-nowrap text-gray-700">
+                        ${formatDate(school.visitDate)}
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-blue-900">
+                        ${school.name}
+                    </td>
+                    <td class="px-6 py-4 text-gray-700">
+                        ${school.district}
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                        <a href="${school.folderUrl}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            View Photos
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                             </svg>
-                            <strong>Village:</strong> ${school.village}
-                        </span>
-                        <span class="flex items-center gap-2">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <strong>District:</strong> ${school.district}
-                        </span>
-                        <span class="flex items-center gap-2">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-                            </svg>
-                            <strong>Visited:</strong> ${formatDate(school.visitDate)}
-                        </span>
-                    </div>
-                </div>
-                <div class="gallery-embed-container">
-                    <iframe
-                        src="${school.embedUrl}"
-                        frameborder="0"
-                        scrolling="no"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            `;
-
-            galleryDisplay.classList.remove('hidden');
-
-            // Smooth scroll to gallery
-            setTimeout(() => {
-                galleryDisplay.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 100);
-        }
-
-        function renderRecentlyVisited(schools) {
-            const recentSchools = schools
-                .sort((a, b) => new Date(b.visitDate) - new Date(a.visitDate))
-                .slice(0, 10);
-
-            const recentList = document.getElementById('recentSchoolsList');
-
-            if (recentSchools.length === 0) {
-                recentList.innerHTML = '<p class="text-gray-600 text-center py-8">No schools visited yet.</p>';
-                return;
-            }
-
-            recentList.innerHTML = recentSchools.map(school => `
-                <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer"
-                     onclick="selectSchoolFromRecent('${school.district}', '${school.village}', '${school.name}')">
-                    <div class="flex items-start justify-between gap-4">
-                        <div class="flex-1">
-                            <h4 class="font-bold text-lg text-blue-900 mb-1">${school.name}</h4>
-                            <div class="flex flex-wrap gap-3 text-sm text-gray-600">
-                                <span>📍 ${school.village}, ${school.district}</span>
-                                <span>📅 ${formatDate(school.visitDate)}</span>
-                            </div>
-                        </div>
-                        <button class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg font-bold transition whitespace-nowrap">
-                            View Photos →
-                        </button>
-                    </div>
-                </div>
+                        </a>
+                    </td>
+                </tr>
             `).join('');
-        }
-
-        function selectSchoolFromRecent(district, village, schoolName) {
-            // Set the filters
-            document.getElementById('districtFilter').value = district;
-            updateVillageFilter();
-
-            setTimeout(() => {
-                document.getElementById('villageFilter').value = village;
-                updateSchoolFilter();
-
-                setTimeout(() => {
-                    const schoolSelect = document.getElementById('schoolFilter');
-                    const options = Array.from(schoolSelect.options);
-                    const schoolOption = options.find(opt => {
-                        if (opt.dataset.schoolData) {
-                            const school = JSON.parse(opt.dataset.schoolData);
-                            return school.name === schoolName;
-                        }
-                        return false;
-                    });
-
-                    if (schoolOption) {
-                        schoolSelect.value = schoolOption.value;
-                        displaySchoolGallery();
-                    }
-                }, 100);
-            }, 100);
         }
 
         function formatDate(dateString) {
