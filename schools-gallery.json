@@ -1,112 +1,16 @@
 {
   "schools": [
     {
-      "name": "PM Shri Senior Secondary School",
+      "name": "GHS Phase-5",
       "district": "SAS Nagar",
-      "visitDate": "2025-10-25",
-      "folderUrl": "https://1drv.ms/f/s/DEMO1"
+      "visitDate": "2025-10-27",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/shashank_tamaskar_plaksha_edu_in/EsxuFP62PudLszzQXApGvCABb_vdDhiqyUJwF8PE6W-MfA?e=8aiflJ"
     },
     {
-      "name": "PM Shri Government High School",
+      "name": "GHS Kumbra",
       "district": "SAS Nagar",
-      "visitDate": "2025-10-24",
-      "folderUrl": "https://1drv.ms/f/s/DEMO2"
-    },
-    {
-      "name": "PM Shri Model Senior Secondary School",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-23",
-      "folderUrl": "https://1drv.ms/f/s/DEMO3"
-    },
-    {
-      "name": "PM Shri Government Senior Secondary School",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-22",
-      "folderUrl": "https://1drv.ms/f/s/DEMO4"
-    },
-    {
-      "name": "PM Shri Girls High School",
-      "district": "Ludhiana",
-      "visitDate": "2025-10-21",
-      "folderUrl": "https://1drv.ms/f/s/DEMO5"
-    },
-    {
-      "name": "PM Shri Senior Secondary School",
-      "district": "Ludhiana",
-      "visitDate": "2025-10-20",
-      "folderUrl": "https://1drv.ms/f/s/DEMO6"
-    },
-    {
-      "name": "PM Shri Government School",
-      "district": "Ludhiana",
-      "visitDate": "2025-10-19",
-      "folderUrl": "https://1drv.ms/f/s/DEMO7"
-    },
-    {
-      "name": "PM Shri Model High School",
-      "district": "Ludhiana",
-      "visitDate": "2025-10-18",
-      "folderUrl": "https://1drv.ms/f/s/DEMO8"
-    },
-    {
-      "name": "PM Shri Public School",
-      "district": "Ludhiana",
-      "visitDate": "2025-10-17",
-      "folderUrl": "https://1drv.ms/f/s/DEMO9"
-    },
-    {
-      "name": "PM Shri Rajkiya Senior Secondary School",
-      "district": "Patiala",
-      "visitDate": "2025-10-16",
-      "folderUrl": "https://1drv.ms/f/s/DEMO10"
-    },
-    {
-      "name": "PM Shri Government High School",
-      "district": "Patiala",
-      "visitDate": "2025-10-15",
-      "folderUrl": "https://1drv.ms/f/s/DEMO11"
-    },
-    {
-      "name": "PM Shri Senior Secondary School",
-      "district": "Patiala",
-      "visitDate": "2025-10-14",
-      "folderUrl": "https://1drv.ms/f/s/DEMO12"
-    },
-    {
-      "name": "PM Shri Girls Senior Secondary School",
-      "district": "Patiala",
-      "visitDate": "2025-10-13",
-      "folderUrl": "https://1drv.ms/f/s/DEMO13"
-    },
-    {
-      "name": "PM Shri Model School",
-      "district": "Patiala",
-      "visitDate": "2025-10-12",
-      "folderUrl": "https://1drv.ms/f/s/DEMO14"
-    },
-    {
-      "name": "PM Shri Government Senior Secondary School",
-      "district": "Fatehgarh Sahib",
-      "visitDate": "2025-10-11",
-      "folderUrl": "https://1drv.ms/f/s/DEMO15"
-    },
-    {
-      "name": "PM Shri High School",
-      "district": "Fatehgarh Sahib",
-      "visitDate": "2025-10-10",
-      "folderUrl": "https://1drv.ms/f/s/DEMO16"
-    },
-    {
-      "name": "PM Shri Senior Secondary School",
-      "district": "Fatehgarh Sahib",
-      "visitDate": "2025-10-09",
-      "folderUrl": "https://1drv.ms/f/s/DEMO17"
-    },
-    {
-      "name": "PM Shri Government School",
-      "district": "Fatehgarh Sahib",
-      "visitDate": "2025-10-08",
-      "folderUrl": "https://1drv.ms/f/s/DEMO18"
+      "visitDate": "2025-10-27",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/shashank_tamaskar_plaksha_edu_in/EvcclyjZbSNAn-qpGJTELMMBvwTskvOasxus-qJNZP8vzA?e=rCIQjC"
     }
   ]
 }
