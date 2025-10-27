@@ -1,26 +1,67 @@
 {
-  "lastUpdated": "2025-01-14",
+  "lastUpdated": "2025-10-27",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
-    "duration": "73 days",
-    "startDate": "2025-10-15",
-    "endDate": "2026-01-30",
-    "status": "planned"
+    "duration": "67 days",
+    "startDate": "2025-10-27",
+    "endDate": "2026-01-31",
+    "status": "active"
   },
   "mission": {
     "schoolsCovered": {
-      "current": 0,
+      "current": 2,
       "total": 235
     },
     "districtsCovered": {
       "current": 0,
       "total": 16
     },
-    "studentsImpacted": 0,
-    "distanceTravelled": 0,
+    "studentsImpacted": 834,
+    "distanceTravelled": 24,
     "targetAudience": "Students from Classes 6-12"
   },
+  "dailyUpdates": [
+    {
+      "date": "2025-10-27",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GHS-Phase-5",
+          "location": {
+            "lat": 30.7149059,
+            "lng": 76.7127094
+          },
+          "studentsReached": 432,
+          "district": "SAS Nagar"
+        },
+        {
+          "name": "GHS Kumbra",
+          "location": {
+            "lat": 30.6883551,
+            "lng": 76.7257611
+          },
+          "studentsReached": 402,
+          "district": "SAS Nagar"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "endPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "distanceTravelled": 24
+      },
+      "totalStudents": 834,
+      "schoolsVisited": 2
+    }
+  ],
   "vehicles": [
     {
       "id": 1,
@@ -30,11 +71,11 @@
         "district": "SAS Nagar",
         "lat": 30.7046,
         "lng": 76.7179,
-        "date": "2025-10-15",
-        "status": "planned"
+        "date": "2025-10-27",
+        "status": "active"
       },
       "schedule": [
-        {"district": "SAS Nagar", "schools": 17, "startDate": "2025-10-15", "endDate": "2025-10-25", "lat": 30.7046, "lng": 76.7179},
+        {"district": "SAS Nagar", "schools": 17, "startDate": "2025-10-27", "endDate": "2025-10-25", "lat": 30.7046, "lng": 76.7179},
         {"district": "Fatehgarh Sahib", "schools": 6, "startDate": "2025-10-25", "endDate": "2025-10-30", "lat": 30.6444, "lng": 76.3965},
         {"district": "Roopnagar", "schools": 7, "startDate": "2025-11-01", "endDate": "2025-11-04", "lat": 31.0374, "lng": 76.5265},
         {"district": "Ludhiana", "schools": 24, "startDate": "2025-11-10", "endDate": "2025-11-20", "lat": 30.9010, "lng": 75.8573},
@@ -53,11 +94,11 @@
         "district": "Patiala",
         "lat": 30.3398,
         "lng": 76.3869,
-        "date": "2025-10-15",
-        "status": "planned"
+        "date": "2025-10-27",
+        "status": "active"
       },
       "schedule": [
-        {"district": "Patiala", "schools": 29, "startDate": "2025-10-15", "endDate": "2025-10-30", "lat": 30.3398, "lng": 76.3869},
+        {"district": "Patiala", "schools": 29, "startDate": "2025-10-27", "endDate": "2025-10-30", "lat": 30.3398, "lng": 76.3869},
         {"district": "Malerkotla", "schools": 7, "startDate": "2025-11-01", "endDate": "2025-11-04", "lat": 30.5311, "lng": 75.8819},
         {"district": "Fazilka", "schools": 13, "startDate": "2025-11-05", "endDate": "2025-11-10", "lat": 30.4028, "lng": 74.0281},
         {"district": "Ferozepur", "schools": 17, "startDate": "2025-11-10", "endDate": "2025-11-20", "lat": 30.9191, "lng": 74.8750},
