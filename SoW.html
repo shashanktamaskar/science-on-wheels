@@ -459,6 +459,14 @@
             completedSchools.forEach(school => {
                 const marker = L.marker([school.lat, school.lng], { icon: greenBusIcon }).addTo(map);
 
+                // Add tooltip that shows on hover
+                marker.bindTooltip(school.name, {
+                    permanent: false,
+                    direction: 'top',
+                    offset: [0, -20],
+                    className: 'school-tooltip'
+                });
+
                 // Find gallery link if available
                 let galleryButton = '';
                 if (galleryData && galleryData.schools) {
