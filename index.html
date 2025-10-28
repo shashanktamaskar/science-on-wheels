@@ -63,6 +63,7 @@
                     <button onclick="navigateTo('home')" class="nav-link hover:text-cyan-300 transition text-cyan-300 font-bold" data-page="home">Home</button>
                     <button onclick="navigateTo('plan')" class="nav-link hover:text-cyan-300 transition" data-page="plan">Our Plan</button>
                     <button onclick="navigateTo('team')" class="nav-link hover:text-cyan-300 transition" data-page="team">The Team</button>
+                    <button onclick="navigateTo('gallery')" class="nav-link hover:text-cyan-300 transition" data-page="gallery">Gallery</button>
                     <button onclick="navigateTo('whatsnext')" class="nav-link hover:text-cyan-300 transition" data-page="whatsnext">What's Next?</button>
                     <button onclick="navigateTo('contact')" class="nav-link hover:text-cyan-300 transition" data-page="contact">Contact Us</button>
                     <button onclick="navigateTo('supporters')" class="nav-link hover:text-cyan-300 transition" data-page="supporters">Partners</button>
@@ -79,6 +80,7 @@
                 <button onclick="navigateTo('home'); toggleMobileMenu();" class="block w-full text-left py-2">Home</button>
                 <button onclick="navigateTo('plan'); toggleMobileMenu();" class="block w-full text-left py-2">Our Plan</button>
                 <button onclick="navigateTo('team'); toggleMobileMenu();" class="block w-full text-left py-2">The Team</button>
+                <button onclick="navigateTo('gallery'); toggleMobileMenu();" class="block w-full text-left py-2">Gallery</button>
                 <button onclick="navigateTo('whatsnext'); toggleMobileMenu();" class="block w-full text-left py-2">What's Next?</button>
                 <button onclick="navigateTo('contact'); toggleMobileMenu();" class="block w-full text-left py-2">Contact Us</button>
                 <button onclick="navigateTo('supporters'); toggleMobileMenu();" class="block w-full text-left py-2">Partners</button>
@@ -283,6 +285,9 @@
 
         <!-- Team Page -->
         <div id="team" class="page-section space-y-12"></div>
+
+        <!-- Gallery Page -->
+        <div id="gallery" class="page-section space-y-12"></div>
 
         <!-- What's Next Page -->
         <div id="whatsnext" class="page-section space-y-12"></div>
@@ -610,6 +615,9 @@
                 </section>
             `;
 
+            // Render Gallery Page - Data will be loaded dynamically
+            renderGalleryPage();
+
             // Render Team Page
             document.getElementById('team').innerHTML = `
                 <section class="bg-white rounded-lg shadow-xl p-8">
@@ -920,6 +928,121 @@
                     </p>
                 </section>
             `;
+        }
+
+        // Gallery Data and Functions
+        let galleryData = null;
+
+        async function loadGalleryData() {
+            try {
+                const response = await fetch('schools-gallery.json');
+                galleryData = await response.json();
+                return galleryData;
+            } catch (error) {
+                console.error('Error loading gallery data:', error);
+                return { schools: [] };
+            }
+        }
+
+        function renderGalleryPage() {
+            document.getElementById('gallery').innerHTML = `
+                <!-- Hero Section -->
+                <section class="plaksha-teal text-white rounded-lg shadow-xl p-12 text-center mb-8">
+                    <h2 class="text-5xl font-bold mb-4">📸 Photo Gallery</h2>
+                    <p class="text-xl max-w-3xl mx-auto">
+                        View photos from our school visits across Punjab. Click "View Photos" to see the complete photo album for each school.
+                    </p>
+                </section>
+
+                <!-- Schools Table Section -->
+                <section class="bg-white rounded-lg shadow-xl p-8">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">
+                        School Visits (<span id="schoolCount">0</span> schools)
+                    </h3>
+
+                    <!-- Table Container with horizontal scroll on mobile -->
+                    <div class="overflow-x-auto">
+                        <table id="schoolsTable" class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
+                                    <th class="px-6 py-4 text-left font-bold">Date</th>
+                                    <th class="px-6 py-4 text-left font-bold">School Name</th>
+                                    <th class="px-6 py-4 text-left font-bold">District</th>
+                                    <th class="px-6 py-4 text-center font-bold">Photos</th>
+                                </tr>
+                            </thead>
+                            <tbody id="schoolsTableBody">
+                                <tr>
+                                    <td colspan="4" class="px-6 py-8 text-center text-gray-500">
+                                        Loading schools...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            `;
+
+            // Load gallery data and populate table
+            loadGalleryData().then(data => {
+                if (data.schools.length > 0) {
+                    renderSchoolsTable(data.schools);
+                } else {
+                    document.getElementById('schoolsTableBody').innerHTML = `
+                        <tr>
+                            <td colspan="4" class="px-6 py-12 text-center">
+                                <svg class="mx-auto mb-4 text-gray-400" width="64" height="64" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <h4 class="text-xl font-bold text-gray-700 mb-2">No Schools Visited Yet</h4>
+                                <p class="text-gray-600">Check back soon as we begin visiting schools across Punjab!</p>
+                            </td>
+                        </tr>
+                    `;
+                    document.getElementById('schoolCount').textContent = '0';
+                }
+            });
+        }
+
+        function renderSchoolsTable(schools) {
+            // Sort by date (newest first)
+            const sortedSchools = schools.sort((a, b) => new Date(b.visitDate) - new Date(a.visitDate));
+
+            // Update count
+            document.getElementById('schoolCount').textContent = sortedSchools.length;
+
+            // Generate table rows
+            const tableBody = document.getElementById('schoolsTableBody');
+            tableBody.innerHTML = sortedSchools.map((school, index) => `
+                <tr class="${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-blue-50 transition">
+                    <td class="px-6 py-4 whitespace-nowrap text-gray-700">
+                        ${formatDate(school.visitDate)}
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-blue-900">
+                        ${school.name}
+                    </td>
+                    <td class="px-6 py-4 text-gray-700">
+                        ${school.district}
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                        <a href="${school.folderUrl}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                            View Photos
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
         }
 
         // Navigation
