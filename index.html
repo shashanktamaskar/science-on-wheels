@@ -324,8 +324,14 @@
         // Load data from JSON
         async function loadData() {
             try {
-                const response = await fetch('data.json');
-                projectData = await response.json();
+                // Load both project data and gallery data
+                const [projectResponse, galleryResponse] = await Promise.all([
+                    fetch('data.json'),
+                    fetch('schools-gallery.json')
+                ]);
+                projectData = await projectResponse.json();
+                galleryData = await galleryResponse.json();
+
                 updateDashboard();
                 initializeMap();
                 renderOtherPages();
@@ -333,6 +339,7 @@
                 console.error('Error loading data:', error);
                 // Use default data if JSON fails to load
                 projectData = getDefaultData();
+                galleryData = { schools: [] };
                 updateDashboard();
                 initializeMap();
                 renderOtherPages();
@@ -478,7 +485,6 @@
                         <div style="font-weight: bold; font-size: 1.1em; margin-bottom: 6px; color: #1f2937;">✓ ${school.name}</div>
                         <div style="color: #6b7280; margin-bottom: 10px; font-size: 0.95em;">${formattedDate}</div>
                         <div style="margin: 6px 0; color: #374151;">👥 ${school.studentsReached} Students Reached</div>
-                        <div style="margin: 6px 0; color: #374151;">📸 Photos Available</div>
                         <div style="color: #6b7280; margin: 6px 0;">📍 ${school.district} District</div>
                         ${galleryButton}
                     </div>
