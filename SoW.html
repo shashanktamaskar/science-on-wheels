@@ -319,8 +319,14 @@
         // Load data from JSON
         async function loadData() {
             try {
-                const response = await fetch('data.json');
-                projectData = await response.json();
+                // Load both project data and gallery data
+                const [projectResponse, galleryResponse] = await Promise.all([
+                    fetch('data.json'),
+                    fetch('schools-gallery.json')
+                ]);
+                projectData = await projectResponse.json();
+                galleryData = await galleryResponse.json();
+
                 updateDashboard();
                 initializeMap();
                 renderOtherPages();
@@ -328,6 +334,7 @@
                 console.error('Error loading data:', error);
                 // Use default data if JSON fails to load
                 projectData = getDefaultData();
+                galleryData = { schools: [] };
                 updateDashboard();
                 initializeMap();
                 renderOtherPages();
