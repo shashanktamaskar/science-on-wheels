@@ -24,22 +24,25 @@ instructions in DAILY_UPDATE_INSTRUCTIONS.md.
 - [School Name]: [Complete OneDrive URL]
 [Add more links as needed...]
 
+**Collage Images:**
+- [School Name]: [Filename for collage image - e.g., GHS-Balongi.jpg]
+- [School Name]: [Filename for collage image - e.g., GHS-Kurali.jpg]
+[Add more images as needed...]
+
 **Instructions:**
 1. Read DAILY_UPDATE_INSTRUCTIONS.md for complete step-by-step process
 2. Calculate route distance (Plaksha → School1 → School2 → ... → Plaksha)
 3. Update data.json with new daily entry and cumulative mission statistics
 4. Update schools-gallery.json with new school entries
-5. Validate both JSON files
-6. Commit changes with descriptive message
-7. Push to branch: claude/session-[unique-id]
-8. Provide PR creation link and description
+5. Upload collage images to gallery_school_collage/ folder (filenames MUST match school names in JSON)
+6. Validate both JSON files
+7. Commit changes with descriptive message
+8. Push to branch: claude/session-[unique-id]
+9. Provide PR creation link and description
 
 ================================================================================
 
 EXAMPLE (for reference):
-
-Update the Science on Wheels website with today's school visits following the
-instructions in DAILY_UPDATE_INSTRUCTIONS.md.
 
 **Date:** 2025-10-29
 
@@ -53,14 +56,8 @@ instructions in DAILY_UPDATE_INSTRUCTIONS.md.
 - GHS-Balongi: https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ExampleLink1
 - GHS-Kurali: https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ExampleLink2
 
-**Instructions:**
-1. Read DAILY_UPDATE_INSTRUCTIONS.md for complete step-by-step process
-2. Calculate route distance (Plaksha → School1 → School2 → ... → Plaksha)
-3. Update data.json with new daily entry and cumulative mission statistics
-4. Update schools-gallery.json with new school entries
-5. Validate both JSON files
-6. Commit changes with descriptive message
-7. Push to branch: claude/session-[unique-id]
-8. Provide PR creation link and description
+**Collage Images:**
+- GHS-Balongi: GHS-Balongi.jpg
+- GHS-Kurali: GHS-Kurali.jpg
 
 ================================================================================

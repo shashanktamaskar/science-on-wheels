@@ -324,8 +324,14 @@
         // Load data from JSON
         async function loadData() {
             try {
-                const response = await fetch('data.json');
-                projectData = await response.json();
+                // Load both project data and gallery data
+                const [projectResponse, galleryResponse] = await Promise.all([
+                    fetch('data.json'),
+                    fetch('schools-gallery.json')
+                ]);
+                projectData = await projectResponse.json();
+                galleryData = await galleryResponse.json();
+
                 updateDashboard();
                 initializeMap();
                 renderOtherPages();
@@ -333,6 +339,7 @@
                 console.error('Error loading data:', error);
                 // Use default data if JSON fails to load
                 projectData = getDefaultData();
+                galleryData = { schools: [] };
                 updateDashboard();
                 initializeMap();
                 renderOtherPages();
@@ -403,13 +410,13 @@
         function initializeMap() {
             if (!projectData || map) return;
 
-            // Initialize map centered on Punjab with zoom constraints
+            // Initialize map centered on SAS Nagar with higher zoom level
             map = L.map('map', {
                 minZoom: 8,
                 maxZoom: 18,
                 scrollWheelZoom: false, // Disable scroll wheel zoom to prevent accidental zoom out
                 zoomControl: true
-            }).setView([30.7333, 75.5], 8);
+            }).setView([30.7046, 76.7179], 11); // SAS Nagar coordinates with zoom 11
 
             // Re-enable zoom on map click (user must click map first to zoom)
             map.on('click', function() {
@@ -425,67 +432,75 @@
                 maxZoom: 18
             }).addTo(map);
 
-            const vehicle1Color = '#ef4444'; // red
-            const vehicle2Color = '#3b82f6'; // blue
-
-            // Plaksha University coordinates - starting location for both vehicles
-            const plakshaLat = 30.6310588;
-            const plakshaLng = 76.7255981;
-
-            // Create custom van icons - red and blue
-            const redBusIcon = L.divIcon({
-                className: 'custom-van-icon',
-                html: `<div style="font-size: 32px; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.7));">🚐</div>`,
+            // Create green bus icon for completed schools
+            const greenBusIcon = L.divIcon({
+                className: 'custom-bus-icon',
+                html: `<div style="font-size: 32px; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.7));">🚌</div>`,
                 iconSize: [40, 40],
                 iconAnchor: [20, 20],
                 popupAnchor: [0, -20]
             });
 
-            const blueBusIcon = L.divIcon({
-                className: 'custom-van-icon',
-                html: `<div style="font-size: 32px; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.7)); color: #3b82f6;">🚐</div>`,
-                iconSize: [40, 40],
-                iconAnchor: [20, 20],
-                popupAnchor: [0, -20]
+            // Collect all completed schools from dailyUpdates
+            const completedSchools = [];
+            if (projectData.dailyUpdates && Array.isArray(projectData.dailyUpdates)) {
+                projectData.dailyUpdates.forEach(day => {
+                    if (day.schools && Array.isArray(day.schools)) {
+                        day.schools.forEach(school => {
+                            completedSchools.push({
+                                name: school.name,
+                                date: day.date,
+                                studentsReached: school.studentsReached,
+                                district: school.district,
+                                lat: school.location.lat,
+                                lng: school.location.lng
+                            });
+                        });
+                    }
+                });
+            }
+
+            // Add markers for each completed school
+            completedSchools.forEach(school => {
+                const marker = L.marker([school.lat, school.lng], { icon: greenBusIcon }).addTo(map);
+
+                // Add tooltip that shows on hover
+                marker.bindTooltip(school.name, {
+                    permanent: false,
+                    direction: 'top',
+                    offset: [0, -20],
+                    className: 'school-tooltip'
+                });
+
+                // Find gallery link if available
+                let galleryButton = '';
+                if (galleryData && galleryData.schools) {
+                    const gallerySchool = galleryData.schools.find(g => g.name === school.name);
+                    if (gallerySchool && gallerySchool.folderUrl) {
+                        galleryButton = `<div style="margin-top: 12px;"><a href="${gallerySchool.folderUrl}" target="_blank" style="display: inline-block; padding: 8px 16px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#2563eb'">View Gallery →</a></div>`;
+                    }
+                }
+
+                // Format date
+                const formattedDate = new Date(school.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+
+                marker.bindPopup(`
+                    <div style="padding: 12px; min-width: 220px; font-family: system-ui, -apple-system, sans-serif;">
+                        <div style="font-weight: bold; font-size: 1.1em; margin-bottom: 6px; color: #1f2937;">✓ ${school.name}</div>
+                        <div style="color: #6b7280; margin-bottom: 10px; font-size: 0.95em;">${formattedDate}</div>
+                        <div style="margin: 6px 0; color: #374151;">👥 ${school.studentsReached} Students Reached</div>
+                        <div style="color: #6b7280; margin: 6px 0;">📍 ${school.district} District</div>
+                        ${galleryButton}
+                    </div>
+                `, {
+                    maxWidth: 280,
+                    className: 'custom-popup'
+                });
             });
-
-            // Plot Vehicle 1 route (polyline only, no markers at each stop)
-            if (projectData.vehicles[0] && projectData.vehicles[0].schedule) {
-                const v1Coords = projectData.vehicles[0].schedule.map(s => [s.lat, s.lng]);
-                if (v1Coords.length > 0) {
-                    L.polyline(v1Coords, { color: vehicle1Color, weight: 5, opacity: 0.8, dashArray: '10, 10' }).addTo(map);
-                }
-            }
-
-            // Plot Vehicle 2 route (polyline only, no markers at each stop)
-            if (projectData.vehicles[1] && projectData.vehicles[1].schedule) {
-                const v2Coords = projectData.vehicles[1].schedule.map(s => [s.lat, s.lng]);
-                if (v2Coords.length > 0) {
-                    L.polyline(v2Coords, { color: vehicle2Color, weight: 5, opacity: 0.8, dashArray: '10, 10' }).addTo(map);
-                }
-            }
-
-            // Add Vehicle 1 (Red Bus) marker at Plaksha - slightly offset
-            const vehicle1Marker = L.marker([plakshaLat + 0.002, plakshaLng - 0.002], { icon: redBusIcon }).addTo(map);
-            vehicle1Marker.bindPopup(`
-                <div class="p-2">
-                    <strong class="text-red-600">🚐 Vehicle 1 (Red Bus)</strong><br>
-                    <strong>Current Location: Plaksha University</strong><br>
-                    Status: Ready to start journey<br>
-                    Will cover: ${projectData.vehicles[0].schedule.length} districts
-                </div>
-            `);
-
-            // Add Vehicle 2 (Blue Bus) marker at Plaksha - slightly offset
-            const vehicle2Marker = L.marker([plakshaLat - 0.002, plakshaLng + 0.002], { icon: blueBusIcon }).addTo(map);
-            vehicle2Marker.bindPopup(`
-                <div class="p-2">
-                    <strong class="text-blue-600">🚐 Vehicle 2 (Blue Bus)</strong><br>
-                    <strong>Current Location: Plaksha University</strong><br>
-                    Status: Ready to start journey<br>
-                    Will cover: ${projectData.vehicles[1].schedule.length} districts
-                </div>
-            `);
         }
 
         function renderOtherPages() {
@@ -950,15 +965,58 @@
                 <section class="plaksha-teal text-white rounded-lg shadow-xl p-12 text-center mb-8">
                     <h2 class="text-5xl font-bold mb-4">📸 Photo Gallery</h2>
                     <p class="text-xl max-w-3xl mx-auto">
-                        View photos from our school visits across Punjab. Click "View Photos" to see the complete photo album for each school.
+                        View photos from our school visits across Punjab. Explore collages and complete photo albums from each visit.
                     </p>
+                </section>
+
+                <!-- School Collages Carousel Section -->
+                <section class="bg-white rounded-lg shadow-xl p-8 mb-8">
+                    <h3 class="text-3xl font-bold text-blue-900 mb-6 text-center">
+                        School Visit Highlights
+                    </h3>
+                    <p class="text-center text-gray-600 mb-8">
+                        One collage per school showcasing the best moments from our visits
+                    </p>
+
+                    <!-- Carousel Container -->
+                    <div class="relative max-w-4xl mx-auto">
+                        <!-- Carousel Slide -->
+                        <div id="collageCarousel" class="relative overflow-hidden rounded-lg bg-gradient-to-br from-gray-100 to-gray-200" style="min-height: 400px;">
+                            <div class="text-center py-12 text-gray-500">
+                                Loading collages...
+                            </div>
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition-all hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed" style="display: none;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                        <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition-all hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed" style="display: none;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Counter -->
+                        <div id="carouselCounter" class="text-center mt-4 text-gray-600 font-medium" style="display: none;">
+                            <span id="currentSlide">1</span> / <span id="totalSlides">0</span>
+                        </div>
+
+                        <!-- Dots Indicator -->
+                        <div id="dotsContainer" class="flex justify-center gap-2 mt-4" style="display: none;"></div>
+                    </div>
                 </section>
 
                 <!-- Schools Table Section -->
                 <section class="bg-white rounded-lg shadow-xl p-8">
-                    <h3 class="text-2xl font-bold text-blue-900 mb-6">
-                        School Visits (<span id="schoolCount">0</span> schools)
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">
+                        Complete Photo Albums
                     </h3>
+                    <p class="text-center text-gray-600 mb-6">
+                        View all photos from each school (<span id="schoolCount">0</span> schools)
+                    </p>
 
                     <!-- Table Container with horizontal scroll on mobile -->
                     <div class="overflow-x-auto">
@@ -983,11 +1041,21 @@
                 </section>
             `;
 
-            // Load gallery data and populate table
+            // Load gallery data and populate both collage gallery and table
             loadGalleryData().then(data => {
                 if (data.schools.length > 0) {
+                    renderCollageGallery(data.schools);
                     renderSchoolsTable(data.schools);
                 } else {
+                    document.getElementById('collageGallery').innerHTML = `
+                        <div class="text-center py-12 col-span-full">
+                            <svg class="mx-auto mb-4 text-gray-400" width="64" height="64" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <h4 class="text-xl font-bold text-gray-700 mb-2">No School Collages Yet</h4>
+                            <p class="text-gray-600">Collages will appear here as schools are visited!</p>
+                        </div>
+                    `;
                     document.getElementById('schoolsTableBody').innerHTML = `
                         <tr>
                             <td colspan="4" class="px-6 py-12 text-center">
@@ -1002,6 +1070,153 @@
                     document.getElementById('schoolCount').textContent = '0';
                 }
             });
+        }
+
+        // Carousel state
+        let carouselSchools = [];
+        let currentSlideIndex = 0;
+        const imageFormats = ['.jpg', '.jpeg', '.png', '.webp'];
+
+        function renderCollageGallery(schools) {
+            // Sort by date (newest first)
+            carouselSchools = schools.sort((a, b) => new Date(b.visitDate) - new Date(a.visitDate));
+
+            if (carouselSchools.length === 0) {
+                return;
+            }
+
+            // Initialize carousel
+            currentSlideIndex = 0;
+            document.getElementById('totalSlides').textContent = carouselSchools.length;
+
+            // Show controls
+            document.getElementById('prevBtn').style.display = 'block';
+            document.getElementById('nextBtn').style.display = 'block';
+            document.getElementById('carouselCounter').style.display = 'block';
+
+            // Create dots for visual indicator (show only if <= 10 schools for cleaner UI)
+            if (carouselSchools.length <= 10) {
+                const dotsContainer = document.getElementById('dotsContainer');
+                dotsContainer.style.display = 'flex';
+                dotsContainer.innerHTML = carouselSchools.map((_, index) =>
+                    `<button onclick="goToSlide(${index})" class="dot w-2 h-2 rounded-full transition-all ${index === 0 ? 'bg-cyan-600 w-8' : 'bg-gray-300'}" data-index="${index}"></button>`
+                ).join('');
+            }
+
+            // Setup navigation
+            document.getElementById('prevBtn').onclick = () => navigateCarousel(-1);
+            document.getElementById('nextBtn').onclick = () => navigateCarousel(1);
+
+            // Keyboard navigation
+            document.addEventListener('keydown', handleKeyboardNav);
+
+            // Render first slide
+            renderSlide(0);
+        }
+
+        function renderSlide(index) {
+            const school = carouselSchools[index];
+            const carousel = document.getElementById('collageCarousel');
+
+            // Generate potential image paths
+            const imagePaths = imageFormats.map(format =>
+                `gallery_school_collage/${encodeURIComponent(school.name)}${format}`
+            );
+
+            carousel.innerHTML = `
+                <div class="relative w-full h-full" style="min-height: 400px;">
+                    <img
+                        id="carouselImage"
+                        src="${imagePaths[0]}"
+                        alt="${school.name} collage"
+                        class="w-full h-full object-contain bg-gradient-to-br from-gray-100 to-gray-200"
+                        onerror="handleCarouselImageError(this, '${school.name}', ${JSON.stringify(imagePaths).replace(/"/g, '&quot;')});"
+                        style="max-height: 600px;"
+                    />
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
+                        <h4 class="text-white font-bold text-2xl mb-2">${school.name}</h4>
+                        <div class="flex items-center justify-between text-white">
+                            <div>
+                                <p class="text-lg text-gray-200">${school.district} District</p>
+                                <p class="text-sm text-gray-300">${formatDate(school.visitDate)}</p>
+                            </div>
+                            <a href="${school.folderUrl}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-lg transition inline-flex items-center gap-2">
+                                View All Photos
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Update counter and dots
+            document.getElementById('currentSlide').textContent = index + 1;
+            updateDots(index);
+
+            // Update button states
+            document.getElementById('prevBtn').disabled = index === 0;
+            document.getElementById('nextBtn').disabled = index === carouselSchools.length - 1;
+        }
+
+        function navigateCarousel(direction) {
+            const newIndex = currentSlideIndex + direction;
+            if (newIndex >= 0 && newIndex < carouselSchools.length) {
+                currentSlideIndex = newIndex;
+                renderSlide(currentSlideIndex);
+            }
+        }
+
+        function goToSlide(index) {
+            currentSlideIndex = index;
+            renderSlide(currentSlideIndex);
+        }
+
+        function updateDots(activeIndex) {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('bg-cyan-600', 'w-8');
+                    dot.classList.remove('bg-gray-300');
+                } else {
+                    dot.classList.remove('bg-cyan-600', 'w-8');
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+        }
+
+        function handleKeyboardNav(e) {
+            if (e.key === 'ArrowLeft') {
+                navigateCarousel(-1);
+            } else if (e.key === 'ArrowRight') {
+                navigateCarousel(1);
+            }
+        }
+
+        function handleCarouselImageError(imgElement, schoolName, imagePaths) {
+            const paths = JSON.parse(imagePaths);
+            const currentSrc = imgElement.src;
+            const currentPathIndex = paths.findIndex(path => currentSrc.includes(path));
+
+            // Try next format
+            if (currentPathIndex < paths.length - 1) {
+                imgElement.src = paths[currentPathIndex + 1];
+            } else {
+                // Show placeholder if all formats fail
+                imgElement.parentElement.innerHTML = `
+                    <div class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-cyan-50 to-blue-50" style="min-height: 400px;">
+                        <svg class="text-cyan-300 mb-4" width="96" height="96" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <p class="text-center text-xl text-gray-700 font-bold mb-2">${schoolName}</p>
+                        <p class="text-center text-sm text-gray-500">Collage coming soon</p>
+                    </div>
+                `;
+            }
         }
 
         function renderSchoolsTable(schools) {

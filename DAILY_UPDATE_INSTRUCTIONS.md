@@ -9,6 +9,10 @@ science-on-wheels/
 ├── data.json              # Main data file with mission stats and daily updates
 ├── schools-gallery.json   # Gallery data with school photos
 ├── index.html            # Website (auto-updates from JSON files)
+├── gallery_school_collage/  # School collage images folder
+│   ├── GHS-Balongi.jpg
+│   ├── GHS-Kurali.jpg
+│   └── [SchoolName].jpg   # One image per school (must match JSON name)
 └── DAILY_UPDATE_INSTRUCTIONS.md  # This file
 ```
 
@@ -38,8 +42,8 @@ User will provide:
 ```
 Date: YYYY-MM-DD
 Schools visited:
-1. School Name - Coordinates: (latitude, longitude) - Students: number
-2. School Name - Coordinates: (latitude, longitude) - Students: number
+1. School Name - Coordinates: (latitude, longitude) - Students: number - District: District Name
+2. School Name - Coordinates: (latitude, longitude) - Students: number - District: District Name
 ...
 
 Start/End: Plaksha University (30.6310588, 76.7230178)
@@ -47,6 +51,11 @@ Start/End: Plaksha University (30.6310588, 76.7230178)
 Gallery:
 - School Name: OneDrive URL
 - School Name: OneDrive URL
+...
+
+Collage Images:
+- School Name: Filename.jpg
+- School Name: Filename.jpg
 ...
 ```
 
@@ -69,7 +78,6 @@ Extract current values:
 ### STEP 2: Calculate Route Distance
 
 Use the Haversine formula to calculate distances:
-
 ```python
 import math
 
@@ -101,7 +109,6 @@ def haversine(lat1, lon1, lat2, lon2):
 - Round to nearest whole number
 
 ### STEP 3: Calculate New Cumulative Statistics
-
 ```
 new_schools_count = old_schools_count + number_of_schools_visited_today
 new_students = old_students + sum_of_students_today
@@ -138,7 +145,6 @@ new_districts = count unique districts from all dailyUpdates including today
 **4c. Add new daily update entry:**
 
 Insert the new entry at the BEGINNING of the `dailyUpdates` array (after the opening `[`):
-
 ```json
 {
   "date": "YYYY-MM-DD",
@@ -186,7 +192,6 @@ Insert the new entry at the BEGINNING of the `dailyUpdates` array (after the ope
 ### STEP 5: Update schools-gallery.json
 
 Add new school entries to the `schools` array at the END (before the closing `]`):
-
 ```json
 {
   "name": "School Name",
@@ -201,8 +206,43 @@ Add new school entries to the `schools` array at the END (before the closing `]`
 - Add one entry for EACH school visited
 - Use the exact school name as provided
 
-### STEP 6: Validate JSON Files
+### STEP 5.5: Upload Collage Images to Gallery
 
+Upload the collage images to the `gallery_school_collage/` folder on the remote repository.
+
+**File Naming Rules (CRITICAL):**
+- School name in JSON: `"name": "GHS-Balongi"`
+- Image filename must match EXACTLY: `GHS-Balongi.jpg`
+- Supported formats: `.jpg`, `.jpeg`, `.png`, `.webp`
+- The carousel reads school names from `schools-gallery.json` and loads images matching those names
+
+**Upload Process:**
+1. Ensure image filename matches the school name in JSON exactly
+2. Upload to: `gallery_school_collage/[SchoolName].jpg`
+3. Use one of these methods:
+   - Push via Git: `git add gallery_school_collage/[SchoolName].jpg`
+   - Upload via GitHub web interface
+   - Use repository file upload feature
+
+**Example Matching:**
+```json
+// In schools-gallery.json
+{
+  "name": "GHS Phase-5",
+  ...
+}
+```
+```
+// Image file location
+gallery_school_collage/GHS Phase-5.jpg
+```
+
+**If Image is Missing:**
+- Carousel will display a placeholder
+- Always ensure filenames match JSON names exactly
+- Check for spelling, capitalization, spaces, and special characters
+
+### STEP 6: Validate JSON Files
 ```bash
 # Validate JSON syntax
 python3 -c "import json; json.load(open('data.json'))"
@@ -212,7 +252,6 @@ python3 -c "import json; json.load(open('schools-gallery.json'))"
 If validation fails, fix syntax errors before proceeding.
 
 ### STEP 7: Git Workflow
-
 ```bash
 # Check current branch
 git branch
@@ -223,6 +262,7 @@ git branch
 
 # Stage files
 git add data.json schools-gallery.json
+git add gallery_school_collage/*.jpg gallery_school_collage/*.jpeg gallery_school_collage/*.png gallery_school_collage/*.webp
 
 # View changes
 git diff --cached
@@ -234,6 +274,7 @@ Update website with <Month> <Day>, 2025 school visits
 - Add <School1> (<students1> students) and <School2> (<students2> students) to daily updates
 - Update mission stats: <new_schools> schools covered, <new_students> total students, <new_distance> km travelled
 - Add schools to gallery with OneDrive photo links
+- Upload collage images to gallery_school_collage/ folder
 - Route: Plaksha → <School1> → <School2> → Plaksha (<distance> km)
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)
@@ -249,12 +290,12 @@ git push -u origin claude/session-<ID>
 ### STEP 8: Create Pull Request
 
 Provide the user with the GitHub PR creation URL (from git push output) and the following PR template:
-
 ```markdown
 ## Summary
 - Added <School1> (<students1> students) and <School2> (<students2> students) to daily updates for <date>
 - Updated mission statistics: <new_schools> schools covered, <new_students> total students impacted, <new_distance> km travelled
 - Added schools to gallery page with OneDrive photo links
+- Uploaded collage images to gallery_school_collage/ folder
 - Route: Plaksha University → <School1> → <School2> → Plaksha University (<distance> km total)
 
 ## Changes
@@ -271,11 +312,17 @@ Provide the user with the GitHub PR creation URL (from git push output) and the 
 - Added <School1> with OneDrive link
 - Added <School2> with OneDrive link
 
+### gallery_school_collage/
+- Uploaded <School1>.jpg collage image
+- Uploaded <School2>.jpg collage image
+
 ## Test plan
 - [x] Verified data.json is valid JSON
 - [x] Verified schools-gallery.json is valid JSON
 - [x] Checked that coordinates are correct
 - [x] Confirmed distance calculations are accurate
+- [x] Verified collage image filenames match school names in JSON exactly
+- [x] Confirmed images are in correct format (.jpg, .jpeg, .png, or .webp)
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)
 ```
@@ -286,14 +333,18 @@ Provide the user with the GitHub PR creation URL (from git push output) and the 
 ```
 Date: 2025-10-29
 Schools visited:
-1. GHS-Balongi - Coordinates: (30.7234, 76.7123) - Students: 300
-2. GHS-Kurali - Coordinates: (30.7845, 76.7956) - Students: 275
+1. GHS-Balongi - Coordinates: (30.7234, 76.7123) - Students: 300 - District: SAS Nagar
+2. GHS-Kurali - Coordinates: (30.7845, 76.7956) - Students: 275 - District: SAS Nagar
 
 Start/End: Plaksha University (30.6310588, 76.7230178)
 
 Gallery:
 - GHS-Balongi: https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ExampleLink1
 - GHS-Kurali: https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ExampleLink2
+
+Collage Images:
+- GHS-Balongi: GHS-Balongi.jpg
+- GHS-Kurali: GHS-Kurali.jpg
 ```
 
 ### Processing:
@@ -325,6 +376,34 @@ Gallery:
    - Provide PR creation link
 
 ## Important Notes
+
+### Gallery Image Management
+- **Filename Matching:** The school name in `schools-gallery.json` must match the image filename EXACTLY
+- **Supported Formats:** `.jpg`, `.jpeg`, `.png`, `.webp`
+- **Location:** All images go in the `gallery_school_collage/` folder
+- **Naming Convention:** Use the exact school name from JSON
+  - Example: If JSON has `"name": "GHS-Saneta"`, file must be `GHS-Saneta.jpg`
+  - Capitalization, spaces, and special characters MUST match
+- **Missing Images:** If an image filename doesn't match, the carousel will show a placeholder
+- **Multiple Schools:** Each school needs its own unique image file
+
+**Gallery Folder Structure Example:**
+```
+gallery_school_collage/
+  ├── GHS-Balongi.jpg      ✓ matches JSON entry "GHS-Balongi"
+  ├── GHS-Kurali.png       ✓ matches JSON entry "GHS-Kurali"
+  ├── GHS Phase-5.jpg      ✓ matches JSON entry "GHS Phase-5" (note: spaces matter!)
+  └── GHS Kumbra.jpeg      ✓ matches JSON entry "GHS Kumbra"
+```
+
+**Verification Checklist for Images:**
+- [ ] Each image filename matches corresponding school name in JSON
+- [ ] No typos in filenames
+- [ ] Proper capitalization maintained
+- [ ] Spaces preserved correctly
+- [ ] File extension is one of: .jpg, .jpeg, .png, .webp
+- [ ] Images are uploaded to gallery_school_collage/ folder
+- [ ] Images are included in git commit
 
 ### District Counting
 - Count UNIQUE districts across ALL dailyUpdates entries
@@ -421,6 +500,10 @@ Before committing, verify:
 - [ ] New dailyUpdates entry is at beginning of array
 - [ ] All schools added to gallery
 - [ ] OneDrive links are complete
+- [ ] Collage images uploaded to gallery_school_collage/ folder
+- [ ] Image filenames match school names in JSON EXACTLY
+- [ ] Image formats are supported (.jpg, .jpeg, .png, or .webp)
+- [ ] No spelling/capitalization mismatches between JSON and filenames
 - [ ] Commit message is descriptive
 - [ ] Changes pushed to correct branch
 - [ ] PR link provided to user
