@@ -1,0 +1,63 @@
+================================================================================
+SCIENCE ON WHEELS - DAILY UPDATE PROMPT TEMPLATE
+================================================================================
+
+Copy and paste this prompt, fill in the bracketed information, and give it to
+any AI assistant (Claude, ChatGPT, etc.) to update the website.
+
+================================================================================
+
+Update the Science on Wheels website with today's school visits following the
+instructions in DAILY_UPDATE_INSTRUCTIONS.md.
+
+**Date:** [YYYY-MM-DD]
+
+**Schools visited:**
+1. [School Name] - Coordinates: ([latitude], [longitude]) - Students: [number] - District: [District Name]
+2. [School Name] - Coordinates: ([latitude], [longitude]) - Students: [number] - District: [District Name]
+[Add more schools as needed...]
+
+**Start/End Point:** Plaksha University (30.6310588, 76.7230178)
+
+**Gallery Links:**
+- [School Name]: [Complete OneDrive URL]
+- [School Name]: [Complete OneDrive URL]
+[Add more links as needed...]
+
+**Collage Images:**
+- [School Name]: [Filename for collage image - e.g., GHS-Balongi.jpg]
+- [School Name]: [Filename for collage image - e.g., GHS-Kurali.jpg]
+[Add more images as needed...]
+
+**Instructions:**
+1. Read DAILY_UPDATE_INSTRUCTIONS.md for complete step-by-step process
+2. Calculate route distance (Plaksha → School1 → School2 → ... → Plaksha)
+3. Update data.json with new daily entry and cumulative mission statistics
+4. Update schools-gallery.json with new school entries
+5. Upload collage images to gallery_school_collage/ folder (filenames MUST match school names in JSON)
+6. Validate both JSON files
+7. Commit changes with descriptive message
+8. Push to branch: claude/session-[unique-id]
+9. Provide PR creation link and description
+
+================================================================================
+
+EXAMPLE (for reference):
+
+**Date:** 2025-10-29
+
+**Schools visited:**
+1. GHS-Balongi - Coordinates: (30.7234, 76.7123) - Students: 300 - District: SAS Nagar
+2. GHS-Kurali - Coordinates: (30.7845, 76.7956) - Students: 275 - District: SAS Nagar
+
+**Start/End Point:** Plaksha University (30.6310588, 76.7230178)
+
+**Gallery Links:**
+- GHS-Balongi: https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ExampleLink1
+- GHS-Kurali: https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ExampleLink2
+
+**Collage Images:**
+- GHS-Balongi: GHS-Balongi.jpg
+- GHS-Kurali: GHS-Kurali.jpg
+
+================================================================================
