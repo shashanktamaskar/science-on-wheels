@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-28",
+  "lastUpdated": "2025-10-29",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,18 +10,57 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 4,
+      "current": 6,
       "total": 235
     },
     "districtsCovered": {
       "current": 1,
       "total": 16
     },
-    "studentsImpacted": 1341,
-    "distanceTravelled": 47,
+    "studentsImpacted": 2196,
+    "distanceTravelled": 72,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-10-29",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GHS-MUBARIKPUR",
+          "location": {
+            "lat": 30.6113071,
+            "lng": 76.8489418
+          },
+          "studentsReached": 240,
+          "district": "SAS Nagar"
+        },
+        {
+          "name": "GSSS-MUBARIKPUR",
+          "location": {
+            "lat": 30.6112191,
+            "lng": 76.8512458
+          },
+          "studentsReached": 615,
+          "district": "SAS Nagar"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "endPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "distanceTravelled": 25
+      },
+      "totalStudents": 855,
+      "schoolsVisited": 2
+    },
     {
       "date": "2025-10-27",
       "vehicle": 1,
