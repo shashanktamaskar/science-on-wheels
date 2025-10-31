@@ -14,7 +14,7 @@
       "total": 235
     },
     "districtsCovered": {
-      "current": 2,
+      "current": 1,
       "total": 16
     },
     "studentsImpacted": 4346,
@@ -72,7 +72,7 @@
             "lng": 76.6628657
           },
           "studentsReached": 505,
-          "district": "Mohali"
+          "district": "SAS Nagar"
         },
         {
           "name": "GSSS-LALRU",
@@ -81,7 +81,7 @@
             "lng": 76.7114194
           },
           "studentsReached": 497,
-          "district": "Mohali"
+          "district": "SAS Nagar"
         }
       ],
       "route": {
