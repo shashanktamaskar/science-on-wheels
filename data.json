@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-30",
+  "lastUpdated": "2025-10-31",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,18 +10,57 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 8,
+      "current": 10,
       "total": 235
     },
     "districtsCovered": {
-      "current": 1,
+      "current": 2,
       "total": 16
     },
-    "studentsImpacted": 3198,
-    "distanceTravelled": 117,
+    "studentsImpacted": 4346,
+    "distanceTravelled": 156,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-10-31",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS RAMPUR SAINIA",
+          "location": {
+            "lat": 30.6321256,
+            "lng": 76.7251603
+          },
+          "studentsReached": 491,
+          "district": "SAS Nagar"
+        },
+        {
+          "name": "GSSS-SAMGAULI",
+          "location": {
+            "lat": 30.5345967,
+            "lng": 76.8938531
+          },
+          "studentsReached": 657,
+          "district": "SAS Nagar"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "endPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "distanceTravelled": 39
+      },
+      "totalStudents": 1148,
+      "schoolsVisited": 2
+    },
     {
       "date": "2025-10-30",
       "vehicle": 1,
