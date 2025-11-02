@@ -7,6 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet MarkerCluster -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -41,6 +45,112 @@
             max-width: 150px;
             max-height: 80px;
             object-fit: contain;
+        }
+        /* Map Search Box */
+        .map-search-box {
+            position: absolute;
+            top: 10px;
+            right: 50px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .map-search-input {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            border-radius: 6px;
+            width: 250px;
+            font-size: 14px;
+        }
+        .map-search-input:focus {
+            outline: none;
+            border-color: #017a7b;
+        }
+        /* Enhanced Legend */
+        .map-legend {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 60px;
+            cursor: pointer;
+            padding: 20px;
+            user-select: none;
+        }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+        /* Gallery Filters */
+        .filter-dropdown {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .filter-dropdown:focus {
+            outline: none;
+            border-color: #017a7b;
+        }
+        /* Touch gestures indicator */
+        .swipe-indicator {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 12px;
+            opacity: 0.7;
         }
     </style>
 </head>
@@ -170,15 +280,46 @@
                 <!-- Punjab Map with Vehicle Routes -->
                 <div class="mt-8">
                     <h3 class="text-2xl font-bold text-blue-900 mb-4">Vehicle Routes Across Punjab</h3>
-                    <div id="map" class="shadow-lg"></div>
-                    <div class="mt-4 flex gap-4 justify-center flex-wrap">
-                        <div class="flex items-center gap-2">
-                            <div class="w-4 h-4 bg-red-500 rounded-full"></div>
-                            <span class="text-sm">Vehicle 1 Route</span>
+                    <div class="relative">
+                        <div id="map" class="shadow-lg"></div>
+                        <!-- Map Search Box -->
+                        <div class="map-search-box">
+                            <input
+                                type="text"
+                                id="mapSearch"
+                                class="map-search-input"
+                                placeholder="🔍 Search schools..."
+                                aria-label="Search schools on map"
+                            />
                         </div>
-                        <div class="flex items-center gap-2">
-                            <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
-                            <span class="text-sm">Vehicle 2 Route</span>
+                    </div>
+                    <!-- Enhanced Legend -->
+                    <div class="mt-6 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg">
+                        <h4 class="font-bold text-lg text-blue-900 mb-4">Map Legend</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <div class="legend-item">
+                                    <div style="font-size: 24px;">🚌</div>
+                                    <span><strong>Green Bus:</strong> Visited School</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="w-4 h-4 bg-cyan-500 rounded-full border-2 border-white"></div>
+                                    <span><strong>Cyan Line:</strong> Vehicle 1 Route</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="w-4 h-4 bg-purple-500 rounded-full border-2 border-white"></div>
+                                    <span><strong>Purple Line:</strong> Vehicle 2 Route</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="legend-item">
+                                    <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#f59e0b" opacity="0.3"/><circle cx="10" cy="10" r="4" fill="#f59e0b"/></svg>
+                                    <span><strong>Cluster:</strong> Multiple Schools (click to zoom)</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="text-sm text-gray-600">💡 <strong>Tip:</strong> Click markers for details, use search to find schools</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -299,6 +440,30 @@
         <div id="supporters" class="page-section space-y-12"></div>
     </div>
 
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)">&#10094;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImage" class="lightbox-image" src="" alt="">
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
+                <button onclick="downloadImage()" class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition flex items-center gap-2">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    Download
+                </button>
+                <button onclick="shareImage()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition flex items-center gap-2">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                    </svg>
+                    Share
+                </button>
+            </div>
+        </div>
+        <span class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)">&#10095;</span>
+    </div>
+
     <!-- Footer -->
     <footer class="plaksha-teal-light text-white py-8 mt-16">
         <div class="max-w-7xl mx-auto px-6 text-center">
@@ -407,16 +572,19 @@
             document.getElementById('districtsProgress').style.width = districtsPercent + '%';
         }
 
+        let schoolMarkers = []; // Store all markers for search
+        let markerClusterGroup = null;
+
         function initializeMap() {
             if (!projectData || map) return;
 
             // Initialize map centered on SAS Nagar with higher zoom level
             map = L.map('map', {
-                minZoom: 8,
+                minZoom: 7,
                 maxZoom: 18,
                 scrollWheelZoom: false, // Disable scroll wheel zoom to prevent accidental zoom out
                 zoomControl: true
-            }).setView([30.7046, 76.7179], 11); // SAS Nagar coordinates with zoom 11
+            }).setView([30.7046, 76.7179], 9); // SAS Nagar coordinates
 
             // Re-enable zoom on map click (user must click map first to zoom)
             map.on('click', function() {
@@ -428,9 +596,17 @@
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '© OpenStreetMap contributors',
-                minZoom: 8,
+                minZoom: 7,
                 maxZoom: 18
             }).addTo(map);
+
+            // Initialize marker cluster group
+            markerClusterGroup = L.markerClusterGroup({
+                maxClusterRadius: 50,
+                spiderfyOnMaxZoom: true,
+                showCoverageOnHover: false,
+                zoomToBoundsOnClick: true
+            });
 
             // Create green bus icon for completed schools
             const greenBusIcon = L.divIcon({
@@ -460,9 +636,16 @@
                 });
             }
 
+            // Add route polylines for vehicles
+            addVehicleRoutes();
+
             // Add markers for each completed school
             completedSchools.forEach(school => {
-                const marker = L.marker([school.lat, school.lng], { icon: greenBusIcon }).addTo(map);
+                const marker = L.marker([school.lat, school.lng], { icon: greenBusIcon });
+
+                // Store marker data for search
+                marker.schoolData = school;
+                schoolMarkers.push(marker);
 
                 // Add tooltip that shows on hover
                 marker.bindTooltip(school.name, {
@@ -499,6 +682,81 @@
                 `, {
                     maxWidth: 280,
                     className: 'custom-popup'
+                });
+
+                // Add marker to cluster group
+                markerClusterGroup.addLayer(marker);
+            });
+
+            // Add cluster group to map
+            map.addLayer(markerClusterGroup);
+
+            // Setup search functionality
+            setupMapSearch();
+        }
+
+        // Add vehicle route polylines
+        function addVehicleRoutes() {
+            if (!projectData || !projectData.vehicles) return;
+
+            const colors = ['#06b6d4', '#a855f7']; // Cyan for Vehicle 1, Purple for Vehicle 2
+
+            projectData.vehicles.forEach((vehicle, index) => {
+                if (vehicle.schedule && vehicle.schedule.length > 0) {
+                    const routePoints = vehicle.schedule.map(stop => [stop.lat, stop.lng]);
+
+                    // Create polyline
+                    const polyline = L.polyline(routePoints, {
+                        color: colors[index],
+                        weight: 3,
+                        opacity: 0.7,
+                        smoothFactor: 1
+                    }).addTo(map);
+
+                    // Add popup to polyline showing route info
+                    polyline.bindPopup(`
+                        <div style="padding: 10px; font-family: system-ui, -apple-system, sans-serif;">
+                            <div style="font-weight: bold; color: #1f2937; margin-bottom: 6px;">${vehicle.name} Route</div>
+                            <div style="color: #6b7280; font-size: 0.9em;">
+                                ${vehicle.schedule.map(stop => `📍 ${stop.district}`).join('<br>')}
+                            </div>
+                        </div>
+                    `);
+                }
+            });
+        }
+
+        // Map search functionality
+        function setupMapSearch() {
+            const searchInput = document.getElementById('mapSearch');
+            if (!searchInput) return;
+
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+
+                if (searchTerm.length < 2) {
+                    // Reset all markers to visible
+                    schoolMarkers.forEach(marker => {
+                        marker.setOpacity(1);
+                    });
+                    return;
+                }
+
+                // Filter markers based on search
+                schoolMarkers.forEach(marker => {
+                    const schoolName = marker.schoolData.name.toLowerCase();
+                    const district = marker.schoolData.district.toLowerCase();
+
+                    if (schoolName.includes(searchTerm) || district.includes(searchTerm)) {
+                        marker.setOpacity(1);
+                        // Optionally highlight matching markers
+                        if (schoolMarkers.length < 50) { // Only auto-zoom if not too many schools
+                            marker.openPopup();
+                            map.setView(marker.getLatLng(), 13);
+                        }
+                    } else {
+                        marker.setOpacity(0.2);
+                    }
                 });
             });
         }
@@ -969,6 +1227,29 @@
                     </p>
                 </section>
 
+                <!-- Filters Section -->
+                <section class="bg-white rounded-lg shadow-xl p-6 mb-8">
+                    <div class="flex flex-wrap items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <label for="districtFilter" class="font-semibold text-gray-700">Filter by District:</label>
+                            <select id="districtFilter" class="filter-dropdown" onchange="applyGalleryFilters()">
+                                <option value="all">All Districts</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <label for="dateFilter" class="font-semibold text-gray-700">Filter by Date:</label>
+                            <select id="dateFilter" class="filter-dropdown" onchange="applyGalleryFilters()">
+                                <option value="all">All Dates</option>
+                                <option value="latest">Latest First</option>
+                                <option value="oldest">Oldest First</option>
+                            </select>
+                        </div>
+                        <button onclick="resetGalleryFilters()" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition ml-auto">
+                            Reset Filters
+                        </button>
+                    </div>
+                </section>
+
                 <!-- School Collages Carousel Section -->
                 <section class="bg-white rounded-lg shadow-xl p-8 mb-8">
                     <h3 class="text-3xl font-bold text-blue-900 mb-6 text-center">
@@ -1044,6 +1325,9 @@
             // Load gallery data and populate both collage gallery and table
             loadGalleryData().then(data => {
                 if (data.schools.length > 0) {
+                    allGallerySchools = data.schools;
+                    filteredGallerySchools = data.schools;
+                    populateDistrictFilter(data.schools);
                     renderCollageGallery(data.schools);
                     renderSchoolsTable(data.schools);
                 } else {
@@ -1129,10 +1413,13 @@
                         id="carouselImage"
                         src="${imagePaths[0]}"
                         alt="${school.name} collage"
-                        class="w-full h-full object-contain bg-gradient-to-br from-gray-100 to-gray-200"
+                        class="w-full h-full object-contain bg-gradient-to-br from-gray-100 to-gray-200 cursor-pointer"
                         onerror="handleCarouselImageError(this, '${school.name}', ${JSON.stringify(imagePaths).replace(/"/g, '&quot;')});"
+                        onclick="openLightbox('${imagePaths[0]}')"
                         style="max-height: 600px;"
+                        title="Click to view full screen"
                     />
+                    <div class="swipe-indicator">👆 Swipe or use arrows to navigate</div>
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
                         <h4 class="text-white font-bold text-2xl mb-2">${school.name}</h4>
                         <div class="flex items-center justify-between text-white">
@@ -1286,6 +1573,193 @@
         function toggleMobileMenu() {
             document.getElementById('mobileMenu').classList.toggle('hidden');
         }
+
+        // Gallery filter state
+        let allGallerySchools = [];
+        let filteredGallerySchools = [];
+
+        // Populate district filter and apply filters
+        function populateDistrictFilter(schools) {
+            const districts = [...new Set(schools.map(s => s.district))].sort();
+            const districtFilter = document.getElementById('districtFilter');
+            if (districtFilter) {
+                districts.forEach(district => {
+                    const option = document.createElement('option');
+                    option.value = district;
+                    option.textContent = district;
+                    districtFilter.appendChild(option);
+                });
+            }
+        }
+
+        function applyGalleryFilters() {
+            const districtFilter = document.getElementById('districtFilter')?.value || 'all';
+            const dateFilter = document.getElementById('dateFilter')?.value || 'all';
+
+            let filtered = [...allGallerySchools];
+
+            // Apply district filter
+            if (districtFilter !== 'all') {
+                filtered = filtered.filter(s => s.district === districtFilter);
+            }
+
+            // Apply date sorting
+            if (dateFilter === 'latest') {
+                filtered.sort((a, b) => new Date(b.visitDate) - new Date(a.visitDate));
+            } else if (dateFilter === 'oldest') {
+                filtered.sort((a, b) => new Date(a.visitDate) - new Date(b.visitDate));
+            }
+
+            filteredGallerySchools = filtered;
+            renderCollageGallery(filtered);
+            renderSchoolsTable(filtered);
+        }
+
+        function resetGalleryFilters() {
+            document.getElementById('districtFilter').value = 'all';
+            document.getElementById('dateFilter').value = 'all';
+            applyGalleryFilters();
+        }
+
+        // Lightbox functionality
+        let currentLightboxImages = [];
+        let currentLightboxIndex = 0;
+
+        function openLightbox(imageSrc, images = [], startIndex = 0) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+
+            currentLightboxImages = images.length > 0 ? images : [imageSrc];
+            currentLightboxIndex = startIndex;
+
+            lightboxImage.src = currentLightboxImages[currentLightboxIndex];
+            lightbox.classList.add('active');
+
+            // Prevent body scroll when lightbox is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeLightboxImage(direction) {
+            currentLightboxIndex += direction;
+
+            if (currentLightboxIndex < 0) {
+                currentLightboxIndex = currentLightboxImages.length - 1;
+            } else if (currentLightboxIndex >= currentLightboxImages.length) {
+                currentLightboxIndex = 0;
+            }
+
+            document.getElementById('lightboxImage').src = currentLightboxImages[currentLightboxIndex];
+        }
+
+        // Download image
+        function downloadImage() {
+            const imageSrc = document.getElementById('lightboxImage').src;
+            const link = document.createElement('a');
+            link.href = imageSrc;
+            link.download = imageSrc.split('/').pop() || 'photo.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Share image
+        function shareImage() {
+            const imageSrc = document.getElementById('lightboxImage').src;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Science on Wheels - Photo',
+                    text: 'Check out this photo from Science on Wheels Punjab!',
+                    url: imageSrc
+                }).catch(err => console.log('Error sharing:', err));
+            } else {
+                // Fallback: copy link to clipboard
+                navigator.clipboard.writeText(imageSrc).then(() => {
+                    alert('Image link copied to clipboard!');
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                });
+            }
+        }
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+                if (e.key === 'ArrowRight') changeLightboxImage(1);
+            }
+        });
+
+        // Close lightbox when clicking outside image
+        document.getElementById('lightbox')?.addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') {
+                closeLightbox();
+            }
+        });
+
+        // Touch/Swipe gestures for carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        function handleCarouselSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swiped left - next
+                    navigateCarousel(1);
+                } else {
+                    // Swiped right - previous
+                    navigateCarousel(-1);
+                }
+            }
+        }
+
+        // Add touch event listeners to carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('collageCarousel');
+            if (carousel) {
+                carousel.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                carousel.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleCarouselSwipe();
+                }, { passive: true });
+            }
+
+            // Touch gestures for lightbox
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox) {
+                lightbox.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                }, { passive: true });
+
+                lightbox.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    const diff = touchStartX - touchEndX;
+                    const swipeThreshold = 50;
+
+                    if (Math.abs(diff) > swipeThreshold) {
+                        if (diff > 0) {
+                            changeLightboxImage(1);
+                        } else {
+                            changeLightboxImage(-1);
+                        }
+                    }
+                }, { passive: true });
+            }
+        });
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
