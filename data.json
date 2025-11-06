@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-10-31",
+  "lastUpdated": "2025-11-06",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,18 +10,48 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 10,
+      "current": 11,
       "total": 235
     },
     "districtsCovered": {
       "current": 1,
       "total": 16
     },
-    "studentsImpacted": 4346,
-    "distanceTravelled": 156,
+    "studentsImpacted": 5497,
+    "distanceTravelled": 174,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-11-06",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-LOHGARH",
+          "location": {
+            "lat": 30.642822,
+            "lng": 76.814822
+          },
+          "studentsReached": 1151,
+          "district": "SAS Nagar"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "endPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "distanceTravelled": 18
+      },
+      "totalStudents": 1151,
+      "schoolsVisited": 1
+    },
     {
       "date": "2025-10-31",
       "vehicle": 1,
