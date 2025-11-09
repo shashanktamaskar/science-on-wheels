@@ -42,8 +42,8 @@ User will provide:
 ```
 Date: YYYY-MM-DD
 Schools visited:
-1. School Name - Coordinates: (latitude, longitude) - Students: number - District: District Name
-2. School Name - Coordinates: (latitude, longitude) - Students: number - District: District Name
+1. School Name - Coordinates: (latitude, longitude) - Students: number - Girls: number - Boys: number - District: District Name
+2. School Name - Coordinates: (latitude, longitude) - Students: number - Girls: number - Boys: number - District: District Name
 ...
 
 Start/End: Plaksha University (30.6310588, 76.7230178)
@@ -72,6 +72,8 @@ Extract current values:
 - Current schools count: `data.mission.schoolsCovered.current`
 - Current districts count: `data.mission.districtsCovered.current`
 - Current students: `data.mission.studentsImpacted`
+- Current girls: `data.mission.genderBreakdown.girls`
+- Current boys: `data.mission.genderBreakdown.boys`
 - Current distance: `data.mission.distanceTravelled`
 - All districts visited so far (from `dailyUpdates` array)
 
@@ -112,6 +114,8 @@ def haversine(lat1, lon1, lat2, lon2):
 ```
 new_schools_count = old_schools_count + number_of_schools_visited_today
 new_students = old_students + sum_of_students_today
+new_girls = old_girls + sum_of_girls_today
+new_boys = old_boys + sum_of_boys_today
 new_distance = old_distance + today_route_distance
 
 # For districts: check if any new district was visited
@@ -137,6 +141,10 @@ new_districts = count unique districts from all dailyUpdates including today
     "total": 16
   },
   "studentsImpacted": <new_students>,
+  "genderBreakdown": {
+    "girls": <new_girls>,
+    "boys": <new_boys>
+  },
   "distanceTravelled": <new_distance>,
   "targetAudience": "Students from Classes 6-12"
 }
@@ -157,6 +165,8 @@ Insert the new entry at the BEGINNING of the `dailyUpdates` array (after the ope
         "lng": longitude
       },
       "studentsReached": number,
+      "girlsCount": number,
+      "boysCount": number,
       "district": "District Name"
     },
     {
@@ -166,6 +176,8 @@ Insert the new entry at the BEGINNING of the `dailyUpdates` array (after the ope
         "lng": longitude
       },
       "studentsReached": number,
+      "girlsCount": number,
+      "boysCount": number,
       "district": "District Name"
     }
   ],
@@ -271,8 +283,8 @@ git diff --cached
 git commit -m "$(cat <<'EOF'
 Update website with <Month> <Day>, 2025 school visits
 
-- Add <School1> (<students1> students) and <School2> (<students2> students) to daily updates
-- Update mission stats: <new_schools> schools covered, <new_students> total students, <new_distance> km travelled
+- Add <School1> (<students1> students: <girls1> girls, <boys1> boys) and <School2> (<students2> students: <girls2> girls, <boys2> boys) to daily updates
+- Update mission stats: <new_schools> schools covered, <new_students> total students (<new_girls> girls, <new_boys> boys), <new_distance> km travelled
 - Add schools to gallery with OneDrive photo links
 - Upload collage images to gallery_school_collage/ folder
 - Route: Plaksha → <School1> → <School2> → Plaksha (<distance> km)
@@ -292,8 +304,8 @@ git push -u origin claude/session-<ID>
 Provide the user with the GitHub PR creation URL (from git push output) and the following PR template:
 ```markdown
 ## Summary
-- Added <School1> (<students1> students) and <School2> (<students2> students) to daily updates for <date>
-- Updated mission statistics: <new_schools> schools covered, <new_students> total students impacted, <new_distance> km travelled
+- Added <School1> (<students1> students: <girls1> girls, <boys1> boys) and <School2> (<students2> students: <girls2> girls, <boys2> boys) to daily updates for <date>
+- Updated mission statistics: <new_schools> schools covered, <new_students> total students impacted (<new_girls> girls, <new_boys> boys), <new_distance> km travelled
 - Added schools to gallery page with OneDrive photo links
 - Uploaded collage images to gallery_school_collage/ folder
 - Route: Plaksha University → <School1> → <School2> → Plaksha University (<distance> km total)
@@ -305,6 +317,7 @@ Provide the user with the GitHub PR creation URL (from git push output) and the 
   - Schools covered: <old> → <new>
   - Districts covered: <old> → <new>
   - Students impacted: <old> → <new>
+  - Gender breakdown: <old_girls> girls, <old_boys> boys → <new_girls> girls, <new_boys> boys
   - Distance travelled: <old> km → <new> km
 - Added new daily update entry for <date>
 
@@ -333,8 +346,8 @@ Provide the user with the GitHub PR creation URL (from git push output) and the 
 ```
 Date: 2025-10-29
 Schools visited:
-1. GHS-Balongi - Coordinates: (30.7234, 76.7123) - Students: 300
-2. GHS-Kurali - Coordinates: (30.7845, 76.7956) - Students: 275
+1. GHS-Balongi - Coordinates: (30.7234, 76.7123) - Students: 300 - Girls: 150 - Boys: 150
+2. GHS-Kurali - Coordinates: (30.7845, 76.7956) - Students: 275 - Girls: 140 - Boys: 135
 
 Start/End: Plaksha University (30.6310588, 76.7230178)
 
@@ -348,6 +361,8 @@ Gallery:
 1. **Read current data:**
    - Schools: 4 → 6 (adding 2)
    - Students: 1341 → 1916 (adding 575)
+   - Girls: 670 → 960 (adding 290)
+   - Boys: 671 → 956 (adding 285)
    - Districts: Check if "SAS Nagar" or new district
    - Distance: 47 → (47 + calculated)
 

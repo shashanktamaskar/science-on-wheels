@@ -18,6 +18,10 @@
       "total": 16
     },
     "studentsImpacted": 6322,
+    "genderBreakdown": {
+      "girls": 3161,
+      "boys": 3161
+    },
     "distanceTravelled": 198,
     "targetAudience": "Students from Classes 6-12"
   },
@@ -33,6 +37,8 @@
             "lng": 76.844331
           },
           "studentsReached": 275,
+          "girlsCount": 138,
+          "boysCount": 137,
           "district": "SAS Nagar"
         },
         {
@@ -42,6 +48,8 @@
             "lng": 76.784354
           },
           "studentsReached": 550,
+          "girlsCount": 275,
+          "boysCount": 275,
           "district": "SAS Nagar"
         }
       ],
@@ -72,6 +80,8 @@
             "lng": 76.814822
           },
           "studentsReached": 1151,
+          "girlsCount": 576,
+          "boysCount": 575,
           "district": "SAS Nagar"
         }
       ],
@@ -102,6 +112,8 @@
             "lng": 76.7251603
           },
           "studentsReached": 491,
+          "girlsCount": 246,
+          "boysCount": 245,
           "district": "SAS Nagar"
         },
         {
@@ -111,6 +123,8 @@
             "lng": 76.8938531
           },
           "studentsReached": 657,
+          "girlsCount": 329,
+          "boysCount": 328,
           "district": "SAS Nagar"
         }
       ],
@@ -141,6 +155,8 @@
             "lng": 76.6628657
           },
           "studentsReached": 505,
+          "girlsCount": 253,
+          "boysCount": 252,
           "district": "SAS Nagar"
         },
         {
@@ -150,6 +166,8 @@
             "lng": 76.7114194
           },
           "studentsReached": 497,
+          "girlsCount": 249,
+          "boysCount": 248,
           "district": "SAS Nagar"
         }
       ],
@@ -180,6 +198,8 @@
             "lng": 76.8489418
           },
           "studentsReached": 240,
+          "girlsCount": 120,
+          "boysCount": 120,
           "district": "SAS Nagar"
         },
         {
@@ -189,6 +209,8 @@
             "lng": 76.8512458
           },
           "studentsReached": 615,
+          "girlsCount": 308,
+          "boysCount": 307,
           "district": "SAS Nagar"
         }
       ],
@@ -219,6 +241,8 @@
             "lng": 76.7127094
           },
           "studentsReached": 432,
+          "girlsCount": 216,
+          "boysCount": 216,
           "district": "SAS Nagar"
         },
         {
@@ -228,6 +252,8 @@
             "lng": 76.7257611
           },
           "studentsReached": 402,
+          "girlsCount": 201,
+          "boysCount": 201,
           "district": "SAS Nagar"
         }
       ],
@@ -258,6 +284,8 @@
             "lng": 76.6835287
           },
           "studentsReached": 251,
+          "girlsCount": 126,
+          "boysCount": 125,
           "district": "SAS Nagar"
         },
         {
@@ -267,6 +295,8 @@
             "lng": 76.6610706
           },
           "studentsReached": 256,
+          "girlsCount": 128,
+          "boysCount": 128,
           "district": "SAS Nagar"
         }
       ],
