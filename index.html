@@ -172,7 +172,7 @@
                                         <span id="girlsCount">0</span><span class="text-xl opacity-90"> Girls</span> /
                                         <span id="boysCount">0</span><span class="text-xl opacity-90"> Boys</span>
                                     </div>
-                                    <div class="text-lg opacity-90">Gender Ratio (<span id="genderRatioPercent">50:50</span>)</div>
+                                    <div class="text-lg opacity-90">Gender Breakdown</div>
                                 </div>
                             </div>
                         </div>
@@ -418,12 +418,6 @@
                 const boys = mission.genderBreakdown.boys;
                 document.getElementById('girlsCount').textContent = girls.toLocaleString();
                 document.getElementById('boysCount').textContent = boys.toLocaleString();
-
-                // Calculate gender ratio percentage
-                const total = girls + boys;
-                const girlsPercent = Math.round((girls / total) * 100);
-                const boysPercent = Math.round((boys / total) * 100);
-                document.getElementById('genderRatioPercent').textContent = `${girlsPercent}:${boysPercent}`;
             }
 
             // Update progress bars
