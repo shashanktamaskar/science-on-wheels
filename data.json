@@ -19,8 +19,8 @@
     },
     "studentsImpacted": 6872,
     "genderBreakdown": {
-      "girls": 3436,
-      "boys": 3436
+      "girls": 3461,
+      "boys": 3411
     },
     "distanceTravelled": 239,
     "targetAudience": "Students from Classes 6-12"
@@ -37,8 +37,8 @@
             "lng": 76.6120451
           },
           "studentsReached": 550,
-          "girlsCount": 275,
-          "boysCount": 275,
+          "girlsCount": 300,
+          "boysCount": 250,
           "district": "SAS Nagar"
         }
       ],
