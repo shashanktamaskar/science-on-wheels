@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-10",
+  "lastUpdated": "2025-11-11",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,76 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 14,
+      "current": 17,
       "total": 235
     },
     "districtsCovered": {
       "current": 1,
       "total": 16
     },
-    "studentsImpacted": 6872,
+    "studentsImpacted": 7888,
     "genderBreakdown": {
-      "girls": 3461,
-      "boys": 3411
+      "girls": 3956,
+      "boys": 3932
     },
-    "distanceTravelled": 239,
+    "distanceTravelled": 310,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-11-11",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GHS-DESUMAJRA",
+          "location": {
+            "lat": 30.742399,
+            "lng": 76.6667366
+          },
+          "studentsReached": 440,
+          "girlsCount": 210,
+          "boysCount": 230,
+          "district": "SAS Nagar"
+        },
+        {
+          "name": "GHS-NAYAGAON",
+          "location": {
+            "lat": 30.7734482,
+            "lng": 76.7928947
+          },
+          "studentsReached": 276,
+          "girlsCount": 144,
+          "boysCount": 132,
+          "district": "SAS Nagar"
+        },
+        {
+          "name": "GSSS-KHIZRABAD",
+          "location": {
+            "lat": 30.8766699,
+            "lng": 76.6592949
+          },
+          "studentsReached": 300,
+          "girlsCount": 141,
+          "boysCount": 159,
+          "district": "SAS Nagar"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "endPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "distanceTravelled": 71
+      },
+      "totalStudents": 1016,
+      "schoolsVisited": 3
+    },
     {
       "date": "2025-11-10",
       "vehicle": 1,
