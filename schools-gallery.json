@@ -1,6 +1,24 @@
 {
   "schools": [
     {
+      "name": "GHS-DESUMAJRA",
+      "district": "SAS Nagar",
+      "visitDate": "2025-11-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EgSemv3CPUFNgQ6W5UMkQL4BFkIXpp59jPot_DYwqZG8dA?e=VWGmia"
+    },
+    {
+      "name": "GHS-NAYAGAON",
+      "district": "SAS Nagar",
+      "visitDate": "2025-11-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EpDsqWsmMHpFu2N6-uanvfUBFjLMdKISxIZBY0PvcICEKw?e=i1qory"
+    },
+    {
+      "name": "GSSS-KHIZRABAD",
+      "district": "SAS Nagar",
+      "visitDate": "2025-11-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ErJl7De7oFlEiAteJvDAfxYB14M2mPPg67HFVh16rFt0Yg?e=ELuHlx"
+    },
+    {
       "name": "GHS Phase-5",
       "district": "SAS Nagar",
       "visitDate": "2025-10-27",
