@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-11",
+  "lastUpdated": "2025-11-12",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,65 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 17,
+      "current": 19,
       "total": 235
     },
     "districtsCovered": {
-      "current": 1,
+      "current": 2,
       "total": 16
     },
-    "studentsImpacted": 7888,
+    "studentsImpacted": 8745,
     "genderBreakdown": {
-      "girls": 3956,
-      "boys": 3932
+      "girls": 4743,
+      "boys": 4002
     },
-    "distanceTravelled": 310,
+    "distanceTravelled": 372,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-11-12",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GGSS-AMLOH",
+          "location": {
+            "lat": 30.6117285,
+            "lng": 76.2329723
+          },
+          "studentsReached": 712,
+          "girlsCount": 712,
+          "boysCount": 0,
+          "district": "FATEHGARH Sahib"
+        },
+        {
+          "name": "GHS-HARBANSPURA",
+          "location": {
+            "lat": 30.6359234,
+            "lng": 76.3388863
+          },
+          "studentsReached": 145,
+          "girlsCount": 75,
+          "boysCount": 70,
+          "district": "FATEHGARH Sahib"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "endPoint": {
+          "name": "Hotel",
+          "lat": 30.6313821,
+          "lng": 76.3909623
+        },
+        "distanceTravelled": 62
+      },
+      "totalStudents": 857,
+      "schoolsVisited": 2
+    },
     {
       "date": "2025-11-11",
       "vehicle": 1,
