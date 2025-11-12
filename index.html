@@ -430,13 +430,13 @@
         function initializeMap() {
             if (!projectData || map) return;
 
-            // Initialize map centered on SAS Nagar with higher zoom level
+            // Initialize map centered to show both SAS Nagar and FATEHGARH Sahib districts
             map = L.map('map', {
                 minZoom: 8,
                 maxZoom: 18,
                 scrollWheelZoom: false, // Disable scroll wheel zoom to prevent accidental zoom out
                 zoomControl: true
-            }).setView([30.7046, 76.7179], 11); // SAS Nagar coordinates with zoom 11
+            }).setView([30.6642, 76.5019], 10); // Center between districts with zoom 10
 
             // Re-enable zoom on map click (user must click map first to zoom)
             map.on('click', function() {
