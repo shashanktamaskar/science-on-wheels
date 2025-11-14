@@ -55,14 +55,14 @@
       ],
       "route": {
         "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
+          "name": "Hotel",
+          "lat": 30.6313821,
+          "lng": 76.3909623
         },
         "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
+          "name": "Hotel",
+          "lat": 30.6313821,
+          "lng": 76.3909623
         },
         "distanceTravelled": 55
       },
