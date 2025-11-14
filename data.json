@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-13",
+  "lastUpdated": "2025-11-14",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,65 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 21,
+      "current": 23,
       "total": 235
     },
     "districtsCovered": {
       "current": 2,
       "total": 16
     },
-    "studentsImpacted": 9282,
+    "studentsImpacted": 10432,
     "genderBreakdown": {
-      "girls": 4965,
-      "boys": 4317
+      "girls": 5615,
+      "boys": 4817
     },
-    "distanceTravelled": 420,
+    "distanceTravelled": 475,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-11-14",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-SIRHIND",
+          "location": {
+            "lat": 30.6262402,
+            "lng": 76.3828856
+          },
+          "studentsReached": 650,
+          "girlsCount": 650,
+          "boysCount": 0,
+          "district": "FATEHGARH Sahib"
+        },
+        {
+          "name": "GSSS-GOBINDGARH",
+          "location": {
+            "lat": 30.6684517,
+            "lng": 76.2809301
+          },
+          "studentsReached": 500,
+          "girlsCount": 0,
+          "boysCount": 500,
+          "district": "FATEHGARH Sahib"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Hotel",
+          "lat": 30.6313821,
+          "lng": 76.3909623
+        },
+        "endPoint": {
+          "name": "Hotel",
+          "lat": 30.6313821,
+          "lng": 76.3909623
+        },
+        "distanceTravelled": 55
+      },
+      "totalStudents": 1150,
+      "schoolsVisited": 2
+    },
     {
       "date": "2025-11-13",
       "vehicle": 1,
