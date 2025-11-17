@@ -10,17 +10,17 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 27,
+      "current": 28,
       "total": 235
     },
     "districtsCovered": {
       "current": 3,
       "total": 16
     },
-    "studentsImpacted": 11661,
+    "studentsImpacted": 12031,
     "genderBreakdown": {
-      "girls": 6143,
-      "boys": 5518
+      "girls": 6323,
+      "boys": 5708
     },
     "distanceTravelled": 475,
     "targetAudience": "Students from Classes 6-12"
@@ -68,6 +68,38 @@
       },
       "totalStudents": 570,
       "schoolsVisited": 2
+    },
+    {
+      "date": "2025-11-17",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GSSS-KATHERA",
+          "location": {
+            "lat": 31.1720963,
+            "lng": 76.4737695
+          },
+          "studentsReached": 370,
+          "girlsCount": 180,
+          "boysCount": 190,
+          "district": "ROOPNAGAR"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Zirakpur",
+          "lat": 30.6681398,
+          "lng": 76.8127588
+        },
+        "endPoint": {
+          "name": "Anandpur Sahib",
+          "lat": 31.2323894,
+          "lng": 76.4993261
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 370,
+      "schoolsVisited": 1
     },
     {
       "date": "2025-11-15",
