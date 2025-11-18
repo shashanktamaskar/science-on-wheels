@@ -1,6 +1,18 @@
 {
   "schools": [
     {
+      "name": "GSSS-MASSEWAL",
+      "district": "ROOPNAGAR",
+      "visitDate": "2025-11-18",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EmoV7x2oK-tJsKJqydHJKWQB8H3JHMTPMG5fJf63CaeJ8A?e=9mcdMW"
+    },
+    {
+      "name": "GSSS-BHARATGARH",
+      "district": "ROOPNAGAR",
+      "visitDate": "2025-11-18",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EqaWnN436CJPtrAR-tT0Au0BX5FpfsrUTHgCTxDmCZLdAg?e=bhgITw"
+    },
+    {
       "name": "GHS-DESUMAJRA",
       "district": "SAS Nagar",
       "visitDate": "2025-11-11",
