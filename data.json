@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-17",
+  "lastUpdated": "2025-11-18",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,65 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 28,
+      "current": 30,
       "total": 235
     },
     "districtsCovered": {
       "current": 3,
       "total": 16
     },
-    "studentsImpacted": 12031,
+    "studentsImpacted": 13068,
     "genderBreakdown": {
-      "girls": 6323,
-      "boys": 5708
+      "girls": 6887,
+      "boys": 6181
     },
     "distanceTravelled": 475,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-11-18",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-MASSEWAL",
+          "location": {
+            "lat": 31.2041551,
+            "lng": 76.6070868
+          },
+          "studentsReached": 605,
+          "girlsCount": 332,
+          "boysCount": 273,
+          "district": "ROOPNAGAR"
+        },
+        {
+          "name": "GSSS-BHARATGARH",
+          "location": {
+            "lat": 31.0980151,
+            "lng": 76.6143188
+          },
+          "studentsReached": 432,
+          "girlsCount": 232,
+          "boysCount": 200,
+          "district": "ROOPNAGAR"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Anandpur Sahib",
+          "lat": 31.2323894,
+          "lng": 76.4993261
+        },
+        "endPoint": {
+          "name": "Anandpur Sahib",
+          "lat": 31.2323894,
+          "lng": 76.4993261
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 1037,
+      "schoolsVisited": 2
+    },
     {
       "date": "2025-11-17",
       "vehicle": 1,
