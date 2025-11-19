@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-18",
+  "lastUpdated": "2025-11-19",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,65 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 30,
+      "current": 32,
       "total": 235
     },
     "districtsCovered": {
-      "current": 3,
+      "current": 4,
       "total": 16
     },
-    "studentsImpacted": 13068,
+    "studentsImpacted": 14034,
     "genderBreakdown": {
-      "girls": 6887,
-      "boys": 6181
+      "girls": 7317,
+      "boys": 6717
     },
     "distanceTravelled": 475,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-11-19",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-KASABAD",
+          "location": {
+            "lat": 30.9695215,
+            "lng": 75.8432378
+          },
+          "studentsReached": 480,
+          "girlsCount": 200,
+          "boysCount": 280,
+          "district": "Ludhiana"
+        },
+        {
+          "name": "GSSS-SAHIBANA",
+          "location": {
+            "lat": 30.8961345,
+            "lng": 75.9692431
+          },
+          "studentsReached": 486,
+          "girlsCount": 230,
+          "boysCount": 256,
+          "district": "Ludhiana"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Ludhiana",
+          "lat": 30.890366,
+          "lng": 75.8865113
+        },
+        "endPoint": {
+          "name": "Ludhiana",
+          "lat": 30.8813999,
+          "lng": 75.8144534
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 966,
+      "schoolsVisited": 2
+    },
     {
       "date": "2025-11-18",
       "vehicle": 1,
