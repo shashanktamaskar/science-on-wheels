@@ -251,7 +251,24 @@
 <body>
     <div class="container">
         <h1>🚐 Science on Wheels - Data Entry Tool</h1>
-        <p class="subtitle">Enter school visit data easily - just paste Google Maps links!</p>
+        <p class="subtitle">Enter school visit data easily - just follow the instructions below!</p>
+
+        <!-- Help Section -->
+        <div class="section" style="background: #e3f2fd; border-left-color: #2196f3;">
+            <h2 class="section-title" style="color: #1976d2;">📖 How to Get Coordinates from Google Maps</h2>
+            <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                <p style="margin-bottom: 10px; font-weight: 600;">Follow these steps:</p>
+                <ol style="margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Open Google Maps</strong> and find your location</li>
+                    <li><strong>Right-click</strong> on the exact location pin</li>
+                    <li><strong>Click the coordinates</strong> that appear at the top (e.g., "30.9695215, 75.8432378")</li>
+                    <li>This will copy the coordinates. <strong>Paste them in the Latitude and Longitude fields below</strong></li>
+                </ol>
+                <div style="margin-top: 15px; padding: 10px; background: #fff3cd; border-radius: 5px; border-left: 3px solid #ffc107;">
+                    <strong>⚠️ Important:</strong> Short links like "maps.app.goo.gl/xxxxx" don't contain visible coordinates. You must click on the location to see the actual coordinates (numbers like 30.9695215, 75.8432378).
+                </div>
+            </div>
+        </div>
 
         <form id="dataEntryForm">
             <!-- Date Section -->
@@ -273,26 +290,56 @@
             <!-- Route Section -->
             <div class="section">
                 <h2 class="section-title">🗺️ Route Information</h2>
-                <div class="row">
-                    <div class="form-group">
-                        <label for="startPointName">Start Point Name *</label>
-                        <input type="text" id="startPointName" placeholder="e.g., Ludhiana" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="startPointLink">Start Point Maps Link *</label>
-                        <input type="url" id="startPointLink" placeholder="Paste Google Maps link">
-                        <div class="help-text">Paste link like: https://maps.app.goo.gl/...</div>
+                <div style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                    <strong>Start Point</strong>
+                    <div style="margin-top: 10px;">
+                        <div class="form-group">
+                            <label for="startPointName">Location Name *</label>
+                            <input type="text" id="startPointName" placeholder="e.g., Ludhiana" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="startPointLink">Google Maps Link *</label>
+                            <input type="url" id="startPointLink" placeholder="Paste Google Maps link" required>
+                            <button type="button" class="copy-btn" style="margin-top: 5px; padding: 8px 15px; font-size: 12px;" onclick="extractCoordinates('start', 'route')">
+                                🎯 Get Coordinates from Link
+                            </button>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="startPointLat">Latitude *</label>
+                                <input type="text" id="startPointLat" placeholder="Will auto-fill" pattern="-?[0-9]+\.?[0-9]*" required readonly style="background: #f0f0f0;">
+                            </div>
+                            <div class="form-group">
+                                <label for="startPointLng">Longitude *</label>
+                                <input type="text" id="startPointLng" placeholder="Will auto-fill" pattern="-?[0-9]+\.?[0-9]*" required readonly style="background: #f0f0f0;">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="form-group">
-                        <label for="endPointName">End Point Name *</label>
-                        <input type="text" id="endPointName" placeholder="e.g., Ludhiana" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="endPointLink">End Point Maps Link *</label>
-                        <input type="url" id="endPointLink" placeholder="Paste Google Maps link">
-                        <div class="help-text">Paste link like: https://maps.app.goo.gl/...</div>
+                <div style="background: white; padding: 15px; border-radius: 8px;">
+                    <strong>End Point</strong>
+                    <div style="margin-top: 10px;">
+                        <div class="form-group">
+                            <label for="endPointName">Location Name *</label>
+                            <input type="text" id="endPointName" placeholder="e.g., Ludhiana" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="endPointLink">Google Maps Link *</label>
+                            <input type="url" id="endPointLink" placeholder="Paste Google Maps link" required>
+                            <button type="button" class="copy-btn" style="margin-top: 5px; padding: 8px 15px; font-size: 12px;" onclick="extractCoordinates('end', 'route')">
+                                🎯 Get Coordinates from Link
+                            </button>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="endPointLat">Latitude *</label>
+                                <input type="text" id="endPointLat" placeholder="Will auto-fill" pattern="-?[0-9]+\.?[0-9]*" required readonly style="background: #f0f0f0;">
+                            </div>
+                            <div class="form-group">
+                                <label for="endPointLng">Longitude *</label>
+                                <input type="text" id="endPointLng" placeholder="Will auto-fill" pattern="-?[0-9]+\.?[0-9]*" required readonly style="background: #f0f0f0;">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -337,8 +384,22 @@
 
                 <div class="form-group">
                     <label>Google Maps Link *</label>
-                    <input type="url" id="schoolMapLink-${schoolCount}" placeholder="Paste Google Maps link" required>
-                    <div class="help-text">Right-click on Google Maps location → Share → Copy link</div>
+                    <input type="url" id="schoolMapLink-${schoolCount}" placeholder="Paste any Google Maps link" required>
+                    <button type="button" class="copy-btn" style="margin-top: 5px; padding: 8px 15px; font-size: 12px;" onclick="extractCoordinates(${schoolCount}, 'school')">
+                        🎯 Get Coordinates from Link
+                    </button>
+                    <div class="help-text">Paste any Google Maps link (even shortened ones like maps.app.goo.gl), then click the button above</div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label>Latitude *</label>
+                        <input type="text" id="schoolLat-${schoolCount}" placeholder="Will auto-fill from link" pattern="-?[0-9]+\.?[0-9]*" required readonly style="background: #f0f0f0;">
+                    </div>
+                    <div class="form-group">
+                        <label>Longitude *</label>
+                        <input type="text" id="schoolLng-${schoolCount}" placeholder="Will auto-fill from link" pattern="-?[0-9]+\.?[0-9]*" required readonly style="background: #f0f0f0;">
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -380,75 +441,83 @@
             schoolDiv.remove();
         }
 
-        // Extract coordinates from Google Maps link
-        async function extractCoordinates(mapsLink) {
-            try {
-                // Handle different Google Maps URL formats
-                let coords = null;
+        // Extract coordinates from Google Maps link with user assistance
+        function extractCoordinates(id, type) {
+            let linkInputId, latInputId, lngInputId;
 
-                // Format 1: https://maps.app.goo.gl/xxxxx (shortened link - needs to be expanded)
-                if (mapsLink.includes('maps.app.goo.gl') || mapsLink.includes('goo.gl')) {
-                    // Try to extract from the URL after it redirects
-                    const response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(mapsLink)}`);
-                    const text = await response.text();
-                    const match = text.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
-                    if (match) {
-                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-                    }
-                }
-
-                // Format 2: https://www.google.com/maps/place/.../@lat,lng
-                if (!coords && mapsLink.includes('@')) {
-                    const match = mapsLink.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
-                    if (match) {
-                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-                    }
-                }
-
-                // Format 3: https://www.google.com/maps?q=lat,lng
-                if (!coords && mapsLink.includes('q=')) {
-                    const match = mapsLink.match(/q=(-?\d+\.\d+),(-?\d+\.\d+)/);
-                    if (match) {
-                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-                    }
-                }
-
-                // Format 4: Direct coordinates in URL
-                if (!coords) {
-                    const match = mapsLink.match(/(-?\d+\.\d+),(-?\d+\.\d+)/);
-                    if (match) {
-                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-                    }
-                }
-
-                return coords;
-            } catch (error) {
-                console.error('Error extracting coordinates:', error);
-                return null;
+            if (type === 'school') {
+                linkInputId = `schoolMapLink-${id}`;
+                latInputId = `schoolLat-${id}`;
+                lngInputId = `schoolLng-${id}`;
+            } else if (type === 'route') {
+                linkInputId = `${id}PointLink`;
+                latInputId = `${id}PointLat`;
+                lngInputId = `${id}PointLng`;
             }
-        }
 
-        // Manual coordinate extraction (client-side only)
-        function extractCoordinatesSync(mapsLink) {
-            // Format: https://www.google.com/maps/place/.../@lat,lng
+            const mapsLink = document.getElementById(linkInputId).value;
+
+            if (!mapsLink) {
+                alert('Please paste a Google Maps link first!');
+                return;
+            }
+
+            // Try to extract coordinates directly from URL first
             let match = mapsLink.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
-            if (match) {
-                return { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
+            if (!match) {
+                match = mapsLink.match(/q=(-?\d+\.\d+),(-?\d+\.\d+)/);
+            }
+            if (!match) {
+                match = mapsLink.match(/(-?\d+\.\d+),(-?\d+\.\d+)/);
             }
 
-            // Format: https://www.google.com/maps?q=lat,lng
-            match = mapsLink.match(/q=(-?\d+\.\d+),(-?\d+\.\d+)/);
             if (match) {
-                return { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
+                // Coordinates found in URL!
+                const lat = parseFloat(match[1]);
+                const lng = parseFloat(match[2]);
+                document.getElementById(latInputId).value = lat;
+                document.getElementById(lngInputId).value = lng;
+                document.getElementById(latInputId).removeAttribute('readonly');
+                document.getElementById(lngInputId).removeAttribute('readonly');
+                document.getElementById(latInputId).style.background = '#d4edda';
+                document.getElementById(lngInputId).style.background = '#d4edda';
+                alert(`✅ Coordinates extracted successfully!\nLatitude: ${lat}\nLongitude: ${lng}`);
+                return;
             }
 
-            // Format: Direct coordinates
-            match = mapsLink.match(/(-?\d+\.\d+),(-?\d+\.\d+)/);
-            if (match) {
-                return { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-            }
+            // If coordinates not in URL, open helper dialog
+            const mapWindow = window.open(mapsLink, '_blank', 'width=800,height=600');
 
-            return null;
+            const coordinates = prompt(
+                '📍 The link will open in a new tab.\n\n' +
+                'Follow these steps:\n' +
+                '1. In the new tab, right-click on the location\n' +
+                '2. Click on the coordinates at the top (they look like: 30.9695215, 75.8432378)\n' +
+                '3. This will copy them to your clipboard\n' +
+                '4. Paste the coordinates here:\n\n' +
+                'Format: latitude, longitude'
+            );
+
+            if (coordinates) {
+                const parts = coordinates.split(',').map(s => s.trim());
+                if (parts.length === 2) {
+                    const lat = parseFloat(parts[0]);
+                    const lng = parseFloat(parts[1]);
+                    if (!isNaN(lat) && !isNaN(lng)) {
+                        document.getElementById(latInputId).value = lat;
+                        document.getElementById(lngInputId).value = lng;
+                        document.getElementById(latInputId).removeAttribute('readonly');
+                        document.getElementById(lngInputId).removeAttribute('readonly');
+                        document.getElementById(latInputId).style.background = '#d4edda';
+                        document.getElementById(lngInputId).style.background = '#d4edda';
+                        alert('✅ Coordinates added successfully!');
+                    } else {
+                        alert('❌ Invalid coordinates. Please make sure they are numbers.');
+                    }
+                } else {
+                    alert('❌ Please enter coordinates in format: latitude, longitude');
+                }
+            }
         }
 
         document.getElementById('dataEntryForm').addEventListener('submit', async function(e) {
@@ -463,7 +532,8 @@
             for (const schoolDiv of schoolDivs) {
                 const id = schoolDiv.id.split('-')[1];
                 const name = document.getElementById(`schoolName-${id}`).value;
-                const mapLink = document.getElementById(`schoolMapLink-${id}`).value;
+                const lat = parseFloat(document.getElementById(`schoolLat-${id}`).value);
+                const lng = parseFloat(document.getElementById(`schoolLng-${id}`).value);
                 const district = document.getElementById(`schoolDistrict-${id}`).value;
                 const students = parseInt(document.getElementById(`schoolStudents-${id}`).value);
                 const girls = parseInt(document.getElementById(`schoolGirls-${id}`).value);
@@ -471,13 +541,13 @@
                 const gallery = document.getElementById(`schoolGallery-${id}`).value;
                 const collage = document.getElementById(`schoolCollage-${id}`).value;
 
-                // Extract coordinates
-                const coords = extractCoordinatesSync(mapLink);
-
-                if (!coords) {
-                    alert(`⚠️ Could not extract coordinates from maps link for ${name}. Please check the link format.\n\nTip: Open the location in Google Maps, right-click, and copy the link with coordinates visible.`);
+                // Validate coordinates
+                if (isNaN(lat) || isNaN(lng)) {
+                    alert(`⚠️ Invalid coordinates for ${name}. Please check that you entered valid numbers.`);
                     return;
                 }
+
+                const coords = { lat, lng };
 
                 schools.push({
                     name,
@@ -491,19 +561,22 @@
                 });
             }
 
-            // Extract route coordinates
+            // Get route coordinates from manual inputs
             const startPointName = document.getElementById('startPointName').value;
-            const startPointLink = document.getElementById('startPointLink').value;
+            const startPointLat = parseFloat(document.getElementById('startPointLat').value);
+            const startPointLng = parseFloat(document.getElementById('startPointLng').value);
             const endPointName = document.getElementById('endPointName').value;
-            const endPointLink = document.getElementById('endPointLink').value;
+            const endPointLat = parseFloat(document.getElementById('endPointLat').value);
+            const endPointLng = parseFloat(document.getElementById('endPointLng').value);
 
-            const startCoords = extractCoordinatesSync(startPointLink);
-            const endCoords = extractCoordinatesSync(endPointLink);
-
-            if (!startCoords || !endCoords) {
-                alert('⚠️ Could not extract coordinates from route points. Please check the links.');
+            // Validate route coordinates
+            if (isNaN(startPointLat) || isNaN(startPointLng) || isNaN(endPointLat) || isNaN(endPointLng)) {
+                alert('⚠️ Invalid coordinates for route points. Please check that you entered valid numbers.');
                 return;
             }
+
+            const startCoords = { lat: startPointLat, lng: startPointLng };
+            const endCoords = { lat: endPointLat, lng: endPointLng };
 
             // Generate output
             generateOutput(date, schools, { startPointName, startCoords, endPointName, endCoords });
