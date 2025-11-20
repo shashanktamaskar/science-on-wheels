@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science on Wheels - Data Entry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .help-text {
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="url"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        input[type="url"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .school-entry {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .school-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .school-number {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 16px;
+        }
+
+        .remove-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background 0.3s;
+        }
+
+        .remove-btn:hover {
+            background: #c82333;
+        }
+
+        .add-school-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .add-school-btn:hover {
+            background: #218838;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .row-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        .generate-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            transition: transform 0.2s;
+            margin-top: 20px;
+        }
+
+        .generate-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .output-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .output-section.show {
+            display: block;
+        }
+
+        .output-box {
+            background: #2d3748;
+            color: #a0aec0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .copy-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .copy-btn:hover {
+            background: #5568d3;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .error {
+            border-color: #dc3545 !important;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚐 Science on Wheels - Data Entry Tool</h1>
+        <p class="subtitle">Enter school visit data easily - just paste Google Maps links!</p>
+
+        <form id="dataEntryForm">
+            <!-- Date Section -->
+            <div class="section">
+                <h2 class="section-title">📅 Visit Date</h2>
+                <div class="form-group">
+                    <label for="visitDate">Date of Visit *</label>
+                    <input type="date" id="visitDate" required>
+                </div>
+            </div>
+
+            <!-- Schools Section -->
+            <div class="section">
+                <h2 class="section-title">🏫 Schools Visited</h2>
+                <div id="schoolsContainer"></div>
+                <button type="button" class="add-school-btn" onclick="addSchool()">+ Add School</button>
+            </div>
+
+            <!-- Route Section -->
+            <div class="section">
+                <h2 class="section-title">🗺️ Route Information</h2>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="startPointName">Start Point Name *</label>
+                        <input type="text" id="startPointName" placeholder="e.g., Ludhiana" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startPointLink">Start Point Maps Link *</label>
+                        <input type="url" id="startPointLink" placeholder="Paste Google Maps link">
+                        <div class="help-text">Paste link like: https://maps.app.goo.gl/...</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="endPointName">End Point Name *</label>
+                        <input type="text" id="endPointName" placeholder="e.g., Ludhiana" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endPointLink">End Point Maps Link *</label>
+                        <input type="url" id="endPointLink" placeholder="Paste Google Maps link">
+                        <div class="help-text">Paste link like: https://maps.app.goo.gl/...</div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="generate-btn">🎯 Generate Data</button>
+        </form>
+
+        <!-- Output Section -->
+        <div id="outputSection" class="output-section">
+            <h2 class="section-title">📋 Generated Data</h2>
+            <div class="output-box" id="outputBox"></div>
+            <button class="copy-btn" onclick="copyOutput()">📋 Copy to Clipboard</button>
+            <div class="success-message" id="successMessage">✅ Copied to clipboard!</div>
+        </div>
+    </div>
+
+    <script>
+        let schoolCount = 0;
+
+        // Initialize with one school
+        window.onload = function() {
+            addSchool();
+        };
+
+        function addSchool() {
+            schoolCount++;
+            const container = document.getElementById('schoolsContainer');
+            const schoolDiv = document.createElement('div');
+            schoolDiv.className = 'school-entry';
+            schoolDiv.id = `school-${schoolCount}`;
+
+            schoolDiv.innerHTML = `
+                <div class="school-header">
+                    <span class="school-number">School #${schoolCount}</span>
+                    ${schoolCount > 1 ? `<button type="button" class="remove-btn" onclick="removeSchool(${schoolCount})">Remove</button>` : ''}
+                </div>
+
+                <div class="form-group">
+                    <label>School Name *</label>
+                    <input type="text" id="schoolName-${schoolCount}" placeholder="e.g., GSSS-KASABAD" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Google Maps Link *</label>
+                    <input type="url" id="schoolMapLink-${schoolCount}" placeholder="Paste Google Maps link" required>
+                    <div class="help-text">Right-click on Google Maps location → Share → Copy link</div>
+                </div>
+
+                <div class="form-group">
+                    <label>District *</label>
+                    <input type="text" id="schoolDistrict-${schoolCount}" placeholder="e.g., Ludhiana" required>
+                </div>
+
+                <div class="row-3">
+                    <div class="form-group">
+                        <label>Total Students *</label>
+                        <input type="number" id="schoolStudents-${schoolCount}" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Girls *</label>
+                        <input type="number" id="schoolGirls-${schoolCount}" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Boys *</label>
+                        <input type="number" id="schoolBoys-${schoolCount}" min="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gallery Link (SharePoint) *</label>
+                    <input type="url" id="schoolGallery-${schoolCount}" placeholder="SharePoint folder link" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Collage Image Filename *</label>
+                    <input type="text" id="schoolCollage-${schoolCount}" placeholder="e.g., GSSS-KASABAD.jpg" required>
+                </div>
+            `;
+
+            container.appendChild(schoolDiv);
+        }
+
+        function removeSchool(id) {
+            const schoolDiv = document.getElementById(`school-${id}`);
+            schoolDiv.remove();
+        }
+
+        // Extract coordinates from Google Maps link
+        async function extractCoordinates(mapsLink) {
+            try {
+                // Handle different Google Maps URL formats
+                let coords = null;
+
+                // Format 1: https://maps.app.goo.gl/xxxxx (shortened link - needs to be expanded)
+                if (mapsLink.includes('maps.app.goo.gl') || mapsLink.includes('goo.gl')) {
+                    // Try to extract from the URL after it redirects
+                    const response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(mapsLink)}`);
+                    const text = await response.text();
+                    const match = text.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+                    if (match) {
+                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
+                    }
+                }
+
+                // Format 2: https://www.google.com/maps/place/.../@lat,lng
+                if (!coords && mapsLink.includes('@')) {
+                    const match = mapsLink.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+                    if (match) {
+                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
+                    }
+                }
+
+                // Format 3: https://www.google.com/maps?q=lat,lng
+                if (!coords && mapsLink.includes('q=')) {
+                    const match = mapsLink.match(/q=(-?\d+\.\d+),(-?\d+\.\d+)/);
+                    if (match) {
+                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
+                    }
+                }
+
+                // Format 4: Direct coordinates in URL
+                if (!coords) {
+                    const match = mapsLink.match(/(-?\d+\.\d+),(-?\d+\.\d+)/);
+                    if (match) {
+                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
+                    }
+                }
+
+                return coords;
+            } catch (error) {
+                console.error('Error extracting coordinates:', error);
+                return null;
+            }
+        }
+
+        // Manual coordinate extraction (client-side only)
+        function extractCoordinatesSync(mapsLink) {
+            // Format: https://www.google.com/maps/place/.../@lat,lng
+            let match = mapsLink.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+            if (match) {
+                return { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
+            }
+
+            // Format: https://www.google.com/maps?q=lat,lng
+            match = mapsLink.match(/q=(-?\d+\.\d+),(-?\d+\.\d+)/);
+            if (match) {
+                return { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
+            }
+
+            // Format: Direct coordinates
+            match = mapsLink.match(/(-?\d+\.\d+),(-?\d+\.\d+)/);
+            if (match) {
+                return { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
+            }
+
+            return null;
+        }
+
+        document.getElementById('dataEntryForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const date = document.getElementById('visitDate').value;
+            const schools = [];
+
+            // Collect school data
+            const schoolDivs = document.querySelectorAll('.school-entry');
+
+            for (const schoolDiv of schoolDivs) {
+                const id = schoolDiv.id.split('-')[1];
+                const name = document.getElementById(`schoolName-${id}`).value;
+                const mapLink = document.getElementById(`schoolMapLink-${id}`).value;
+                const district = document.getElementById(`schoolDistrict-${id}`).value;
+                const students = parseInt(document.getElementById(`schoolStudents-${id}`).value);
+                const girls = parseInt(document.getElementById(`schoolGirls-${id}`).value);
+                const boys = parseInt(document.getElementById(`schoolBoys-${id}`).value);
+                const gallery = document.getElementById(`schoolGallery-${id}`).value;
+                const collage = document.getElementById(`schoolCollage-${id}`).value;
+
+                // Extract coordinates
+                const coords = extractCoordinatesSync(mapLink);
+
+                if (!coords) {
+                    alert(`⚠️ Could not extract coordinates from maps link for ${name}. Please check the link format.\n\nTip: Open the location in Google Maps, right-click, and copy the link with coordinates visible.`);
+                    return;
+                }
+
+                schools.push({
+                    name,
+                    coords,
+                    students,
+                    girls,
+                    boys,
+                    district,
+                    gallery,
+                    collage
+                });
+            }
+
+            // Extract route coordinates
+            const startPointName = document.getElementById('startPointName').value;
+            const startPointLink = document.getElementById('startPointLink').value;
+            const endPointName = document.getElementById('endPointName').value;
+            const endPointLink = document.getElementById('endPointLink').value;
+
+            const startCoords = extractCoordinatesSync(startPointLink);
+            const endCoords = extractCoordinatesSync(endPointLink);
+
+            if (!startCoords || !endCoords) {
+                alert('⚠️ Could not extract coordinates from route points. Please check the links.');
+                return;
+            }
+
+            // Generate output
+            generateOutput(date, schools, { startPointName, startCoords, endPointName, endCoords });
+        });
+
+        function generateOutput(date, schools, route) {
+            const output = {
+                date,
+                schools: schools.map(s => ({
+                    name: s.name,
+                    coordinates: `(${s.coords.lat},${s.coords.lng})`,
+                    students: s.students,
+                    girls: s.girls,
+                    boys: s.boys,
+                    district: s.district
+                })),
+                startPoint: `${route.startPointName}(${route.startCoords.lat},${route.startCoords.lng})`,
+                endPoint: `${route.endPointName}(${route.endCoords.lat},${route.endCoords.lng})`,
+                galleryLinks: schools.map(s => ({
+                    name: s.name,
+                    url: s.gallery
+                })),
+                collageImages: schools.map(s => ({
+                    name: s.name,
+                    filename: s.collage
+                }))
+            };
+
+            // Format output
+            let formattedOutput = `website data ${date.split('-').reverse().join('/')}\n`;
+            formattedOutput += `**Date:** ${date}\n`;
+            formattedOutput += `**Schools visited:**\n\n`;
+
+            schools.forEach(s => {
+                formattedOutput += `${s.name} - Coordinates: (${s.coords.lat},${s.coords.lng}) - Students: ${s.students} - Girls: ${s.girls} - Boys: ${s.boys} - District: ${s.district}\n`;
+            });
+
+            formattedOutput += `\n**Start Point:** ${route.startPointName}(${route.startCoords.lat},${route.startCoords.lng})\n`;
+            formattedOutput += `**End Point:** ${route.endPointName}(${route.endCoords.lat},${route.endCoords.lng})\n`;
+
+            formattedOutput += `\n**Gallery Links:**\n\n`;
+            schools.forEach(s => {
+                formattedOutput += `${s.name}: ${s.gallery}\n`;
+            });
+
+            formattedOutput += `\n**Collage Images:**\n`;
+            schools.forEach(s => {
+                formattedOutput += `${s.name}: ${s.collage}\n`;
+            });
+
+            // Display output
+            document.getElementById('outputBox').textContent = formattedOutput;
+            document.getElementById('outputSection').classList.add('show');
+
+            // Scroll to output
+            document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyOutput() {
+            const outputBox = document.getElementById('outputBox');
+            const text = outputBox.textContent;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const successMsg = document.getElementById('successMessage');
+                successMsg.classList.add('show');
+                setTimeout(() => {
+                    successMsg.classList.remove('show');
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>
