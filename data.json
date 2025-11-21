@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-19",
+  "lastUpdated": "2025-11-20",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,69 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 32,
+      "current": 34,
       "total": 235
     },
     "districtsCovered": {
       "current": 4,
       "total": 16
     },
-    "studentsImpacted": 14034,
+    "studentsImpacted": 15536,
     "genderBreakdown": {
-      "girls": 7317,
-      "boys": 6717
+      "girls": 8085,
+      "boys": 7451
     },
     "distanceTravelled": 475,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-11-20",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-AYALI KHURD",
+          "location": {
+            "lat": 13.2104203,
+            "lng": 77.7108679
+          },
+          "studentsReached": 1083,
+          "girlsCount": 588,
+          "boysCount": 495,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC5kvgfoo3YRq449xwBOg4YAVDqu_S2reZpPnV4XXp9YWc?e=xaDvhE",
+          "collageImage": "GSSS-AYALI KHURD.jpg"
+        },
+        {
+          "name": "GSSS-JASPAL BANGER",
+          "location": {
+            "lat": 13.0215792,
+            "lng": 77.5504773
+          },
+          "studentsReached": 419,
+          "girlsCount": 180,
+          "boysCount": 239,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC9_bmvN-HUSKP37gl931GDATEquBn7jTdUPyG2dJQ0-AY?e=uwzYjr",
+          "collageImage": "GSSS-JASPAL BANGER.jpg"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Ludhiana",
+          "lat": 30.8813999,
+          "lng": 75.8144534
+        },
+        "endPoint": {
+          "name": "Ludhiana",
+          "lat": 30.8813999,
+          "lng": 75.8144534
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 1502,
+      "schoolsVisited": 2
+    },
     {
       "date": "2025-11-19",
       "vehicle": 1,
