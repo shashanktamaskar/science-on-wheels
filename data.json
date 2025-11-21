@@ -10,17 +10,17 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 36,
+      "current": 37,
       "total": 235
     },
     "districtsCovered": {
       "current": 4,
       "total": 16
     },
-    "studentsImpacted": 16390,
+    "studentsImpacted": 17240,
     "genderBreakdown": {
-      "girls": 8501,
-      "boys": 7889
+      "girls": 8871,
+      "boys": 8369
     },
     "distanceTravelled": 475,
     "targetAudience": "Students from Classes 6-12"
@@ -72,6 +72,40 @@
       },
       "totalStudents": 854,
       "schoolsVisited": 2
+    },
+    {
+      "date": "2025-11-21",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GSSS-HAIBOWAL KHURD",
+          "location": {
+            "lat": 30.9046382,
+            "lng": 75.8152625
+          },
+          "studentsReached": 850,
+          "girlsCount": 370,
+          "boysCount": 480,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDvgTFQyGDSRpIE4QZZYeyHAQu2TrrsJatol1Um3IuA1cA?e=HFRIt8",
+          "collageImage": "GSSS-HAIBOWAL KHURD.jpg"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Ludhiana",
+          "lat": 30.8813999,
+          "lng": 75.8144534
+        },
+        "endPoint": {
+          "name": "Plaksha University",
+          "lat": 30.6310588,
+          "lng": 76.7230178
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 850,
+      "schoolsVisited": 1
     },
     {
       "date": "2025-11-20",
