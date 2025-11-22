@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-21",
+  "lastUpdated": "2025-11-22",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,54 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 37,
+      "current": 38,
       "total": 235
     },
     "districtsCovered": {
       "current": 4,
       "total": 16
     },
-    "studentsImpacted": 17240,
+    "studentsImpacted": 18025,
     "genderBreakdown": {
-      "girls": 8871,
+      "girls": 9656,
       "boys": 8369
     },
-    "distanceTravelled": 475,
+    "distanceTravelled": 480,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-11-22",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GGSSS-JAGRAON",
+          "location": {
+            "lat": 30.7915936,
+            "lng": 75.46947
+          },
+          "studentsReached": 785,
+          "girlsCount": 785,
+          "boysCount": 0,
+          "district": "Ludhiana"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "JAGRAON",
+          "lat": 30.8074849,
+          "lng": 75.487859
+        },
+        "endPoint": {
+          "name": "JAGRAON",
+          "lat": 30.8074849,
+          "lng": 75.487859
+        },
+        "distanceTravelled": 5
+      },
+      "totalStudents": 785,
+      "schoolsVisited": 1
+    },
     {
       "date": "2025-11-21",
       "vehicle": 1,
