@@ -1,6 +1,18 @@
 {
   "schools": [
     {
+      "name": "GSSS-SIDHWAN KALAN",
+      "district": "Ludhiana",
+      "visitDate": "2025-11-24",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCZ7WFWSBqMR4MlH7bByJvFAYgY1iZBuaLeZ62ZVlt-Rks?e=f7m0ek"
+    },
+    {
+      "name": "GSSS-GHALIB KALAN",
+      "district": "Ludhiana",
+      "visitDate": "2025-11-24",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDpGTnhqLD-TamYm3aAP-jBAY1PCRZdCao288RqfrhDc3Y?e=RC5ByK"
+    },
+    {
       "name": "GSSS-MASSEWAL",
       "district": "ROOPNAGAR",
       "visitDate": "2025-11-18",
