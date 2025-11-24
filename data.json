@@ -17,10 +17,10 @@
       "current": 4,
       "total": 16
     },
-    "studentsImpacted": 18793,
+    "studentsImpacted": 19618,
     "genderBreakdown": {
-      "girls": 9986,
-      "boys": 8807
+      "girls": 10381,
+      "boys": 9237
     },
     "distanceTravelled": 480,
     "targetAudience": "Students from Classes 6-12"
@@ -55,6 +55,19 @@
           "district": "Ludhiana",
           "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDpGTnhqLD-TamYm3aAP-jBAY1PCRZdCao288RqfrhDc3Y?e=RC5ByK",
           "collageImage": "GSSS-GHALIB KALAN.jpg"
+        },
+        {
+          "name": "GMSSS-CEMETRY ROAD",
+          "location": {
+            "lat": 30.9132023,
+            "lng": 75.8350524
+          },
+          "studentsReached": 825,
+          "girlsCount": 395,
+          "boysCount": 430,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDih5v2_ylOQI8zGqJPIl4LAUfK2QY7PeZysmUyQCZPefA?e=0SJxg1",
+          "collageImage": "GMSSS-CEMETRY ROAD.jpg"
         }
       ],
       "route": {
@@ -64,14 +77,14 @@
           "lng": 75.489089
         },
         "endPoint": {
-          "name": "KOTHE SHER JANG",
-          "lat": 30.811011,
-          "lng": 75.489089
+          "name": "Ludhiana",
+          "lat": 30.8812622,
+          "lng": 75.8118549
         },
         "distanceTravelled": 0
       },
-      "totalStudents": 768,
-      "schoolsVisited": 2
+      "totalStudents": 1593,
+      "schoolsVisited": 3
     },
     {
       "date": "2025-11-22",
