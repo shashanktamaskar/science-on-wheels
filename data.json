@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-26",
+  "lastUpdated": "2025-11-27",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,69 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 44,
+      "current": 46,
       "total": 235
     },
     "districtsCovered": {
       "current": 4,
       "total": 16
     },
-    "studentsImpacted": 20877,
+    "studentsImpacted": 22089,
     "genderBreakdown": {
-      "girls": 11042,
-      "boys": 9835
+      "girls": 11852,
+      "boys": 10237
     },
     "distanceTravelled": 480,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-11-27",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-MALOUD",
+          "location": {
+            "lat": 30.6334625,
+            "lng": 75.9349146
+          },
+          "studentsReached": 460,
+          "girlsCount": 460,
+          "boysCount": 0,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBjMoJWn40ZRrIncF2ajXelAQmv3YBH-kzvFUOAze40cx8?e=b32gV2",
+          "collageImage": "GSSS-MALOUD.jpg"
+        },
+        {
+          "name": "GSSS-DEHLON",
+          "location": {
+            "lat": 30.7390705,
+            "lng": 75.8480269
+          },
+          "studentsReached": 752,
+          "girlsCount": 350,
+          "boysCount": 402,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAH_QDSqvneQruZhHYC4guBAd12npnR42pSevdEVV8xJak?e=I9eunA",
+          "collageImage": "GSSS-DEHLON.jpg"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "MULLANPUR DAKHA",
+          "lat": 30.8495489,
+          "lng": 75.6815823
+        },
+        "endPoint": {
+          "name": "DORAHA",
+          "lat": 30.796177,
+          "lng": 76.035197
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 1212,
+      "schoolsVisited": 2
+    },
     {
       "date": "2025-11-26",
       "vehicle": 1,

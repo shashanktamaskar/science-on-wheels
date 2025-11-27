@@ -1,6 +1,18 @@
 {
   "schools": [
     {
+      "name": "GSSS-MALOUD",
+      "district": "Ludhiana",
+      "visitDate": "2025-11-27",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBjMoJWn40ZRrIncF2ajXelAQmv3YBH-kzvFUOAze40cx8?e=b32gV2"
+    },
+    {
+      "name": "GSSS-DEHLON",
+      "district": "Ludhiana",
+      "visitDate": "2025-11-27",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAH_QDSqvneQruZhHYC4guBAd12npnR42pSevdEVV8xJak?e=I9eunA"
+    },
+    {
       "name": "GSSS-BHAINI BARINGA",
       "district": "Ludhiana",
       "visitDate": "2025-11-26",
