@@ -10,17 +10,17 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 46,
+      "current": 47,
       "total": 235
     },
     "districtsCovered": {
       "current": 4,
       "total": 16
     },
-    "studentsImpacted": 22089,
+    "studentsImpacted": 22336,
     "genderBreakdown": {
-      "girls": 11852,
-      "boys": 10237
+      "girls": 11992,
+      "boys": 10344
     },
     "distanceTravelled": 480,
     "targetAudience": "Students from Classes 6-12"
@@ -55,6 +55,19 @@
           "district": "Ludhiana",
           "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAH_QDSqvneQruZhHYC4guBAd12npnR42pSevdEVV8xJak?e=I9eunA",
           "collageImage": "GSSS-DEHLON.jpg"
+        },
+        {
+          "name": "GHS-MULLANPUR MANDI",
+          "location": {
+            "lat": 30.8496717,
+            "lng": 75.6841167
+          },
+          "studentsReached": 247,
+          "girlsCount": 140,
+          "boysCount": 107,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBgcdz-Aq7lRZoCjnUxLeuzATEkI3ipGUQanKJEIP9ojR8?e=8eK1SZ",
+          "collageImage": "GHS-MULLANPUR MANDI.jpg"
         }
       ],
       "route": {
@@ -70,8 +83,8 @@
         },
         "distanceTravelled": 0
       },
-      "totalStudents": 1212,
-      "schoolsVisited": 2
+      "totalStudents": 1459,
+      "schoolsVisited": 3
     },
     {
       "date": "2025-11-26",
