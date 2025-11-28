@@ -10,16 +10,16 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 49,
+      "current": 50,
       "total": 235
     },
     "districtsCovered": {
       "current": 4,
       "total": 16
     },
-    "studentsImpacted": 22933,
+    "studentsImpacted": 23693,
     "genderBreakdown": {
-      "girls": 12247,
+      "girls": 13007,
       "boys": 10686
     },
     "distanceTravelled": 480,
@@ -55,6 +55,19 @@
           "district": "Ludhiana",
           "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBHywn0nXg8TJKddrVaSpvnARzmf5x7TATOee4nqMNdYKQ?e=E2a76x",
           "collageImage": "GHS-BEGOWAL.jpg"
+        },
+        {
+          "name": "GSSS-SAMRALA G",
+          "location": {
+            "lat": 30.832371,
+            "lng": 76.192599
+          },
+          "studentsReached": 760,
+          "girlsCount": 760,
+          "boysCount": 0,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAK2DPIQyCeRoLTF0iu05yNAUQGJeZaH0fsIpjBGE0K8PQ?e=Jlw0tu",
+          "collageImage": "GSSS-SAMRALA G.jpg"
         }
       ],
       "route": {
@@ -70,8 +83,8 @@
         },
         "distanceTravelled": 0
       },
-      "totalStudents": 597,
-      "schoolsVisited": 2
+      "totalStudents": 1357,
+      "schoolsVisited": 3
     },
     {
       "date": "2025-11-27",
