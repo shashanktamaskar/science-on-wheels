@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-27",
+  "lastUpdated": "2025-11-28",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,82 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 47,
+      "current": 50,
       "total": 235
     },
     "districtsCovered": {
       "current": 4,
       "total": 16
     },
-    "studentsImpacted": 22336,
+    "studentsImpacted": 23693,
     "genderBreakdown": {
-      "girls": 11992,
-      "boys": 10344
+      "girls": 13007,
+      "boys": 10686
     },
     "distanceTravelled": 480,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-11-28",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-RUPALON",
+          "location": {
+            "lat": 30.782974,
+            "lng": 76.111791
+          },
+          "studentsReached": 414,
+          "girlsCount": 181,
+          "boysCount": 233,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCZx8V63BzORa4St4uMvqBzAdcuJSzZxqgdYwMnBe6wAjw?e=um049J",
+          "collageImage": "GSSS-RUPALON.jpg"
+        },
+        {
+          "name": "GHS-BEGOWAL",
+          "location": {
+            "lat": 30.8127813,
+            "lng": 76.0588706
+          },
+          "studentsReached": 183,
+          "girlsCount": 74,
+          "boysCount": 109,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBHywn0nXg8TJKddrVaSpvnARzmf5x7TATOee4nqMNdYKQ?e=E2a76x",
+          "collageImage": "GHS-BEGOWAL.jpg"
+        },
+        {
+          "name": "GSSS-SAMRALA G",
+          "location": {
+            "lat": 30.832371,
+            "lng": 76.192599
+          },
+          "studentsReached": 760,
+          "girlsCount": 760,
+          "boysCount": 0,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAK2DPIQyCeRoLTF0iu05yNAUQGJeZaH0fsIpjBGE0K8PQ?e=Jlw0tu",
+          "collageImage": "GSSS-SAMRALA G.jpg"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "DORAHA",
+          "lat": 30.7960391,
+          "lng": 76.0349003
+        },
+        "endPoint": {
+          "name": "Rampur Jhamloti, Punjab",
+          "lat": 30.841475,
+          "lng": 76.1636318
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 1357,
+      "schoolsVisited": 3
+    },
     {
       "date": "2025-11-27",
       "vehicle": 1,
