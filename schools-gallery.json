@@ -1,6 +1,18 @@
 {
   "schools": [
     {
+      "name": "GSSS-MACHHIWARA",
+      "district": "Ludhiana",
+      "visitDate": "2025-11-29",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAd0pu7YSlETYCMPkKZ861_AaO5rlO9V7ypmamXy8e9L6M?e=IXYuXC"
+    },
+    {
+      "name": "GHS-SHERPUR BET",
+      "district": "Ludhiana",
+      "visitDate": "2025-11-29",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCtBQacXZHWTISuRweRFcWWAUIgS1SYwC9DrOTr8oXWjDk?e=GFSNSz"
+    },
+    {
       "name": "GSSS-RUPALON",
       "district": "Ludhiana",
       "visitDate": "2025-11-28",
