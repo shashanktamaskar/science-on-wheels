@@ -1,6 +1,18 @@
 {
   "schools": [
     {
+      "name": "GSSS-KUTHALA",
+      "district": "Malerkotla",
+      "visitDate": "2025-12-01",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDwA7eLkWmPSaFMHfDEmgMgAeXGG-UrX2vwPG1yPQU7pOU?e=585ZW1"
+    },
+    {
+      "name": "GSSS-MALERKOTLA(BOYS)",
+      "district": "Malerkotla",
+      "visitDate": "2025-12-01",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDtTqcxVc0TT7zl4XrXInm1ARPlepTWMNelLpL2Rs3I49Q?e=nqxhZR"
+    },
+    {
       "name": "GSSS-MACHHIWARA",
       "district": "Ludhiana",
       "visitDate": "2025-11-29",
