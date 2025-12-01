@@ -17,10 +17,10 @@
       "current": 5,
       "total": 16
     },
-    "studentsImpacted": 24449,
+    "studentsImpacted": 25221,
     "genderBreakdown": {
-      "girls": 13674,
-      "boys": 10775
+      "girls": 14034,
+      "boys": 11215
     },
     "distanceTravelled": 480,
     "targetAudience": "Students from Classes 6-12"
@@ -36,9 +36,9 @@
             "lat": 30.5258458,
             "lng": 75.7593691
           },
-          "studentsReached": 0,
-          "girlsCount": 0,
-          "boysCount": 0,
+          "studentsReached": 512,
+          "girlsCount": 232,
+          "boysCount": 280,
           "district": "Malerkotla",
           "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDwA7eLkWmPSaFMHfDEmgMgAeXGG-UrX2vwPG1yPQU7pOU?e=585ZW1",
           "collageImage": "GSSS-KUTHALA.jpg"
@@ -49,9 +49,9 @@
             "lat": 30.5248173,
             "lng": 75.879902
           },
-          "studentsReached": 0,
-          "girlsCount": 0,
-          "boysCount": 0,
+          "studentsReached": 260,
+          "girlsCount": 128,
+          "boysCount": 160,
           "district": "Malerkotla",
           "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDtTqcxVc0TT7zl4XrXInm1ARPlepTWMNelLpL2Rs3I49Q?e=nqxhZR",
           "collageImage": "GSSS-MALERKOTLA(BOYS).jpg"
@@ -70,7 +70,7 @@
         },
         "distanceTravelled": 0
       },
-      "totalStudents": 0,
+      "totalStudents": 772,
       "schoolsVisited": 2
     },
     {
