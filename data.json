@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-29",
+  "lastUpdated": "2025-12-01",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,95 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 52,
+      "current": 56,
       "total": 235
     },
     "districtsCovered": {
-      "current": 4,
+      "current": 5,
       "total": 16
     },
-    "studentsImpacted": 24449,
+    "studentsImpacted": 25942,
     "genderBreakdown": {
-      "girls": 13674,
-      "boys": 10775
+      "girls": 14374,
+      "boys": 11596
     },
     "distanceTravelled": 480,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-12-01",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-KUTHALA",
+          "location": {
+            "lat": 30.5258458,
+            "lng": 75.7593691
+          },
+          "studentsReached": 512,
+          "girlsCount": 232,
+          "boysCount": 280,
+          "district": "Malerkotla",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDwA7eLkWmPSaFMHfDEmgMgAeXGG-UrX2vwPG1yPQU7pOU?e=585ZW1",
+          "collageImage": "GSSS-KUTHALA.jpg"
+        },
+        {
+          "name": "GSSS-MALERKOTLA(BOYS)",
+          "location": {
+            "lat": 30.5248173,
+            "lng": 75.879902
+          },
+          "studentsReached": 260,
+          "girlsCount": 128,
+          "boysCount": 160,
+          "district": "Malerkotla",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDtTqcxVc0TT7zl4XrXInm1ARPlepTWMNelLpL2Rs3I49Q?e=nqxhZR",
+          "collageImage": "GSSS-MALERKOTLA(BOYS).jpg"
+        },
+        {
+          "name": "GSSS-RASULRA",
+          "location": {
+            "lat": 30.6988829,
+            "lng": 76.1879861
+          },
+          "studentsReached": 308,
+          "girlsCount": 160,
+          "boysCount": 148,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCk0uj7NDs0TJBqgHjCjDFZARuJx9vZ0aaY5N7vA6YXs7Y?e=L7uzLt",
+          "collageImage": "GSSS-RASULRA.jpg"
+        },
+        {
+          "name": "GHS-KHANNA",
+          "location": {
+            "lat": 30.6949733,
+            "lng": 76.2295956
+          },
+          "studentsReached": 413,
+          "girlsCount": 180,
+          "boysCount": 233,
+          "district": "Ludhiana",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBKqXPavlnuSojuquZ0b6T7AXSPwjxwymi-mwMN7ULDCE0?e=a87Clw",
+          "collageImage": "GHS-KHANNA.jpg"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Ludhiana",
+          "lat": 30.881053,
+          "lng": 75.814448
+        },
+        "endPoint": {
+          "name": "MALERKOTLA",
+          "lat": 30.5352805,
+          "lng": 75.8646336
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 1493,
+      "schoolsVisited": 4
+    },
     {
       "date": "2025-11-29",
       "vehicle": 1,
