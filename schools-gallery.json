@@ -1,6 +1,30 @@
 {
   "schools": [
     {
+      "name": "GSSS-DHANGERA",
+      "district": "Patiala",
+      "visitDate": "2025-12-03",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FDHANGERA&viewid=efb56dab%2D8a39%2D4d99%2Db96c%2D40fc250c7320&login_hint=scienceonwheels%40plaksha%2Eedu%2Ein&source=waffle"
+    },
+    {
+      "name": "GSSS-SEONA",
+      "district": "Patiala",
+      "visitDate": "2025-12-03",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FSEONA&viewid=efb56dab%2D8a39%2D4d99%2Db96c%2D40fc250c7320&login_hint=scienceonwheels%40plaksha%2Eedu%2Ein&source=waffle"
+    },
+    {
+      "name": "GMHS-Nabha",
+      "district": "Patiala",
+      "visitDate": "2025-12-03",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCkso11h4BnSrbfw3p2b6MXARj0zfPvNA8Hpv80tqafqUo?e=GY7BNS"
+    },
+    {
+      "name": "GSSS-BHOGIWAL",
+      "district": "Malerkotla",
+      "visitDate": "2025-12-03",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgA_4TIvKw5-Qq7v1GBmZE4hAYraL4P7vSmH0JRs3dOEMEs?e=BdLU26"
+    },
+    {
       "name": "GHS-MOHALLA AMARPURA",
       "district": "Malerkotla",
       "visitDate": "2025-12-02",
