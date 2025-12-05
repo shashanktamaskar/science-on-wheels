@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-04",
+  "lastUpdated": "2025-12-05",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,103 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 66,
+      "current": 69,
       "total": 235
     },
     "districtsCovered": {
       "current": 6,
       "total": 16
     },
-    "studentsImpacted": 31763,
+    "studentsImpacted": 33676,
     "genderBreakdown": {
-      "girls": 18269,
-      "boys": 13522
+      "girls": 19118,
+      "boys": 14586
     },
     "distanceTravelled": 480,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-12-05",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-TRIPURI",
+          "location": {
+            "lat": 30.3560228,
+            "lng": 76.3899618
+          },
+          "studentsReached": 973,
+          "girlsCount": 489,
+          "boysCount": 484,
+          "district": "Patiala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCNfePUhgOSTaWcAYX-fbZbAV80nqdF4JRUclsha2ZMLCY?e=SUvZcL",
+          "collageImage": "GSSS-TRIPURI.jpg"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Patiala, Punjab",
+          "lat": 30.3449167,
+          "lng": 76.39775
+        },
+        "endPoint": {
+          "name": "Patiala, Punjab",
+          "lat": 30.3449167,
+          "lng": 76.39775
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 973,
+      "schoolsVisited": 1
+    },
+    {
+      "date": "2025-12-05",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GSSS-KALYAN",
+          "location": {
+            "lat": 30.3559951,
+            "lng": 76.3033439
+          },
+          "studentsReached": 600,
+          "girlsCount": 270,
+          "boysCount": 330,
+          "district": "Patiala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/shared?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FKALYAN",
+          "collageImage": "GSSS-KALYAN.jpg"
+        },
+        {
+          "name": "GSSS-MULTIPURPOSE",
+          "location": {
+            "lat": 30.3504965,
+            "lng": 76.3843538
+          },
+          "studentsReached": 340,
+          "girlsCount": 90,
+          "boysCount": 250,
+          "district": "Patiala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FMULTIPURPOSE",
+          "collageImage": "GSSS-MULTIPURPOSE.jpg"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Patiala, Punjab",
+          "lat": 30.3449167,
+          "lng": 76.39775
+        },
+        "endPoint": {
+          "name": "Patiala, Punjab",
+          "lat": 30.3449167,
+          "lng": 76.39775
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 940,
+      "schoolsVisited": 2
+    },
     {
       "date": "2025-12-04",
       "vehicle": 2,
