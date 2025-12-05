@@ -1,526 +1,490 @@
-# Daily Update Instructions for Science on Wheels Website
+# Daily Update Instructions for Science on Wheels
 
-## Overview
-This document provides step-by-step instructions for updating the Science on Wheels website with daily school visit data. These instructions can be followed by any AI model or developer.
+This guide provides detailed, step-by-step instructions for adding daily school visit data to the repository. These instructions can be followed by any AI tool or developer.
 
-## Project Structure
-```
-science-on-wheels/
-├── data.json              # Main data file with mission stats and daily updates
-├── schools-gallery.json   # Gallery data with school photos
-├── index.html            # Website (auto-updates from JSON files)
-├── gallery_school_collage/  # School collage images folder
-│   ├── GHS-Balongi.jpg
-│   ├── GHS-Kurali.jpg
-│   └── [SchoolName].jpg   # One image per school (must match JSON name)
-└── DAILY_UPDATE_INSTRUCTIONS.md  # This file
-```
+## Quick Overview
 
-## Files to Update
+**Two files need updating:**
+1. `data.json` - Mission statistics and daily visit records
+2. `schools-gallery.json` - Gallery index with school photo links
 
-### 1. data.json
-Contains:
-- `lastUpdated`: Date of last update (YYYY-MM-DD format)
-- `mission`: Cumulative statistics
-  - `schoolsCovered.current`: Total schools visited so far
-  - `districtsCovered.current`: Total unique districts visited
-  - `studentsImpacted`: Total students reached
-  - `distanceTravelled`: Total kilometers travelled
-- `dailyUpdates`: Array of daily visit records (newest first)
+**Current Statistics** (as of 2025-12-05):
+- Schools covered: 69
+- Students impacted: 33,676
+- Girls: 19,118
+- Boys: 14,586
+- Districts: 6 (SAS Nagar, Ludhiana, Fatehgarh Sahib, Roopnagar, Malerkotla, Patiala)
 
-### 2. schools-gallery.json
-Contains:
-- `schools`: Array of school entries with photo links
-  - `name`: School name
-  - `district`: District name
-  - `visitDate`: Visit date (YYYY-MM-DD)
-  - `folderUrl`: OneDrive link to photos
+---
 
 ## Input Data Format
 
-User will provide:
+You'll receive data in this format:
+
 ```
-Date: YYYY-MM-DD
+Date: 2025-MM-DD
+Vehicle: Vehicle-1 (or Vehicle-2)
 Schools visited:
-1. School Name - Coordinates: (latitude, longitude) - Students: number - Girls: number - Boys: number - District: District Name
-2. School Name - Coordinates: (latitude, longitude) - Students: number - Girls: number - Boys: number - District: District Name
-...
 
-Start/End: Plaksha University (30.6310588, 76.7230178)
+SCHOOL-NAME - Coordinates: (latitude, longitude) - Students: XXX - Girls: XX - Boys: XX - District: District Name
 
-Gallery:
-- School Name: OneDrive URL
-- School Name: OneDrive URL
-...
+Start Point: Location Name (latitude, longitude)
+End Point: Location Name (latitude, longitude)
+
+Gallery Links:
+SCHOOL-NAME: https://sharepoint-url
 
 Collage Images:
-- School Name: Filename.jpg
-- School Name: Filename.jpg
-...
+SCHOOL-NAME: SCHOOL-NAME.jpg
 ```
 
-## Step-by-Step Instructions
+---
 
-### STEP 1: Read Current Data
-```bash
-# Read both JSON files
-cat data.json
-cat schools-gallery.json
+## Step 1: Calculate New Statistics
+
+### 1.1: Count New Schools and Students
+
+```
+New schools = Current schools + Number of schools in today's data
+New students = Current students + Sum of all students today
+New girls = Current girls + Sum of all girls today
+New boys = Current boys + Sum of all boys today
 ```
 
-Extract current values:
-- Current schools count: `data.mission.schoolsCovered.current`
-- Current districts count: `data.mission.districtsCovered.current`
-- Current students: `data.mission.studentsImpacted`
-- Current girls: `data.mission.genderBreakdown.girls`
-- Current boys: `data.mission.genderBreakdown.boys`
-- Current distance: `data.mission.distanceTravelled`
-- All districts visited so far (from `dailyUpdates` array)
+### 1.2: Check Districts
 
-### STEP 2: Calculate Route Distance
+Current districts: SAS Nagar, Ludhiana, Fatehgarh Sahib, Roopnagar, Malerkotla, Patiala
 
-Use the Haversine formula to calculate distances:
-```python
-import math
-
-def haversine(lat1, lon1, lat2, lon2):
-    """Calculate distance between two points in kilometers"""
-    R = 6371  # Earth's radius in km
-
-    lat1_rad = math.radians(lat1)
-    lat2_rad = math.radians(lat2)
-    delta_lat = math.radians(lat2 - lat1)
-    delta_lon = math.radians(lon2 - lon1)
-
-    a = math.sin(delta_lat/2)**2 + math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(delta_lon/2)**2
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
-    distance = R * c
-
-    return round(distance, 2)
-
-# Calculate route:
-# Plaksha → School1 → School2 → ... → Plaksha
-# Sum all segments and round to nearest km
+If the visit includes a NEW district not in this list:
 ```
-
-**Route Logic:**
-- Start at Plaksha University
-- Visit each school in order provided
-- Return to Plaksha University
-- Sum all segment distances
-- Round to nearest whole number
-
-### STEP 3: Calculate New Cumulative Statistics
+New districts = Current districts + 1
 ```
-new_schools_count = old_schools_count + number_of_schools_visited_today
-new_students = old_students + sum_of_students_today
-new_girls = old_girls + sum_of_girls_today
-new_boys = old_boys + sum_of_boys_today
-new_distance = old_distance + today_route_distance
+Otherwise, keep districts the same.
 
-# For districts: check if any new district was visited
-new_districts = count unique districts from all dailyUpdates including today
-```
+---
 
-### STEP 4: Update data.json
+## Step 2: Update data.json
 
-**4a. Update top-level fields:**
+### 2.1: Update Header Information
+
+**Location:** Lines 2, 13, 20, 22-23
+
 ```json
-"lastUpdated": "YYYY-MM-DD"  // Today's date
-```
-
-**4b. Update mission statistics:**
-```json
-"mission": {
-  "schoolsCovered": {
-    "current": <new_schools_count>,
-    "total": 235
-  },
-  "districtsCovered": {
-    "current": <new_districts_count>,
-    "total": 16
-  },
-  "studentsImpacted": <new_students>,
-  "genderBreakdown": {
-    "girls": <new_girls>,
-    "boys": <new_boys>
-  },
-  "distanceTravelled": <new_distance>,
-  "targetAudience": "Students from Classes 6-12"
+{
+  "lastUpdated": "2025-MM-DD",  // Update to today's date
+  ...
+  "mission": {
+    "schoolsCovered": {
+      "current": XX,  // New school count
+      "total": 235
+    },
+    "districtsCovered": {
+      "current": X,  // New district count (usually stays same)
+      "total": 16
+    },
+    "studentsImpacted": XXXXX,  // New total students
+    "genderBreakdown": {
+      "girls": XXXXX,  // New total girls
+      "boys": XXXXX   // New total boys
+    },
+    "distanceTravelled": 480,
+    "targetAudience": "Students from Classes 6-12"
+  }
 }
 ```
 
-**4c. Add new daily update entry:**
+### 2.2: Add New Daily Update Entry
 
-Insert the new entry at the BEGINNING of the `dailyUpdates` array (after the opening `[`):
+**Location:** Add at the **BEGINNING** of the `dailyUpdates` array (line 28, right after `"dailyUpdates": [`)
+
+**Template:**
 ```json
 {
-  "date": "YYYY-MM-DD",
+  "date": "2025-MM-DD",
+  "vehicle": 1,  // or 2, based on which vehicle
+  "schools": [
+    {
+      "name": "SCHOOL-NAME-WITH-HYPHENS",
+      "location": {
+        "lat": 30.1234567,
+        "lng": 76.1234567
+      },
+      "studentsReached": XXX,
+      "girlsCount": XXX,
+      "boysCount": XXX,
+      "district": "District Name",
+      "galleryLink": "https://sharepoint-url",
+      "collageImage": "SCHOOL-NAME-WITH-HYPHENS.jpg"
+    }
+    // Add more schools here if multiple schools visited
+  ],
+  "route": {
+    "startPoint": {
+      "name": "Location Name",
+      "lat": 30.1234567,
+      "lng": 76.1234567
+    },
+    "endPoint": {
+      "name": "Location Name",
+      "lat": 30.1234567,
+      "lng": 76.1234567
+    },
+    "distanceTravelled": 0  // Usually set to 0
+  },
+  "totalStudents": XXX,  // Sum of all studentsReached
+  "schoolsVisited": X     // Count of schools in array
+},
+```
+
+**Critical Notes:**
+- Add a **comma** after the closing `}` (since there are existing entries below)
+- School names must use **hyphens not spaces** (e.g., "GSSS-SCHOOL-NAME" not "GSSS SCHOOL NAME")
+- This ensures names match the collage image filenames
+- For multiple schools in one day, add multiple objects in the `schools` array
+
+### 2.3: Multiple Vehicles on Same Day
+
+If both Vehicle 1 and Vehicle 2 operated on the same date:
+- Create TWO separate daily update entries
+- One entry for Vehicle 1 (with `"vehicle": 1`)
+- One entry for Vehicle 2 (with `"vehicle": 2`)
+- Both entries have the same date
+- Add both entries at the beginning of the array
+
+---
+
+## Step 3: Update schools-gallery.json
+
+### 3.1: Add School Entries
+
+**Location:** Add at the **BEGINNING** of the `schools` array (line 2, right after `"schools": [`)
+
+**Template for each school:**
+```json
+{
+  "name": "SCHOOL-NAME-WITH-HYPHENS",
+  "district": "District Name",
+  "visitDate": "2025-MM-DD",
+  "folderUrl": "https://sharepoint-gallery-url"
+},
+```
+
+**Critical Notes:**
+- Add one entry for **each** school visited
+- School name must **exactly match** the name in data.json
+- Add a **comma** after the closing `}` (since there are existing entries below)
+- Newest schools go at the top (chronological order, newest first)
+
+---
+
+## Step 4: Validate JSON Files
+
+**Run these commands to check for syntax errors:**
+
+```bash
+python3 -c "import json; json.load(open('data.json'))" && echo "data.json is valid"
+python3 -c "import json; json.load(open('schools-gallery.json'))" && echo "schools-gallery.json is valid"
+```
+
+**If validation fails:**
+- Check for missing commas between objects in arrays
+- Check for extra commas after the last item in an array
+- Check for mismatched brackets `{}` or braces `[]`
+- Check for unescaped characters in URLs (though most should be fine)
+
+---
+
+## Step 5: Commit and Push
+
+```bash
+# Stage the modified files
+git add data.json schools-gallery.json
+
+# Commit with descriptive message
+git commit -m "Add school visit data for YYYY-MM-DD - Vehicle X
+
+- Added [school names] ([student counts])
+- Updated mission statistics (X schools, X,XXX total students)
+- Added gallery entries
+- District: [district name]"
+
+# Push to branch
+git push origin [branch-name]
+```
+
+---
+
+## Complete Example
+
+### Input Data:
+```
+Date: 2025-12-06
+Vehicle: Vehicle-1
+Schools visited:
+
+GSSS-EXAMPLE - Coordinates: (30.5000000, 76.5000000) - Students: 500 - Girls: 250 - Boys: 250 - District: Patiala
+
+Start Point: Patiala, Punjab (30.3449167, 76.39775)
+End Point: Patiala, Punjab (30.3449167, 76.39775)
+
+Gallery Links:
+GSSS-EXAMPLE: https://plakshauniversity1-my.sharepoint.com/:f:/example
+
+Collage Images:
+GSSS-EXAMPLE: GSSS-EXAMPLE.jpg
+```
+
+### Step 1: Calculate Statistics
+
+**Current** (from data.json):
+- Schools: 69
+- Students: 33,676
+- Girls: 19,118
+- Boys: 14,586
+- Districts: 6 (Patiala already counted)
+
+**New** (adding today's data):
+- Schools: 69 + 1 = **70**
+- Students: 33,676 + 500 = **34,176**
+- Girls: 19,118 + 250 = **19,368**
+- Boys: 14,586 + 250 = **14,836**
+- Districts: **6** (no change, Patiala already in list)
+
+### Step 2: Update data.json
+
+**Update lines 2, 13, 20, 22-23:**
+```json
+"lastUpdated": "2025-12-06",
+...
+"current": 70,
+...
+"studentsImpacted": 34176,
+"genderBreakdown": {
+  "girls": 19368,
+  "boys": 14836
+}
+```
+
+**Add at line 28 (beginning of dailyUpdates array):**
+```json
+{
+  "date": "2025-12-06",
   "vehicle": 1,
   "schools": [
     {
-      "name": "School Name 1",
+      "name": "GSSS-EXAMPLE",
       "location": {
-        "lat": latitude,
-        "lng": longitude
+        "lat": 30.5000000,
+        "lng": 76.5000000
       },
-      "studentsReached": number,
-      "girlsCount": number,
-      "boysCount": number,
-      "district": "District Name"
-    },
-    {
-      "name": "School Name 2",
-      "location": {
-        "lat": latitude,
-        "lng": longitude
-      },
-      "studentsReached": number,
-      "girlsCount": number,
-      "boysCount": number,
-      "district": "District Name"
+      "studentsReached": 500,
+      "girlsCount": 250,
+      "boysCount": 250,
+      "district": "Patiala",
+      "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/example",
+      "collageImage": "GSSS-EXAMPLE.jpg"
     }
   ],
   "route": {
     "startPoint": {
-      "name": "Plaksha University",
-      "lat": 30.6310588,
-      "lng": 76.7230178
+      "name": "Patiala, Punjab",
+      "lat": 30.3449167,
+      "lng": 76.39775
     },
     "endPoint": {
-      "name": "Plaksha University",
-      "lat": 30.6310588,
-      "lng": 76.7230178
+      "name": "Patiala, Punjab",
+      "lat": 30.3449167,
+      "lng": 76.39775
     },
-    "distanceTravelled": <calculated_distance>
+    "distanceTravelled": 0
   },
-  "totalStudents": <sum_of_students_today>,
-  "schoolsVisited": <count_of_schools_today>
-}
+  "totalStudents": 500,
+  "schoolsVisited": 1
+},
 ```
 
-**IMPORTANT:** Add a comma after the closing `}` if there are existing entries below.
+### Step 3: Update schools-gallery.json
 
-### STEP 5: Update schools-gallery.json
-
-Add new school entries to the `schools` array at the END (before the closing `]`):
+**Add at line 2 (beginning of schools array):**
 ```json
 {
-  "name": "School Name",
-  "district": "District Name",
-  "visitDate": "YYYY-MM-DD",
-  "folderUrl": "OneDrive URL"
-}
+  "name": "GSSS-EXAMPLE",
+  "district": "Patiala",
+  "visitDate": "2025-12-06",
+  "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/example"
+},
 ```
 
-**IMPORTANT:**
-- Add a comma after the previous entry
-- Add one entry for EACH school visited
-- Use the exact school name as provided
+### Step 4: Validate and Commit
 
-### STEP 5.5: Upload Collage Images to Gallery
-
-Upload the collage images to the `gallery_school_collage/` folder on the remote repository.
-
-**File Naming Rules (CRITICAL):**
-- School name in JSON: `"name": "GHS-Balongi"`
-- Image filename must match EXACTLY: `GHS-Balongi.jpg`
-- Supported formats: `.jpg`, `.jpeg`, `.png`, `.webp`
-- The carousel reads school names from `schools-gallery.json` and loads images matching those names
-
-**Upload Process:**
-1. Ensure image filename matches the school name in JSON exactly
-2. Upload to: `gallery_school_collage/[SchoolName].jpg`
-3. Use one of these methods:
-   - Push via Git: `git add gallery_school_collage/[SchoolName].jpg`
-   - Upload via GitHub web interface
-   - Use repository file upload feature
-
-**Example Matching:**
-```json
-// In schools-gallery.json
-{
-  "name": "GHS Phase-5",
-  ...
-}
-```
-```
-// Image file location
-gallery_school_collage/GHS Phase-5.jpg
-```
-
-**If Image is Missing:**
-- Carousel will display a placeholder
-- Always ensure filenames match JSON names exactly
-- Check for spelling, capitalization, spaces, and special characters
-
-### STEP 6: Validate JSON Files
 ```bash
-# Validate JSON syntax
-python3 -c "import json; json.load(open('data.json'))"
-python3 -c "import json; json.load(open('schools-gallery.json'))"
-```
+python3 -c "import json; json.load(open('data.json'))" && echo "valid"
+python3 -c "import json; json.load(open('schools-gallery.json'))" && echo "valid"
 
-If validation fails, fix syntax errors before proceeding.
-
-### STEP 7: Git Workflow
-```bash
-# Check current branch
-git branch
-
-# Ensure on correct branch: claude/session-<ID>
-# If not, create new branch:
-# git checkout -b claude/session-<ID>
-
-# Stage files
 git add data.json schools-gallery.json
-git add gallery_school_collage/*.jpg gallery_school_collage/*.jpeg gallery_school_collage/*.png gallery_school_collage/*.webp
+git commit -m "Add school visit data for December 6, 2025 - Vehicle 1
 
-# View changes
-git diff --cached
+- Added GSSS-EXAMPLE (500 students: 250 girls, 250 boys)
+- Updated mission statistics (70 schools, 34,176 total students)
+- Added gallery entry
+- District: Patiala"
 
-# Commit with descriptive message
-git commit -m "$(cat <<'EOF'
-Update website with <Month> <Day>, 2025 school visits
-
-- Add <School1> (<students1> students: <girls1> girls, <boys1> boys) and <School2> (<students2> students: <girls2> girls, <boys2> boys) to daily updates
-- Update mission stats: <new_schools> schools covered, <new_students> total students (<new_girls> girls, <new_boys> boys), <new_distance> km travelled
-- Add schools to gallery with OneDrive photo links
-- Upload collage images to gallery_school_collage/ folder
-- Route: Plaksha → <School1> → <School2> → Plaksha (<distance> km)
-
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>
-EOF
-)"
-
-# Push to remote
-git push -u origin claude/session-<ID>
+git push origin claude/add-school-visit-data-01N2BzaEyuWyRGZoaT3Xynu3
 ```
-
-### STEP 8: Create Pull Request
-
-Provide the user with the GitHub PR creation URL (from git push output) and the following PR template:
-```markdown
-## Summary
-- Added <School1> (<students1> students: <girls1> girls, <boys1> boys) and <School2> (<students2> students: <girls2> girls, <boys2> boys) to daily updates for <date>
-- Updated mission statistics: <new_schools> schools covered, <new_students> total students impacted (<new_girls> girls, <new_boys> boys), <new_distance> km travelled
-- Added schools to gallery page with OneDrive photo links
-- Uploaded collage images to gallery_school_collage/ folder
-- Route: Plaksha University → <School1> → <School2> → Plaksha University (<distance> km total)
-
-## Changes
-### data.json
-- Updated `lastUpdated` to <date>
-- Updated mission stats:
-  - Schools covered: <old> → <new>
-  - Districts covered: <old> → <new>
-  - Students impacted: <old> → <new>
-  - Gender breakdown: <old_girls> girls, <old_boys> boys → <new_girls> girls, <new_boys> boys
-  - Distance travelled: <old> km → <new> km
-- Added new daily update entry for <date>
-
-### schools-gallery.json
-- Added <School1> with OneDrive link
-- Added <School2> with OneDrive link
-
-### gallery_school_collage/
-- Uploaded <School1>.jpg collage image
-- Uploaded <School2>.jpg collage image
-
-## Test plan
-- [x] Verified data.json is valid JSON
-- [x] Verified schools-gallery.json is valid JSON
-- [x] Checked that coordinates are correct
-- [x] Confirmed distance calculations are accurate
-- [x] Verified collage image filenames match school names in JSON exactly
-- [x] Confirmed images are in correct format (.jpg, .jpeg, .png, or .webp)
-
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
-```
-
-## Example Complete Workflow
-
-### Input:
-```
-Date: 2025-10-29
-Schools visited:
-1. GHS-Balongi - Coordinates: (30.7234, 76.7123) - Students: 300 - Girls: 150 - Boys: 150
-2. GHS-Kurali - Coordinates: (30.7845, 76.7956) - Students: 275 - Girls: 140 - Boys: 135
-
-Start/End: Plaksha University (30.6310588, 76.7230178)
-
-Gallery:
-- GHS-Balongi: https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ExampleLink1
-- GHS-Kurali: https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ExampleLink2
-```
-
-### Processing:
-
-1. **Read current data:**
-   - Schools: 4 → 6 (adding 2)
-   - Students: 1341 → 1916 (adding 575)
-   - Girls: 670 → 960 (adding 290)
-   - Boys: 671 → 956 (adding 285)
-   - Districts: Check if "SAS Nagar" or new district
-   - Distance: 47 → (47 + calculated)
-
-2. **Calculate distance:**
-   - Plaksha (30.6310588, 76.7230178) → Balongi (30.7234, 76.7123) = ~10.5 km
-   - Balongi (30.7234, 76.7123) → Kurali (30.7845, 76.7956) = ~9.8 km
-   - Kurali (30.7845, 76.7956) → Plaksha (30.6310588, 76.7230178) = ~19.1 km
-   - **Total: 39 km (rounded from 39.4)**
-
-3. **Update data.json:**
-   - Set `lastUpdated` to "2025-10-29"
-   - Update mission: schools=6, students=1916, distance=86
-   - Add new dailyUpdates entry at beginning
-
-4. **Update schools-gallery.json:**
-   - Add GHS-Balongi entry
-   - Add GHS-Kurali entry
-
-5. **Commit and push:**
-   - Create descriptive commit message
-   - Push to branch
-   - Provide PR creation link
-
-## Important Notes
-
-### Gallery Image Management
-- **Filename Matching:** The school name in `schools-gallery.json` must match the image filename EXACTLY
-- **Supported Formats:** `.jpg`, `.jpeg`, `.png`, `.webp`
-- **Location:** All images go in the `gallery_school_collage/` folder
-- **Naming Convention:** Use the exact school name from JSON
-  - Example: If JSON has `"name": "GHS-Saneta"`, file must be `GHS-Saneta.jpg`
-  - Capitalization, spaces, and special characters MUST match
-- **Missing Images:** If an image filename doesn't match, the carousel will show a placeholder
-- **Multiple Schools:** Each school needs its own unique image file
-
-**Gallery Folder Structure Example:**
-```
-gallery_school_collage/
-  ├── GHS-Balongi.jpg      ✓ matches JSON entry "GHS-Balongi"
-  ├── GHS-Kurali.png       ✓ matches JSON entry "GHS-Kurali"
-  ├── GHS Phase-5.jpg      ✓ matches JSON entry "GHS Phase-5" (note: spaces matter!)
-  └── GHS Kumbra.jpeg      ✓ matches JSON entry "GHS Kumbra"
-```
-
-**Verification Checklist for Images:**
-- [ ] Each image filename matches corresponding school name in JSON
-- [ ] No typos in filenames
-- [ ] Proper capitalization maintained
-- [ ] Spaces preserved correctly
-- [ ] File extension is one of: .jpg, .jpeg, .png, .webp
-- [ ] Images are uploaded to gallery_school_collage/ folder
-- [ ] Images are included in git commit
-
-### District Counting
-- Count UNIQUE districts across ALL dailyUpdates entries
-- Districts visited so far (as of 2025-10-28): SAS Nagar
-- If a new district is visited for the first time, increment the counter
-- District names should match existing entries (check spelling)
-
-### Common Districts in Punjab
-SAS Nagar, Patiala, Ludhiana, Fatehgarh Sahib, Roopnagar, Sangroor, Mansa, Barnala, Bathinda, Mukatsar Sahib, Malerkotla, Fazilka, Ferozepur, Faridkot, Moga, Pathankot
-
-### Data Integrity
-- Always validate JSON syntax before committing
-- Verify coordinates are in decimal degrees format
-- Ensure student counts are positive integers
-- Check that dates follow YYYY-MM-DD format
-- Verify OneDrive links are complete and accessible
-
-### Git Branch Naming
-- Always use pattern: `claude/session-<ID>`
-- ID should be unique for each session
-- Never push to `main` directly
-- Never force push
-
-### Error Handling
-If errors occur:
-1. Validate JSON syntax first
-2. Check for missing commas in arrays/objects
-3. Verify all required fields are present
-4. Ensure numbers are not quoted
-5. Confirm coordinates are valid lat/lng values
-
-## Quick Reference
-
-### Haversine Formula (Python)
-```python
-import math
-
-def calculate_route_distance(waypoints):
-    """
-    waypoints: list of (lat, lng) tuples
-    Returns: total distance in km (rounded)
-    """
-    R = 6371
-    total = 0
-
-    for i in range(len(waypoints) - 1):
-        lat1, lon1 = waypoints[i]
-        lat2, lon2 = waypoints[i + 1]
-
-        lat1_rad = math.radians(lat1)
-        lat2_rad = math.radians(lat2)
-        delta_lat = math.radians(lat2 - lat1)
-        delta_lon = math.radians(lon2 - lon1)
-
-        a = math.sin(delta_lat/2)**2 + math.cos(lat1_rad) * math.cos(lat2_rad) * math.sin(delta_lon/2)**2
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
-        total += R * c
-
-    return round(total)
-
-# Usage:
-waypoints = [
-    (30.6310588, 76.7230178),  # Plaksha
-    (30.7234, 76.7123),        # School 1
-    (30.7845, 76.7956),        # School 2
-    (30.6310588, 76.7230178)   # Back to Plaksha
-]
-distance = calculate_route_distance(waypoints)
-```
-
-### JSON Editing Tips
-- Use `Edit` tool for targeted changes (preferred)
-- Preserve exact indentation (2 spaces per level)
-- Add commas between array/object elements
-- Don't add comma after last element
-- Strings must be double-quoted
-- Numbers should not be quoted
-
-### File Locations
-- Repository: `science-on-wheels`
-- Data file: `/home/user/science-on-wheels/data.json`
-- Gallery file: `/home/user/science-on-wheels/schools-gallery.json`
-- Website URL: https://shashanktamaskar.github.io/science-on-wheels/
 
 ---
 
-## Checklist
+## Common Mistakes to Avoid
+
+1. **School Name Formatting**
+   - ❌ "GSSS SCHOOL NAME" (spaces)
+   - ✅ "GSSS-SCHOOL-NAME" (hyphens)
+   - Must match collage filename exactly
+
+2. **Missing Commas**
+   - Add comma after `}` when there are more entries below
+   - Don't add comma after the last entry in an array
+
+3. **Wrong Insertion Point**
+   - ❌ Adding new entries at the end of arrays
+   - ✅ Adding new entries at the BEGINNING of arrays
+
+4. **Statistics Errors**
+   - Always double-check your addition
+   - Use current values from data.json, not old values
+
+5. **District Counting**
+   - Only increment if it's a NEW district
+   - Current districts: SAS Nagar, Ludhiana, Fatehgarh Sahib, Roopnagar, Malerkotla, Patiala
+
+6. **Date Format**
+   - ❌ "12-05-2025" or "05/12/2025"
+   - ✅ "2025-12-05" (YYYY-MM-DD)
+
+7. **Coordinate Precision**
+   - Use 7 decimal places (e.g., 30.1234567)
+   - Don't round to fewer decimals
+
+---
+
+## Verification Checklist
 
 Before committing, verify:
-- [ ] Both JSON files are valid (syntax check)
-- [ ] lastUpdated date is correct
+- [ ] JSON files are syntactically valid (ran validation commands)
+- [ ] `lastUpdated` date matches today's date
 - [ ] Mission statistics are correctly calculated
-- [ ] Distance calculation is accurate
-- [ ] New dailyUpdates entry is at beginning of array
-- [ ] All schools added to gallery
-- [ ] OneDrive links are complete
-- [ ] Collage images uploaded to gallery_school_collage/ folder
-- [ ] Image filenames match school names in JSON EXACTLY
-- [ ] Image formats are supported (.jpg, .jpeg, .png, or .webp)
-- [ ] No spelling/capitalization mismatches between JSON and filenames
+- [ ] New daily update entry is at the BEGINNING of dailyUpdates array
+- [ ] School names use hyphens (match collage filenames)
+- [ ] `totalStudents` and `schoolsVisited` match the data in the entry
+- [ ] New school entries are at the BEGINNING of schools array in schools-gallery.json
+- [ ] All required fields are present
 - [ ] Commit message is descriptive
-- [ ] Changes pushed to correct branch
-- [ ] PR link provided to user
+- [ ] Pushing to correct branch
 
 ---
 
-**Last Updated:** 2025-10-28
-**Maintained By:** Science on Wheels Team
-**Repository:** https://github.com/shashanktamaskar/science-on-wheels
+## Key Field Descriptions
+
+### data.json Structure
+
+```json
+{
+  "lastUpdated": "YYYY-MM-DD",  // Date of last update
+  "mission": {
+    "schoolsCovered": {
+      "current": XX,  // Schools visited so far
+      "total": 235    // Total target schools
+    },
+    "studentsImpacted": XXXXX,  // Total students reached
+    "genderBreakdown": {
+      "girls": XXXXX,
+      "boys": XXXXX
+    }
+  },
+  "dailyUpdates": [
+    {
+      "date": "YYYY-MM-DD",
+      "vehicle": 1,  // Which vehicle (1 or 2)
+      "schools": [...],  // Array of schools visited
+      "route": {...},    // Start/end points
+      "totalStudents": XXX,     // Sum for this day
+      "schoolsVisited": X       // Count for this day
+    }
+  ]
+}
+```
+
+### schools-gallery.json Structure
+
+```json
+{
+  "schools": [
+    {
+      "name": "SCHOOL-NAME",    // Must match data.json exactly
+      "district": "District",   // District name
+      "visitDate": "YYYY-MM-DD",
+      "folderUrl": "https://..."  // Gallery link
+    }
+  ]
+}
+```
+
+---
+
+## Current Statistics Reference
+
+**As of 2025-12-05:**
+- **Schools covered**: 69
+- **Students impacted**: 33,676
+- **Girls**: 19,118
+- **Boys**: 14,586
+- **Districts covered**: 6
+
+**Current Districts:**
+1. SAS Nagar
+2. Ludhiana
+3. Fatehgarh Sahib
+4. Roopnagar
+5. Malerkotla
+6. Patiala
+
+---
+
+## Troubleshooting
+
+### JSON Validation Errors
+
+**Error: "Expecting ',' delimiter"**
+- Missing comma between array/object elements
+- Add comma after previous entry
+
+**Error: "Extra data"**
+- Trailing comma after last array element
+- Remove comma after final entry
+
+**Error: "Unterminated string"**
+- Check for unescaped quotes in URLs
+- Ensure all strings are properly closed
+
+### Git Errors
+
+**Error: "Updates were rejected"**
+- Run `git pull origin [branch-name]` first
+- Then try pushing again
+
+**Error: "Permission denied"**
+- Check branch name is correct
+- Verify you have write access
+
+---
+
+## Additional Resources
+
+- **Repository**: https://github.com/shashanktamaskar/science-on-wheels
+- **Website**: https://shashanktamaskar.github.io/science-on-wheels/
+- **Current Branch**: claude/add-school-visit-data-01N2BzaEyuWyRGZoaT3Xynu3
+
+---
+
+**Last Updated**: 2025-12-05
+**Current Statistics**: 69 schools, 33,676 students (19,118 girls, 14,586 boys)
