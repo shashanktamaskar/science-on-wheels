@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-03",
+  "lastUpdated": "2025-12-04",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,56 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 63,
+      "current": 64,
       "total": 235
     },
     "districtsCovered": {
       "current": 6,
       "total": 16
     },
-    "studentsImpacted": 29164,
+    "studentsImpacted": 30819,
     "genderBreakdown": {
-      "girls": 15890,
+      "girls": 17545,
       "boys": 13302
     },
     "distanceTravelled": 480,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-12-04",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GSSS(GIRLS) NABHA",
+          "location": {
+            "lat": 30.3789968,
+            "lng": 76.1517648
+          },
+          "studentsReached": 1655,
+          "girlsCount": 1655,
+          "boysCount": 0,
+          "district": "Patiala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBBeFDhTwOfR5rjq4f-cuLcAfY7El3BskO540A362uL3kw?e=BHqiae",
+          "collageImage": "GSSS-GIRLS-NABHA.jpg"
+        }
+      ],
+      "route": {
+        "startPoint": {
+          "name": "Patiala, Punjab",
+          "lat": 30.3449167,
+          "lng": 76.39775
+        },
+        "endPoint": {
+          "name": "Patiala, Punjab",
+          "lat": 30.3451667,
+          "lng": 76.39775
+        },
+        "distanceTravelled": 0
+      },
+      "totalStudents": 1655,
+      "schoolsVisited": 1
+    },
     {
       "date": "2025-12-03",
       "vehicle": 1,
