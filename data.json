@@ -31,7 +31,7 @@
       "vehicle": 2,
       "schools": [
         {
-          "name": "GSSS(GIRLS) NABHA",
+          "name": "GSSS-GIRLS-NABHA",
           "location": {
             "lat": 30.3789968,
             "lng": 76.1517648
@@ -65,7 +65,7 @@
       "vehicle": 1,
       "schools": [
         {
-          "name": "GSSS G SAMANA",
+          "name": "GSSS-G-SAMANA",
           "location": {
             "lat": 30.1544796,
             "lng": 76.1925008
@@ -78,7 +78,7 @@
           "collageImage": "GSSS-G-SAMANA.jpg"
         },
         {
-          "name": "GSSS DHANETHA",
+          "name": "GSSS-DHANETHA",
           "location": {
             "lat": 30.1073926,
             "lng": 76.1979985
