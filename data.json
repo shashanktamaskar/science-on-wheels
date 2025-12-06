@@ -1,1733 +1,1475 @@
 {
-  "lastUpdated": "2025-12-05",
-  "projectInfo": {
-    "title": "Science on Wheels for Punjab",
-    "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
-    "duration": "67 days",
-    "startDate": "2025-10-27",
-    "endDate": "2026-01-31",
-    "status": "active"
-  },
-  "mission": {
-    "schoolsCovered": {
-      "current": 69,
-      "total": 235
-    },
-    "districtsCovered": {
-      "current": 6,
-      "total": 16
-    },
-    "studentsImpacted": 33676,
-    "genderBreakdown": {
-      "girls": 19118,
-      "boys": 14586
-    },
-    "distanceTravelled": 480,
-    "targetAudience": "Students from Classes 6-12"
-  },
-  "dailyUpdates": [
-    {
-      "date": "2025-12-05",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-TRIPURI",
-          "location": {
-            "lat": 30.3560228,
-            "lng": 76.3899618
-          },
-          "studentsReached": 973,
-          "girlsCount": 489,
-          "boysCount": 484,
-          "district": "Patiala",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCNfePUhgOSTaWcAYX-fbZbAV80nqdF4JRUclsha2ZMLCY?e=SUvZcL",
-          "collageImage": "GSSS-TRIPURI.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Patiala, Punjab",
-          "lat": 30.3449167,
-          "lng": 76.39775
-        },
-        "endPoint": {
-          "name": "Patiala, Punjab",
-          "lat": 30.3449167,
-          "lng": 76.39775
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 973,
-      "schoolsVisited": 1
-    },
-    {
-      "date": "2025-12-05",
-      "vehicle": 2,
-      "schools": [
-        {
-          "name": "GSSS-KALYAN",
-          "location": {
-            "lat": 30.3559951,
-            "lng": 76.3033439
-          },
-          "studentsReached": 600,
-          "girlsCount": 270,
-          "boysCount": 330,
-          "district": "Patiala",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/shared?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FKALYAN",
-          "collageImage": "GSSS-KALYAN.jpg"
-        },
-        {
-          "name": "GSSS-MULTIPURPOSE",
-          "location": {
-            "lat": 30.3504965,
-            "lng": 76.3843538
-          },
-          "studentsReached": 340,
-          "girlsCount": 90,
-          "boysCount": 250,
-          "district": "Patiala",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FMULTIPURPOSE",
-          "collageImage": "GSSS-MULTIPURPOSE.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Patiala, Punjab",
-          "lat": 30.3449167,
-          "lng": 76.39775
-        },
-        "endPoint": {
-          "name": "Patiala, Punjab",
-          "lat": 30.3449167,
-          "lng": 76.39775
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 940,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-12-04",
-      "vehicle": 2,
-      "schools": [
-        {
-          "name": "GSSS-GIRLS-NABHA",
-          "location": {
-            "lat": 30.3789968,
-            "lng": 76.1517648
-          },
-          "studentsReached": 1655,
-          "girlsCount": 1655,
-          "boysCount": 0,
-          "district": "Patiala",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBBeFDhTwOfR5rjq4f-cuLcAfY7El3BskO540A362uL3kw?e=BHqiae",
-          "collageImage": "GSSS-GIRLS-NABHA.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Patiala, Punjab",
-          "lat": 30.3449167,
-          "lng": 76.39775
-        },
-        "endPoint": {
-          "name": "Patiala, Punjab",
-          "lat": 30.3451667,
-          "lng": 76.39775
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 1655,
-      "schoolsVisited": 1
-    },
-    {
-      "date": "2025-12-04",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-G-SAMANA",
-          "location": {
-            "lat": 30.1544796,
-            "lng": 76.1925008
-          },
-          "studentsReached": 563,
-          "girlsCount": 563,
-          "boysCount": 0,
-          "district": "Patiala",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDAO66gPt8HTaAbgdTPJ4obAf2N7K2KqJb5KnVZ3M-_ejI?e=BmqND2",
-          "collageImage": "GSSS-G-SAMANA.jpg"
-        },
-        {
-          "name": "GSSS-DHANETHA",
-          "location": {
-            "lat": 30.1073926,
-            "lng": 76.1979985
-          },
-          "studentsReached": 381,
-          "girlsCount": 161,
-          "boysCount": 220,
-          "district": "Patiala",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNlaM3-nR-T5R7H_DRfsebAU6_iY1RpSOp9OKt5ALsI8g?e=YLBVxM",
-          "collageImage": "GSSS-DHANETHA.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Patiala, Punjab",
-          "lat": 30.344906,
-          "lng": 76.39774
-        },
-        "endPoint": {
-          "name": "Patiala, Punjab",
-          "lat": 30.3451667,
-          "lng": 76.39775
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 944,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-12-03",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-DHANGERA",
-          "location": {
-            "lat": 30.4290455,
-            "lng": 76.2160099
-          },
-          "studentsReached": 527,
-          "girlsCount": 259,
-          "boysCount": 268,
-          "district": "Patiala",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FDHANGERA&viewid=efb56dab%2D8a39%2D4d99%2Db96c%2D40fc250c7320&login_hint=scienceonwheels%40plaksha%2Eedu%2Ein&source=waffle",
-          "collageImage": "GSSS-DHANGERA.jpg"
-        },
-        {
-          "name": "GSSS-SEONA",
-          "location": {
-            "lat": 30.4158824,
-            "lng": 76.2748737
-          },
-          "studentsReached": 535,
-          "girlsCount": 268,
-          "boysCount": 267,
-          "district": "Patiala",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FSEONA&viewid=efb56dab%2D8a39%2D4d99%2Db96c%2D40fc250c7320&login_hint=scienceonwheels%40plaksha%2Eedu%2Ein&source=waffle",
-          "collageImage": "GSSS-SEONA.jpg"
-        },
-        {
-          "name": "GMHS-Nabha",
-          "location": {
-            "lat": 30.5166067,
-            "lng": 75.8787587
-          },
-          "studentsReached": 546,
-          "girlsCount": 146,
-          "boysCount": 400,
-          "district": "Patiala",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCkso11h4BnSrbfw3p2b6MXARj0zfPvNA8Hpv80tqafqUo?e=GY7BNS",
-          "collageImage": "GMHS-Nabha.jpg"
-        },
-        {
-          "name": "GSSS-BHOGIWAL",
-          "location": {
-            "lat": 30.4768799,
-            "lng": 75.8678759
-          },
-          "studentsReached": 1006,
-          "girlsCount": 501,
-          "boysCount": 505,
-          "district": "Malerkotla",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgA_4TIvKw5-Qq7v1GBmZE4hAYraL4P7vSmH0JRs3dOEMEs?e=BdLU26",
-          "collageImage": "GSSS-BHOGIWAL.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Hotel tej patiala",
-          "lat": 30.3397809,
-          "lng": 76.3869957
-        },
-        "endPoint": {
-          "name": "Hotel tej patiala",
-          "lat": 30.3397809,
-          "lng": 76.3869957
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 2614,
-      "schoolsVisited": 4
-    },
-    {
-      "date": "2025-12-02",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GHS-MOHALLA AMARPURA",
-          "location": {
-            "lat": 30.6863623,
-            "lng": 75.822269
-          },
-          "studentsReached": 179,
-          "girlsCount": 83,
-          "boysCount": 96,
-          "district": "Malerkotla",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAv8h_kyUCCRoNXhvg0DrmAATcz7MQY0WvYDhomUiyYIEM?e=Ig02hb",
-          "collageImage": "GHS-MOHALLA AMARPURA.jpg"
-        },
-        {
-          "name": "GHS-HIMTANA",
-          "location": {
-            "lat": 30.4519509,
-            "lng": 75.8597211
-          },
-          "studentsReached": 175,
-          "girlsCount": 84,
-          "boysCount": 91,
-          "district": "Malerkotla",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgA-_5JKjenbQo5m73j46WpHAdZpgei-2_3q-Yzm2BzZne0?e=AhsTQE",
-          "collageImage": "GHS-HIMTANA.jpg"
-        },
-        {
-          "name": "GSSS-AMARGARH",
-          "location": {
-            "lat": 30.46071,
-            "lng": 76.0130784
-          },
-          "studentsReached": 254,
-          "girlsCount": 175,
-          "boysCount": 79,
-          "district": "Malerkotla",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBKGwUD5PIoRrecPyVGyz2zAb9na1SupjsWoYKKVe0ccB0?e=azJXdq",
-          "collageImage": "GSSS-AMARGARH.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "MALERKOTLA",
-          "lat": 30.6347744,
-          "lng": 76.7221076
-        },
-        "endPoint": {
-          "name": "MALERKOTLA",
-          "lat": 30.535281,
-          "lng": 75.867208
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 608,
-      "schoolsVisited": 3
-    },
-    {
-      "date": "2025-12-01",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-KUTHALA",
-          "location": {
-            "lat": 30.5258458,
-            "lng": 75.7593691
-          },
-          "studentsReached": 512,
-          "girlsCount": 232,
-          "boysCount": 280,
-          "district": "Malerkotla",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDwA7eLkWmPSaFMHfDEmgMgAeXGG-UrX2vwPG1yPQU7pOU?e=585ZW1",
-          "collageImage": "GSSS-KUTHALA.jpg"
-        },
-        {
-          "name": "GSSS-MALERKOTLA(BOYS)",
-          "location": {
-            "lat": 30.5248173,
-            "lng": 75.879902
-          },
-          "studentsReached": 260,
-          "girlsCount": 128,
-          "boysCount": 160,
-          "district": "Malerkotla",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDtTqcxVc0TT7zl4XrXInm1ARPlepTWMNelLpL2Rs3I49Q?e=nqxhZR",
-          "collageImage": "GSSS-MALERKOTLA(BOYS).jpg"
-        },
-        {
-          "name": "GSSS-RASULRA",
-          "location": {
-            "lat": 30.6988829,
-            "lng": 76.1879861
-          },
-          "studentsReached": 308,
-          "girlsCount": 160,
-          "boysCount": 148,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCk0uj7NDs0TJBqgHjCjDFZARuJx9vZ0aaY5N7vA6YXs7Y?e=L7uzLt",
-          "collageImage": "GSSS-RASULRA.jpg"
-        },
-        {
-          "name": "GHS-KHANNA",
-          "location": {
-            "lat": 30.6949733,
-            "lng": 76.2295956
-          },
-          "studentsReached": 413,
-          "girlsCount": 180,
-          "boysCount": 233,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBKqXPavlnuSojuquZ0b6T7AXSPwjxwymi-mwMN7ULDCE0?e=a87Clw",
-          "collageImage": "GHS-KHANNA.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Ludhiana",
-          "lat": 30.881053,
-          "lng": 75.814448
-        },
-        "endPoint": {
-          "name": "MALERKOTLA",
-          "lat": 30.5352805,
-          "lng": 75.8646336
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 1493,
-      "schoolsVisited": 4
-    },
-    {
-      "date": "2025-11-29",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-MACHHIWARA",
-          "location": {
-            "lat": 30.915858,
-            "lng": 76.204509
-          },
-          "studentsReached": 594,
-          "girlsCount": 594,
-          "boysCount": 0,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAd0pu7YSlETYCMPkKZ861_AaO5rlO9V7ypmamXy8e9L6M?e=IXYuXC",
-          "collageImage": "GSSS-MACHHIWARA.jpg"
-        },
-        {
-          "name": "GHS-SHERPUR BET",
-          "location": {
-            "lat": 30.935487,
-            "lng": 76.303634
-          },
-          "studentsReached": 162,
-          "girlsCount": 73,
-          "boysCount": 89,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCtBQacXZHWTISuRweRFcWWAUIgS1SYwC9DrOTr8oXWjDk?e=GFSNSz",
-          "collageImage": "GHS-SHERPUR BET.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "RAMPUR JHAMLOTI",
-          "lat": 30.841475,
-          "lng": 76.166206
-        },
-        "endPoint": {
-          "name": "Ludhiana",
-          "lat": 30.881053,
-          "lng": 75.814448
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 756,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-28",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-RUPALON",
-          "location": {
-            "lat": 30.782974,
-            "lng": 76.111791
-          },
-          "studentsReached": 414,
-          "girlsCount": 181,
-          "boysCount": 233,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCZx8V63BzORa4St4uMvqBzAdcuJSzZxqgdYwMnBe6wAjw?e=um049J",
-          "collageImage": "GSSS-RUPALON.jpg"
-        },
-        {
-          "name": "GHS-BEGOWAL",
-          "location": {
-            "lat": 30.8127813,
-            "lng": 76.0588706
-          },
-          "studentsReached": 183,
-          "girlsCount": 74,
-          "boysCount": 109,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBHywn0nXg8TJKddrVaSpvnARzmf5x7TATOee4nqMNdYKQ?e=E2a76x",
-          "collageImage": "GHS-BEGOWAL.jpg"
-        },
-        {
-          "name": "GSSS-SAMRALA G",
-          "location": {
-            "lat": 30.832371,
-            "lng": 76.192599
-          },
-          "studentsReached": 760,
-          "girlsCount": 760,
-          "boysCount": 0,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAK2DPIQyCeRoLTF0iu05yNAUQGJeZaH0fsIpjBGE0K8PQ?e=Jlw0tu",
-          "collageImage": "GSSS-SAMRALA G.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "DORAHA",
-          "lat": 30.7960391,
-          "lng": 76.0349003
-        },
-        "endPoint": {
-          "name": "Rampur Jhamloti, Punjab",
-          "lat": 30.841475,
-          "lng": 76.1636318
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 1357,
-      "schoolsVisited": 3
-    },
-    {
-      "date": "2025-11-27",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-MALOUD",
-          "location": {
-            "lat": 30.6334625,
-            "lng": 75.9349146
-          },
-          "studentsReached": 460,
-          "girlsCount": 460,
-          "boysCount": 0,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBjMoJWn40ZRrIncF2ajXelAQmv3YBH-kzvFUOAze40cx8?e=b32gV2",
-          "collageImage": "GSSS-MALOUD.jpg"
-        },
-        {
-          "name": "GSSS-DEHLON",
-          "location": {
-            "lat": 30.7390705,
-            "lng": 75.8480269
-          },
-          "studentsReached": 752,
-          "girlsCount": 350,
-          "boysCount": 402,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAH_QDSqvneQruZhHYC4guBAd12npnR42pSevdEVV8xJak?e=I9eunA",
-          "collageImage": "GSSS-DEHLON.jpg"
-        },
-        {
-          "name": "GHS-MULLANPUR MANDI",
-          "location": {
-            "lat": 30.8496717,
-            "lng": 75.6841167
-          },
-          "studentsReached": 247,
-          "girlsCount": 140,
-          "boysCount": 107,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBgcdz-Aq7lRZoCjnUxLeuzATEkI3ipGUQanKJEIP9ojR8?e=8eK1SZ",
-          "collageImage": "GHS-MULLANPUR MANDI.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "MULLANPUR DAKHA",
-          "lat": 30.8495489,
-          "lng": 75.6815823
-        },
-        "endPoint": {
-          "name": "DORAHA",
-          "lat": 30.796177,
-          "lng": 76.035197
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 1459,
-      "schoolsVisited": 3
-    },
-    {
-      "date": "2025-11-26",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-BHAINI BARINGA",
-          "location": {
-            "lat": 30.8806629,
-            "lng": 75.8143756
-          },
-          "studentsReached": 364,
-          "girlsCount": 201,
-          "boysCount": 163,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDQhmKo7EaaQaLHrerhbwJHAbhPCbmGKwiTLuhlVcE1L5M?e=sRaPCY",
-          "collageImage": "GSSS-BHAINI BARINGA.jpg"
-        },
-        {
-          "name": "GSSS-B.M RAIKOT",
-          "location": {
-            "lat": 30.8806417,
-            "lng": 75.8143617
-          },
-          "studentsReached": 368,
-          "girlsCount": 368,
-          "boysCount": 0,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDT0fTRQFg2Ta7IxH7pSDjIAQ3NK0FfKgZlZIUC51I5VR0?e=JR3feu",
-          "collageImage": "GSSS-B.M RAIKOT.jpg"
-        },
-        {
-          "name": "GSSS-AJITSAR RAIKOT",
-          "location": {
-            "lat": 30.8806483,
-            "lng": 75.8143683
-          },
-          "studentsReached": 366,
-          "girlsCount": 22,
-          "boysCount": 344,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAaBkGVyzmETprLgJbAme-nAX-67QNBa4fcR_HnTdfNDd8?e=oliS4u",
-          "collageImage": "GSSS-AJITSAR RAIKOT.jpg"
-        },
-        {
-          "name": "GHS-MULLANPUR",
-          "location": {
-            "lat": 30.848215,
-            "lng": 75.662291
-          },
-          "studentsReached": 161,
-          "girlsCount": 70,
-          "boysCount": 91,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC7ZIbwIlKVSZTtZGiotb9VARmYWP-KZt27Aj01wxqRQO4?e=oHb3Fw",
-          "collageImage": "GHS-MULLANPUR.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Ludhiana",
-          "lat": 30.6714924,
-          "lng": 76.6541824
-        },
-        "endPoint": {
-          "name": "MULLANPUR DAKHA",
-          "lat": 30.8495489,
-          "lng": 75.6815823
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 1259,
-      "schoolsVisited": 4
-    },
-    {
-      "date": "2025-11-24",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-SIDHWAN KALAN",
-          "location": {
-            "lat": 30.8112559,
-            "lng": 75.4891814
-          },
-          "studentsReached": 350,
-          "girlsCount": 150,
-          "boysCount": 200,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCZ7WFWSBqMR4MlH7bByJvFAYgY1iZBuaLeZ62ZVlt-Rks?e=f7m0ek",
-          "collageImage": "GSSS-SIDHWAN KALAN.jpg"
-        },
-        {
-          "name": "GSSS-GHALIB KALAN",
-          "location": {
-            "lat": 30.8112318,
-            "lng": 75.4891883
-          },
-          "studentsReached": 418,
-          "girlsCount": 180,
-          "boysCount": 238,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDpGTnhqLD-TamYm3aAP-jBAY1PCRZdCao288RqfrhDc3Y?e=RC5ByK",
-          "collageImage": "GSSS-GHALIB KALAN.jpg"
-        },
-        {
-          "name": "GMSSS-CEMETRY ROAD",
-          "location": {
-            "lat": 30.9132023,
-            "lng": 75.8350524
-          },
-          "studentsReached": 825,
-          "girlsCount": 395,
-          "boysCount": 430,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDih5v2_ylOQI8zGqJPIl4LAUfK2QY7PeZysmUyQCZPefA?e=0SJxg1",
-          "collageImage": "GMSSS-CEMETRY ROAD.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "KOTHE SHER JANG",
-          "lat": 30.811011,
-          "lng": 75.489089
-        },
-        "endPoint": {
-          "name": "Ludhiana",
-          "lat": 30.8812622,
-          "lng": 75.8118549
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 1593,
-      "schoolsVisited": 3
-    },
-    {
-      "date": "2025-11-22",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GGSSS-JAGRAON",
-          "location": {
-            "lat": 30.7915936,
-            "lng": 75.46947
-          },
-          "studentsReached": 785,
-          "girlsCount": 785,
-          "boysCount": 0,
-          "district": "Ludhiana"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "JAGRAON",
-          "lat": 30.8074849,
-          "lng": 75.487859
-        },
-        "endPoint": {
-          "name": "JAGRAON",
-          "lat": 30.8074849,
-          "lng": 75.487859
-        },
-        "distanceTravelled": 5
-      },
-      "totalStudents": 785,
-      "schoolsVisited": 1
-    },
-    {
-      "date": "2025-11-21",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-DHANDRA",
-          "location": {
-            "lat": 30.838955,
-            "lng": 75.8275608
-          },
-          "studentsReached": 534,
-          "girlsCount": 236,
-          "boysCount": 298,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC9eNTKKrVUSYfJtbi6pBOIAdpFOdP8DsK9U5Di4-pke_E?e=pi8KV1",
-          "collageImage": "GSSS-DHANDRA.jpg"
-        },
-        {
-          "name": "GMSSS-CEMETRY ROAD",
-          "location": {
-            "lat": 30.9132023,
-            "lng": 75.8350524
-          },
-          "studentsReached": 320,
-          "girlsCount": 180,
-          "boysCount": 140,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDih5v2_ylOQI8zGqJPIl4LAUfK2QY7PeZysmUyQCZPefA?e=0SJxg1",
-          "collageImage": "GMSSS-CEMETRY ROAD.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Ludhiana",
-          "lat": 30.8813999,
-          "lng": 75.8144534
-        },
-        "endPoint": {
-          "name": "JAGRAON",
-          "lat": 30.8110115,
-          "lng": 75.4865142
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 854,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-21",
-      "vehicle": 2,
-      "schools": [
-        {
-          "name": "GSSS-HAIBOWAL KHURD",
-          "location": {
-            "lat": 30.9046382,
-            "lng": 75.8152625
-          },
-          "studentsReached": 850,
-          "girlsCount": 370,
-          "boysCount": 480,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDvgTFQyGDSRpIE4QZZYeyHAQu2TrrsJatol1Um3IuA1cA?e=HFRIt8",
-          "collageImage": "GSSS-HAIBOWAL KHURD.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Ludhiana",
-          "lat": 30.8813999,
-          "lng": 75.8144534
-        },
-        "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 850,
-      "schoolsVisited": 1
-    },
-    {
-      "date": "2025-11-20",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-AYALI KHURD",
-          "location": {
-            "lat": 30.6714924,
-            "lng": 76.6541824
-          },
-          "studentsReached": 1083,
-          "girlsCount": 588,
-          "boysCount": 495,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC5kvgfoo3YRq449xwBOg4YAVDqu_S2reZpPnV4XXp9YWc?e=xaDvhE",
-          "collageImage": "GSSS-AYALI KHURD.jpg"
-        },
-        {
-          "name": "GSSS-JASPAL BANGER",
-          "location": {
-            "lat": 30.6727522,
-            "lng": 76.652822
-          },
-          "studentsReached": 419,
-          "girlsCount": 180,
-          "boysCount": 239,
-          "district": "Ludhiana",
-          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC9_bmvN-HUSKP37gl931GDATEquBn7jTdUPyG2dJQ0-AY?e=uwzYjr",
-          "collageImage": "GSSS-JASPAL BANGER.jpg"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Ludhiana",
-          "lat": 30.8813999,
-          "lng": 75.8144534
-        },
-        "endPoint": {
-          "name": "Ludhiana",
-          "lat": 30.8813999,
-          "lng": 75.8144534
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 1502,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-19",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-KASABAD",
-          "location": {
-            "lat": 30.9695215,
-            "lng": 75.8432378
-          },
-          "studentsReached": 480,
-          "girlsCount": 200,
-          "boysCount": 280,
-          "district": "Ludhiana"
-        },
-        {
-          "name": "GSSS-SAHIBANA",
-          "location": {
-            "lat": 30.8961345,
-            "lng": 75.9692431
-          },
-          "studentsReached": 486,
-          "girlsCount": 230,
-          "boysCount": 256,
-          "district": "Ludhiana"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Ludhiana",
-          "lat": 30.890366,
-          "lng": 75.8865113
-        },
-        "endPoint": {
-          "name": "Ludhiana",
-          "lat": 30.8813999,
-          "lng": 75.8144534
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 966,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-18",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-MASSEWAL",
-          "location": {
-            "lat": 31.2041551,
-            "lng": 76.6070868
-          },
-          "studentsReached": 605,
-          "girlsCount": 332,
-          "boysCount": 273,
-          "district": "ROOPNAGAR"
-        },
-        {
-          "name": "GSSS-BHARATGARH",
-          "location": {
-            "lat": 31.0980151,
-            "lng": 76.6143188
-          },
-          "studentsReached": 432,
-          "girlsCount": 232,
-          "boysCount": 200,
-          "district": "ROOPNAGAR"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Anandpur Sahib",
-          "lat": 31.2323894,
-          "lng": 76.4993261
-        },
-        "endPoint": {
-          "name": "Anandpur Sahib",
-          "lat": 31.2323894,
-          "lng": 76.4993261
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 1037,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-17",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GHS-MATOUR",
-          "location": {
-            "lat": 31.228629,
-            "lng": 76.5084313
-          },
-          "studentsReached": 154,
-          "girlsCount": 58,
-          "boysCount": 96,
-          "district": "ROOPNAGAR"
-        },
-        {
-          "name": "GSSS-KAHANPUR KHUHI",
-          "location": {
-            "lat": 31.2382787,
-            "lng": 76.3636926
-          },
-          "studentsReached": 416,
-          "girlsCount": 199,
-          "boysCount": 217,
-          "district": "ROOPNAGAR"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Anandpur Sahib",
-          "lat": 31.2323894,
-          "lng": 76.4993261
-        },
-        "endPoint": {
-          "name": "Anandpur Sahib",
-          "lat": 31.2323894,
-          "lng": 76.4993261
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 570,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-17",
-      "vehicle": 2,
-      "schools": [
-        {
-          "name": "GSSS-KATHERA",
-          "location": {
-            "lat": 31.3567591,
-            "lng": 76.3779661
-          },
-          "studentsReached": 370,
-          "girlsCount": 180,
-          "boysCount": 190,
-          "district": "ROOPNAGAR"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Zirakpur",
-          "lat": 30.6681398,
-          "lng": 76.8127588
-        },
-        "endPoint": {
-          "name": "Anandpur Sahib",
-          "lat": 31.2323894,
-          "lng": 76.4993261
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 370,
-      "schoolsVisited": 1
-    },
-    {
-      "date": "2025-11-15",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-NURPUR BEDI",
-          "location": {
-            "lat": 31.1720963,
-            "lng": 76.4737695
-          },
-          "studentsReached": 273,
-          "girlsCount": 53,
-          "boysCount": 220,
-          "district": "ROOPNAGAR"
-        },
-        {
-          "name": "GSSS-PHOOLPUR GAREWAL",
-          "location": {
-            "lat": 30.947646,
-            "lng": 76.558278
-          },
-          "studentsReached": 386,
-          "girlsCount": 218,
-          "boysCount": 168,
-          "district": "ROOPNAGAR"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Anandpur Sahib",
-          "lat": 31.2322854,
-          "lng": 76.4967297
-        },
-        "endPoint": {
-          "name": "Anandpur Sahib",
-          "lat": 31.2321332,
-          "lng": 76.4968902
-        },
-        "distanceTravelled": 0
-      },
-      "totalStudents": 659,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-14",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-SIRHIND",
-          "location": {
-            "lat": 30.6262402,
-            "lng": 76.3828856
-          },
-          "studentsReached": 650,
-          "girlsCount": 650,
-          "boysCount": 0,
-          "district": "FATEHGARH Sahib"
-        },
-        {
-          "name": "GSSS-GOBINDGARH",
-          "location": {
-            "lat": 30.6684517,
-            "lng": 76.2809301
-          },
-          "studentsReached": 500,
-          "girlsCount": 0,
-          "boysCount": 500,
-          "district": "FATEHGARH Sahib"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Hotel",
-          "lat": 30.6313821,
-          "lng": 76.3909623
-        },
-        "endPoint": {
-          "name": "Hotel",
-          "lat": 30.6313821,
-          "lng": 76.3909623
-        },
-        "distanceTravelled": 55
-      },
-      "totalStudents": 1150,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-13",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GHS-KHANIAN",
-          "location": {
-            "lat": 30.619425,
-            "lng": 76.204712
-          },
-          "studentsReached": 140,
-          "girlsCount": 74,
-          "boysCount": 66,
-          "district": "FATEHGARH Sahib"
-        },
-        {
-          "name": "GSSS-NARAINGARH",
-          "location": {
-            "lat": 30.59723,
-            "lng": 76.26656
-          },
-          "studentsReached": 397,
-          "girlsCount": 148,
-          "boysCount": 249,
-          "district": "FATEHGARH Sahib"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Hotel",
-          "lat": 30.6313821,
-          "lng": 76.3909623
-        },
-        "endPoint": {
-          "name": "Hotel",
-          "lat": 30.6313821,
-          "lng": 76.3909623
-        },
-        "distanceTravelled": 48
-      },
-      "totalStudents": 537,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-12",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GGSS-AMLOH",
-          "location": {
-            "lat": 30.6117285,
-            "lng": 76.2329723
-          },
-          "studentsReached": 712,
-          "girlsCount": 712,
-          "boysCount": 0,
-          "district": "FATEHGARH Sahib"
-        },
-        {
-          "name": "GHS-HARBANSPURA",
-          "location": {
-            "lat": 30.6359234,
-            "lng": 76.3388863
-          },
-          "studentsReached": 145,
-          "girlsCount": 75,
-          "boysCount": 70,
-          "district": "FATEHGARH Sahib"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "endPoint": {
-          "name": "Hotel",
-          "lat": 30.6313821,
-          "lng": 76.3909623
-        },
-        "distanceTravelled": 62
-      },
-      "totalStudents": 857,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-11",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GHS-DESUMAJRA",
-          "location": {
-            "lat": 30.742399,
-            "lng": 76.6667366
-          },
-          "studentsReached": 440,
-          "girlsCount": 210,
-          "boysCount": 230,
-          "district": "SAS Nagar"
-        },
-        {
-          "name": "GHS-NAYAGAON",
-          "location": {
-            "lat": 30.7734482,
-            "lng": 76.7928947
-          },
-          "studentsReached": 276,
-          "girlsCount": 144,
-          "boysCount": 132,
-          "district": "SAS Nagar"
-        },
-        {
-          "name": "GSSS-KHIZRABAD",
-          "location": {
-            "lat": 30.8766699,
-            "lng": 76.6592949
-          },
-          "studentsReached": 300,
-          "girlsCount": 141,
-          "boysCount": 159,
-          "district": "SAS Nagar"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "distanceTravelled": 71
-      },
-      "totalStudents": 1016,
-      "schoolsVisited": 3
-    },
-    {
-      "date": "2025-11-10",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-SAHORAN",
-          "location": {
-            "lat": 30.7879803,
-            "lng": 76.6120451
-          },
-          "studentsReached": 550,
-          "girlsCount": 300,
-          "boysCount": 250,
-          "district": "SAS Nagar"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "distanceTravelled": 41
-      },
-      "totalStudents": 550,
-      "schoolsVisited": 1
-    },
-    {
-      "date": "2025-11-07",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GHS-DHAKAULI",
-          "location": {
-            "lat": 30.655228,
-            "lng": 76.844331
-          },
-          "studentsReached": 275,
-          "girlsCount": 138,
-          "boysCount": 137,
-          "district": "SAS Nagar"
-        },
-        {
-          "name": "GSSS-DAYALPURA",
-          "location": {
-            "lat": 30.642139,
-            "lng": 76.784354
-          },
-          "studentsReached": 550,
-          "girlsCount": 275,
-          "boysCount": 275,
-          "district": "SAS Nagar"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "distanceTravelled": 24
-      },
-      "totalStudents": 825,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-11-06",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS-LOHGARH",
-          "location": {
-            "lat": 30.642822,
-            "lng": 76.814822
-          },
-          "studentsReached": 1151,
-          "girlsCount": 576,
-          "boysCount": 575,
-          "district": "SAS Nagar"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "distanceTravelled": 18
-      },
-      "totalStudents": 1151,
-      "schoolsVisited": 1
-    },
-    {
-      "date": "2025-10-31",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GSSS RAMPUR SAINIA",
-          "location": {
-            "lat": 30.6321256,
-            "lng": 76.7251603
-          },
-          "studentsReached": 491,
-          "girlsCount": 246,
-          "boysCount": 245,
-          "district": "SAS Nagar"
-        },
-        {
-          "name": "GSSS-SAMGAULI",
-          "location": {
-            "lat": 30.5345967,
-            "lng": 76.8938531
-          },
-          "studentsReached": 657,
-          "girlsCount": 329,
-          "boysCount": 328,
-          "district": "SAS Nagar"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "distanceTravelled": 39
-      },
-      "totalStudents": 1148,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-10-30",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GHS-DAPPAR",
-          "location": {
-            "lat": 30.679443,
-            "lng": 76.6628657
-          },
-          "studentsReached": 505,
-          "girlsCount": 253,
-          "boysCount": 252,
-          "district": "SAS Nagar"
-        },
-        {
-          "name": "GSSS-LALRU",
-          "location": {
-            "lat": 30.4920036,
-            "lng": 76.7114194
-          },
-          "studentsReached": 497,
-          "girlsCount": 249,
-          "boysCount": 248,
-          "district": "SAS Nagar"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "distanceTravelled": 45
-      },
-      "totalStudents": 1002,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-10-29",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GHS-MUBARIKPUR",
-          "location": {
-            "lat": 30.6113071,
-            "lng": 76.8489418
-          },
-          "studentsReached": 240,
-          "girlsCount": 120,
-          "boysCount": 120,
-          "district": "SAS Nagar"
-        },
-        {
-          "name": "GSSS-MUBARIKPUR",
-          "location": {
-            "lat": 30.6112191,
-            "lng": 76.8512458
-          },
-          "studentsReached": 615,
-          "girlsCount": 308,
-          "boysCount": 307,
-          "district": "SAS Nagar"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "distanceTravelled": 25
-      },
-      "totalStudents": 855,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-10-27",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GHS-Phase-5",
-          "location": {
-            "lat": 30.7149059,
-            "lng": 76.7127094
-          },
-          "studentsReached": 432,
-          "girlsCount": 216,
-          "boysCount": 216,
-          "district": "SAS Nagar"
-        },
-        {
-          "name": "GHS Kumbra",
-          "location": {
-            "lat": 30.6883551,
-            "lng": 76.7257611
-          },
-          "studentsReached": 402,
-          "girlsCount": 201,
-          "boysCount": 201,
-          "district": "SAS Nagar"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "distanceTravelled": 24
-      },
-      "totalStudents": 834,
-      "schoolsVisited": 2
-    },
-    {
-      "date": "2025-10-28",
-      "vehicle": 1,
-      "schools": [
-        {
-          "name": "GHS-Saneta",
-          "location": {
-            "lat": 30.6416167,
-            "lng": 76.6835287
-          },
-          "studentsReached": 251,
-          "girlsCount": 126,
-          "boysCount": 125,
-          "district": "SAS Nagar"
-        },
-        {
-          "name": "GHS-Hulka",
-          "location": {
-            "lat": 30.5616404,
-            "lng": 76.6610706
-          },
-          "studentsReached": 256,
-          "girlsCount": 128,
-          "boysCount": 128,
-          "district": "SAS Nagar"
-        }
-      ],
-      "route": {
-        "startPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "endPoint": {
-          "name": "Plaksha University",
-          "lat": 30.6310588,
-          "lng": 76.7230178
-        },
-        "distanceTravelled": 23
-      },
-      "totalStudents": 507,
-      "schoolsVisited": 2
-    }
-  ],
-  "vehicles": [
-    {
-      "id": 1,
-      "name": "Vehicle 1",
-      "currentLocation": {
-        "name": "MULLANPUR DAKHA",
-        "district": "Ludhiana",
-        "lat": 30.8495489,
-        "lng": 75.6815823,
-        "date": "2025-11-26",
+    "lastUpdated": "2025-12-06",
+    "projectInfo": {
+        "title": "Science on Wheels for Punjab",
+        "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
+        "duration": "67 days",
+        "startDate": "2025-10-27",
+        "endDate": "2026-01-31",
         "status": "active"
-      },
-      "schedule": [
-        {"district": "SAS Nagar", "schools": 17, "startDate": "2025-10-27", "endDate": "2025-10-25", "lat": 30.7046, "lng": 76.7179},
-        {"district": "Fatehgarh Sahib", "schools": 6, "startDate": "2025-10-25", "endDate": "2025-10-30", "lat": 30.6444, "lng": 76.3965},
-        {"district": "Roopnagar", "schools": 7, "startDate": "2025-11-01", "endDate": "2025-11-04", "lat": 31.0374, "lng": 76.5265},
-        {"district": "Ludhiana", "schools": 24, "startDate": "2025-11-10", "endDate": "2025-11-20", "lat": 30.9010, "lng": 75.8573},
-        {"district": "Sangroor", "schools": 18, "startDate": "2025-11-20", "endDate": "2025-11-30", "lat": 30.2458, "lng": 75.8421},
-        {"district": "Mansa", "schools": 15, "startDate": "2025-12-01", "endDate": "2025-12-07", "lat": 29.9988, "lng": 75.3936},
-        {"district": "Barnala", "schools": 11, "startDate": "2025-12-08", "endDate": "2025-12-15", "lat": 30.3784, "lng": 75.5489},
-        {"district": "Bathinda", "schools": 26, "startDate": "2025-12-30", "endDate": "2026-01-13", "lat": 30.2084, "lng": 74.9456},
-        {"district": "Mukatsar Sahib", "schools": 10, "startDate": "2026-01-13", "endDate": "2026-01-30", "lat": 30.4755, "lng": 74.5151}
-      ]
     },
-    {
-      "id": 2,
-      "name": "Vehicle 2",
-      "currentLocation": {
-        "name": "Ready to Deploy",
-        "district": "Patiala",
-        "lat": 30.3398,
-        "lng": 76.3869,
-        "date": "2025-10-27",
-        "status": "active"
-      },
-      "schedule": [
-        {"district": "Patiala", "schools": 29, "startDate": "2025-10-27", "endDate": "2025-10-30", "lat": 30.3398, "lng": 76.3869},
-        {"district": "Malerkotla", "schools": 7, "startDate": "2025-11-01", "endDate": "2025-11-04", "lat": 30.5311, "lng": 75.8819},
-        {"district": "Fazilka", "schools": 13, "startDate": "2025-11-05", "endDate": "2025-11-10", "lat": 30.4028, "lng": 74.0281},
-        {"district": "Ferozepur", "schools": 17, "startDate": "2025-11-10", "endDate": "2025-11-20", "lat": 30.9191, "lng": 74.8750},
-        {"district": "Faridkot", "schools": 9, "startDate": "2025-11-20", "endDate": "2025-11-30", "lat": 30.6705, "lng": 74.7570},
-        {"district": "Moga", "schools": 13, "startDate": "2025-12-01", "endDate": "2025-12-10", "lat": 30.8158, "lng": 75.1705},
-        {"district": "Pathankot", "schools": 13, "startDate": "2025-12-30", "endDate": "2026-01-13", "lat": 32.2746, "lng": 75.6521}
-      ]
-    }
-  ],
-  "activities": [
-    {
-      "title": "Space Technology Education",
-      "description": "Awareness session on Antariksh Gyaan Abhiyaan with space tech education equipment",
-      "duration": "~45 mins"
+    "mission": {
+        "schoolsCovered": {
+            "current": 52,
+            "total": 235
+        },
+        "districtsCovered": {
+            "current": 4,
+            "total": 16
+        },
+        "studentsImpacted": 26255,
+        "genderBreakdown": {
+            "girls": 14614,
+            "boys": 11641
+        },
+        "distanceTravelled": 1036,
+        "targetAudience": "Students from Classes 6-12"
     },
-    {
-      "title": "Robotics Workshops",
-      "description": "Hands-on robotics demonstrations with application modules and interactive kits",
-      "duration": "~60 mins"
+    "dailyUpdates": [
+        {
+            "date": "2025-12-06",
+            "vehicle": 2,
+            "schools": [
+                {
+                    "name": "GSSS-MULTIPURPOSE-SESSION-2",
+                    "location": {
+                        "lat": 30.3504965,
+                        "lng": 76.3843538
+                    },
+                    "studentsReached": 322,
+                    "girlsCount": 180,
+                    "boysCount": 142,
+                    "district": "Patiala",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FMULTIPURPOSE&view=0",
+                    "collageImage": "GSSS-MULTIPURPOSE-SESSION-2.jpg"
+                },
+                {
+                    "name": "GSSS-NANDPURKESHO",
+                    "location": {
+                        "lat": 30.455167,
+                        "lng": 76.422222
+                    },
+                    "studentsReached": 362,
+                    "girlsCount": 171,
+                    "boysCount": 191,
+                    "district": "Patiala",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FNANDPURKESHO&view=0",
+                    "collageImage": "GSSS-NANDPURKESHO.jpg"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.3449167,
+                    "lng": 76.39775
+                },
+                "endPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.344917,
+                    "lng": 76.397750
+                },
+                "distanceTravelled": 26
+            },
+            "totalStudents": 684,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-12-06",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS-KANGANWAL",
+                    "location": {
+                        "lat": 30.5460638,
+                        "lng": 75.8809257
+                    },
+                    "studentsReached": 320,
+                    "girlsCount": 155,
+                    "boysCount": 165,
+                    "district": "Malerkotla",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMALERKOTLA%5FGSSS%5FKANGANWAL&view=0",
+                    "collageImage": "GSSS-KANGANWAL.jpg"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.3449167,
+                    "lng": 76.39775
+                },
+                "endPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.344917,
+                    "lng": 76.397750
+                },
+                "distanceTravelled": 109
+            },
+            "totalStudents": 320,
+            "schoolsVisited": 1
+        },
+        {
+            "date": "2025-12-05",
+            "vehicle": 2,
+            "schools": [
+                {
+                    "name": "GSSS KALYAN",
+                    "location": {
+                        "lat": 30.3559951,
+                        "lng": 76.3033439
+                    },
+                    "studentsReached": 600,
+                    "girlsCount": 270,
+                    "boysCount": 330,
+                    "district": "Patiala",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/shared?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FKALYAN&ct=1764946332380&or=OWA%2DNT%2DMail&cid=0c1ee03d%2D84e3%2D88de%2D8acc%2D703586f66d7c&ga=1",
+                    "collageImage": "GSSS-KALYAN.jpg"
+                },
+                {
+                    "name": "GSSS MULTIPURPOSE",
+                    "location": {
+                        "lat": 30.3504965,
+                        "lng": 76.3843538
+                    },
+                    "studentsReached": 340,
+                    "girlsCount": 90,
+                    "boysCount": 250,
+                    "district": "Patiala",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FMULTIPURPOSE&ct=1764946491706&or=OWA%2DNT%2DMail&ga=1",
+                    "collageImage": "GSSS-MULTIPURPOSE.jpg"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.3449167,
+                    "lng": 76.39775
+                },
+                "endPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.3449167,
+                    "lng": 76.39775
+                },
+                "distanceTravelled": 18
+            },
+            "totalStudents": 940,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-12-05",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS TRIPURI",
+                    "location": {
+                        "lat": 30.3560228,
+                        "lng": 76.3899618
+                    },
+                    "studentsReached": 973,
+                    "girlsCount": 489,
+                    "boysCount": 484,
+                    "district": "Patiala",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCNfePUhgOSTaWcAYX-fbZbAV80nqdF4JRUclsha2ZMLCY?e=SUvZcL",
+                    "collageImage": "GSSS-TRIPURI.jpg"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.3449167,
+                    "lng": 76.39775
+                },
+                "endPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.3449167,
+                    "lng": 76.39775
+                },
+                "distanceTravelled": 3
+            },
+            "totalStudents": 973,
+            "schoolsVisited": 1
+        },
+        {
+            "date": "2025-12-04",
+            "vehicle": 2,
+            "schools": [
+                {
+                    "name": "GSSS(GIRLS) NABHA",
+                    "location": {
+                        "lat": 30.3789968,
+                        "lng": 76.1517648
+                    },
+                    "studentsReached": 1655,
+                    "girlsCount": 1655,
+                    "boysCount": 0,
+                    "district": "Patiala",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBBeFDhTwOfR5rjq4f-cuLcAfY7El3BskO540A362uL3kw?e=BHqiae",
+                    "collageImage": "GSSS-GIRLS-NABHA.jpg"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.3449167,
+                    "lng": 76.39775
+                },
+                "endPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.3451667,
+                    "lng": 76.39775
+                },
+                "distanceTravelled": 48
+            },
+            "totalStudents": 1655,
+            "schoolsVisited": 1
+        },
+        {
+            "date": "2025-12-04",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS G SAMANA",
+                    "location": {
+                        "lat": 30.1544796,
+                        "lng": 76.1925008
+                    },
+                    "studentsReached": 563,
+                    "girlsCount": 563,
+                    "boysCount": 0,
+                    "district": "Patiala",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDAO66gPt8HTaAbgdTPJ4obAf2N7K2KqJb5KnVZ3M-_ejI?e=BmqND2",
+                    "collageImage": "GSSS-G-SAMANA.jpg"
+                },
+                {
+                    "name": "GSSS DHANETHA",
+                    "location": {
+                        "lat": 30.1073926,
+                        "lng": 76.1979985
+                    },
+                    "studentsReached": 381,
+                    "girlsCount": 161,
+                    "boysCount": 220,
+                    "district": "Patiala",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNlaM3-nR-T5R7H_DRfsebAU6_iY1RpSOp9OKt5ALsI8g?e=YLBVxM",
+                    "collageImage": "GSSS-DHANETHA.jpg"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.344906,
+                    "lng": 76.39774
+                },
+                "endPoint": {
+                    "name": "Patiala, Punjab",
+                    "lat": 30.3451667,
+                    "lng": 76.39775
+                },
+                "distanceTravelled": 67
+            },
+            "totalStudents": 944,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-12-03",
+            "schoolName": "GSSS-BHOGIWAL",
+            "district": "MALERKOTLA",
+            "students": 1006,
+            "girls": 501,
+            "boys": 505,
+            "distanceTravelled": 106,
+            "mapLink": "https://maps.app.goo.gl/YMJwycUXLgdvMZcT8",
+            "collageImage": "GSSS-BHOGIWAL.jpg"
+        },
+        {
+            "date": "2025-12-03",
+            "schoolName": "GMHS-Nabha",
+            "district": "Patiala",
+            "students": 546,
+            "girls": 146,
+            "boys": 400,
+            "distanceTravelled": 107,
+            "mapLink": "https://maps.app.goo.gl/jjurNWWN7qGT2uF89",
+            "collageImage": "GMHS-Nabha.jpg"
+        },
+        {
+            "date": "2025-12-03",
+            "schoolName": "GSSS-SEONA",
+            "district": "Patiala",
+            "students": 535,
+            "girls": 268,
+            "boys": 267,
+            "distanceTravelled": 34,
+            "mapLink": "https://maps.app.goo.gl/AeKju2mHSQWiQRib8",
+            "collageImage": "GSSS-SEONA.jpg"
+        },
+        {
+            "date": "2025-12-03",
+            "schoolName": "GSSS-DHANGERA",
+            "district": "Patiala",
+            "students": 527,
+            "girls": 259,
+            "boys": 268,
+            "distanceTravelled": 38,
+            "mapLink": "https://maps.app.goo.gl/U39v1Y3UeRBcdmdVA",
+            "collageImage": "GSSS-DHANGERA.jpg"
+        },
+        {
+            "date": "2025-11-22",
+            "schoolName": "GSSS-KASABAD",
+            "district": "Ludhiana",
+            "students": 100,
+            "girls": 50,
+            "boys": 50,
+            "distanceTravelled": 0,
+            "mapLink": "https://maps.app.goo.gl/XfnuYkEvZdMmMvPG7",
+            "collageImage": "GSSS-KASABAD.jpg"
+        },
+        {
+            "date": "2025-11-22",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GGSSS-JAGRAON",
+                    "location": {
+                        "lat": 30.7915936,
+                        "lng": 75.46947
+                    },
+                    "studentsReached": 785,
+                    "girlsCount": 785,
+                    "boysCount": 0,
+                    "district": "Ludhiana"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "JAGRAON",
+                    "lat": 30.8074849,
+                    "lng": 75.487859
+                },
+                "endPoint": {
+                    "name": "JAGRAON",
+                    "lat": 30.8074849,
+                    "lng": 75.487859
+                },
+                "distanceTravelled": 5
+            },
+            "totalStudents": 785,
+            "schoolsVisited": 1
+        },
+        {
+            "date": "2025-11-21",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS-DHANDRA",
+                    "location": {
+                        "lat": 30.838955,
+                        "lng": 75.8275608
+                    },
+                    "studentsReached": 534,
+                    "girlsCount": 236,
+                    "boysCount": 298,
+                    "district": "Ludhiana",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC9eNTKKrVUSYfJtbi6pBOIAdpFOdP8DsK9U5Di4-pke_E?e=pi8KV1",
+                    "collageImage": "GSSS-DHANDRA.jpg"
+                },
+                {
+                    "name": "GMSSS-CEMETRY ROAD",
+                    "location": {
+                        "lat": 30.9132023,
+                        "lng": 75.8350524
+                    },
+                    "studentsReached": 320,
+                    "girlsCount": 180,
+                    "boysCount": 140,
+                    "district": "Ludhiana",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDih5v2_ylOQI8zGqJPIl4LAUfK2QY7PeZysmUyQCZPefA?e=0SJxg1",
+                    "collageImage": "GMSSS-CEMETRY ROAD.jpg"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Ludhiana",
+                    "lat": 30.8813999,
+                    "lng": 75.8144534
+                },
+                "endPoint": {
+                    "name": "JAGRAON",
+                    "lat": 30.8110115,
+                    "lng": 75.4865142
+                },
+                "distanceTravelled": 0
+            },
+            "totalStudents": 854,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-11-21",
+            "vehicle": 2,
+            "schools": [
+                {
+                    "name": "GSSS-HAIBOWAL KHURD",
+                    "location": {
+                        "lat": 30.9046382,
+                        "lng": 75.8152625
+                    },
+                    "studentsReached": 850,
+                    "girlsCount": 370,
+                    "boysCount": 480,
+                    "district": "Ludhiana",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDvgTFQyGDSRpIE4QZZYeyHAQu2TrrsJatol1Um3IuA1cA?e=HFRIt8",
+                    "collageImage": "GSSS-HAIBOWAL KHURD.jpg"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Ludhiana",
+                    "lat": 30.8813999,
+                    "lng": 75.8144534
+                },
+                "endPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "distanceTravelled": 0
+            },
+            "totalStudents": 850,
+            "schoolsVisited": 1
+        },
+        {
+            "date": "2025-11-20",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS-AYALI KHURD",
+                    "location": {
+                        "lat": 30.6714924,
+                        "lng": 76.6541824
+                    },
+                    "studentsReached": 1083,
+                    "girlsCount": 588,
+                    "boysCount": 495,
+                    "district": "Ludhiana",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC5kvgfoo3YRq449xwBOg4YAVDqu_S2reZpPnV4XXp9YWc?e=xaDvhE",
+                    "collageImage": "GSSS-AYALI KHURD.jpg"
+                },
+                {
+                    "name": "GSSS-JASPAL BANGER",
+                    "location": {
+                        "lat": 30.6727522,
+                        "lng": 76.652822
+                    },
+                    "studentsReached": 419,
+                    "girlsCount": 180,
+                    "boysCount": 239,
+                    "district": "Ludhiana",
+                    "galleryLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC9_bmvN-HUSKP37gl931GDATEquBn7jTdUPyG2dJQ0-AY?e=uwzYjr",
+                    "collageImage": "GSSS-JASPAL BANGER.jpg"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Ludhiana",
+                    "lat": 30.8813999,
+                    "lng": 75.8144534
+                },
+                "endPoint": {
+                    "name": "Ludhiana",
+                    "lat": 30.8813999,
+                    "lng": 75.8144534
+                },
+                "distanceTravelled": 0
+            },
+            "totalStudents": 1502,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-11-19",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS-KASABAD",
+                    "location": {
+                        "lat": 30.9695215,
+                        "lng": 75.8432378
+                    },
+                    "studentsReached": 480,
+                    "girlsCount": 200,
+                    "boysCount": 280,
+                    "district": "Ludhiana"
+                },
+                {
+                    "name": "GSSS-SAHIBANA",
+                    "location": {
+                        "lat": 30.8961345,
+                        "lng": 75.9692431
+                    },
+                    "studentsReached": 486,
+                    "girlsCount": 230,
+                    "boysCount": 256,
+                    "district": "Ludhiana"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Ludhiana",
+                    "lat": 30.890366,
+                    "lng": 75.8865113
+                },
+                "endPoint": {
+                    "name": "Ludhiana",
+                    "lat": 30.8813999,
+                    "lng": 75.8144534
+                },
+                "distanceTravelled": 0
+            },
+            "totalStudents": 966,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-11-18",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS-MASSEWAL",
+                    "location": {
+                        "lat": 31.2041551,
+                        "lng": 76.6070868
+                    },
+                    "studentsReached": 605,
+                    "girlsCount": 332,
+                    "boysCount": 273,
+                    "district": "ROOPNAGAR"
+                },
+                {
+                    "name": "GSSS-BHARATGARH",
+                    "location": {
+                        "lat": 31.0980151,
+                        "lng": 76.6143188
+                    },
+                    "studentsReached": 432,
+                    "girlsCount": 232,
+                    "boysCount": 200,
+                    "district": "ROOPNAGAR"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Anandpur Sahib",
+                    "lat": 31.2323894,
+                    "lng": 76.4993261
+                },
+                "endPoint": {
+                    "name": "Anandpur Sahib",
+                    "lat": 31.2323894,
+                    "lng": 76.4993261
+                },
+                "distanceTravelled": 0
+            },
+            "totalStudents": 1037,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-11-17",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GHS-MATOUR",
+                    "location": {
+                        "lat": 31.228629,
+                        "lng": 76.5084313
+                    },
+                    "studentsReached": 154,
+                    "girlsCount": 58,
+                    "boysCount": 96,
+                    "district": "ROOPNAGAR"
+                },
+                {
+                    "name": "GSSS-KAHANPUR KHUHI",
+                    "location": {
+                        "lat": 31.2382787,
+                        "lng": 76.3636926
+                    },
+                    "studentsReached": 416,
+                    "girlsCount": 199,
+                    "boysCount": 217,
+                    "district": "ROOPNAGAR"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Anandpur Sahib",
+                    "lat": 31.2323894,
+                    "lng": 76.4993261
+                },
+                "endPoint": {
+                    "name": "Anandpur Sahib",
+                    "lat": 31.2323894,
+                    "lng": 76.4993261
+                },
+                "distanceTravelled": 0
+            },
+            "totalStudents": 570,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-11-17",
+            "vehicle": 2,
+            "schools": [
+                {
+                    "name": "GSSS-KATHERA",
+                    "location": {
+                        "lat": 31.3567591,
+                        "lng": 76.3779661
+                    },
+                    "studentsReached": 370,
+                    "girlsCount": 180,
+                    "boysCount": 190,
+                    "district": "ROOPNAGAR"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Zirakpur",
+                    "lat": 30.6681398,
+                    "lng": 76.8127588
+                },
+                "endPoint": {
+                    "name": "Anandpur Sahib",
+                    "lat": 31.2323894,
+                    "lng": 76.4993261
+                },
+                "distanceTravelled": 0
+            },
+            "totalStudents": 370,
+            "schoolsVisited": 1
+        },
+        {
+            "date": "2025-11-15",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS-NURPUR BEDI",
+                    "location": {
+                        "lat": 31.1720963,
+                        "lng": 76.4737695
+                    },
+                    "studentsReached": 273,
+                    "girlsCount": 53,
+                    "boysCount": 220,
+                    "district": "ROOPNAGAR"
+                },
+                {
+                    "name": "GSSS-PHOOLPUR GAREWAL",
+                    "location": {
+                        "lat": 30.947646,
+                        "lng": 76.558278
+                    },
+                    "studentsReached": 386,
+                    "girlsCount": 218,
+                    "boysCount": 168,
+                    "district": "ROOPNAGAR"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Anandpur Sahib",
+                    "lat": 31.2322854,
+                    "lng": 76.4967297
+                },
+                "endPoint": {
+                    "name": "Anandpur Sahib",
+                    "lat": 31.2321332,
+                    "lng": 76.4968902
+                },
+                "distanceTravelled": 0
+            },
+            "totalStudents": 659,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-11-14",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS-SIRHIND",
+                    "location": {
+                        "lat": 30.6262402,
+                        "lng": 76.3828856
+                    },
+                    "studentsReached": 650,
+                    "girlsCount": 650,
+                    "boysCount": 0,
+                    "district": "FATEHGARH Sahib"
+                },
+                {
+                    "name": "GSSS-GOBINDGARH",
+                    "location": {
+                        "lat": 30.6684517,
+                        "lng": 76.2809301
+                    },
+                    "studentsReached": 500,
+                    "girlsCount": 0,
+                    "boysCount": 500,
+                    "district": "FATEHGARH Sahib"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Hotel",
+                    "lat": 30.6313821,
+                    "lng": 76.3909623
+                },
+                "endPoint": {
+                    "name": "Hotel",
+                    "lat": 30.6313821,
+                    "lng": 76.3909623
+                },
+                "distanceTravelled": 55
+            },
+            "totalStudents": 1150,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-11-13",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GHS-KHANIAN",
+                    "location": {
+                        "lat": 30.619425,
+                        "lng": 76.204712
+                    },
+                    "studentsReached": 140,
+                    "girlsCount": 74,
+                    "boysCount": 66,
+                    "district": "FATEHGARH Sahib"
+                },
+                {
+                    "name": "GSSS-NARAINGARH",
+                    "location": {
+                        "lat": 30.59723,
+                        "lng": 76.26656
+                    },
+                    "studentsReached": 397,
+                    "girlsCount": 148,
+                    "boysCount": 249,
+                    "district": "FATEHGARH Sahib"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Hotel",
+                    "lat": 30.6313821,
+                    "lng": 76.3909623
+                },
+                "endPoint": {
+                    "name": "Hotel",
+                    "lat": 30.6313821,
+                    "lng": 76.3909623
+                },
+                "distanceTravelled": 48
+            },
+            "totalStudents": 537,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-11-12",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GGSS-AMLOH",
+                    "location": {
+                        "lat": 30.6117285,
+                        "lng": 76.2329723
+                    },
+                    "studentsReached": 712,
+                    "girlsCount": 712,
+                    "boysCount": 0,
+                    "district": "FATEHGARH Sahib"
+                },
+                {
+                    "name": "GHS-HARBANSPURA",
+                    "location": {
+                        "lat": 30.6359234,
+                        "lng": 76.3388863
+                    },
+                    "studentsReached": 145,
+                    "girlsCount": 75,
+                    "boysCount": 70,
+                    "district": "FATEHGARH Sahib"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "endPoint": {
+                    "name": "Hotel",
+                    "lat": 30.6313821,
+                    "lng": 76.3909623
+                },
+                "distanceTravelled": 62
+            },
+            "totalStudents": 857,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-11-11",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GHS-DESUMAJRA",
+                    "location": {
+                        "lat": 30.742399,
+                        "lng": 76.6667366
+                    },
+                    "studentsReached": 440,
+                    "girlsCount": 210,
+                    "boysCount": 230,
+                    "district": "SAS Nagar"
+                },
+                {
+                    "name": "GHS-NAYAGAON",
+                    "location": {
+                        "lat": 30.7734482,
+                        "lng": 76.7928947
+                    },
+                    "studentsReached": 276,
+                    "girlsCount": 144,
+                    "boysCount": 132,
+                    "district": "SAS Nagar"
+                },
+                {
+                    "name": "GSSS-KHIZRABAD",
+                    "location": {
+                        "lat": 30.8766699,
+                        "lng": 76.6592949
+                    },
+                    "studentsReached": 300,
+                    "girlsCount": 141,
+                    "boysCount": 159,
+                    "district": "SAS Nagar"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "endPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "distanceTravelled": 71
+            },
+            "totalStudents": 1016,
+            "schoolsVisited": 3
+        },
+        {
+            "date": "2025-11-10",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS-SAHORAN",
+                    "location": {
+                        "lat": 30.7879803,
+                        "lng": 76.6120451
+                    },
+                    "studentsReached": 550,
+                    "girlsCount": 300,
+                    "boysCount": 250,
+                    "district": "SAS Nagar"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "endPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "distanceTravelled": 41
+            },
+            "totalStudents": 550,
+            "schoolsVisited": 1
+        },
+        {
+            "date": "2025-11-07",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GHS-DHAKAULI",
+                    "location": {
+                        "lat": 30.655228,
+                        "lng": 76.844331
+                    },
+                    "studentsReached": 275,
+                    "girlsCount": 138,
+                    "boysCount": 137,
+                    "district": "SAS Nagar"
+                },
+                {
+                    "name": "GSSS-DAYALPURA",
+                    "location": {
+                        "lat": 30.642139,
+                        "lng": 76.784354
+                    },
+                    "studentsReached": 550,
+                    "girlsCount": 275,
+                    "boysCount": 275,
+                    "district": "SAS Nagar"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "endPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "distanceTravelled": 24
+            },
+            "totalStudents": 825,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-11-06",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS-LOHGARH",
+                    "location": {
+                        "lat": 30.642822,
+                        "lng": 76.814822
+                    },
+                    "studentsReached": 1151,
+                    "girlsCount": 576,
+                    "boysCount": 575,
+                    "district": "SAS Nagar"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "endPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "distanceTravelled": 18
+            },
+            "totalStudents": 1151,
+            "schoolsVisited": 1
+        },
+        {
+            "date": "2025-10-31",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GSSS RAMPUR SAINIA",
+                    "location": {
+                        "lat": 30.6321256,
+                        "lng": 76.7251603
+                    },
+                    "studentsReached": 491,
+                    "girlsCount": 246,
+                    "boysCount": 245,
+                    "district": "SAS Nagar"
+                },
+                {
+                    "name": "GSSS-SAMGAULI",
+                    "location": {
+                        "lat": 30.5345967,
+                        "lng": 76.8938531
+                    },
+                    "studentsReached": 657,
+                    "girlsCount": 329,
+                    "boysCount": 328,
+                    "district": "SAS Nagar"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "endPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "distanceTravelled": 39
+            },
+            "totalStudents": 1148,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-10-30",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GHS-DAPPAR",
+                    "location": {
+                        "lat": 30.679443,
+                        "lng": 76.6628657
+                    },
+                    "studentsReached": 505,
+                    "girlsCount": 253,
+                    "boysCount": 252,
+                    "district": "SAS Nagar"
+                },
+                {
+                    "name": "GSSS-LALRU",
+                    "location": {
+                        "lat": 30.4920036,
+                        "lng": 76.7114194
+                    },
+                    "studentsReached": 497,
+                    "girlsCount": 249,
+                    "boysCount": 248,
+                    "district": "SAS Nagar"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "endPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "distanceTravelled": 45
+            },
+            "totalStudents": 1002,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-10-29",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GHS-MUBARIKPUR",
+                    "location": {
+                        "lat": 30.6113071,
+                        "lng": 76.8489418
+                    },
+                    "studentsReached": 240,
+                    "girlsCount": 120,
+                    "boysCount": 120,
+                    "district": "SAS Nagar"
+                },
+                {
+                    "name": "GSSS-MUBARIKPUR",
+                    "location": {
+                        "lat": 30.6112191,
+                        "lng": 76.8512458
+                    },
+                    "studentsReached": 615,
+                    "girlsCount": 308,
+                    "boysCount": 307,
+                    "district": "SAS Nagar"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "endPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "distanceTravelled": 25
+            },
+            "totalStudents": 855,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-10-27",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GHS-Phase-5",
+                    "location": {
+                        "lat": 30.7149059,
+                        "lng": 76.7127094
+                    },
+                    "studentsReached": 432,
+                    "girlsCount": 216,
+                    "boysCount": 216,
+                    "district": "SAS Nagar"
+                },
+                {
+                    "name": "GHS Kumbra",
+                    "location": {
+                        "lat": 30.6883551,
+                        "lng": 76.7257611
+                    },
+                    "studentsReached": 402,
+                    "girlsCount": 201,
+                    "boysCount": 201,
+                    "district": "SAS Nagar"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "endPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "distanceTravelled": 24
+            },
+            "totalStudents": 834,
+            "schoolsVisited": 2
+        },
+        {
+            "date": "2025-10-28",
+            "vehicle": 1,
+            "schools": [
+                {
+                    "name": "GHS-Saneta",
+                    "location": {
+                        "lat": 30.6416167,
+                        "lng": 76.6835287
+                    },
+                    "studentsReached": 251,
+                    "girlsCount": 126,
+                    "boysCount": 125,
+                    "district": "SAS Nagar"
+                },
+                {
+                    "name": "GHS-Hulka",
+                    "location": {
+                        "lat": 30.5616404,
+                        "lng": 76.6610706
+                    },
+                    "studentsReached": 256,
+                    "girlsCount": 128,
+                    "boysCount": 128,
+                    "district": "SAS Nagar"
+                }
+            ],
+            "route": {
+                "startPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "endPoint": {
+                    "name": "Plaksha University",
+                    "lat": 30.6310588,
+                    "lng": 76.7230178
+                },
+                "distanceTravelled": 23
+            },
+            "totalStudents": 507,
+            "schoolsVisited": 2
+        }
+    ],
+    "vehicles": [
+        {
+            "id": 1,
+            "name": "Vehicle 1",
+            "currentLocation": {
+                "name": "Ready to Deploy",
+                "district": "SAS Nagar",
+                "lat": 30.7046,
+                "lng": 76.7179,
+                "date": "2025-10-27",
+                "status": "active"
+            },
+            "schedule": [
+                {
+                    "district": "SAS Nagar",
+                    "schools": 17,
+                    "startDate": "2025-10-27",
+                    "endDate": "2025-10-25",
+                    "lat": 30.7046,
+                    "lng": 76.7179
+                },
+                {
+                    "district": "Fatehgarh Sahib",
+                    "schools": 6,
+                    "startDate": "2025-10-25",
+                    "endDate": "2025-10-30",
+                    "lat": 30.6444,
+                    "lng": 76.3965
+                },
+                {
+                    "district": "Roopnagar",
+                    "schools": 7,
+                    "startDate": "2025-11-01",
+                    "endDate": "2025-11-04",
+                    "lat": 31.0374,
+                    "lng": 76.5265
+                },
+                {
+                    "district": "Ludhiana",
+                    "schools": 24,
+                    "startDate": "2025-11-10",
+                    "endDate": "2025-11-20",
+                    "lat": 30.901,
+                    "lng": 75.8573
+                },
+                {
+                    "district": "Sangroor",
+                    "schools": 18,
+                    "startDate": "2025-11-20",
+                    "endDate": "2025-11-30",
+                    "lat": 30.2458,
+                    "lng": 75.8421
+                },
+                {
+                    "district": "Mansa",
+                    "schools": 15,
+                    "startDate": "2025-12-01",
+                    "endDate": "2025-12-07",
+                    "lat": 29.9988,
+                    "lng": 75.3936
+                },
+                {
+                    "district": "Barnala",
+                    "schools": 11,
+                    "startDate": "2025-12-08",
+                    "endDate": "2025-12-15",
+                    "lat": 30.3784,
+                    "lng": 75.5489
+                },
+                {
+                    "district": "Bathinda",
+                    "schools": 26,
+                    "startDate": "2025-12-30",
+                    "endDate": "2026-01-13",
+                    "lat": 30.2084,
+                    "lng": 74.9456
+                },
+                {
+                    "district": "Mukatsar Sahib",
+                    "schools": 10,
+                    "startDate": "2026-01-13",
+                    "endDate": "2026-01-30",
+                    "lat": 30.4755,
+                    "lng": 74.5151
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Vehicle 2",
+            "currentLocation": {
+                "name": "Ready to Deploy",
+                "district": "Patiala",
+                "lat": 30.3398,
+                "lng": 76.3869,
+                "date": "2025-10-27",
+                "status": "active"
+            },
+            "schedule": [
+                {
+                    "district": "Patiala",
+                    "schools": 29,
+                    "startDate": "2025-10-27",
+                    "endDate": "2025-10-30",
+                    "lat": 30.3398,
+                    "lng": 76.3869
+                },
+                {
+                    "district": "Malerkotla",
+                    "schools": 7,
+                    "startDate": "2025-11-01",
+                    "endDate": "2025-11-04",
+                    "lat": 30.5311,
+                    "lng": 75.8819
+                },
+                {
+                    "district": "Fazilka",
+                    "schools": 13,
+                    "startDate": "2025-11-05",
+                    "endDate": "2025-11-10",
+                    "lat": 30.4028,
+                    "lng": 74.0281
+                },
+                {
+                    "district": "Ferozepur",
+                    "schools": 17,
+                    "startDate": "2025-11-10",
+                    "endDate": "2025-11-20",
+                    "lat": 30.9191,
+                    "lng": 74.875
+                },
+                {
+                    "district": "Faridkot",
+                    "schools": 9,
+                    "startDate": "2025-11-20",
+                    "endDate": "2025-11-30",
+                    "lat": 30.6705,
+                    "lng": 74.757
+                },
+                {
+                    "district": "Moga",
+                    "schools": 13,
+                    "startDate": "2025-12-01",
+                    "endDate": "2025-12-10",
+                    "lat": 30.8158,
+                    "lng": 75.1705
+                },
+                {
+                    "district": "Pathankot",
+                    "schools": 13,
+                    "startDate": "2025-12-30",
+                    "endDate": "2026-01-13",
+                    "lat": 32.2746,
+                    "lng": 75.6521
+                }
+            ]
+        }
+    ],
+    "activities": [
+        {
+            "title": "Space Technology Education",
+            "description": "Awareness session on Antariksh Gyaan Abhiyaan with space tech education equipment",
+            "duration": "~45 mins"
+        },
+        {
+            "title": "Robotics Workshops",
+            "description": "Hands-on robotics demonstrations with application modules and interactive kits",
+            "duration": "~60 mins"
+        },
+        {
+            "title": "Water Testing Station",
+            "description": "Testing basic water quality parameters (pH, TDS, etc.) and environmental awareness",
+            "duration": "~45 mins"
+        },
+        {
+            "title": "Sustainability Education",
+            "description": "Interactive sustainability education models and team-based projects",
+            "duration": "~30 mins"
+        }
+    ],
+    "teamMembers": {
+        "plaksha": [
+            {
+                "name": "Dr. Rucha Joshi",
+                "designation": "Associate Professor (Principal Investigator)",
+                "email": "rucha.joshi@plaksha.edu.in",
+                "phone": "+91 7901851024"
+            },
+            {
+                "name": "Dr. Shashank Tamaskar",
+                "designation": "Associate Professor (Co-Principal Investigator)",
+                "email": "shashank.tamaskar@plaksha.edu.in",
+                "phone": "+91 9041791024"
+            }
+        ],
+        "iitMandi": [
+            {
+                "name": "Dr. Harshad Kulkarni",
+                "designation": "Assistant Professor (Co-Principal Investigator)",
+                "email": "harshad@iitmandi.ac.in",
+                "phone": "+91 7018308782",
+                "location": "IIT Mandi, Kamand, Himachal Pradesh"
+            }
+        ],
+        "idym": [
+            {
+                "name": "Mr. Ratnesh Mishra",
+                "designation": "Co-Founder & Principal Investigator, IDYM Foundation",
+                "email": "ratneshidymfoundation@gmail.com",
+                "phone": "+91 8879476341",
+                "organization": "Igniting Dreams of Young Minds Foundation (ISRO's Space Tutor)"
+            }
+        ]
     },
-    {
-      "title": "Water Testing Station",
-      "description": "Testing basic water quality parameters (pH, TDS, etc.) and environmental awareness",
-      "duration": "~45 mins"
-    },
-    {
-      "title": "Sustainability Education",
-      "description": "Interactive sustainability education models and team-based projects",
-      "duration": "~30 mins"
-    }
-  ],
-  "teamMembers": {
-    "plaksha": [
-      {
-        "name": "Dr. Rucha Joshi",
-        "designation": "Associate Professor (Principal Investigator)",
+    "contact": {
+        "website": "www.plaksha.edu.in",
         "email": "rucha.joshi@plaksha.edu.in",
-        "phone": "+91 7901851024"
-      },
-      {
-        "name": "Dr. Shashank Tamaskar",
-        "designation": "Associate Professor (Co-Principal Investigator)",
-        "email": "shashank.tamaskar@plaksha.edu.in",
-        "phone": "+91 9041791024"
-      }
+        "phone": "+91 7901851024",
+        "address": "Plaksha University, Alpha Sector 101, IT City Road, S.A.S. Nagar, Punjab 140306"
+    },
+    "partners": [
+        {
+            "name": "Plaksha University",
+            "role": "Principal Organization"
+        },
+        {
+            "name": "IIT Mandi",
+            "role": "Academic Partner"
+        },
+        {
+            "name": "IDYM Foundation",
+            "role": "Implementation Partner (ISRO's Space Tutor)"
+        },
+        {
+            "name": "SCERT Punjab",
+            "role": "PM Shri Schools Partner"
+        }
     ],
-    "iitMandi": [
-      {
-        "name": "Dr. Harshad Kulkarni",
-        "designation": "Assistant Professor (Co-Principal Investigator)",
-        "email": "harshad@iitmandi.ac.in",
-        "phone": "+91 7018308782",
-        "location": "IIT Mandi, Kamand, Himachal Pradesh"
-      }
+    "demographics": {
+        "tribal": 6,
+        "rural": 4,
+        "semiUrban": 3,
+        "urban": 3
+    },
+    "gallery": [
+        {
+            "district": "SAS Nagar",
+            "images": []
+        },
+        {
+            "district": "Ludhiana",
+            "images": []
+        },
+        {
+            "district": "Patiala",
+            "images": []
+        }
     ],
-    "idym": [
-      {
-        "name": "Mr. Ratnesh Mishra",
-        "designation": "Co-Founder & Principal Investigator, IDYM Foundation",
-        "email": "ratneshidymfoundation@gmail.com",
-        "phone": "+91 8879476341",
-        "organization": "Igniting Dreams of Young Minds Foundation (ISRO's Space Tutor)"
-      }
-    ]
-  },
-  "contact": {
-    "website": "www.plaksha.edu.in",
-    "email": "rucha.joshi@plaksha.edu.in",
-    "phone": "+91 7901851024",
-    "address": "Plaksha University, Alpha Sector 101, IT City Road, S.A.S. Nagar, Punjab 140306"
-  },
-  "partners": [
-    {
-      "name": "Plaksha University",
-      "role": "Principal Organization"
-    },
-    {
-      "name": "IIT Mandi",
-      "role": "Academic Partner"
-    },
-    {
-      "name": "IDYM Foundation",
-      "role": "Implementation Partner (ISRO's Space Tutor)"
-    },
-    {
-      "name": "SCERT Punjab",
-      "role": "PM Shri Schools Partner"
+    "testimonials": [
+        {
+            "name": "Sample Student",
+            "school": "PM Shri School, Ludhiana",
+            "text": "The robotics workshop was amazing! I learned so much about coding and building robots.",
+            "date": "2025-10-20"
+        },
+        {
+            "name": "Sample Teacher",
+            "school": "PM Shri School, Patiala",
+            "text": "This program has inspired our students to pursue science and technology. Thank you!",
+            "date": "2025-10-18"
+        }
+    ],
+    "helpline": {
+        "feedbackForm": "https://forms.gle/your-form-link",
+        "website": "https://shashanktamaskar.github.io/science-on-wheels/",
+        "email": "rucha.joshi@plaksha.edu.in",
+        "phone": "+91 8358082703"
     }
-  ],
-  "demographics": {
-    "tribal": 6,
-    "rural": 4,
-    "semiUrban": 3,
-    "urban": 3
-  },
-  "gallery": [
-    {
-      "district": "SAS Nagar",
-      "images": []
-    },
-    {
-      "district": "Ludhiana",
-      "images": []
-    },
-    {
-      "district": "Patiala",
-      "images": []
-    }
-  ],
-  "testimonials": [
-    {
-      "name": "Sample Student",
-      "school": "PM Shri School, Ludhiana",
-      "text": "The robotics workshop was amazing! I learned so much about coding and building robots.",
-      "date": "2025-10-20"
-    },
-    {
-      "name": "Sample Teacher",
-      "school": "PM Shri School, Patiala",
-      "text": "This program has inspired our students to pursue science and technology. Thank you!",
-      "date": "2025-10-18"
-    }
-  ],
-  "helpline": {
-    "feedbackForm": "https://forms.gle/your-form-link",
-    "website": "https://shashanktamaskar.github.io/science-on-wheels/",
-    "email": "rucha.joshi@plaksha.edu.in",
-    "phone": "+91 8358082703"
-  }
 }

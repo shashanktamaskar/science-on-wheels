@@ -1,418 +1,304 @@
 {
-  "schools": [
-    {
-      "name": "GSSS-TRIPURI",
-      "district": "Patiala",
-      "visitDate": "2025-12-05",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCNfePUhgOSTaWcAYX-fbZbAV80nqdF4JRUclsha2ZMLCY?e=SUvZcL"
-    },
-    {
-      "name": "GSSS-KALYAN",
-      "district": "Patiala",
-      "visitDate": "2025-12-05",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/shared?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FKALYAN"
-    },
-    {
-      "name": "GSSS-MULTIPURPOSE",
-      "district": "Patiala",
-      "visitDate": "2025-12-05",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FMULTIPURPOSE"
-    },
-    {
-      "name": "GSSS-GIRLS-NABHA",
-      "district": "Patiala",
-      "visitDate": "2025-12-04",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBBeFDhTwOfR5rjq4f-cuLcAfY7El3BskO540A362uL3kw?e=BHqiae"
-    },
-    {
-      "name": "GSSS-G-SAMANA",
-      "district": "Patiala",
-      "visitDate": "2025-12-04",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDAO66gPt8HTaAbgdTPJ4obAf2N7K2KqJb5KnVZ3M-_ejI?e=BmqND2"
-    },
-    {
-      "name": "GSSS-DHANETHA",
-      "district": "Patiala",
-      "visitDate": "2025-12-04",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNlaM3-nR-T5R7H_DRfsebAU6_iY1RpSOp9OKt5ALsI8g?e=YLBVxM"
-    },
-    {
-      "name": "GSSS-DHANGERA",
-      "district": "Patiala",
-      "visitDate": "2025-12-03",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FDHANGERA&viewid=efb56dab%2D8a39%2D4d99%2Db96c%2D40fc250c7320&login_hint=scienceonwheels%40plaksha%2Eedu%2Ein&source=waffle"
-    },
-    {
-      "name": "GSSS-SEONA",
-      "district": "Patiala",
-      "visitDate": "2025-12-03",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FSEONA&viewid=efb56dab%2D8a39%2D4d99%2Db96c%2D40fc250c7320&login_hint=scienceonwheels%40plaksha%2Eedu%2Ein&source=waffle"
-    },
-    {
-      "name": "GMHS-Nabha",
-      "district": "Patiala",
-      "visitDate": "2025-12-03",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCkso11h4BnSrbfw3p2b6MXARj0zfPvNA8Hpv80tqafqUo?e=GY7BNS"
-    },
-    {
-      "name": "GSSS-BHOGIWAL",
-      "district": "Malerkotla",
-      "visitDate": "2025-12-03",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgA_4TIvKw5-Qq7v1GBmZE4hAYraL4P7vSmH0JRs3dOEMEs?e=BdLU26"
-    },
-    {
-      "name": "GHS-MOHALLA AMARPURA",
-      "district": "Malerkotla",
-      "visitDate": "2025-12-02",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAv8h_kyUCCRoNXhvg0DrmAATcz7MQY0WvYDhomUiyYIEM?e=Ig02hb"
-    },
-    {
-      "name": "GHS-HIMTANA",
-      "district": "Malerkotla",
-      "visitDate": "2025-12-02",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgA-_5JKjenbQo5m73j46WpHAdZpgei-2_3q-Yzm2BzZne0?e=AhsTQE"
-    },
-    {
-      "name": "GSSS-AMARGARH",
-      "district": "Malerkotla",
-      "visitDate": "2025-12-02",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBKGwUD5PIoRrecPyVGyz2zAb9na1SupjsWoYKKVe0ccB0?e=azJXdq"
-    },
-    {
-      "name": "GSSS-KUTHALA",
-      "district": "Malerkotla",
-      "visitDate": "2025-12-01",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDwA7eLkWmPSaFMHfDEmgMgAeXGG-UrX2vwPG1yPQU7pOU?e=585ZW1"
-    },
-    {
-      "name": "GSSS-MALERKOTLA(BOYS)",
-      "district": "Malerkotla",
-      "visitDate": "2025-12-01",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDtTqcxVc0TT7zl4XrXInm1ARPlepTWMNelLpL2Rs3I49Q?e=nqxhZR"
-    },
-    {
-      "name": "GSSS-RASULRA",
-      "district": "Ludhiana",
-      "visitDate": "2025-12-01",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCk0uj7NDs0TJBqgHjCjDFZARuJx9vZ0aaY5N7vA6YXs7Y?e=L7uzLt"
-    },
-    {
-      "name": "GHS-KHANNA",
-      "district": "Ludhiana",
-      "visitDate": "2025-12-01",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBKqXPavlnuSojuquZ0b6T7AXSPwjxwymi-mwMN7ULDCE0?e=a87Clw"
-    },
-    {
-      "name": "GSSS-MACHHIWARA",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-29",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAd0pu7YSlETYCMPkKZ861_AaO5rlO9V7ypmamXy8e9L6M?e=IXYuXC"
-    },
-    {
-      "name": "GHS-SHERPUR BET",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-29",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCtBQacXZHWTISuRweRFcWWAUIgS1SYwC9DrOTr8oXWjDk?e=GFSNSz"
-    },
-    {
-      "name": "GSSS-RUPALON",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-28",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCZx8V63BzORa4St4uMvqBzAdcuJSzZxqgdYwMnBe6wAjw?e=um049J"
-    },
-    {
-      "name": "GHS-BEGOWAL",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-28",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBHywn0nXg8TJKddrVaSpvnARzmf5x7TATOee4nqMNdYKQ?e=E2a76x"
-    },
-    {
-      "name": "GSSS-SAMRALA G",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-28",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAK2DPIQyCeRoLTF0iu05yNAUQGJeZaH0fsIpjBGE0K8PQ?e=Jlw0tu"
-    },
-    {
-      "name": "GSSS-MALOUD",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-27",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBjMoJWn40ZRrIncF2ajXelAQmv3YBH-kzvFUOAze40cx8?e=b32gV2"
-    },
-    {
-      "name": "GSSS-DEHLON",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-27",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAH_QDSqvneQruZhHYC4guBAd12npnR42pSevdEVV8xJak?e=I9eunA"
-    },
-    {
-      "name": "GHS-MULLANPUR MANDI",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-27",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBgcdz-Aq7lRZoCjnUxLeuzATEkI3ipGUQanKJEIP9ojR8?e=8eK1SZ"
-    },
-    {
-      "name": "GSSS-BHAINI BARINGA",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-26",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDQhmKo7EaaQaLHrerhbwJHAbhPCbmGKwiTLuhlVcE1L5M?e=sRaPCY"
-    },
-    {
-      "name": "GSSS-B.M RAIKOT",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-26",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDT0fTRQFg2Ta7IxH7pSDjIAQ3NK0FfKgZlZIUC51I5VR0?e=JR3feu"
-    },
-    {
-      "name": "GSSS-AJITSAR RAIKOT",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-26",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAaBkGVyzmETprLgJbAme-nAX-67QNBa4fcR_HnTdfNDd8?e=oliS4u"
-    },
-    {
-      "name": "GHS-MULLANPUR",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-26",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC7ZIbwIlKVSZTtZGiotb9VARmYWP-KZt27Aj01wxqRQO4?e=oHb3Fw"
-    },
-    {
-      "name": "GSSS-SIDHWAN KALAN",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-24",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCZ7WFWSBqMR4MlH7bByJvFAYgY1iZBuaLeZ62ZVlt-Rks?e=f7m0ek"
-    },
-    {
-      "name": "GSSS-GHALIB KALAN",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-24",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDpGTnhqLD-TamYm3aAP-jBAY1PCRZdCao288RqfrhDc3Y?e=RC5ByK"
-    },
-    {
-      "name": "GSSS-AYALI KHURD",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-20",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC5kvgfoo3YRq449xwBOg4YAVDqu_S2reZpPnV4XXp9YWc?e=xaDvhE"
-    },
-    {
-      "name": "GSSS-JASPAL BANGER",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-20",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC9_bmvN-HUSKP37gl931GDATEquBn7jTdUPyG2dJQ0-AY?e=uwzYjr"
-    },
-    {
-      "name": "GSSS-MASSEWAL",
-      "district": "ROOPNAGAR",
-      "visitDate": "2025-11-18",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EmoV7x2oK-tJsKJqydHJKWQB8H3JHMTPMG5fJf63CaeJ8A?e=9mcdMW"
-    },
-    {
-      "name": "GSSS-BHARATGARH",
-      "district": "ROOPNAGAR",
-      "visitDate": "2025-11-18",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EqaWnN436CJPtrAR-tT0Au0BX5FpfsrUTHgCTxDmCZLdAg?e=bhgITw"
-    },
-    {
-      "name": "GHS-DESUMAJRA",
-      "district": "SAS Nagar",
-      "visitDate": "2025-11-11",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EgSemv3CPUFNgQ6W5UMkQL4BFkIXpp59jPot_DYwqZG8dA?e=VWGmia"
-    },
-    {
-      "name": "GHS-NAYAGAON",
-      "district": "SAS Nagar",
-      "visitDate": "2025-11-11",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EpDsqWsmMHpFu2N6-uanvfUBFjLMdKISxIZBY0PvcICEKw?e=i1qory"
-    },
-    {
-      "name": "GSSS-KHIZRABAD",
-      "district": "SAS Nagar",
-      "visitDate": "2025-11-11",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ErJl7De7oFlEiAteJvDAfxYB14M2mPPg67HFVh16rFt0Yg?e=ELuHlx"
-    },
-    {
-      "name": "GHS Phase-5",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-27",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/shashank_tamaskar_plaksha_edu_in/EsxuFP62PudLszzQXApGvCABb_vdDhiqyUJwF8PE6W-MfA?e=8aiflJ"
-    },
-    {
-      "name": "GHS Kumbra",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-27",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/shashank_tamaskar_plaksha_edu_in/EvcclyjZbSNAn-qpGJTELMMBvwTskvOasxus-qJNZP8vzA?e=rCIQjC"
-    },
-    {
-      "name": "GHS-Saneta",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-28",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EjBKoK0GfvRFsNd89K-tGPgBpAxUyxiqOxYHT11AA-j1rg?e=CdVxRd"
-    },
-    {
-      "name": "GHS-Hulka",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-28",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EtGM89WI9R1Mp0wwNFVqgBcB4r7f_W4NK36aZAKhhxFyzA?e=hoAb4K"
-    },
-    {
-      "name": "GHS-MUBARIKPUR",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-29",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Esyn_6hXfW5PqNgW4_KrbZYBNbDbqmuQsgAyywTuhdSW2g?e=MDHgtX"
-    },
-    {
-      "name": "GSSS-MUBARIKPUR",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-29",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:i:/g/personal/scienceonwheels_plaksha_edu_in/Eb_BC8dsxEZBusJf7upKB1YByFYUQBID_z2ZVSMv9SdR-A?e=xnVGob"
-    },
-    {
-      "name": "GHS-DAPPAR",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-30",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ElF8sE1m-apJunOE_c_vaowBLKrZsojCYZTsU_QogLsC4Q?e=FfrfDz"
-    },
-    {
-      "name": "GSSS-LALRU",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-30",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Eo6vdb3Q9-xKrWlTl2yZiuYBXvFb-L1D0XFD8KoigYhTag?e=ZoK4Kf"
-    },
-    {
-      "name": "GSSS RAMPUR SAINIA",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-31",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Eg--ceOYTnRIubP_M6Dbm0oBRYow6mQXwGP1eG1c2ZiMyw?e=HEjMuZ"
-    },
-    {
-      "name": "GSSS-SAMGAULI",
-      "district": "SAS Nagar",
-      "visitDate": "2025-10-31",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EnF4O9eR8R5EpijDFuOIQM4Bz4-I7Po8sXV6UiJzXiQBxQ?e=awisUG"
-    },
-    {
-      "name": "GSSS-LOHGARH",
-      "district": "SAS Nagar",
-      "visitDate": "2025-11-06",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Es1AA2Pu4TtCi9kelsxCXqEBwBbePu1X8bebWCmufSaaVg?e=yxM4Qw"
-    },
-    {
-      "name": "GHS-DHAKAULI",
-      "district": "SAS Nagar",
-      "visitDate": "2025-11-07",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Eo3AK-wdQ4NAt4PWM888NTUBF4rR86ktKQ3mimy3hSSnng?e=SNitF1"
-    },
-    {
-      "name": "GSSS-DAYALPURA",
-      "district": "SAS Nagar",
-      "visitDate": "2025-11-07",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EjrO0ZqXl1lIjhZqMLJx8scBWEDQPZwBYFyRy8MYNkJOJg?e=0229Hh"
-    },
-    {
-      "name": "GSSS-SAHORAN",
-      "district": "SAS Nagar",
-      "visitDate": "2025-11-10",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EqVd8YAHkCFKgWLUA7Wax78BcI65pPpjIwpD61nRThDgEg?e=T9BvT4"
-    },
-    {
-      "name": "GGSS-AMLOH",
-      "district": "FATEHGARH Sahib",
-      "visitDate": "2025-11-12",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EuBRTzTkEUxHtnCFWTijK0MBOIeOBKnSnwhMK3t9QpdbAw?e=flvpOL"
-    },
-    {
-      "name": "GHS-HARBANSPURA",
-      "district": "FATEHGARH Sahib",
-      "visitDate": "2025-11-12",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EtpkNxjKBudJja6qfrzjV3EBDP6pXwE9q8BTPQjuOi4_4Q?e=fn13wO"
-    },
-    {
-      "name": "GHS-KHANIAN",
-      "district": "FATEHGARH Sahib",
-      "visitDate": "2025-11-13",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EpT14zrNRUNArxn8IwoJs10BdMmvODLXT-RzlOgBRVrhig?e=dyEBba"
-    },
-    {
-      "name": "GSSS-NARAINGARH",
-      "district": "FATEHGARH Sahib",
-      "visitDate": "2025-11-13",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Ek2op-W3IJ5FpI0HDSTo-XMBKwcH-zB0Sd0XM2keYjY_cA?e=eQIebs"
-    },
-    {
-      "name": "GSSS-SIRHIND",
-      "district": "FATEHGARH Sahib",
-      "visitDate": "2025-11-14",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EhejJHxSPZ1OilOhvttEyQcBkIg8IyyOnOaZMBwVwR2EIg?e=BllTV8"
-    },
-    {
-      "name": "GSSS-GOBINDGARH",
-      "district": "FATEHGARH Sahib",
-      "visitDate": "2025-11-14",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Elqip_frIgZHgJZ1a8AY8IcBQK7JC84nsWta2K1cFbZwCw?e=fi2EdC"
-    },
-    {
-      "name": "GSSS-NURPUR BEDI",
-      "district": "ROOPNAGAR",
-      "visitDate": "2025-11-15",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EvSFah4X--hPgzuKnYhYcHABKyEQyehKIwXwUlCvMvhV7Q?e=vvmUx5"
-    },
-    {
-      "name": "GSSS-PHOOLPUR GAREWAL",
-      "district": "ROOPNAGAR",
-      "visitDate": "2025-11-15",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Ejezujl9jTVOh9B2lNhBngkBxxXFRtoQSC-zqbMcUmYa-A?e=51Kgae"
-    },
-    {
-      "name": "GHS-MATOUR",
-      "district": "ROOPNAGAR",
-      "visitDate": "2025-11-17",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/El7V9dLqanpEvQUdAU44rtsBfupKC5R9fD3FKgr_bX8BsQ?e=oi8pcw"
-    },
-    {
-      "name": "GSSS-KAHANPUR KHUHI",
-      "district": "ROOPNAGAR",
-      "visitDate": "2025-11-17",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Egcr7QINRz1Nn0LP3-RgnZEBUmCMR_qFTdDQre_iEsISAw?e=ujX1Yx"
-    },
-    {
-      "name": "GSSS-KATHERA",
-      "district": "ROOPNAGAR",
-      "visitDate": "2025-11-17",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EqsukYQ59o1OqW6qFyiHC5cB01KHqqrAGi6RA1GcdNcPMQ?e=kgG5h3"
-    },
-    {
-      "name": "GSSS-KASABAD",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-19",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Ejomz4vGCAZEilnTxCX6jh4BIH2iujyfNQN-k2l1isMC7Q?e=pYZUhc"
-    },
-    {
-      "name": "GSSS-SAHIBANA",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-19",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ErWNY7a3FtFPnMSMeapKjksBzeMCAps0ky7ngCJ2L2cjfQ?e=JQCTTQ"
-    },
-    {
-      "name": "GSSS-DHANDRA",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-21",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC9eNTKKrVUSYfJtbi6pBOIAdpFOdP8DsK9U5Di4-pke_E?e=pi8KV1"
-    },
-    {
-      "name": "GMSSS-CEMETRY ROAD",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-21",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDih5v2_ylOQI8zGqJPIl4LAUfK2QY7PeZysmUyQCZPefA?e=0SJxg1"
-    },
-    {
-      "name": "GSSS-HAIBOWAL KHURD",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-21",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDvgTFQyGDSRpIE4QZZYeyHAQu2TrrsJatol1Um3IuA1cA?e=HFRIt8"
-    },
-    {
-      "name": "GGSSS-JAGRAON",
-      "district": "Ludhiana",
-      "visitDate": "2025-11-22",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBMabPvuTnVT5muBgE-kNV-AfYENxV9Xu1iE4maW5DcKWc?e=jYE5wj"
-    }
-  ]
+    "schools": [
+        {
+            "name": "GSSS-MASSEWAL",
+            "district": "ROOPNAGAR",
+            "visitDate": "2025-11-18",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EmoV7x2oK-tJsKJqydHJKWQB8H3JHMTPMG5fJf63CaeJ8A?e=9mcdMW"
+        },
+        {
+            "name": "GSSS-BHARATGARH",
+            "district": "ROOPNAGAR",
+            "visitDate": "2025-11-18",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EqaWnN436CJPtrAR-tT0Au0BX5FpfsrUTHgCTxDmCZLdAg?e=bhgITw"
+        },
+        {
+            "name": "GHS-DESUMAJRA",
+            "district": "SAS Nagar",
+            "visitDate": "2025-11-11",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EgSemv3CPUFNgQ6W5UMkQL4BFkIXpp59jPot_DYwqZG8dA?e=VWGmia"
+        },
+        {
+            "name": "GHS-NAYAGAON",
+            "district": "SAS Nagar",
+            "visitDate": "2025-11-11",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EpDsqWsmMHpFu2N6-uanvfUBFjLMdKISxIZBY0PvcICEKw?e=i1qory"
+        },
+        {
+            "name": "GSSS-KHIZRABAD",
+            "district": "SAS Nagar",
+            "visitDate": "2025-11-11",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ErJl7De7oFlEiAteJvDAfxYB14M2mPPg67HFVh16rFt0Yg?e=ELuHlx"
+        },
+        {
+            "name": "GHS Phase-5",
+            "district": "SAS Nagar",
+            "visitDate": "2025-10-27",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/shashank_tamaskar_plaksha_edu_in/EsxuFP62PudLszzQXApGvCABb_vdDhiqyUJwF8PE6W-MfA?e=8aiflJ"
+        },
+        {
+            "name": "GHS Kumbra",
+            "district": "SAS Nagar",
+            "visitDate": "2025-10-27",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/shashank_tamaskar_plaksha_edu_in/EvcclyjZbSNAn-qpGJTELMMBvwTskvOasxus-qJNZP8vzA?e=rCIQjC"
+        },
+        {
+            "name": "GHS-Saneta",
+            "district": "SAS Nagar",
+            "visitDate": "2025-10-28",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EjBKoK0GfvRFsNd89K-tGPgBpAxUyxiqOxYHT11AA-j1rg?e=CdVxRd"
+        },
+        {
+            "name": "GHS-Hulka",
+            "district": "SAS Nagar",
+            "visitDate": "2025-10-28",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EtGM89WI9R1Mp0wwNFVqgBcB4r7f_W4NK36aZAKhhxFyzA?e=hoAb4K"
+        },
+        {
+            "name": "GHS-MUBARIKPUR",
+            "district": "SAS Nagar",
+            "visitDate": "2025-10-29",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Esyn_6hXfW5PqNgW4_KrbZYBNbDbqmuQsgAyywTuhdSW2g?e=MDHgtX"
+        },
+        {
+            "name": "GSSS-MUBARIKPUR",
+            "district": "SAS Nagar",
+            "visitDate": "2025-10-29",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:i:/g/personal/scienceonwheels_plaksha_edu_in/Eb_BC8dsxEZBusJf7upKB1YByFYUQBID_z2ZVSMv9SdR-A?e=xnVGob"
+        },
+        {
+            "name": "GHS-DAPPAR",
+            "district": "SAS Nagar",
+            "visitDate": "2025-10-30",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ElF8sE1m-apJunOE_c_vaowBLKrZsojCYZTsU_QogLsC4Q?e=FfrfDz"
+        },
+        {
+            "name": "GSSS-LALRU",
+            "district": "SAS Nagar",
+            "visitDate": "2025-10-30",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Eo6vdb3Q9-xKrWlTl2yZiuYBXvFb-L1D0XFD8KoigYhTag?e=ZoK4Kf"
+        },
+        {
+            "name": "GSSS RAMPUR SAINIA",
+            "district": "SAS Nagar",
+            "visitDate": "2025-10-31",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Eg--ceOYTnRIubP_M6Dbm0oBRYow6mQXwGP1eG1c2ZiMyw?e=HEjMuZ"
+        },
+        {
+            "name": "GSSS-SAMGAULI",
+            "district": "SAS Nagar",
+            "visitDate": "2025-10-31",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EnF4O9eR8R5EpijDFuOIQM4Bz4-I7Po8sXV6UiJzXiQBxQ?e=awisUG"
+        },
+        {
+            "name": "GSSS-LOHGARH",
+            "district": "SAS Nagar",
+            "visitDate": "2025-11-06",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Es1AA2Pu4TtCi9kelsxCXqEBwBbePu1X8bebWCmufSaaVg?e=yxM4Qw"
+        },
+        {
+            "name": "GHS-DHAKAULI",
+            "district": "SAS Nagar",
+            "visitDate": "2025-11-07",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Eo3AK-wdQ4NAt4PWM888NTUBF4rR86ktKQ3mimy3hSSnng?e=SNitF1"
+        },
+        {
+            "name": "GSSS-DAYALPURA",
+            "district": "SAS Nagar",
+            "visitDate": "2025-11-07",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EjrO0ZqXl1lIjhZqMLJx8scBWEDQPZwBYFyRy8MYNkJOJg?e=0229Hh"
+        },
+        {
+            "name": "GSSS-SAHORAN",
+            "district": "SAS Nagar",
+            "visitDate": "2025-11-10",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EqVd8YAHkCFKgWLUA7Wax78BcI65pPpjIwpD61nRThDgEg?e=T9BvT4"
+        },
+        {
+            "name": "GGSS-AMLOH",
+            "district": "FATEHGARH Sahib",
+            "visitDate": "2025-11-12",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EuBRTzTkEUxHtnCFWTijK0MBOIeOBKnSnwhMK3t9QpdbAw?e=flvpOL"
+        },
+        {
+            "name": "GHS-HARBANSPURA",
+            "district": "FATEHGARH Sahib",
+            "visitDate": "2025-11-12",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EtpkNxjKBudJja6qfrzjV3EBDP6pXwE9q8BTPQjuOi4_4Q?e=fn13wO"
+        },
+        {
+            "name": "GHS-KHANIAN",
+            "district": "FATEHGARH Sahib",
+            "visitDate": "2025-11-13",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EpT14zrNRUNArxn8IwoJs10BdMmvODLXT-RzlOgBRVrhig?e=dyEBba"
+        },
+        {
+            "name": "GSSS-NARAINGARH",
+            "district": "FATEHGARH Sahib",
+            "visitDate": "2025-11-13",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Ek2op-W3IJ5FpI0HDSTo-XMBKwcH-zB0Sd0XM2keYjY_cA?e=eQIebs"
+        },
+        {
+            "name": "GSSS-SIRHIND",
+            "district": "FATEHGARH Sahib",
+            "visitDate": "2025-11-14",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EhejJHxSPZ1OilOhvttEyQcBkIg8IyyOnOaZMBwVwR2EIg?e=BllTV8"
+        },
+        {
+            "name": "GSSS-GOBINDGARH",
+            "district": "FATEHGARH Sahib",
+            "visitDate": "2025-11-14",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Elqip_frIgZHgJZ1a8AY8IcBQK7JC84nsWta2K1cFbZwCw?e=fi2EdC"
+        },
+        {
+            "name": "GSSS-NURPUR BEDI",
+            "district": "ROOPNAGAR",
+            "visitDate": "2025-11-15",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EvSFah4X--hPgzuKnYhYcHABKyEQyehKIwXwUlCvMvhV7Q?e=vvmUx5"
+        },
+        {
+            "name": "GSSS-PHOOLPUR GAREWAL",
+            "district": "ROOPNAGAR",
+            "visitDate": "2025-11-15",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Ejezujl9jTVOh9B2lNhBngkBxxXFRtoQSC-zqbMcUmYa-A?e=51Kgae"
+        },
+        {
+            "name": "GHS-MATOUR",
+            "district": "ROOPNAGAR",
+            "visitDate": "2025-11-17",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/El7V9dLqanpEvQUdAU44rtsBfupKC5R9fD3FKgr_bX8BsQ?e=oi8pcw"
+        },
+        {
+            "name": "GSSS-KAHANPUR KHUHI",
+            "district": "ROOPNAGAR",
+            "visitDate": "2025-11-17",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Egcr7QINRz1Nn0LP3-RgnZEBUmCMR_qFTdDQre_iEsISAw?e=ujX1Yx"
+        },
+        {
+            "name": "GSSS-KATHERA",
+            "district": "ROOPNAGAR",
+            "visitDate": "2025-11-17",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/EqsukYQ59o1OqW6qFyiHC5cB01KHqqrAGi6RA1GcdNcPMQ?e=kgG5h3"
+        },
+        {
+            "name": "GSSS-KASABAD",
+            "district": "Ludhiana",
+            "visitDate": "2025-11-19",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/Ejomz4vGCAZEilnTxCX6jh4BIH2iujyfNQN-k2l1isMC7Q?e=pYZUhc"
+        },
+        {
+            "name": "GSSS-SAHIBANA",
+            "district": "Ludhiana",
+            "visitDate": "2025-11-19",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/ErWNY7a3FtFPnMSMeapKjksBzeMCAps0ky7ngCJ2L2cjfQ?e=JQCTTQ"
+        },
+        {
+            "name": "GSSS-DHANDRA",
+            "district": "Ludhiana",
+            "visitDate": "2025-11-21",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgC9eNTKKrVUSYfJtbi6pBOIAdpFOdP8DsK9U5Di4-pke_E?e=pi8KV1"
+        },
+        {
+            "name": "GMSSS-CEMETRY ROAD",
+            "district": "Ludhiana",
+            "visitDate": "2025-11-21",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDih5v2_ylOQI8zGqJPIl4LAUfK2QY7PeZysmUyQCZPefA?e=0SJxg1"
+        },
+        {
+            "name": "GSSS-HAIBOWAL KHURD",
+            "district": "Ludhiana",
+            "visitDate": "2025-11-21",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDvgTFQyGDSRpIE4QZZYeyHAQu2TrrsJatol1Um3IuA1cA?e=HFRIt8"
+        },
+        {
+            "name": "GGSSS-JAGRAON",
+            "district": "Ludhiana",
+            "visitDate": "2025-11-22",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBMabPvuTnVT5muBgE-kNV-AfYENxV9Xu1iE4maW5DcKWc?e=jYE5wj"
+        },
+        {
+            "name": "GSSS-KASABAD",
+            "district": "Ludhiana",
+            "visitDate": "2025-11-22",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBMabPvuTnVT5muBgE-kNV-AfYENxV9Xu1iE4maW5DcKWc?e=jYE5wj"
+        },
+        {
+            "name": "GSSS-DHANGERA",
+            "district": "Patiala",
+            "visitDate": "2025-12-03",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FDHANGERA&viewid=efb56dab%2D8a39%2D4d99%2Db96c%2D40fc250c7320&login_hint=scienceonwheels%40plaksha%2Eedu%2Ein&source=waffle"
+        },
+        {
+            "name": "GSSS-SEONA",
+            "district": "Patiala",
+            "visitDate": "2025-12-03",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FSEONA&viewid=efb56dab%2D8a39%2D4d99%2Db96c%2D40fc250c7320&login_hint=scienceonwheels%40plaksha%2Eedu%2Ein&source=waffle"
+        },
+        {
+            "name": "GMHS-Nabha",
+            "district": "Patiala",
+            "visitDate": "2025-12-03",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCkso11h4BnSrbfw3p2b6MXARj0zfPvNA8Hpv80tqafqUo?e=GY7BNS"
+        },
+        {
+            "name": "GSSS-BHOGIWAL",
+            "district": "MALERKOTLA",
+            "visitDate": "2025-12-03",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgA_4TIvKw5-Qq7v1GBmZE4hAYraL4P7vSmH0JRs3dOEMEs?e=BdLU26"
+        },
+        {
+            "name": "GSSS(GIRLS) NABHA",
+            "district": "Patiala",
+            "visitDate": "2025-12-04",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBBeFDhTwOfR5rjq4f-cuLcAfY7El3BskO540A362uL3kw?e=BHqiae"
+        },
+        {
+            "name": "GSSS G SAMANA",
+            "district": "Patiala",
+            "visitDate": "2025-12-04",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDAO66gPt8HTaAbgdTPJ4obAf2N7K2KqJb5KnVZ3M-_ejI?e=BmqND2"
+        },
+        {
+            "name": "GSSS DHANETHA",
+            "district": "Patiala",
+            "visitDate": "2025-12-04",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNlaM3-nR-T5R7H_DRfsebAU6_iY1RpSOp9OKt5ALsI8g?e=YLBVxM"
+        },
+        {
+            "name": "GSSS TRIPURI",
+            "district": "Patiala",
+            "visitDate": "2025-12-05",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCNfePUhgOSTaWcAYX-fbZbAV80nqdF4JRUclsha2ZMLCY?e=SUvZcL"
+        },
+        {
+            "name": "GSSS KALYAN",
+            "district": "Patiala",
+            "visitDate": "2025-12-05",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/shared?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FKALYAN&ct=1764946332380&or=OWA%2DNT%2DMail&cid=0c1ee03d%2D84e3%2D88de%2D8acc%2D703586f66d7c&ga=1"
+        },
+        {
+            "name": "GSSS MULTIPURPOSE",
+            "district": "Patiala",
+            "visitDate": "2025-12-05",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/my?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FMULTIPURPOSE&ct=1764946491706&or=OWA%2DNT%2DMail&ga=1"
+        },
+        {
+            "name": "GSSS-MULTIPURPOSE-SESSION-2",
+            "district": "Patiala",
+            "visitDate": "2025-12-06",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FMULTIPURPOSE&view=0"
+        },
+        {
+            "name": "GSSS-NANDPURKESHO",
+            "district": "Patiala",
+            "visitDate": "2025-12-06",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FNANDPURKESHO&view=0"
+        },
+        {
+            "name": "GSSS-KANGANWAL",
+            "district": "Malerkotla",
+            "visitDate": "2025-12-06",
+            "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMALERKOTLA%5FGSSS%5FKANGANWAL&view=0"
+        }
+    ]
 }
