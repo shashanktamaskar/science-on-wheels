@@ -1,6 +1,30 @@
 {
   "schools": [
     {
+      "name": "GHS-CHAURA-UPGRADE-RMSA",
+      "district": "Patiala",
+      "visitDate": "2025-12-08",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGHS%5FCHAURA"
+    },
+    {
+      "name": "GSSS-SANOUR-G",
+      "district": "Patiala",
+      "visitDate": "2025-12-08",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FSANOUR"
+    },
+    {
+      "name": "GSSS-SANOUR-B",
+      "district": "Patiala",
+      "visitDate": "2025-12-08",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FSANOUR%20B"
+    },
+    {
+      "name": "GSSS-BHANKHAR",
+      "district": "Patiala",
+      "visitDate": "2025-12-08",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FBHANKHAR"
+    },
+    {
       "name": "GSSS-MULTIPURPOSE-SESSION-2",
       "district": "Patiala",
       "visitDate": "2025-12-06",
