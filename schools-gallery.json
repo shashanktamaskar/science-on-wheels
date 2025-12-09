@@ -1,6 +1,24 @@
 {
   "schools": [
     {
+      "name": "GSSS-NTC",
+      "district": "Patiala",
+      "visitDate": "2025-12-09",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FNTC"
+    },
+    {
+      "name": "GSSS-MASHINGAN",
+      "district": "Patiala",
+      "visitDate": "2025-12-09",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FMASHINGAN"
+    },
+    {
+      "name": "GSSS-DEVIGARH",
+      "district": "Patiala",
+      "visitDate": "2025-12-09",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FDEVIGARH"
+    },
+    {
       "name": "GHS-CHAURA-UPGRADE-RMSA",
       "district": "Patiala",
       "visitDate": "2025-12-08",
