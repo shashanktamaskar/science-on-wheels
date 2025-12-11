@@ -1,6 +1,30 @@
 {
   "schools": [
     {
+      "name": "GSSS-LOH-SIMBLY",
+      "district": "Patiala",
+      "visitDate": "2025-12-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FLOH%20SIMBLY"
+    },
+    {
+      "name": "GSSS-GHANOUR",
+      "district": "Patiala",
+      "visitDate": "2025-12-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FGHANOUR"
+    },
+    {
+      "name": "GSSS-ULANA",
+      "district": "Patiala",
+      "visitDate": "2025-12-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FULANA"
+    },
+    {
+      "name": "GSSS-G-KALKA-ROAD",
+      "district": "Patiala",
+      "visitDate": "2025-12-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FKALKA%20ROAD"
+    },
+    {
       "name": "GHS-DHAKANSU-KALAN",
       "district": "Patiala",
       "visitDate": "2025-12-10",
