@@ -1,6 +1,30 @@
 {
   "schools": [
     {
+      "name": "GSSS-BHAWANIGARH-GIRLS",
+      "district": "Sangrur",
+      "visitDate": "2025-12-15",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FBHAWANIGARH%20%28GIRLS%29"
+    },
+    {
+      "name": "GES-RATTOK",
+      "district": "Sangrur",
+      "visitDate": "2025-12-15",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGES%5FRATTOKE"
+    },
+    {
+      "name": "PATIALA-GSSS-KALKA-ROAD-S2",
+      "district": "Patiala",
+      "visitDate": "2025-12-15",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FKALKA%20ROAD"
+    },
+    {
+      "name": "PATIALA-GSSS-MULTIPURPOSE-S2",
+      "district": "Patiala",
+      "visitDate": "2025-12-15",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FMULTIPURPOSE"
+    },
+    {
       "name": "GSSS-KARAMGARH-SHUTRANA",
       "district": "Patiala",
       "visitDate": "2025-12-12",

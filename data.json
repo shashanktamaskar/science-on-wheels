@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-12",
+  "lastUpdated": "2025-12-15",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,112 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 91,
+      "current": 95,
       "total": 235
     },
     "districtsCovered": {
-      "current": 6,
+      "current": 7,
       "total": 16
     },
-    "studentsImpacted": 45036,
+    "studentsImpacted": 48770,
     "genderBreakdown": {
-      "girls": 24713,
-      "boys": 20351
+      "girls": 26403,
+      "boys": 22395
     },
     "distanceTravelled": 1332,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-12-15",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GES-RATTOK",
+          "location": {
+            "lat": 30.1792249,
+            "lng": 75.5948579
+          },
+          "studentsReached": 82,
+          "girlsCount": 40,
+          "boysCount": 42,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGES%5FRATTOKE",
+          "collageImage": "GES-RATTOK.jpg"
+        },
+        {
+          "name": "GSSS-BHAWANIGARH-GIRLS",
+          "location": {
+            "lat": 30.2675998,
+            "lng": 76.0356903
+          },
+          "studentsReached": 433,
+          "girlsCount": 433,
+          "boysCount": 0,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FBHAWANIGARH%20%28GIRLS%29",
+          "collageImage": "GSSS-BHAWANIGARH-GIRLS.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 515,
+      "route": {
+        "startPoint": {
+          "lat": 30.1541054,
+          "lng": 76.206606
+        },
+        "endPoint": {
+          "lat": 0,
+          "lng": 0
+        }
+      },
+      "distanceTravelled": 0
+    },
+    {
+      "date": "2025-12-15",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "PATIALA-GSSS-MULTIPURPOSE-S2",
+          "location": {
+            "lat": 30.3504965,
+            "lng": 76.3843538
+          },
+          "studentsReached": 2541,
+          "girlsCount": 637,
+          "boysCount": 1904,
+          "district": "Patiala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FMULTIPURPOSE",
+          "collageImage": "PATIALA-GSSS-MULTIPURPOSE-S2.jpg"
+        },
+        {
+          "name": "PATIALA-GSSS-KALKA-ROAD-S2",
+          "location": {
+            "lat": 30.4902351,
+            "lng": 76.0212118
+          },
+          "studentsReached": 678,
+          "girlsCount": 580,
+          "boysCount": 98,
+          "district": "Patiala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATIALA%5FGSSS%5FKALKA%20ROAD",
+          "collageImage": "PATIALA-GSSS-KALKA-ROAD-S2.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 3219,
+      "route": {
+        "startPoint": {
+          "lat": 30.1541054,
+          "lng": 76.206606
+        },
+        "endPoint": {
+          "lat": 0,
+          "lng": 0
+        }
+      },
+      "distanceTravelled": 0
+    },
     {
       "date": "2025-12-12",
       "vehicle": 2,
