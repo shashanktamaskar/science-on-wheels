@@ -1,6 +1,30 @@
 {
   "schools": [
     {
+      "name": "GSSS-LEHRAGAGA-GIRLS",
+      "district": "Sangrur",
+      "visitDate": "2025-12-16",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FLEHRAGAGA%20%28GIRLS%29"
+    },
+    {
+      "name": "GSSS-LEHAL-KALAN",
+      "district": "Sangrur",
+      "visitDate": "2025-12-16",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FLEHAL%20KALAN"
+    },
+    {
+      "name": "GHS-ENNA-BAJWA",
+      "district": "Sangrur",
+      "visitDate": "2025-12-16",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGHS%5FENNA%20BAJWA"
+    },
+    {
+      "name": "GHS-BARDWAL",
+      "district": "Sangrur",
+      "visitDate": "2025-12-16",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGHS%5FBARDWAL"
+    },
+    {
       "name": "GSSS-BHAWANIGARH-GIRLS",
       "district": "Sangrur",
       "visitDate": "2025-12-15",
