@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-16",
+  "lastUpdated": "2025-12-17",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,99 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 99,
+      "current": 102,
       "total": 235
     },
     "districtsCovered": {
       "current": 7,
       "total": 16
     },
-    "studentsImpacted": 50150,
+    "studentsImpacted": 52332,
     "genderBreakdown": {
-      "girls": 27458,
-      "boys": 22720
+      "girls": 28869,
+      "boys": 23491
     },
-    "distanceTravelled": 1473,
+    "distanceTravelled": 1562,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-12-17",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "MASTER-KARTAR-SINGH-GSSS-BOYS-BHAWANIGARH",
+          "location": {
+            "lat": 30.2664891,
+            "lng": 76.0395747
+          },
+          "studentsReached": 412,
+          "girlsCount": 0,
+          "boysCount": 412,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FBHAWANIGARH%20%28BOYS%29",
+          "collageImage": "MASTER-KARTAR-SINGH-GSSS-BOYS-BHAWANIGARH.jpg"
+        },
+        {
+          "name": "GSSS-CHEEMA",
+          "location": {
+            "lat": 30.099495,
+            "lng": 75.679853
+          },
+          "studentsReached": 480,
+          "girlsCount": 121,
+          "boysCount": 359,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FCHEEMA",
+          "collageImage": "GSSS-CHEEMA.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 892,
+      "route": {
+        "startPoint": {
+          "lat": 30.2676588,
+          "lng": 75.8316351
+        },
+        "endPoint": {
+          "lat": 30.2676588,
+          "lng": 75.8316351
+        }
+      },
+      "distanceTravelled": 83
+    },
+    {
+      "date": "2025-12-17",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "LATE-MADAN-SINGH-KAPOOR-GSSS-SANGRUR-GIRLS",
+          "location": {
+            "lat": 30.2456322,
+            "lng": 75.8456763
+          },
+          "studentsReached": 1290,
+          "girlsCount": 1290,
+          "boysCount": 0,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FLate%20Madan%20Singh%20Kapoor%20GSSS%20SANGRUR%20%28Girls%29",
+          "collageImage": "LATE-MADAN-SINGH-KAPOOR-GSSS-SANGRUR-GIRLS.jpg"
+        }
+      ],
+      "schoolsVisited": 1,
+      "studentsReached": 1290,
+      "route": {
+        "startPoint": {
+          "lat": 30.2676588,
+          "lng": 75.8316351
+        },
+        "endPoint": {
+          "lat": 30.2676588,
+          "lng": 75.8316351
+        }
+      },
+      "distanceTravelled": 6
+    },
     {
       "date": "2025-12-16",
       "vehicle": 2,
