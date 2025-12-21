@@ -1,6 +1,24 @@
 {
   "schools": [
     {
+      "name": "GSSS-KHANAURI-KALAN",
+      "district": "Sangrur",
+      "visitDate": "2025-12-19",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FKHANAURI%20KALAN"
+    },
+    {
+      "name": "GHS-NAWAN-GAON",
+      "district": "Sangrur",
+      "visitDate": "2025-12-19",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGHS%5FNAWAN%20GAON"
+    },
+    {
+      "name": "GGSSS-SUNAM-UDHAM-SINGH-WALA",
+      "district": "Sangrur",
+      "visitDate": "2025-12-19",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGGSSS%5FSUNAM%20UDHAM%20SINGH%20WALA"
+    },
+    {
       "name": "GHS-KHETLA",
       "district": "Sangrur",
       "visitDate": "2025-12-18",

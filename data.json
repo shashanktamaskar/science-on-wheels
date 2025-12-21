@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-18",
+  "lastUpdated": "2025-12-19",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,99 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 106,
+      "current": 109,
       "total": 235
     },
     "districtsCovered": {
       "current": 7,
       "total": 16
     },
-    "studentsImpacted": 53682,
+    "studentsImpacted": 55460,
     "genderBreakdown": {
-      "girls": 29594,
-      "boys": 24116
+      "girls": 30872,
+      "boys": 24616
     },
-    "distanceTravelled": 1683,
+    "distanceTravelled": 1810,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-12-19",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GHS-NAWAN-GAON",
+          "location": {
+            "lat": 29.854858,
+            "lng": 76.03121
+          },
+          "studentsReached": 197,
+          "girlsCount": 100,
+          "boysCount": 97,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGHS%5FNAWAN%20GAON",
+          "collageImage": "GHS-NAWAN-GAON.jpg"
+        },
+        {
+          "name": "GSSS-KHANAURI-KALAN",
+          "location": {
+            "lat": 29.8352313,
+            "lng": 76.1087457
+          },
+          "studentsReached": 403,
+          "girlsCount": 0,
+          "boysCount": 403,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FKHANAURI%20KALAN",
+          "collageImage": "GSSS-KHANAURI-KALAN.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 600,
+      "route": {
+        "startPoint": {
+          "lat": 30.2676588,
+          "lng": 75.8316351
+        },
+        "endPoint": {
+          "lat": 29.8312332,
+          "lng": 75.9041611
+        }
+      },
+      "distanceTravelled": 77
+    },
+    {
+      "date": "2025-12-19",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GGSSS-SUNAM-UDHAM-SINGH-WALA",
+          "location": {
+            "lat": 30.1267655,
+            "lng": 75.8032065
+          },
+          "studentsReached": 1178,
+          "girlsCount": 1178,
+          "boysCount": 0,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGGSSS%5FSUNAM%20UDHAM%20SINGH%20WALA",
+          "collageImage": "GGSSS-SUNAM-UDHAM-SINGH-WALA.jpg"
+        }
+      ],
+      "schoolsVisited": 1,
+      "studentsReached": 1178,
+      "route": {
+        "startPoint": {
+          "lat": 30.2676588,
+          "lng": 75.8316351
+        },
+        "endPoint": {
+          "lat": 29.8312332,
+          "lng": 75.9041611
+        }
+      },
+      "distanceTravelled": 50
+    },
     {
       "date": "2025-12-18",
       "vehicle": 2,
