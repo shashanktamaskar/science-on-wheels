@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-19",
+  "lastUpdated": "2025-12-20",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,99 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 109,
+      "current": 112,
       "total": 235
     },
     "districtsCovered": {
       "current": 7,
       "total": 16
     },
-    "studentsImpacted": 55460,
+    "studentsImpacted": 57293,
     "genderBreakdown": {
-      "girls": 30872,
-      "boys": 24616
+      "girls": 32110,
+      "boys": 25211
     },
-    "distanceTravelled": 1810,
+    "distanceTravelled": 1959,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-12-20",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GSSS-MOONAK-BOYS",
+          "location": {
+            "lat": 29.8268276,
+            "lng": 75.8887192
+          },
+          "studentsReached": 645,
+          "girlsCount": 50,
+          "boysCount": 595,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FMOONAK%20BOYS",
+          "collageImage": "GSSS-MOONAK-BOYS.jpg"
+        },
+        {
+          "name": "GSSS-KHANAURI-GIRLS",
+          "location": {
+            "lat": 29.833758,
+            "lng": 76.1103931
+          },
+          "studentsReached": 535,
+          "girlsCount": 535,
+          "boysCount": 0,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FKHANAURI%20KALAN%28GIRLS%29",
+          "collageImage": "GSSS-KHANAURI-GIRLS.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 1180,
+      "route": {
+        "startPoint": {
+          "lat": 29.8312191,
+          "lng": 75.9067076
+        },
+        "endPoint": {
+          "lat": 30.0230811,
+          "lng": 75.3988044
+        }
+      },
+      "distanceTravelled": 95
+    },
+    {
+      "date": "2025-12-20",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-MOONAK-GIRLS",
+          "location": {
+            "lat": 29.8254832,
+            "lng": 75.8873615
+          },
+          "studentsReached": 653,
+          "girlsCount": 653,
+          "boysCount": 0,
+          "district": "Sangrur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FMOONAK%20%28GIRLS%29",
+          "collageImage": "GSSS-MOONAK-GIRLS.jpg"
+        }
+      ],
+      "schoolsVisited": 1,
+      "studentsReached": 653,
+      "route": {
+        "startPoint": {
+          "lat": 29.8312191,
+          "lng": 75.9067076
+        },
+        "endPoint": {
+          "lat": 30.0230811,
+          "lng": 75.3988044
+        }
+      },
+      "distanceTravelled": 54
+    },
     {
       "date": "2025-12-19",
       "vehicle": 2,

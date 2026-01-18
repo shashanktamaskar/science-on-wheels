@@ -1,6 +1,24 @@
 {
   "schools": [
     {
+      "name": "GSSS-KHANAURI-GIRLS",
+      "district": "Sangrur",
+      "visitDate": "2025-12-20",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FKHANAURI%20KALAN%28GIRLS%29"
+    },
+    {
+      "name": "GSSS-MOONAK-BOYS",
+      "district": "Sangrur",
+      "visitDate": "2025-12-20",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FMOONAK%20BOYS"
+    },
+    {
+      "name": "GSSS-MOONAK-GIRLS",
+      "district": "Sangrur",
+      "visitDate": "2025-12-20",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FSANGRUR%5FGSSS%5FMOONAK%20%28GIRLS%29"
+    },
+    {
       "name": "GSSS-KHANAURI-KALAN",
       "district": "Sangrur",
       "visitDate": "2025-12-19",
