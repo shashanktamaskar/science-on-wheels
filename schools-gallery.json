@@ -1,6 +1,42 @@
 {
   "schools": [
     {
+      "name": "GSSS-BHADAUR-GIRLS",
+      "district": "Barnala",
+      "visitDate": "2026-01-16",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FBHADAUR%20GIRL"
+    },
+    {
+      "name": "GSSS-CHEEMA-JODHPUR",
+      "district": "Barnala",
+      "visitDate": "2026-01-16",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FCHEEMA%20JODHPUR"
+    },
+    {
+      "name": "GSSS-CHHAPA",
+      "district": "Barnala",
+      "visitDate": "2026-01-16",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FCHHAPA"
+    },
+    {
+      "name": "GHS-SANGHERA",
+      "district": "Barnala",
+      "visitDate": "2026-01-16",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGHS%5FSANGHERA"
+    },
+    {
+      "name": "GSSS-DHANAULA",
+      "district": "Barnala",
+      "visitDate": "2026-01-16",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FDHANAULA%20B"
+    },
+    {
+      "name": "GHS-JUMLA-MALKAN-RMSA",
+      "district": "Barnala",
+      "visitDate": "2026-01-16",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGHS%5FJUMLA%20MALKAN%20RMSA"
+    },
+    {
       "name": "GSSS-KARANDI",
       "district": "Mansa",
       "visitDate": "2026-01-15",

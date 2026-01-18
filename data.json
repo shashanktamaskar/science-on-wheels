@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-15",
+  "lastUpdated": "2026-01-16",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,157 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 127,
+      "current": 133,
       "total": 235
     },
     "districtsCovered": {
-      "current": 8,
+      "current": 9,
       "total": 16
     },
-    "studentsImpacted": 63356,
+    "studentsImpacted": 66279,
     "genderBreakdown": {
-      "girls": 36185,
-      "boys": 27199
+      "girls": 37810,
+      "boys": 28497
     },
-    "distanceTravelled": 3054,
+    "distanceTravelled": 3267,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2026-01-16",
+      "vehicle": 3,
+      "schools": [
+        {
+          "name": "GSSS-CHEEMA-JODHPUR",
+          "location": {
+            "lat": 30.4062717,
+            "lng": 75.1543979
+          },
+          "studentsReached": 464,
+          "girlsCount": 209,
+          "boysCount": 255,
+          "district": "Barnala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FCHEEMA%20JODHPUR",
+          "collageImage": "GSSS-CHEEMA-JODHPUR.jpg"
+        },
+        {
+          "name": "GSSS-BHADAUR-GIRLS",
+          "location": {
+            "lat": 30.4783982,
+            "lng": 74.8465779
+          },
+          "studentsReached": 740,
+          "girlsCount": 740,
+          "boysCount": 0,
+          "district": "Barnala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FBHADAUR%20GIRL",
+          "collageImage": "GSSS-BHADAUR-GIRLS.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 1204,
+      "route": {
+        "startPoint": {
+          "lat": 30.3872222,
+          "lng": 75.5438056
+        },
+        "endPoint": {
+          "lat": 30.387221,
+          "lng": 75.5412312
+        }
+      },
+      "distanceTravelled": 135
+    },
+    {
+      "date": "2026-01-16",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GHS-SANGHERA",
+          "location": {
+            "lat": 30.4246125,
+            "lng": 75.4331272
+          },
+          "studentsReached": 324,
+          "girlsCount": 160,
+          "boysCount": 164,
+          "district": "Barnala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGHS%5FSANGHERA",
+          "collageImage": "GHS-SANGHERA.jpg"
+        },
+        {
+          "name": "GSSS-CHHAPA",
+          "location": {
+            "lat": 30.5432852,
+            "lng": 75.6286862
+          },
+          "studentsReached": 367,
+          "girlsCount": 167,
+          "boysCount": 200,
+          "district": "Barnala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FCHHAPA",
+          "collageImage": "GSSS-CHHAPA.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 691,
+      "route": {
+        "startPoint": {
+          "lat": 30.3872222,
+          "lng": 75.5438056
+        },
+        "endPoint": {
+          "lat": 30.387221,
+          "lng": 75.5412312
+        }
+      },
+      "distanceTravelled": 54
+    },
+    {
+      "date": "2026-01-16",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GHS-JUMLA-MALKAN-RMSA",
+          "location": {
+            "lat": 30.3559718,
+            "lng": 75.5262305
+          },
+          "studentsReached": 648,
+          "girlsCount": 314,
+          "boysCount": 334,
+          "district": "Barnala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGHS%5FJUMLA%20MALKAN%20RMSA",
+          "collageImage": "GHS-JUMLA-MALKAN-RMSA.jpg"
+        },
+        {
+          "name": "GSSS-DHANAULA",
+          "location": {
+            "lat": 30.2835802,
+            "lng": 75.5138756
+          },
+          "studentsReached": 380,
+          "girlsCount": 35,
+          "boysCount": 345,
+          "district": "Barnala",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FDHANAULA%20B",
+          "collageImage": "GSSS-DHANAULA.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 1028,
+      "route": {
+        "startPoint": {
+          "lat": 30.3872222,
+          "lng": 75.5438056
+        },
+        "endPoint": {
+          "lat": 30.387221,
+          "lng": 75.5412312
+        }
+      },
+      "distanceTravelled": 24
+    },
     {
       "date": "2026-01-15",
       "vehicle": 2,
