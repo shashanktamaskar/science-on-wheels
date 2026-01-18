@@ -1,6 +1,36 @@
 {
   "schools": [
     {
+      "name": "GSSS-RUREKE-KALAN",
+      "district": "Barnala",
+      "visitDate": "2026-01-17",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FRUREKE%20KALAN%20NABARD"
+    },
+    {
+      "name": "GSSS-HANDIYA",
+      "district": "Barnala",
+      "visitDate": "2026-01-17",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FHANDIAYA"
+    },
+    {
+      "name": "GSSS-PARWAHI",
+      "district": "Barnala",
+      "visitDate": "2026-01-17",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FPHARWAHI%20NABARD"
+    },
+    {
+      "name": "GSSS-MAURAN",
+      "district": "Barnala",
+      "visitDate": "2026-01-17",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FMAURAN"
+    },
+    {
+      "name": "GSSS-TAPA-BOYS",
+      "district": "Barnala",
+      "visitDate": "2026-01-17",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBARNALA%5FGSSS%5FTAPA%20BOYS"
+    },
+    {
       "name": "GSSS-BHADAUR-GIRLS",
       "district": "Barnala",
       "visitDate": "2026-01-16",
