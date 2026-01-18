@@ -1,6 +1,24 @@
 {
   "schools": [
     {
+      "name": "GMSSS-DATEWAS",
+      "district": "Mansa",
+      "visitDate": "2026-01-14",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5FGOVT%20MODEL%20SENIOR%20SECONDARY%20SCHOOL%20DATEWAS"
+    },
+    {
+      "name": "GHS-SAMAON",
+      "district": "Mansa",
+      "visitDate": "2026-01-14",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5FGHS%5FSAMAON"
+    },
+    {
+      "name": "GSS-GIRLS-BUDHLADA",
+      "district": "Mansa",
+      "visitDate": "2026-01-14",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5F%20GSS%5FGIRLS%20BUDHLADA"
+    },
+    {
       "name": "GSSS-AKKANWALI",
       "district": "Mansa",
       "visitDate": "2025-12-23",
