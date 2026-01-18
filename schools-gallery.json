@@ -1,6 +1,30 @@
 {
   "schools": [
     {
+      "name": "GSSS-AKKANWALI",
+      "district": "Mansa",
+      "visitDate": "2025-12-23",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5F%20GSSS%5FAKKANWALI"
+    },
+    {
+      "name": "GSSS-BAJEWALA",
+      "district": "Mansa",
+      "visitDate": "2025-12-23",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5F%20GSSS%5FBAJEWALA"
+    },
+    {
+      "name": "GSS-NANGAL-KALAN",
+      "district": "Mansa",
+      "visitDate": "2025-12-23",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5FGSS%5FNANGAL%20KALAN"
+    },
+    {
+      "name": "GSS-SMART-SCHOOL-BHAINI-BAGHA",
+      "district": "Mansa",
+      "visitDate": "2025-12-23",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5FGSS%5FSMART%20SCHOOL%20BHAINI%20BAGHA"
+    },
+    {
       "name": "GSS-BOYS-BHIKHI",
       "district": "Mansa",
       "visitDate": "2025-12-22",
