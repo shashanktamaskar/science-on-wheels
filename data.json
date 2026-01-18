@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-20",
+  "lastUpdated": "2025-12-22",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,112 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 112,
+      "current": 116,
       "total": 235
     },
     "districtsCovered": {
-      "current": 7,
+      "current": 8,
       "total": 16
     },
-    "studentsImpacted": 57293,
+    "studentsImpacted": 58881,
     "genderBreakdown": {
-      "girls": 32110,
-      "boys": 25211
+      "girls": 33238,
+      "boys": 25671
     },
-    "distanceTravelled": 1959,
+    "distanceTravelled": 2246,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2025-12-22",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GSS-GIRLS-BHIKHI",
+          "location": {
+            "lat": 29.8268276,
+            "lng": 75.8887192
+          },
+          "studentsReached": 360,
+          "girlsCount": 360,
+          "boysCount": 0,
+          "district": "Mansa",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5FGSS%5FGIRLS%20BHIKHI",
+          "collageImage": "GSS-GIRLS-BHIKHI.jpg"
+        },
+        {
+          "name": "GSS-BOYS-BHIKHI",
+          "location": {
+            "lat": 29.833758,
+            "lng": 76.1103931
+          },
+          "studentsReached": 360,
+          "girlsCount": 0,
+          "boysCount": 360,
+          "district": "Mansa",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5FGSS%5FBOYS%20BHIKHI",
+          "collageImage": "GSS-BOYS-BHIKHI.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 720,
+      "route": {
+        "startPoint": {
+          "lat": 30.0230811,
+          "lng": 75.3988044
+        },
+        "endPoint": {
+          "lat": 30.0230811,
+          "lng": 75.3988044
+        }
+      },
+      "distanceTravelled": 145
+    },
+    {
+      "date": "2025-12-22",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GHS-BEHNIWAL",
+          "location": {
+            "lat": 29.8254832,
+            "lng": 75.8873615
+          },
+          "studentsReached": 193,
+          "girlsCount": 93,
+          "boysCount": 100,
+          "district": "Mansa",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5FGHS%5FBEHNIWAL",
+          "collageImage": "GHS-BEHNIWAL.jpg"
+        },
+        {
+          "name": "GSS-GIRLS-SARDULGARH",
+          "location": {
+            "lat": 30.2653565,
+            "lng": 75.6265026
+          },
+          "studentsReached": 675,
+          "girlsCount": 675,
+          "boysCount": 0,
+          "district": "Mansa",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMANSA%5FGSS%5FGIRLS%20SARDULGARH",
+          "collageImage": "GSS-GIRLS-SARDULGARH.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 868,
+      "route": {
+        "startPoint": {
+          "lat": 30.0230811,
+          "lng": 75.3988044
+        },
+        "endPoint": {
+          "lat": 30.0230811,
+          "lng": 75.3988044
+        }
+      },
+      "distanceTravelled": 142
+    },
     {
       "date": "2025-12-20",
       "vehicle": 2,
