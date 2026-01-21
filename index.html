@@ -510,13 +510,13 @@
         function initializeMap() {
             if (!projectData || map) return;
 
-            // Initialize map centered on centroid of all visited schools
+            // Initialize map centered on Punjab centroid
             map = L.map('map', {
-                minZoom: 8,
+                minZoom: 7,
                 maxZoom: 18,
                 scrollWheelZoom: false, // Disable scroll wheel zoom to prevent accidental zoom out
                 zoomControl: true
-            }).setView([30.7313601, 76.2495125], 9); // Center on centroid of all 67 schools
+            }).setView([30.8424, 75.4155], 7); // Center on Punjab centroid, zoomed out
 
             // Re-enable zoom on map click (user must click map first to zoom)
             map.on('click', function () {
@@ -532,13 +532,28 @@
                 maxZoom: 18
             }).addTo(map);
 
-            // Create green bus icon for completed schools
+            // Load Punjab boundary GeoJSON
+            fetch('punjab_boundary.json')
+                .then(response => response.json())
+                .then(punjabData => {
+                    L.geoJSON(punjabData, {
+                        style: {
+                            color: '#0066cc',
+                            weight: 2,
+                            fillColor: '#0066cc',
+                            fillOpacity: 0.05
+                        }
+                    }).addTo(map);
+                })
+                .catch(err => console.log('Punjab boundary not loaded:', err));
+
+            // Create smaller green bus icon for completed schools
             const greenBusIcon = L.divIcon({
                 className: 'custom-bus-icon',
-                html: `<div style="font-size: 32px; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.7));">🚌</div>`,
-                iconSize: [40, 40],
-                iconAnchor: [20, 20],
-                popupAnchor: [0, -20]
+                html: `<div style="font-size: 18px; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));">🚌</div>`,
+                iconSize: [24, 24],
+                iconAnchor: [12, 12],
+                popupAnchor: [0, -12]
             });
 
             // Collect all completed schools from dailyUpdates
