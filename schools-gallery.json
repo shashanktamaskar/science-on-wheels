@@ -1,6 +1,36 @@
 {
   "schools": [
     {
+      "name": "GSSS-DAUDAR",
+      "district": "Moga",
+      "visitDate": "2026-01-19",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FDAUDAR"
+    },
+    {
+      "name": "GSSS-FATEH-GARH-PANJTOOR",
+      "district": "Moga",
+      "visitDate": "2026-01-19",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FFATEH%20GARH%20PANJTOOR"
+    },
+    {
+      "name": "GSSS-DHARAMKOT-G",
+      "district": "Moga",
+      "visitDate": "2026-01-19",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FDHARAMKOT%20G"
+    },
+    {
+      "name": "GSSS-KOT-ISSE-KHAN-G",
+      "district": "Moga",
+      "visitDate": "2026-01-19",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FKOT%20ISSE%20KHAN%20G"
+    },
+    {
+      "name": "GSSS-GHALOTI",
+      "district": "Moga",
+      "visitDate": "2026-01-19",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FGHALOTI"
+    },
+    {
       "name": "GSSS-RUREKE-KALAN",
       "district": "Barnala",
       "visitDate": "2026-01-17",
