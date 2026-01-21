@@ -516,7 +516,7 @@
                 maxZoom: 18,
                 scrollWheelZoom: false, // Disable scroll wheel zoom to prevent accidental zoom out
                 zoomControl: true
-            }).setView([30.8424, 75.4155], 7); // Center on Punjab centroid, zoomed out
+            }).setView([30.8424, 75.4155], 8); // Center on Punjab centroid
 
             // Re-enable zoom on map click (user must click map first to zoom)
             map.on('click', function () {
@@ -541,7 +541,7 @@
                             color: '#0066cc',
                             weight: 2,
                             fillColor: '#0066cc',
-                            fillOpacity: 0.05
+                            fillOpacity: 0
                         }
                     }).addTo(map);
                 })
