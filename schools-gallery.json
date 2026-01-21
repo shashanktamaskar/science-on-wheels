@@ -1,6 +1,42 @@
 {
   "schools": [
     {
+      "name": "GSSS-BILASPUR",
+      "district": "Moga",
+      "visitDate": "2026-01-20",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FBILASPUR"
+    },
+    {
+      "name": "GSSS-BADHNI-KALAN-G",
+      "district": "Moga",
+      "visitDate": "2026-01-20",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FBADHNI%20KALAN%20G"
+    },
+    {
+      "name": "GSSS-G-BAGHA-PURANA",
+      "district": "Moga",
+      "visitDate": "2026-01-20",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FBAGHA%20PURANA%20G"
+    },
+    {
+      "name": "GHS-CHARIK-B",
+      "district": "Moga",
+      "visitDate": "2026-01-20",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGHS%5FCHARIK%20B"
+    },
+    {
+      "name": "GHS-DHALLE-KE",
+      "district": "Moga",
+      "visitDate": "2026-01-20",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGHS%5FDHALLE%20KE"
+    },
+    {
+      "name": "GSSS-GODHE-WALA-W",
+      "district": "Moga",
+      "visitDate": "2026-01-20",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FGODHE%20WALA%20W"
+    },
+    {
       "name": "GSSS-DAUDAR",
       "district": "Moga",
       "visitDate": "2026-01-19",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-19",
+  "lastUpdated": "2026-01-20",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,157 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 143,
+      "current": 149,
       "total": 235
     },
     "districtsCovered": {
       "current": 10,
       "total": 16
     },
-    "studentsImpacted": 70919,
+    "studentsImpacted": 73157,
     "genderBreakdown": {
-      "girls": 40137,
-      "boys": 30810
+      "girls": 41567,
+      "boys": 31618
     },
-    "distanceTravelled": 3763,
+    "distanceTravelled": 3984,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2026-01-20",
+      "vehicle": 3,
+      "schools": [
+        {
+          "name": "GSSS-BADHNI-KALAN-G",
+          "location": {
+            "lat": 30.8228362,
+            "lng": 75.1724523
+          },
+          "studentsReached": 342,
+          "girlsCount": 342,
+          "boysCount": 0,
+          "district": "Moga",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FBADHNI%20KALAN%20G",
+          "collageImage": "GSSS-BADHNI-KALAN-G.jpg"
+        },
+        {
+          "name": "GSSS-BILASPUR",
+          "location": {
+            "lat": 30.5716259,
+            "lng": 75.3710932
+          },
+          "studentsReached": 610,
+          "girlsCount": 300,
+          "boysCount": 310,
+          "district": "Moga",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FBILASPUR",
+          "collageImage": "GSSS-BILASPUR.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 952,
+      "route": {
+        "startPoint": {
+          "lat": 30.8142683,
+          "lng": 75.2183024
+        },
+        "endPoint": {
+          "lat": 30.8142532,
+          "lng": 75.2211323
+        }
+      },
+      "distanceTravelled": 69
+    },
+    {
+      "date": "2026-01-20",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GHS-CHARIK-B",
+          "location": {
+            "lat": 30.7243768,
+            "lng": 75.1666844
+          },
+          "studentsReached": 168,
+          "girlsCount": 0,
+          "boysCount": 168,
+          "district": "Moga",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGHS%5FCHARIK%20B",
+          "collageImage": "GHS-CHARIK-B.jpg"
+        },
+        {
+          "name": "GSSS-G-BAGHA-PURANA",
+          "location": {
+            "lat": 30.6879686,
+            "lng": 75.0877952
+          },
+          "studentsReached": 490,
+          "girlsCount": 490,
+          "boysCount": 0,
+          "district": "Moga",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FBAGHA%20PURANA%20G",
+          "collageImage": "GSSS-G-BAGHA-PURANA.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 658,
+      "route": {
+        "startPoint": {
+          "lat": 30.8142683,
+          "lng": 75.2183024
+        },
+        "endPoint": {
+          "lat": 30.2269248,
+          "lng": 74.9432516
+        }
+      },
+      "distanceTravelled": 73
+    },
+    {
+      "date": "2026-01-20",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-GODHE-WALA-W",
+          "location": {
+            "lat": 30.8206806,
+            "lng": 75.1921388
+          },
+          "studentsReached": 410,
+          "girlsCount": 190,
+          "boysCount": 220,
+          "district": "Moga",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FGODHE%20WALA%20W",
+          "collageImage": "GSSS-GODHE-WALA-W.jpg"
+        },
+        {
+          "name": "GHS-DHALLE-KE",
+          "location": {
+            "lat": 30.8451483,
+            "lng": 75.1560284
+          },
+          "studentsReached": 218,
+          "girlsCount": 108,
+          "boysCount": 110,
+          "district": "Moga",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGHS%5FDHALLE%20KE",
+          "collageImage": "GHS-DHALLE-KE.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 628,
+      "route": {
+        "startPoint": {
+          "lat": 30.8142683,
+          "lng": 75.2183024
+        },
+        "endPoint": {
+          "lat": 30.2269248,
+          "lng": 74.9432516
+        }
+      },
+      "distanceTravelled": 79
+    },
     {
       "date": "2026-01-19",
       "vehicle": 3,
