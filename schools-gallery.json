@@ -1,6 +1,42 @@
 {
   "schools": [
     {
+      "name": "GSSS-BHIM-NAGAR-W",
+      "district": "Moga",
+      "visitDate": "2026-01-21",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FBHIM%20NAGAR%20W"
+    },
+    {
+      "name": "GSSS-MARI-MUSTAFA",
+      "district": "Moga",
+      "visitDate": "2026-01-21",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FMARI%20MUSTAFA"
+    },
+    {
+      "name": "GSSS-BIR-TALAB-BASTI",
+      "district": "Bathinda",
+      "visitDate": "2026-01-21",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBATHINDA%5FGSSS%5FBIR%20TALAB%20BASTI"
+    },
+    {
+      "name": "GSSS-SANJAY-NAGAR-RMSA",
+      "district": "Bathinda",
+      "visitDate": "2026-01-21",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBATHINDA%5FGSSS%5FSANJAY%20NAGAR%20RMSA"
+    },
+    {
+      "name": "GSSS-TUNGWALI",
+      "district": "Bathinda",
+      "visitDate": "2026-01-21",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBATHINDA%5FGSSS%5FTUNGWALI"
+    },
+    {
+      "name": "GHS-CHANDSAR-BASTI",
+      "district": "Bathinda",
+      "visitDate": "2026-01-21",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBATHINDA%5FGHS%5FCHANDSAR%20BASTI"
+    },
+    {
       "name": "GSSS-BILASPUR",
       "district": "Moga",
       "visitDate": "2026-01-20",

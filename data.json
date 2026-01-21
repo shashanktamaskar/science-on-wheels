@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-20",
+  "lastUpdated": "2026-01-21",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,157 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 149,
+      "current": 155,
       "total": 235
     },
     "districtsCovered": {
-      "current": 10,
+      "current": 11,
       "total": 16
     },
-    "studentsImpacted": 73157,
+    "studentsImpacted": 75740,
     "genderBreakdown": {
-      "girls": 41567,
-      "boys": 31618
+      "girls": 42802,
+      "boys": 32966
     },
-    "distanceTravelled": 3984,
+    "distanceTravelled": 4151,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2026-01-21",
+      "vehicle": 3,
+      "schools": [
+        {
+          "name": "GSSS-MARI-MUSTAFA",
+          "location": {
+            "lat": 30.5994513,
+            "lng": 74.997268
+          },
+          "studentsReached": 333,
+          "girlsCount": 170,
+          "boysCount": 163,
+          "district": "Moga",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FMARI%20MUSTAFA",
+          "collageImage": "GSSS-MARI-MUSTAFA.jpg"
+        },
+        {
+          "name": "GSSS-BHIM-NAGAR-W",
+          "location": {
+            "lat": 30.8130058,
+            "lng": 75.1203789
+          },
+          "studentsReached": 735,
+          "girlsCount": 235,
+          "boysCount": 500,
+          "district": "Moga",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FMOGA%5FGSSS%5FBHIM%20NAGAR%20W",
+          "collageImage": "GSSS-BHIM-NAGAR-W.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 1068,
+      "route": {
+        "startPoint": {
+          "lat": 30.8168311,
+          "lng": 75.2108504
+        },
+        "endPoint": {
+          "lat": 30.2266256,
+          "lng": 74.9457572
+        }
+      },
+      "distanceTravelled": 125
+    },
+    {
+      "date": "2026-01-21",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GSSS-SANJAY-NAGAR-RMSA",
+          "location": {
+            "lat": 30.2031409,
+            "lng": 74.9225503
+          },
+          "studentsReached": 510,
+          "girlsCount": 290,
+          "boysCount": 220,
+          "district": "Bathinda",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBATHINDA%5FGSSS%5FSANJAY%20NAGAR%20RMSA",
+          "collageImage": "GSSS-SANJAY-NAGAR-RMSA.jpg"
+        },
+        {
+          "name": "GSSS-BIR-TALAB-BASTI",
+          "location": {
+            "lat": 30.208822,
+            "lng": 74.8597803
+          },
+          "studentsReached": 318,
+          "girlsCount": 144,
+          "boysCount": 174,
+          "district": "Bathinda",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBATHINDA%5FGSSS%5FBIR%20TALAB%20BASTI",
+          "collageImage": "GSSS-BIR-TALAB-BASTI.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 828,
+      "route": {
+        "startPoint": {
+          "lat": 30.2266256,
+          "lng": 74.9457572
+        },
+        "endPoint": {
+          "lat": 30.2266256,
+          "lng": 74.9457572
+        }
+      },
+      "distanceTravelled": 18
+    },
+    {
+      "date": "2026-01-21",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GHS-CHANDSAR-BASTI",
+          "location": {
+            "lat": 30.2186786,
+            "lng": 74.9385413
+          },
+          "studentsReached": 267,
+          "girlsCount": 146,
+          "boysCount": 121,
+          "district": "Bathinda",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBATHINDA%5FGHS%5FCHANDSAR%20BASTI",
+          "collageImage": "GHS-CHANDSAR-BASTI.jpg"
+        },
+        {
+          "name": "GSSS-TUNGWALI",
+          "location": {
+            "lat": 30.1651099,
+            "lng": 75.0404188
+          },
+          "studentsReached": 420,
+          "girlsCount": 250,
+          "boysCount": 170,
+          "district": "Bathinda",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FBATHINDA%5FGSSS%5FTUNGWALI",
+          "collageImage": "GSSS-TUNGWALI.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 687,
+      "route": {
+        "startPoint": {
+          "lat": 30.2266256,
+          "lng": 74.9457572
+        },
+        "endPoint": {
+          "lat": 30.2266256,
+          "lng": 74.9457572
+        }
+      },
+      "distanceTravelled": 24
+    },
     {
       "date": "2026-01-20",
       "vehicle": 3,
