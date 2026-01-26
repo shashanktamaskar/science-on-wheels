@@ -1,5 +1,6 @@
 # Archive folder
 archive/
+_archive/
 
 # OS files
 .DS_Store
