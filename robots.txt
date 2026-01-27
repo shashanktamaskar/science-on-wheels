@@ -1,0 +1,12 @@
+# Robots.txt for Science on Wheels
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Disallow: /gallery_school_collage/
+
+# Sitemap location
+Sitemap: https://shashanktamaskar.github.io/science-on-wheels/sitemap.xml
+
+# Crawl-delay (optional, in seconds)
+Crawl-delay: 1
