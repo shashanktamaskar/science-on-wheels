@@ -237,7 +237,7 @@ def generate_collage(zip_path, school_name, district, date, output_dir, api_key)
                 district,
                 date,
                 count=6,
-                model_name='gemini-3-pro-image-preview'
+                model_name='gemini-2.0-flash-exp'
             )
             
             # Create collage
@@ -259,7 +259,7 @@ def generate_collage(zip_path, school_name, district, date, output_dir, api_key)
                 school_name,
                 district,
                 date,
-                model_name='gemini-3-pro-image-preview'
+                model_name='gemini-2.0-flash-exp'
             )
             
             print(f"    ✅ Collage saved: {output_path} (Score: {score}/10)")

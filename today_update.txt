@@ -1,0 +1,12 @@
+DATE: 2026-02-09
+
+VEHICLE: 1
+START: Faridkot | https://maps.app.goo.gl/cywdeSqjNpCoo2kb6
+SCHOOL: GSSSG-FDK | https://maps.app.goo.gl/gCXbpvzGX2E5LEQB8 | 1470 | 1470 | 0 | Faridkot | D:\OneDrive_2026-02-15\20.01.2026 to 11.02.2026\09.02.2026\GSSSG FDK.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFARIDKOT%5FGSSSG%5FFDK&view=0
+SCHOOL: GSSS-GOLEWALA | https://maps.app.goo.gl/samCWp9PGPuSaAEQ7 | 468 | 236 | 232 | Faridkot | D:\OneDrive_2026-02-15\20.01.2026 to 11.02.2026\09.02.2026\GSSS GOLEWALA.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFARIDKOT%5FGSSS%5FGOLEWALA&view=0
+END: Firozpur | https://maps.app.goo.gl/xCjuVeufmvpeFRa78
+
+VEHICLE: 2
+START: Faridkot | https://maps.app.goo.gl/cywdeSqjNpCoo2kb6
+SCHOOL: GHS-TEHNA | https://maps.app.goo.gl/hZSgSVhBpqQ3s5fB6 | 195 | 95 | 100 | Faridkot | D:\OneDrive_2026-02-15\20.01.2026 to 11.02.2026\09.02.2026\GHS TEHNA.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFARIDKOT%5FGHS%5FTEHNA&view=0
+END: Firozpur | https://maps.app.goo.gl/xCjuVeufmvpeFRa78
