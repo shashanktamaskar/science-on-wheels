@@ -1,6 +1,186 @@
 {
   "schools": [
     {
+      "name": "GSSS-GHAROTA",
+      "district": "Pathankot",
+      "visitDate": "2026-02-13",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSSS%5FGHAROTA&view=0"
+    },
+    {
+      "name": "GSSS-BAMIAL",
+      "district": "Pathankot",
+      "visitDate": "2026-02-13",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FBAMIAL&view=0"
+    },
+    {
+      "name": "GSSS-MANWAL",
+      "district": "Pathankot",
+      "visitDate": "2026-02-13",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FMANWAL&view=0"
+    },
+    {
+      "name": "GSSS-FEROZEPUR-KALAN",
+      "district": "Pathankot",
+      "visitDate": "2026-02-13",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FFEROZEPUR%20KALAN&view=0"
+    },
+    {
+      "name": "GHS-BANI-LODHI",
+      "district": "Pathankot",
+      "visitDate": "2026-02-13",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGHS%5FBANI%20LODHI&view=0"
+    },
+    {
+      "name": "GGSSS-BEGOWAL",
+      "district": "Pathankot",
+      "visitDate": "2026-02-13",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGGSSS%5FBEGOWAL&view=0"
+    },
+    {
+      "name": "GSSS-SUJANPUR-BOYS",
+      "district": "Pathankot",
+      "visitDate": "2026-02-12",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FSUJANPUR%20BOYS&view=0"
+    },
+    {
+      "name": "GGSSS-SUJANPUR",
+      "district": "Pathankot",
+      "visitDate": "2026-02-12",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGGSSS%5FSUJANPUR&view=0"
+    },
+    {
+      "name": "GSSS-DAULATPUR-KALAN",
+      "district": "Pathankot",
+      "visitDate": "2026-02-12",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FDAULATPUR%20KALAN&view=0"
+    },
+    {
+      "name": "GSSS-KFC-PATHANKOT",
+      "district": "Pathankot",
+      "visitDate": "2026-02-12",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FKFC%20PATHANKOT&view=0"
+    },
+    {
+      "name": "GSSS-BADHANI",
+      "district": "Pathankot",
+      "visitDate": "2026-02-12",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FBADHANI&view=0"
+    },
+    {
+      "name": "GSSS-TARAGARH-B",
+      "district": "Pathankot",
+      "visitDate": "2026-02-12",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FTARAGARH%20%28B%29"
+    },
+    {
+      "name": "GSSS-JANGAL",
+      "district": "Pathankot",
+      "visitDate": "2026-02-12",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FJANGAL&view=0"
+    },
+    {
+      "name": "GSSS-GIRLS-TALWANDI-BHAI",
+      "district": "Firozpur",
+      "visitDate": "2026-02-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FGIRLS%20TALWANDI%20BHAI&view=0"
+    },
+    {
+      "name": "GSSS-BOYS-TALWANDI-BHAI",
+      "district": "Firozpur",
+      "visitDate": "2026-02-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FBOYS%20TALWANDI%20BHAI&view=0"
+    },
+    {
+      "name": "GSSS-MUDKI-BOYS",
+      "district": "Firozpur",
+      "visitDate": "2026-02-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FMUDKI%20BOYS&view=0"
+    },
+    {
+      "name": "GHS-GHUDUWALA",
+      "district": "Firozpur",
+      "visitDate": "2026-02-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGHS%5FGHUDUWALA&view=0"
+    },
+    {
+      "name": "GSSS-BEHAK-GUJARAN",
+      "district": "Firozpur",
+      "visitDate": "2026-02-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FBEHAK%20GUJARAN&view=0"
+    },
+    {
+      "name": "GSSS-BAZIDPUR",
+      "district": "Firozpur",
+      "visitDate": "2026-02-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5F%20GSSS%5FBAZIDPUR&view=0"
+    },
+    {
+      "name": "GSSS-BOYS-FZR",
+      "district": "Firozpur",
+      "visitDate": "2026-02-11",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FBOYS%20FZR&view=0"
+    },
+    {
+      "name": "GSSS-KUSSU-WALA",
+      "district": "Firozpur",
+      "visitDate": "2026-02-10",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FKUSSU%20WALA&view=0"
+    },
+    {
+      "name": "GSS-BOYS-MAKHU",
+      "district": "Firozpur",
+      "visitDate": "2026-02-10",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSS%5FBOYS%20MAKHU&view=0"
+    },
+    {
+      "name": "GHS-GIRLS-MAKHU",
+      "district": "Firozpur",
+      "visitDate": "2026-02-10",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGHS%5FGIRLS%20MAKHU"
+    },
+    {
+      "name": "GSSS-TALWANDI-JALE-KHAN",
+      "district": "Firozpur",
+      "visitDate": "2026-02-10",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FTALWANDI%20JALE%20KHAN&view=0"
+    },
+    {
+      "name": "GHS-PIR-ISMAIL-KHAN",
+      "district": "Firozpur",
+      "visitDate": "2026-02-10",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGHS%5FPIR%20ISMAIL%20KHAN&view=0"
+    },
+    {
+      "name": "GSSS-KARIAN-PEHLWAN",
+      "district": "Firozpur",
+      "visitDate": "2026-02-10",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FKARIAN%20PEHLWAN&view=0"
+    },
+    {
+      "name": "GHS-JHOK-TEHAL-SINGH",
+      "district": "Firozpur",
+      "visitDate": "2026-02-10",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGHS%5FJHOK%20TEHAL%20SINGH&view=0"
+    },
+    {
+      "name": "GSSS-DONA-MATTAR",
+      "district": "Firozpur",
+      "visitDate": "2026-02-10",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FDONA%20MATTAR&view=0"
+    },
+    {
+      "name": "GHS-CHHANGA-RAI-UTTAR",
+      "district": "Firozpur",
+      "visitDate": "2026-02-10",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGHS%5FCHHANGA%20RAI%20UTTAR&view=0"
+    },
+    {
+      "name": "GSSS-GURU-HAR-SAHAI",
+      "district": "Firozpur",
+      "visitDate": "2026-02-10",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FGURU%20HAR%20SAHAI&viewid=efb56dab%2D8a39%2D4d99%2Db96c%2D40fc250c7320&view=0"
+    },
+    {
       "name": "GHS-TEHNA",
       "district": "Faridkot",
       "visitDate": "2026-02-09",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-09",
+  "lastUpdated": "2026-02-13",
   "projectInfo": {
     "title": "Science on Wheels for Punjab",
     "subtitle": "Mobile Science Van Initiative for PM Shri Schools",
@@ -10,22 +10,640 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 210,
+      "current": 240,
       "total": 235
     },
     "districtsCovered": {
-      "current": 14,
+      "current": 16,
       "total": 16
     },
-    "studentsImpacted": 106178,
+    "studentsImpacted": 119670,
     "genderBreakdown": {
-      "girls": 63789,
-      "boys": 42417
+      "girls": 70011,
+      "boys": 49687
     },
-    "distanceTravelled": 7252,
+    "distanceTravelled": 8820,
     "targetAudience": "Students from Classes 6-12"
   },
   "dailyUpdates": [
+    {
+      "date": "2026-02-13",
+      "vehicle": 3,
+      "schools": [
+        {
+          "name": "GSSS-BAMIAL",
+          "location": {
+            "lat": 32.2887734,
+            "lng": 75.3772968
+          },
+          "studentsReached": 642,
+          "girlsCount": 302,
+          "boysCount": 340,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FBAMIAL&view=0",
+          "collageImage": "GSSS-BAMIAL.jpg"
+        },
+        {
+          "name": "GSSS-GHAROTA",
+          "location": {
+            "lat": 32.1490191,
+            "lng": 75.4991841
+          },
+          "studentsReached": 450,
+          "girlsCount": 300,
+          "boysCount": 150,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSSS%5FGHAROTA&view=0",
+          "collageImage": "GSSS-GHAROTA.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 1092,
+      "route": {
+        "startPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        },
+        "endPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        }
+      },
+      "distanceTravelled": 50
+    },
+    {
+      "date": "2026-02-13",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GSSS-FEROZEPUR-KALAN",
+          "location": {
+            "lat": 32.3402339,
+            "lng": 75.5900873
+          },
+          "studentsReached": 440,
+          "girlsCount": 207,
+          "boysCount": 233,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FFEROZEPUR%20KALAN&view=0",
+          "collageImage": "GSSS-FEROZEPUR-KALAN.jpg"
+        },
+        {
+          "name": "GSSS-MANWAL",
+          "location": {
+            "lat": 32.3011954,
+            "lng": 75.6752154
+          },
+          "studentsReached": 325,
+          "girlsCount": 140,
+          "boysCount": 185,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FMANWAL&view=0",
+          "collageImage": "GSSS-MANWAL.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 765,
+      "route": {
+        "startPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        },
+        "endPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        }
+      },
+      "distanceTravelled": 22
+    },
+    {
+      "date": "2026-02-13",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GGSSS-BEGOWAL",
+          "location": {
+            "lat": 31.6090703,
+            "lng": 75.5253158
+          },
+          "studentsReached": 325,
+          "girlsCount": 325,
+          "boysCount": 0,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGGSSS%5FBEGOWAL&view=0",
+          "collageImage": "GGSSS-BEGOWAL.jpg"
+        },
+        {
+          "name": "GHS-BANI-LODHI",
+          "location": {
+            "lat": 32.2781386,
+            "lng": 75.5386606
+          },
+          "studentsReached": 210,
+          "girlsCount": 90,
+          "boysCount": 120,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGHS%5FBANI%20LODHI&view=0",
+          "collageImage": "GHS-BANI-LODHI.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 535,
+      "route": {
+        "startPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        },
+        "endPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        }
+      },
+      "distanceTravelled": 159
+    },
+    {
+      "date": "2026-02-12",
+      "vehicle": 3,
+      "schools": [
+        {
+          "name": "GGSSS-SUJANPUR",
+          "location": {
+            "lat": 32.3149417,
+            "lng": 75.6116357
+          },
+          "studentsReached": 580,
+          "girlsCount": 580,
+          "boysCount": 0,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGGSSS%5FSUJANPUR&view=0",
+          "collageImage": "GGSSS-SUJANPUR.jpg"
+        },
+        {
+          "name": "GSSS-SUJANPUR-BOYS",
+          "location": {
+            "lat": 32.307976,
+            "lng": 74.9991974
+          },
+          "studentsReached": 540,
+          "girlsCount": 20,
+          "boysCount": 520,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FSUJANPUR%20BOYS&view=0",
+          "collageImage": "GSSS-SUJANPUR-BOYS.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 1120,
+      "route": {
+        "startPoint": {
+          "lat": 0,
+          "lng": 0
+        },
+        "endPoint": {
+          "lat": 0,
+          "lng": 0
+        }
+      },
+      "distanceTravelled": 0
+    },
+    {
+      "date": "2026-02-12",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GSSS-BADHANI",
+          "location": {
+            "lat": 32.3309974,
+            "lng": 75.1449524
+          },
+          "studentsReached": 750,
+          "girlsCount": 337,
+          "boysCount": 413,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FBADHANI&view=0",
+          "collageImage": "GSSS-BADHANI.jpg"
+        },
+        {
+          "name": "GSSS-KFC-PATHANKOT",
+          "location": {
+            "lat": 32.2609115,
+            "lng": 75.6459826
+          },
+          "studentsReached": 425,
+          "girlsCount": 151,
+          "boysCount": 274,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FKFC%20PATHANKOT&view=0",
+          "collageImage": "GSSS-KFC-PATHANKOT.jpg"
+        },
+        {
+          "name": "GSSS-DAULATPUR-KALAN",
+          "location": {
+            "lat": 32.2639192,
+            "lng": 75.0259718
+          },
+          "studentsReached": 435,
+          "girlsCount": 245,
+          "boysCount": 190,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FDAULATPUR%20KALAN&view=0",
+          "collageImage": "GSSS-DAULATPUR-KALAN.jpg"
+        }
+      ],
+      "schoolsVisited": 3,
+      "studentsReached": 1610,
+      "route": {
+        "startPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        },
+        "endPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        }
+      },
+      "distanceTravelled": 211
+    },
+    {
+      "date": "2026-02-12",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-JANGAL",
+          "location": {
+            "lat": 32.1933993,
+            "lng": 75.4476518
+          },
+          "studentsReached": 211,
+          "girlsCount": 111,
+          "boysCount": 100,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FJANGAL&view=0",
+          "collageImage": "GSSS-JANGAL.jpg"
+        },
+        {
+          "name": "GSSS-TARAGARH-B",
+          "location": {
+            "lat": 32.1977858,
+            "lng": 75.4557323
+          },
+          "studentsReached": 105,
+          "girlsCount": 0,
+          "boysCount": 105,
+          "district": "Pathankot",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FTARAGARH%20%28B%29",
+          "collageImage": "GSSS-TARAGARH-B.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 316,
+      "route": {
+        "startPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        },
+        "endPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        }
+      },
+      "distanceTravelled": 41
+    },
+    {
+      "date": "2026-02-11",
+      "vehicle": 3,
+      "schools": [
+        {
+          "name": "GSSS-MUDKI-BOYS",
+          "location": {
+            "lat": 30.7794093,
+            "lng": 74.8068867
+          },
+          "studentsReached": 350,
+          "girlsCount": 0,
+          "boysCount": 350,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FMUDKI%20BOYS&view=0",
+          "collageImage": "GSSS-MUDKI-BOYS.jpg"
+        },
+        {
+          "name": "GSSS-BOYS-TALWANDI-BHAI",
+          "location": {
+            "lat": 30.8628176,
+            "lng": 74.9249277
+          },
+          "studentsReached": 360,
+          "girlsCount": 0,
+          "boysCount": 360,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FBOYS%20TALWANDI%20BHAI&view=0",
+          "collageImage": "GSSS-BOYS-TALWANDI-BHAI.jpg"
+        },
+        {
+          "name": "GSSS-GIRLS-TALWANDI-BHAI",
+          "location": {
+            "lat": 30.8624786,
+            "lng": 74.9240222
+          },
+          "studentsReached": 740,
+          "girlsCount": 740,
+          "boysCount": 0,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FGIRLS%20TALWANDI%20BHAI&view=0",
+          "collageImage": "GSSS-GIRLS-TALWANDI-BHAI.jpg"
+        }
+      ],
+      "schoolsVisited": 3,
+      "studentsReached": 1450,
+      "route": {
+        "startPoint": {
+          "lat": 30.9292302,
+          "lng": 74.6201714
+        },
+        "endPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        }
+      },
+      "distanceTravelled": 210
+    },
+    {
+      "date": "2026-02-11",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GSSS-BEHAK-GUJARAN",
+          "location": {
+            "lat": 31.0368662,
+            "lng": 74.9802786
+          },
+          "studentsReached": 490,
+          "girlsCount": 197,
+          "boysCount": 293,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FBEHAK%20GUJARAN&view=0",
+          "collageImage": "GSSS-BEHAK-GUJARAN.jpg"
+        },
+        {
+          "name": "GHS-GHUDUWALA",
+          "location": {
+            "lat": 30.8082883,
+            "lng": 74.3544198
+          },
+          "studentsReached": 155,
+          "girlsCount": 75,
+          "boysCount": 80,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGHS%5FGHUDUWALA&view=0",
+          "collageImage": "GHS-GHUDUWALA.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 645,
+      "route": {
+        "startPoint": {
+          "lat": 30.9292302,
+          "lng": 74.6201714
+        },
+        "endPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        }
+      },
+      "distanceTravelled": 305
+    },
+    {
+      "date": "2026-02-11",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-BOYS-FZR",
+          "location": {
+            "lat": 30.9477367,
+            "lng": 74.6144789
+          },
+          "studentsReached": 850,
+          "girlsCount": 0,
+          "boysCount": 850,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FBOYS%20FZR&view=0",
+          "collageImage": "GSSS-BOYS-FZR.jpg"
+        },
+        {
+          "name": "GSSS-BAZIDPUR",
+          "location": {
+            "lat": 30.8988267,
+            "lng": 74.670014
+          },
+          "studentsReached": 456,
+          "girlsCount": 298,
+          "boysCount": 158,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5F%20GSSS%5FBAZIDPUR&view=0",
+          "collageImage": "GSSS-BAZIDPUR.jpg"
+        }
+      ],
+      "schoolsVisited": 2,
+      "studentsReached": 1306,
+      "route": {
+        "startPoint": {
+          "lat": 30.9292302,
+          "lng": 74.6201714
+        },
+        "endPoint": {
+          "lat": 32.2734483,
+          "lng": 75.6422896
+        }
+      },
+      "distanceTravelled": 188
+    },
+    {
+      "date": "2026-02-10",
+      "vehicle": 3,
+      "schools": [
+        {
+          "name": "GHS-GIRLS-MAKHU",
+          "location": {
+            "lat": 30.8086336,
+            "lng": 74.3530429
+          },
+          "studentsReached": 580,
+          "girlsCount": 580,
+          "boysCount": 0,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGHS%5FGIRLS%20MAKHU",
+          "collageImage": "GHS-GIRLS-MAKHU.jpg"
+        },
+        {
+          "name": "GSS-BOYS-MAKHU",
+          "location": {
+            "lat": 31.103851,
+            "lng": 74.9874523
+          },
+          "studentsReached": 549,
+          "girlsCount": 0,
+          "boysCount": 549,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSS%5FBOYS%20MAKHU&view=0",
+          "collageImage": "GSS-BOYS-MAKHU.jpg"
+        },
+        {
+          "name": "GSSS-KUSSU-WALA",
+          "location": {
+            "lat": 30.6074741,
+            "lng": 74.7994613
+          },
+          "studentsReached": 620,
+          "girlsCount": 298,
+          "boysCount": 322,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FKUSSU%20WALA&view=0",
+          "collageImage": "GSSS-KUSSU-WALA.jpg"
+        }
+      ],
+      "schoolsVisited": 3,
+      "studentsReached": 1749,
+      "route": {
+        "startPoint": {
+          "lat": 30.9292302,
+          "lng": 74.6201714
+        },
+        "endPoint": {
+          "lat": 30.9292302,
+          "lng": 74.6201714
+        }
+      },
+      "distanceTravelled": 195
+    },
+    {
+      "date": "2026-02-10",
+      "vehicle": 2,
+      "schools": [
+        {
+          "name": "GHS-JHOK-TEHAL-SINGH",
+          "location": {
+            "lat": 30.8116546,
+            "lng": 74.495079
+          },
+          "studentsReached": 244,
+          "girlsCount": 101,
+          "boysCount": 143,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGHS%5FJHOK%20TEHAL%20SINGH&view=0",
+          "collageImage": "GHS-JHOK-TEHAL-SINGH.jpg"
+        },
+        {
+          "name": "GSSS-KARIAN-PEHLWAN",
+          "location": {
+            "lat": 30.9368761,
+            "lng": 74.5712858
+          },
+          "studentsReached": 502,
+          "girlsCount": 256,
+          "boysCount": 246,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FKARIAN%20PEHLWAN&view=0",
+          "collageImage": "GSSS-KARIAN-PEHLWAN.jpg"
+        },
+        {
+          "name": "GHS-PIR-ISMAIL-KHAN",
+          "location": {
+            "lat": 30.950958,
+            "lng": 74.5389869
+          },
+          "studentsReached": 365,
+          "girlsCount": 200,
+          "boysCount": 165,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGHS%5FPIR%20ISMAIL%20KHAN&view=0",
+          "collageImage": "GHS-PIR-ISMAIL-KHAN.jpg"
+        },
+        {
+          "name": "GSSS-TALWANDI-JALE-KHAN",
+          "location": {
+            "lat": 30.8996618,
+            "lng": 74.9495245
+          },
+          "studentsReached": 380,
+          "girlsCount": 200,
+          "boysCount": 180,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FTALWANDI%20JALE%20KHAN&view=0",
+          "collageImage": "GSSS-TALWANDI-JALE-KHAN.jpg"
+        }
+      ],
+      "schoolsVisited": 4,
+      "studentsReached": 1491,
+      "route": {
+        "startPoint": {
+          "lat": 30.9292302,
+          "lng": 74.6201714
+        },
+        "endPoint": {
+          "lat": 30.9292302,
+          "lng": 74.6201714
+        }
+      },
+      "distanceTravelled": 108
+    },
+    {
+      "date": "2026-02-10",
+      "vehicle": 1,
+      "schools": [
+        {
+          "name": "GSSS-GURU-HAR-SAHAI",
+          "location": {
+            "lat": 30.7165546,
+            "lng": 74.401613
+          },
+          "studentsReached": 513,
+          "girlsCount": 30,
+          "boysCount": 483,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FGURU%20HAR%20SAHAI&viewid=efb56dab%2D8a39%2D4d99%2Db96c%2D40fc250c7320&view=0",
+          "collageImage": "GSSS-GURU-HAR-SAHAI.jpg"
+        },
+        {
+          "name": "GHS-CHHANGA-RAI-UTTAR",
+          "location": {
+            "lat": 30.7484918,
+            "lng": 74.3290477
+          },
+          "studentsReached": 430,
+          "girlsCount": 210,
+          "boysCount": 220,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGHS%5FCHHANGA%20RAI%20UTTAR&view=0",
+          "collageImage": "GHS-CHHANGA-RAI-UTTAR.jpg"
+        },
+        {
+          "name": "GSSS-DONA-MATTAR",
+          "location": {
+            "lat": 30.8062562,
+            "lng": 74.3081604
+          },
+          "studentsReached": 470,
+          "girlsCount": 229,
+          "boysCount": 241,
+          "district": "Firozpur",
+          "galleryLink": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFIROZPUR%5FGSSS%5FDONA%20MATTAR&view=0",
+          "collageImage": "GSSS-DONA-MATTAR.jpg"
+        }
+      ],
+      "schoolsVisited": 3,
+      "studentsReached": 1413,
+      "route": {
+        "startPoint": {
+          "lat": 30.9292302,
+          "lng": 74.6201714
+        },
+        "endPoint": {
+          "lat": 30.9292302,
+          "lng": 74.6201714
+        }
+      },
+      "distanceTravelled": 79
+    },
     {
       "date": "2026-02-09",
       "vehicle": 2,

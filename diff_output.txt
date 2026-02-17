@@ -1,0 +1,54 @@
+﻿diff --git a/index.html b/index.html
+index a4eeb0a..6658eeb 100644
+--- a/index.html
++++ b/index.html
+@@ -5,20 +5,23 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Science on Wheels - Punjab | Plaksha University</title>
+-    <meta name="description" content="Science on Wheels brings hands-on science education to remote villages in Punjab, India. An initiative by Plaksha University to make quality science education accessible to all students.">
++    <meta name="description"
++        content="Science on Wheels brings hands-on science education to remote villages in Punjab, India. An initiative by Plaksha University to make quality science education accessible to all students.">
+     <meta name="keywords" content="science education, Punjab, India, STEM, Plaksha University, science outreach">
+     <meta name="author" content="Plaksha University">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Open Graph Tags for Social Media -->
+     <meta property="og:title" content="Science on Wheels - Punjab | Plaksha University">
+-    <meta property="og:description" content="Science on Wheels brings hands-on science education to remote villages in Punjab, India. An initiative by Plaksha University to make quality science education accessible to all students.">
++    <meta property="og:description"
++        content="Science on Wheels brings hands-on science education to remote villages in Punjab, India. An initiative by Plaksha University to make quality science education accessible to all students.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://shashanktamaskar.github.io/science-on-wheels/">
+     <meta property="og:image" content="https://shashanktamaskar.github.io/science-on-wheels/graphics/banner.png">
+     <!-- Twitter Card Tags -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Science on Wheels - Punjab | Plaksha University">
+-    <meta name="twitter:description" content="Science on Wheels brings hands-on science education to remote villages in Punjab, India.">
++    <meta name="twitter:description"
++        content="Science on Wheels brings hands-on science education to remote villages in Punjab, India.">
+     <meta name="twitter:image" content="https://shashanktamaskar.github.io/science-on-wheels/graphics/banner.png">
+     <!-- Canonical URL -->
+     <meta name="canonical" href="https://shashanktamaskar.github.io/science-on-wheels/">
+@@ -425,8 +428,9 @@
+                     +91 8358082703
+                 </a>
+             </div>
+-            <p class="text-xs text-cyan-300 mt-4">┬⌐ 2025 Plaksha University. All rights reserved. <a
+-                    href="data-entry.html" style="opacity: 0.3; font-size: 8px;" class="hover:opacity-100">ΓÇó</a></p>
++            <p class="text-xs text-cyan-300 mt-4">┬⌐ 2026 Plaksha University. All rights reserved. <span
++                    class="text-xs opacity-50 ml-1">v2026.02.15</span> <a href="data-entry.html"
++                    style="opacity: 0.3; font-size: 8px;" class="hover:opacity-100">ΓÇó</a></p>
+         </div>
+     </footer>
+ 
+@@ -439,8 +443,8 @@
+             try {
+                 // Load both project data and gallery data
+                 const [projectResponse, galleryResponse] = await Promise.all([
+-                    fetch('data.json'),
+-                    fetch('schools-gallery.json')
++                    fetch('data.json?v=' + Date.now()),
++                    fetch('schools-gallery.json?v=' + Date.now())
+                 ]);
+                 projectData = await projectResponse.json();
+                 galleryData = await galleryResponse.json();

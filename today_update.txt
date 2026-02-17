@@ -1,12 +1,19 @@
-DATE: 2026-02-09
+DATE: 2026-02-13
 
 VEHICLE: 1
-START: Faridkot | https://maps.app.goo.gl/cywdeSqjNpCoo2kb6
-SCHOOL: GSSSG-FDK | https://maps.app.goo.gl/gCXbpvzGX2E5LEQB8 | 1470 | 1470 | 0 | Faridkot | D:\OneDrive_2026-02-15\20.01.2026 to 11.02.2026\09.02.2026\GSSSG FDK.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFARIDKOT%5FGSSSG%5FFDK&view=0
-SCHOOL: GSSS-GOLEWALA | https://maps.app.goo.gl/samCWp9PGPuSaAEQ7 | 468 | 236 | 232 | Faridkot | D:\OneDrive_2026-02-15\20.01.2026 to 11.02.2026\09.02.2026\GSSS GOLEWALA.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFARIDKOT%5FGSSS%5FGOLEWALA&view=0
-END: Firozpur | https://maps.app.goo.gl/xCjuVeufmvpeFRa78
+START: Pathankot | https://maps.app.goo.gl/uXCWAG9P7J9uKCoUA
+SCHOOL: GGSSS-BEGOWAL | https://maps.app.goo.gl/7vXSaK2ro3951RLU9 | 325 | 325 | 0 | Pathankot | D:\OneDrive_1_2-17-2026\13.02.2026\GGSSS BEGOWAL.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGGSSS%5FBEGOWAL&view=0
+SCHOOL: GHS-BANI-LODHI | https://maps.app.goo.gl/57ViBnUsVhTnQNFo8 | 210 | 90 | 120 | Pathankot | D:\OneDrive_1_2-17-2026\13.02.2026\GHS BANI LODHI.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGHS%5FBANI%20LODHI&view=0
+END: Pathankot | https://maps.app.goo.gl/uXCWAG9P7J9uKCoUA
 
 VEHICLE: 2
-START: Faridkot | https://maps.app.goo.gl/cywdeSqjNpCoo2kb6
-SCHOOL: GHS-TEHNA | https://maps.app.goo.gl/hZSgSVhBpqQ3s5fB6 | 195 | 95 | 100 | Faridkot | D:\OneDrive_2026-02-15\20.01.2026 to 11.02.2026\09.02.2026\GHS TEHNA.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FFARIDKOT%5FGHS%5FTEHNA&view=0
-END: Firozpur | https://maps.app.goo.gl/xCjuVeufmvpeFRa78
+START: Pathankot | https://maps.app.goo.gl/uXCWAG9P7J9uKCoUA
+SCHOOL: GSSS-FEROZEPUR-KALAN | https://maps.app.goo.gl/5A4mmLXKMeieMe4x5 | 440 | 207 | 233 | Pathankot | D:\OneDrive_1_2-17-2026\13.02.2026\GSSS FEROZEPUR KALAN.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FFEROZEPUR%20KALAN&view=0
+SCHOOL: GSSS-MANWAL | https://maps.app.goo.gl/maZcgGv4ku4RBAtV7 | 325 | 140 | 185 | Pathankot | D:\OneDrive_1_2-17-2026\13.02.2026\GSSS MANWAL.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FMANWAL&view=0
+END: Pathankot | https://maps.app.goo.gl/uXCWAG9P7J9uKCoUA
+
+VEHICLE: 3
+START: Pathankot | https://maps.app.goo.gl/uXCWAG9P7J9uKCoUA
+SCHOOL: GSSS-BAMIAL | https://maps.app.goo.gl/q3Pjj5STg31adVbM6 | 642 | 302 | 340 | Pathankot | D:\OneDrive_1_2-17-2026\13.02.2026\GSSS BAMIAL.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSS%5FBAMIAL&view=0
+SCHOOL: GSSS-GHAROTA | https://maps.app.goo.gl/RMuUwQxWxCVPYMV26 | 450 | 300 | 150 | Pathankot | D:\OneDrive_1_2-17-2026\13.02.2026\GSSSS GHAROTA.zip | https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fscienceonwheels%5Fplaksha%5Fedu%5Fin%2FDocuments%2FDocuments%2FGallery%2FPATHANKOT%5FGSSSS%5FGHAROTA&view=0
+END: Pathankot | https://maps.app.goo.gl/uXCWAG9P7J9uKCoUA

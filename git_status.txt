@@ -1,0 +1,84 @@
+﻿ AUTOMATED_UPDATE_GUIDE.md                          |  196 ++
+ COLLAGE_GENERATION_GUIDE.md                        |   86 +
+ DAILY_WORKFLOW_GUIDE.md                            |  235 ++
+ GALLERY_LINK_GUIDE.md                              |   28 +
+ WORKFLOW_IMPROVEMENTS.md                           |  151 ++
+ __pycache__/generate_collage.cpython-312.pyc       |  Bin 0 -> 11698 bytes
+ _backup/data_20251207_011243.json                  | 1475 +++++++++++
+ _backup/schools-gallery_20251207_011243.json       |  304 +++
+ _sandbox/README.md                                 |   23 +
+ _sandbox/generate_collages_dec05.py                |  126 +
+ _sandbox/generate_collages_dec06.py                |  128 +
+ _sandbox/update_dec05.py                           |  172 ++
+ batch_update.py                                    |  480 ++++
+ calc_metrics.py                                    |  236 ++
+ calc_output.txt                                    |   51 +
+ daily_update-LAPTOP-LH6VQ6T0.py                    |  544 ++++
+ daily_update.py                                    |    4 +-
+ data-LAPTOP-LH6VQ6T0.json                          | 2787 ++++++++++++++++++++
+ data.json                                          | 1344 +++++++++-
+ districts.txt                                      |   14 +
+ extract_zip.py                                     |   13 +
+ fix_collages.py                                    |  100 +
+ fix_districts.py                                   |   34 +
+ gallery_school_collage/GHS-ASLAM-WALA.jpg          |  Bin 0 -> 666000 bytes
+ gallery_school_collage/GHS-BHAI-BAKHTAUR-RMSA.jpg  |  Bin 0 -> 808276 bytes
+ gallery_school_collage/GHS-BHUCHO-MANDI-GIRLS.jpg  |  Bin 0 -> 901333 bytes
+ gallery_school_collage/GHS-BHUNDAR.jpg             |  Bin 0 -> 760515 bytes
+ gallery_school_collage/GHS-BRANCH-ABOHAR.jpg       |  Bin 0 -> 935168 bytes
+ gallery_school_collage/GHS-DHILWAN-KALAN.jpg       |  Bin 0 -> 701310 bytes
+ gallery_school_collage/GHS-DOAD.jpg                |  Bin 0 -> 906004 bytes
+ gallery_school_collage/GHS-G-KOTHA-GURU.jpg        |  Bin 0 -> 846242 bytes
+ gallery_school_collage/GHS-JEOND.jpg               |  Bin 0 -> 764203 bytes
+ gallery_school_collage/GHS-KAILE-WANDER-RMSA.jpg   |  Bin 0 -> 618813 bytes
+ gallery_school_collage/GHS-KIKKER-KHERA.jpg        |  Bin 0 -> 806140 bytes
+ gallery_school_collage/GHS-NATHANA-GIRLS.jpg       |  Bin 0 -> 962992 bytes
+ gallery_school_collage/GHS-PARK.jpg                |  Bin 0 -> 702533 bytes
+ gallery_school_collage/GHS-SURGAPURI-KKP.jpg       |  Bin 0 -> 803832 bytes
+ gallery_school_collage/GHS-TARMALA.jpg             |  Bin 0 -> 766461 bytes
+ gallery_school_collage/GHS-TEHNA.jpg               |  Bin 0 -> 716303 bytes
+ .../GSSS-BALEL-KE-HASAL-RMSA.jpg                   |  Bin 0 -> 905186 bytes
+ gallery_school_collage/GSSS-BALLUANA.jpg           |  Bin 0 -> 782342 bytes
+ gallery_school_collage/GSSS-BARGARI.jpg            |  Bin 0 -> 791132 bytes
+ .../GSSS-BAZID-PUR-KATTIAN-WALI.jpg                |  Bin 0 -> 853662 bytes
+ gallery_school_collage/GSSS-CHAK-MOCHAN-WALA.jpg   |  Bin 0 -> 765627 bytes
+ gallery_school_collage/GSSS-DHANDHI-KADIM.jpg      |  Bin 0 -> 687826 bytes
+ gallery_school_collage/GSSS-G-JAITU.jpg            |  Bin 0 -> 815191 bytes
+ gallery_school_collage/GSSS-GIDDERBAHA-G.jpg       |  Bin 0 -> 868617 bytes
+ gallery_school_collage/GSSS-GIRLS-ABOHAR.jpg       |  Bin 0 -> 717742 bytes
+ .../GSSS-GIRLS-SCHOOL-FAZILKA.jpg                  |  Bin 0 -> 887539 bytes
+ gallery_school_collage/GSSS-GOBINDPURA.jpg         |  Bin 0 -> 805049 bytes
+ gallery_school_collage/GSSS-GOLEWALA.jpg           |  Bin 0 -> 860702 bytes
+ gallery_school_collage/GSSS-GONIANA-BOYS.jpg       |  Bin 0 -> 797814 bytes
+ gallery_school_collage/GSSS-GONIANA-GIRLS.jpg      |  Bin 0 -> 827499 bytes
+ gallery_school_collage/GSSS-KOT-FATTA.jpg          |  Bin 0 -> 896614 bytes
+ gallery_school_collage/GSSS-KOTLIABLU.jpg          |  Bin 0 -> 896768 bytes
+ gallery_school_collage/GSSS-LALO-WALI.jpg          |  Bin 0 -> 811652 bytes
+ gallery_school_collage/GSSS-LEHRA-MOHABBAT.jpg     |  Bin 0 -> 923852 bytes
+ gallery_school_collage/GSSS-MAHUANA-BODLA-RMSA.jpg |  Bin 0 -> 787006 bytes
+ gallery_school_collage/GSSS-MALOUT-B.jpg           |  Bin 0 -> 735298 bytes
+ gallery_school_collage/GSSS-MALOUT-G-WNO4.jpg      |  Bin 0 -> 892337 bytes
+ gallery_school_collage/GSSS-MAUR-MANDI-GIRLS.jpg   |  Bin 0 -> 792268 bytes
+ gallery_school_collage/GSSS-MEHMA-SARJA.jpg        |  Bin 0 -> 895956 bytes
+ .../GSSS-MUKTSAR-G-WNO8-MKT-S2.jpg                 |  Bin 0 -> 901346 bytes
+ gallery_school_collage/GSSS-MUKTSAR-G-WNO8-MKT.jpg |  Bin 0 -> 904191 bytes
+ gallery_school_collage/GSSS-NIHAL-KHERA.jpg        |  Bin 0 -> 826982 bytes
+ .../GSSS-PATTI-KALA-MEHRAJ-BOYS.jpg                |  Bin 0 -> 654542 bytes
+ .../GSSS-PATTI-KARAMCHAND-MEHRAJ-GIRLS.jpg         |  Bin 0 -> 796229 bytes
+ gallery_school_collage/GSSS-PIND-MALOUT.jpg        |  Bin 0 -> 819990 bytes
+ gallery_school_collage/GSSS-RAI-KE-KALAN.jpg       |  Bin 0 -> 729752 bytes
+ .../GSSS-RAMPURA-MANDI-GIRLS.jpg                   |  Bin 0 -> 806566 bytes
+ gallery_school_collage/GSSS-RUPANA-B.jpg           |  Bin 0 -> 675952 bytes
+ gallery_school_collage/GSSS-RUPANA-G.jpg           |  Bin 0 -> 733874 bytes
+ gallery_school_collage/GSSS-SANDHWAN.jpg           |  Bin 0 -> 840727 bytes
+ gallery_school_collage/GSSS-SEKHU.jpg              |  Bin 0 -> 845388 bytes
+ gallery_school_collage/GSSS-SIVIAN.jpg             |  Bin 0 -> 779865 bytes
+ gallery_school_collage/GSSS-TALWANDI-SABO.jpg      |  Bin 0 -> 778926 bytes
+ gallery_school_collage/GSSSG-FDK.jpg               |  Bin 0 -> 875982 bytes
+ manual_update.py                                   |  110 +
+ schools-gallery-LAPTOP-LH6VQ6T0.json               |  658 +++++
+ schools-gallery.json                               |  330 +++
+ today_update.txt                                   |   12 +
+ verify_output.txt                                  |   90 +
+ verify_zips.py                                     |  129 +
+ 83 files changed, 9838 insertions(+), 22 deletions(-)

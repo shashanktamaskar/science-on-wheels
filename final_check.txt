@@ -1,0 +1,11 @@
+﻿python :   File "<string>", line 13
+At line:1 char:1
++ python -c "
++ ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  File "<string>", 
+    line 13:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    print(f'Total updates: {len(d[" dailyUpdates\])}')
+                                  ^
+SyntaxError: unterminated string literal (detected at line 13)

@@ -1,0 +1,6 @@
+﻿Processed schools: 210
+Total zips: 62
+
+MISSING (zip exists but not in data.json):
+  05.02.2026: GOVT MODEL SENIOR SECONDARY SCHOOL CHAK MOCHAN WALA.zip
+  04.02.2026: GSSS MAHUANA BODLA(RMSA).zip
