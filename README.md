@@ -1,52 +1,52 @@
-# Science on Wheels - Punjab
+# Science on Wheels — Local to Global Impact
 
-A mobile science van initiative bringing hands-on STEM education to PM Shri schools across Punjab.
+A mobile science van initiative bringing hands-on STEM education to schools in rural, border,
+remote and tribal areas of **Chhattisgarh, Punjab and Himachal Pradesh**.
 
-## About the Project
+An initiative by **Plaksha University**, **IIT Mandi** and **IDYM Foundation** (ISRO's Space Tutor).
 
-Science on Wheels is a collaborative initiative by **Plaksha University**, **IIT Mandi**, and **IDYM Foundation**, supported by **SCERT Punjab**, **ISRO**, and other partners. The program aims to:
+## The Project
 
-- Reach 235 PM Shri schools across 16 districts in Punjab
-- Provide hands-on learning in Space Technology, Robotics, Water Testing, and Sustainability
-- Bridge the STEM education gap in rural, border, and remote areas
+One van carries four educational modules to 45–50 schools per state per year, over two years
+(Aug 2025 – Jul 2027):
 
-## Project Timeline
+1. 🚀 Space tech education equipment
+2. 🤖 Robotics station with applications
+3. 💧 Water testing station
+4. 🌱 Interactive sustainability education models
 
-**October 15, 2025 - January 30, 2026** (73 days)
+Target districts:
 
-## Website
+- **Chhattisgarh:** Rajnandgaon, Mungeli, Jashpur, Kanker, Gariyaband
+- **Punjab:** Faridkot, Fazilka, Ferozepur, Pathankot, Hoshiarpur, Mansa
+- **Himachal Pradesh:** Mandi, Kullu, Bilaspur, Hamirpur, Kangra
 
-This repository contains the official Science on Wheels website featuring:
+## Site structure
 
-- Interactive map showing vehicle routes across Punjab
-- Real-time project statistics and impact metrics
-- Team information and partner details
-- Comprehensive program plan
+| File | Purpose |
+|---|---|
+| `index.html` | Main website (new Local-to-Global project). Reads `data-v2.json`. |
+| `data-v2.json` | All content + live mission data for the new project. |
+| `admin.html` | **Streamlined data entry** — fill a form, totals auto-calculated, publish in one click. See `HOW_TO_UPDATE_DATA.md`. |
+| `punjab.html` | **Archived** Punjab 2025–26 phase website (241 schools, 1,19,670 students). Reads `data.json`. Do not delete. |
+| `data.json`, `schools-gallery.json`, `gallery_school_collage/` | Original Punjab phase data — preserved as-is. |
+| `data-entry.html` + `*.py` + `HOW_TO_*` / `DAILY_*` guides | Legacy Punjab-era update workflow — kept for reference. |
 
-## Technology Stack
+## Updating the website
 
-- HTML5, CSS3, JavaScript
-- Tailwind CSS for styling
-- Leaflet.js for interactive maps
-- JSON-based data architecture
+Open `admin.html` on the live site, enter the day's visits, click **Calculate & preview**, then
+**Publish**. Full instructions in [`HOW_TO_UPDATE_DATA.md`](HOW_TO_UPDATE_DATA.md).
 
-## Local Development
+## Technology
 
-Simply open `index.html` in a web browser to view the website locally.
-
-## Partners
-
-- SCERT Punjab
-- ISRO (Igniting Dreams of Young Minds Foundation - Space Tutor)
-- Plaksha University
-- DS Brar Center for Girls and Women in STEM
-- IIT Mandi
-- Avishkaar
+HTML5, Tailwind CSS, Leaflet.js maps, JSON data — hosted on GitHub Pages. Open `index.html`
+via any static server for local development.
 
 ## Contact
 
-For more information, contact: scienceonwheels@plaksha.edu.in
+- scienceonwheels@plaksha.edu.in
+- Dr. Rucha Joshi (PI) — rucha.joshi@plaksha.edu.in
 
 ---
 
-**© 2025 Plaksha University. All rights reserved.**
+**© 2026 Plaksha University · IIT Mandi · IDYM Foundation. All rights reserved.**

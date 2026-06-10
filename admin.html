@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science on Wheels — One-Click Data Entry</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        input, select { width: 100%; padding: .6rem .75rem; border: 2px solid #e2e8f0; border-radius: .5rem; font-size: .875rem; }
+        input:focus, select:focus { outline: none; border-color: #1e3a8a; }
+        label { display: block; font-size: .75rem; font-weight: 700; color: #334155; margin-bottom: .25rem; text-transform: uppercase; letter-spacing: .03em; }
+        .btn { font-weight: 700; padding: .7rem 1.4rem; border-radius: .5rem; transition: opacity .2s; }
+        .btn:hover { opacity: .85; }
+    </style>
+</head>
+
+<body class="bg-slate-100 text-slate-800 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <div class="bg-slate-900 text-white rounded-t-2xl px-6 py-5">
+            <h1 class="text-2xl font-extrabold">🚐 Science on Wheels — Data Entry</h1>
+            <p class="text-sm text-slate-300 mt-1">Add today's school visits. Statistics, totals and distances are
+                calculated automatically — then publish to the website in one click.</p>
+        </div>
+
+        <div class="bg-white rounded-b-2xl shadow-lg px-6 py-6 space-y-8">
+
+            <!-- Status -->
+            <div id="loadStatus" class="text-sm bg-blue-50 border border-blue-200 rounded-lg px-4 py-3">⏳ Loading
+                current website data…</div>
+
+            <!-- Step 1: Visit basics -->
+            <section>
+                <h2 class="font-extrabold text-lg mb-3 text-slate-900">1 · Visit details</h2>
+                <div class="grid sm:grid-cols-3 gap-4">
+                    <div>
+                        <label for="visitDate">Date of visit</label>
+                        <input type="date" id="visitDate">
+                    </div>
+                    <div>
+                        <label for="visitState">State</label>
+                        <select id="visitState" onchange="refreshDistricts()"></select>
+                    </div>
+                    <div>
+                        <label for="visitVehicle">Vehicle #</label>
+                        <input type="number" id="visitVehicle" value="1" min="1">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 2: Schools -->
+            <section>
+                <h2 class="font-extrabold text-lg mb-3 text-slate-900">2 · Schools visited</h2>
+                <div id="schoolsContainer" class="space-y-4"></div>
+                <button type="button" onclick="addSchool()"
+                    class="btn bg-emerald-600 text-white w-full mt-3">+ Add another school</button>
+            </section>
+
+            <!-- Step 3: Distance -->
+            <section>
+                <h2 class="font-extrabold text-lg mb-3 text-slate-900">3 · Distance</h2>
+                <div class="grid sm:grid-cols-2 gap-4 items-end">
+                    <div>
+                        <label for="distanceKm">Distance travelled today (km)</label>
+                        <input type="number" id="distanceKm" min="0" step="1" placeholder="Leave blank to auto-estimate">
+                    </div>
+                    <p class="text-xs text-slate-500" id="distanceHint">If left blank, we estimate road distance from
+                        the school coordinates (straight-line × 1.4 winding factor).</p>
+                </div>
+            </section>
+
+            <!-- Step 4: Review & publish -->
+            <section>
+                <h2 class="font-extrabold text-lg mb-3 text-slate-900">4 · Review &amp; publish</h2>
+                <button type="button" onclick="buildUpdate()" class="btn bg-slate-900 text-white w-full">🧮 Calculate
+                    &amp; preview update</button>
+
+                <div id="previewWrap" class="hidden mt-5 space-y-4">
+                    <div id="previewSummary" class="bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-3 text-sm"></div>
+
+                    <details class="bg-slate-50 border border-slate-200 rounded-lg">
+                        <summary class="cursor-pointer px-4 py-3 text-sm font-bold">View updated data-v2.json</summary>
+                        <pre id="jsonPreview" class="text-xs overflow-auto max-h-72 px-4 pb-4"></pre>
+                    </details>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <button type="button" onclick="publishToGitHub()"
+                            class="btn bg-blue-700 text-white">🚀 Publish to website (GitHub)</button>
+                        <button type="button" onclick="downloadJson()"
+                            class="btn bg-slate-200 text-slate-800">⬇️ Download data-v2.json instead</button>
+                    </div>
+                    <div id="publishStatus" class="text-sm"></div>
+                </div>
+            </section>
+
+            <!-- Settings -->
+            <details class="border-t border-slate-200 pt-4">
+                <summary class="cursor-pointer text-sm font-bold text-slate-600">⚙️ GitHub settings (one-time setup)</summary>
+                <div class="mt-3 grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="ghToken">GitHub token</label>
+                        <input type="password" id="ghToken" placeholder="github_pat_…">
+                        <p class="text-xs text-slate-500 mt-1">Create a <a class="text-blue-700 underline"
+                                target="_blank" rel="noopener"
+                                href="https://github.com/settings/personal-access-tokens/new">fine-grained token</a>
+                            with <strong>Contents: Read &amp; write</strong> access to only this repository. Stored
+                            only in this browser.</p>
+                    </div>
+                    <div>
+                        <label for="ghRepo">Repository</label>
+                        <input type="text" id="ghRepo" value="shashanktamaskar/science-on-wheels">
+                        <label class="mt-3" for="ghBranch">Branch</label>
+                        <input type="text" id="ghBranch" value="main">
+                    </div>
+                </div>
+                <button type="button" onclick="saveSettings()" class="btn bg-slate-700 text-white mt-3 text-sm">Save
+                    settings in this browser</button>
+            </details>
+        </div>
+        <p class="text-center text-xs text-slate-400 mt-4">Science on Wheels admin · this page is not linked from the
+            public site</p>
+    </div>
+
+    <script>
+        let DATA = null;
+        let UPDATED = null;
+        let schoolCount = 0;
+
+        const $ = id => document.getElementById(id);
+        const fmt = n => n.toLocaleString('en-IN');
+
+        // ---------- load ----------
+        async function load() {
+            try {
+                const res = await fetch('data-v2.json?v=' + Date.now());
+                DATA = await res.json();
+                $('loadStatus').innerHTML = `✅ Loaded current data (last updated <strong>${DATA.lastUpdated}</strong> — ${fmt(DATA.mission.schoolsCovered.current)} schools, ${fmt(DATA.mission.studentsImpacted)} students so far).`;
+                $('loadStatus').className = 'text-sm bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-3';
+                $('visitState').innerHTML = DATA.states.map(s => `<option>${s.name}</option>`).join('');
+            } catch (e) {
+                $('loadStatus').innerHTML = '❌ Could not load data-v2.json. Open this page from the website (or a local server), not as a file.';
+                $('loadStatus').className = 'text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3';
+            }
+            $('visitDate').value = new Date().toISOString().slice(0, 10);
+            // restore settings
+            $('ghToken').value = localStorage.getItem('sow_token') || '';
+            $('ghRepo').value = localStorage.getItem('sow_repo') || 'shashanktamaskar/science-on-wheels';
+            $('ghBranch').value = localStorage.getItem('sow_branch') || 'main';
+            addSchool();
+        }
+
+        function saveSettings() {
+            localStorage.setItem('sow_token', $('ghToken').value.trim());
+            localStorage.setItem('sow_repo', $('ghRepo').value.trim());
+            localStorage.setItem('sow_branch', $('ghBranch').value.trim());
+            alert('Saved. You will not need to enter these again on this browser.');
+        }
+
+        // ---------- schools ----------
+        function districtOptions() {
+            const st = DATA ? DATA.states.find(s => s.name === $('visitState').value) : null;
+            const opts = st ? st.districts : [];
+            return opts.map(d => `<option>${d}</option>`).join('') + '<option value="__other">Other…</option>';
+        }
+
+        function refreshDistricts() {
+            document.querySelectorAll('div[id^=school-] select[data-f=district]')
+                .forEach(sel => { sel.innerHTML = districtOptions(); });
+        }
+
+        function addSchool() {
+            schoolCount++;
+            const div = document.createElement('div');
+            div.className = 'border-2 border-slate-200 rounded-xl p-4 relative';
+            div.id = 'school-' + schoolCount;
+            div.innerHTML = `
+                <div class="flex justify-between items-center mb-3">
+                    <span class="font-extrabold text-blue-800">School #${schoolCount}</span>
+                    <button type="button" class="text-xs text-red-600 font-bold" onclick="this.closest('div[id^=school-]').remove()">✕ remove</button>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="sm:col-span-2">
+                        <label>School name</label>
+                        <input type="text" data-f="name" placeholder="e.g., GSSS-DUMAR">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label>Google Maps link <span class="font-normal normal-case">(coordinates auto-extracted)</span></label>
+                        <input type="url" data-f="maps" placeholder="https://maps.app.goo.gl/… or link containing @lat,lng" onblur="tryCoords(this)">
+                        <p class="text-xs mt-1 text-slate-500" data-f="coordsMsg"></p>
+                    </div>
+                    <div>
+                        <label>District</label>
+                        <select data-f="district" onchange="if(this.value==='__other'){const v=prompt('District name:');if(v){const o=document.createElement('option');o.textContent=v;o.selected=true;this.insertBefore(o,this.firstChild);}else{this.selectedIndex=0;}}">${districtOptions()}</select>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div><label>Girls</label><input type="number" data-f="girls" min="0" oninput="sumStudents(this)"></div>
+                        <div><label>Boys</label><input type="number" data-f="boys" min="0" oninput="sumStudents(this)"></div>
+                        <div><label>Total</label><input type="number" data-f="students" min="0"></div>
+                    </div>
+                    <div>
+                        <label>Photo gallery link <span class="font-normal normal-case">(optional)</span></label>
+                        <input type="url" data-f="gallery" placeholder="SharePoint / Drive folder link">
+                    </div>
+                    <div>
+                        <label>Collage image filename <span class="font-normal normal-case">(optional)</span></label>
+                        <input type="text" data-f="collage" placeholder="e.g., GSSS-DUMAR.jpg">
+                    </div>
+                </div>`;
+            $('schoolsContainer').appendChild(div);
+        }
+
+        function sumStudents(el) {
+            const root = el.closest('div[id^=school-]');
+            const g = parseInt(root.querySelector('[data-f=girls]').value) || 0;
+            const b = parseInt(root.querySelector('[data-f=boys]').value) || 0;
+            root.querySelector('[data-f=students]').value = g + b;
+        }
+
+        // ---------- coordinates ----------
+        function parseCoords(link) {
+            let m = link.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/) ||
+                link.match(/[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)/) ||
+                link.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/) ||
+                link.match(/(-?\d+\.\d{4,}),\s*(-?\d+\.\d{4,})/);
+            return m ? { lat: parseFloat(m[1]), lng: parseFloat(m[2]) } : null;
+        }
+
+        async function resolveShortLink(link) {
+            // expand maps.app.goo.gl links via a CORS proxy
+            try {
+                const res = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(link));
+                const text = await res.text();
+                return parseCoords(text);
+            } catch { return null; }
+        }
+
+        async function tryCoords(input) {
+            const root = input.closest('div[id^=school-]');
+            const msg = root.querySelector('[data-f=coordsMsg]');
+            const link = input.value.trim();
+            if (!link) { msg.textContent = ''; return; }
+            msg.textContent = '⏳ extracting coordinates…';
+            let c = parseCoords(link);
+            if (!c && (link.includes('goo.gl'))) c = await resolveShortLink(link);
+            if (c) {
+                root.dataset.lat = c.lat; root.dataset.lng = c.lng;
+                msg.textContent = `✅ ${c.lat.toFixed(5)}, ${c.lng.toFixed(5)}`;
+                msg.className = 'text-xs mt-1 text-emerald-700 font-semibold';
+            } else {
+                msg.innerHTML = '⚠️ Could not extract coordinates. In Google Maps, right-click the school → click the coordinates to copy → paste them here as <em>lat, lng</em>.';
+                msg.className = 'text-xs mt-1 text-red-600';
+            }
+        }
+
+        function haversine(a, b) {
+            const R = 6371, toRad = x => x * Math.PI / 180;
+            const dLat = toRad(b.lat - a.lat), dLng = toRad(b.lng - a.lng);
+            const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
+            return 2 * R * Math.asin(Math.sqrt(h));
+        }
+
+        // ---------- build update ----------
+        function collectSchools() {
+            const out = [];
+            for (const root of document.querySelectorAll('div[id^=school-]')) {
+                const v = f => root.querySelector(`[data-f=${f}]`).value.trim();
+                const name = v('name');
+                if (!name) continue;
+                if (!root.dataset.lat) {
+                    alert(`School "${name}" has no coordinates yet — paste a Google Maps link and wait for the ✅.`);
+                    return null;
+                }
+                out.push({
+                    name,
+                    state: $('visitState').value,
+                    district: v('district') === '__other' ? '' : v('district'),
+                    location: { lat: parseFloat(root.dataset.lat), lng: parseFloat(root.dataset.lng) },
+                    studentsReached: parseInt(v('students')) || 0,
+                    girlsCount: parseInt(v('girls')) || 0,
+                    boysCount: parseInt(v('boys')) || 0,
+                    galleryLink: v('gallery') || undefined,
+                    collageImage: v('collage') || undefined
+                });
+            }
+            if (!out.length) { alert('Add at least one school with a name.'); return null; }
+            return out;
+        }
+
+        function recomputeMission(data) {
+            const seenDistricts = new Set(), seenStates = new Set(), seenSchools = new Set();
+            let students = 0, girls = 0, boys = 0, dist = 0;
+            data.dailyUpdates.forEach(u => {
+                dist += u.distanceKm || 0;
+                (u.schools || []).forEach(s => {
+                    seenSchools.add(s.name + '|' + (s.district || ''));
+                    if (s.district) seenDistricts.add(s.district);
+                    if (s.state) seenStates.add(s.state);
+                    students += s.studentsReached || 0;
+                    girls += s.girlsCount || 0;
+                    boys += s.boysCount || 0;
+                });
+            });
+            data.mission.schoolsCovered.current = seenSchools.size;
+            data.mission.districtsCovered.current = seenDistricts.size;
+            data.mission.statesCovered.current = seenStates.size;
+            data.mission.studentsImpacted = students;
+            data.mission.genderBreakdown = { girls, boys };
+            data.mission.distanceTravelled = Math.round(dist);
+        }
+
+        function buildUpdate() {
+            if (!DATA) { alert('Data not loaded yet.'); return; }
+            const date = $('visitDate').value;
+            if (!date) { alert('Pick the visit date.'); return; }
+            const schools = collectSchools();
+            if (!schools) return;
+
+            let distanceKm = parseFloat($('distanceKm').value);
+            if (!distanceKm && schools.length >= 1) {
+                let d = 0;
+                for (let i = 1; i < schools.length; i++) d += haversine(schools[i - 1].location, schools[i].location);
+                distanceKm = Math.round(d * 1.4) || 0;
+            }
+
+            UPDATED = JSON.parse(JSON.stringify(DATA));
+            UPDATED.dailyUpdates = UPDATED.dailyUpdates.filter(u => !(u.date === date && u.vehicle === (parseInt($('visitVehicle').value) || 1)));
+            UPDATED.dailyUpdates.push({
+                date,
+                vehicle: parseInt($('visitVehicle').value) || 1,
+                state: $('visitState').value,
+                schools,
+                schoolsVisited: schools.length,
+                studentsReached: schools.reduce((a, s) => a + s.studentsReached, 0),
+                distanceKm: distanceKm || 0
+            });
+            UPDATED.dailyUpdates.sort((a, b) => a.date.localeCompare(b.date));
+            UPDATED.lastUpdated = date;
+            recomputeMission(UPDATED);
+
+            $('previewSummary').innerHTML = `
+                <strong>Ready to publish:</strong> ${schools.length} school(s) on ${date} in ${$('visitState').value}
+                (+${fmt(schools.reduce((a, s) => a + s.studentsReached, 0))} students, ~${distanceKm || 0} km).<br>
+                <strong>New mission totals:</strong> ${fmt(UPDATED.mission.schoolsCovered.current)} schools ·
+                ${fmt(UPDATED.mission.studentsImpacted)} students ·
+                ${UPDATED.mission.districtsCovered.current} districts ·
+                ${UPDATED.mission.statesCovered.current} state(s) ·
+                ${fmt(UPDATED.mission.distanceTravelled)} km`;
+            $('jsonPreview').textContent = JSON.stringify(UPDATED, null, 2);
+            $('previewWrap').classList.remove('hidden');
+            $('previewWrap').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // ---------- publish ----------
+        function b64EncodeUnicode(str) {
+            return btoa(String.fromCharCode(...new TextEncoder().encode(str)));
+        }
+
+        async function publishToGitHub() {
+            if (!UPDATED) return;
+            const token = $('ghToken').value.trim() || localStorage.getItem('sow_token');
+            const repo = $('ghRepo').value.trim();
+            const branch = $('ghBranch').value.trim() || 'main';
+            const status = $('publishStatus');
+            if (!token) {
+                status.innerHTML = '⚠️ No GitHub token set — open <strong>⚙️ GitHub settings</strong> below (one-time setup), or use the Download button and upload the file on github.com.';
+                status.className = 'text-sm text-amber-700';
+                return;
+            }
+            status.textContent = '⏳ Publishing…';
+            status.className = 'text-sm text-slate-600';
+            try {
+                const api = `https://api.github.com/repos/${repo}/contents/data-v2.json`;
+                const headers = { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' };
+                const getRes = await fetch(`${api}?ref=${branch}`, { headers });
+                if (!getRes.ok) throw new Error('Could not read current file (HTTP ' + getRes.status + '). Check token & repo.');
+                const current = await getRes.json();
+                const putRes = await fetch(api, {
+                    method: 'PUT', headers,
+                    body: JSON.stringify({
+                        message: `Data update ${UPDATED.lastUpdated}: ${UPDATED.mission.schoolsCovered.current} schools, ${UPDATED.mission.studentsImpacted} students`,
+                        content: b64EncodeUnicode(JSON.stringify(UPDATED, null, 2)),
+                        sha: current.sha,
+                        branch
+                    })
+                });
+                if (!putRes.ok) throw new Error('Publish failed (HTTP ' + putRes.status + ').');
+                status.innerHTML = '✅ <strong>Published!</strong> The website will refresh within a couple of minutes (GitHub Pages rebuild).';
+                status.className = 'text-sm text-emerald-700';
+                DATA = UPDATED; UPDATED = null;
+            } catch (e) {
+                status.innerHTML = '❌ ' + e.message + ' You can still use <strong>Download</strong> and upload data-v2.json on github.com.';
+                status.className = 'text-sm text-red-600';
+            }
+        }
+
+        function downloadJson() {
+            if (!UPDATED) return;
+            const blob = new Blob([JSON.stringify(UPDATED, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'data-v2.json';
+            a.click();
+            $('publishStatus').innerHTML = '⬇️ Downloaded. Now go to the repository on github.com → open <code>data-v2.json</code> → ✏️ edit → paste/upload → Commit. The site updates automatically.';
+            $('publishStatus').className = 'text-sm text-slate-600';
+        }
+
+        load();
+    </script>
+</body>
+
+</html>
