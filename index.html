@@ -306,10 +306,10 @@
                 <h3 class="text-3xl font-extrabold mb-4">Contact Us</h3>
                 <p class="text-slate-300 mb-6">Want the van to visit your district, partner with us, or support the
                     mission? We'd love to hear from you.</p>
-                <p class="mb-2">📧 <a href="mailto:scienceonwheels@plaksha.edu.in"
+                <p class="mb-2">📧 <strong>Official contact:</strong> <a href="mailto:scienceonwheels@plaksha.edu.in"
                         class="text-amber-300 hover:underline">scienceonwheels@plaksha.edu.in</a></p>
-                <p class="mb-2">📧 <a href="mailto:rucha.joshi@plaksha.edu.in"
-                        class="text-amber-300 hover:underline">rucha.joshi@plaksha.edu.in</a> (Dr. Rucha Joshi, PI)</p>
+                <p class="mb-2">📷 <a href="https://www.instagram.com/plakshauniversity/" target="_blank" rel="noopener"
+                        class="text-amber-300 hover:underline">@plakshauniversity</a></p>
                 <p class="text-slate-300 mt-4 text-sm">Plaksha University, Alpha Sector 101, IT City Road,<br>
                     S.A.S. Nagar, Punjab 140306</p>
             </div>
@@ -502,15 +502,16 @@
                     : `<p class="inline-block bg-white/60 px-6 py-3 rounded-lg font-bold text-sm">📝 Student sign-up form opening soon — watch this space!</p>`;
             }
 
-            // Base hubs with contact person, phone and social handle
+            // Base hubs with contact person and social handle
             document.getElementById('hubsList').innerHTML = data.states.map(s => {
                 const h = s.hubContact || {};
                 return `<li>
                     <p>◆ <strong class="text-white">${s.name}:</strong> ${s.base}</p>
-                    <p class="ml-4 mt-1">${h.person ? `${h.person}` : ''}${h.phone ? ` · 📞 <a class="text-amber-300 hover:underline" href="tel:${h.phone.replace(/\s/g, '')}">${h.phone}</a>` : ''}</p>
+                    ${h.person ? `<p class="ml-4 mt-1">${h.person}</p>` : ''}
                     ${h.instagram ? `<p class="ml-4">📷 <a class="text-amber-300 hover:underline" target="_blank" rel="noopener" href="https://instagram.com/${h.instagram}">@${h.instagram}</a></p>` : ''}
                 </li>`;
-            }).join('');
+            }).join('') + `<li class="pt-2 border-t border-white/10">📧 Official contact:
+                <a class="text-amber-300 hover:underline" href="mailto:scienceonwheels@plaksha.edu.in">scienceonwheels@plaksha.edu.in</a></li>`;
 
             // Team
             const members = [...data.teamMembers.plaksha, ...data.teamMembers.iitMandi, ...data.teamMembers.idym];

@@ -9,11 +9,23 @@
     "status": "active"
   },
   "mission": {
-    "schoolsCovered": { "current": 0, "total": 270 },
-    "statesCovered": { "current": 0, "total": 3 },
-    "districtsCovered": { "current": 0, "total": 16 },
+    "schoolsCovered": {
+      "current": 0,
+      "total": 270
+    },
+    "statesCovered": {
+      "current": 0,
+      "total": 3
+    },
+    "districtsCovered": {
+      "current": 0,
+      "total": 16
+    },
     "studentsImpacted": 0,
-    "genderBreakdown": { "girls": 0, "boys": 0 },
+    "genderBreakdown": {
+      "girls": 0,
+      "boys": 0
+    },
     "distanceTravelled": 0,
     "targetAudience": "Students from Classes 6-12 in rural, border, remote and tribal areas"
   },
@@ -23,10 +35,16 @@
       "base": "IDYM Antariksh Prayogshala, Dumar",
       "hubContact": {
         "person": "Mr. Ratnesh Mishra",
-        "phone": "+91 8879476341",
-        "instagram": "antarikshgyaanabhiyaan"
+        "instagram": "antarikshgyaanabhiyaan",
+        "email": "scienceonwheels@plaksha.edu.in"
       },
-      "districts": ["Rajnandgaon", "Mungeli", "Jashpur", "Kanker", "Gariyaband"],
+      "districts": [
+        "Rajnandgaon",
+        "Mungeli",
+        "Jashpur",
+        "Kanker",
+        "Gariyaband"
+      ],
       "focus": "Tribal and forested districts with ST populations exceeding 45–60%",
       "color": "#f59e0b"
     },
@@ -35,10 +53,17 @@
       "base": "Plaksha University, Mohali",
       "hubContact": {
         "person": "Dr. Rucha Joshi",
-        "phone": "+91 7901851024",
-        "instagram": ""
+        "instagram": "plakshauniversity",
+        "email": "scienceonwheels@plaksha.edu.in"
       },
-      "districts": ["Faridkot", "Fazilka", "Ferozepur", "Pathankot", "Hoshiarpur", "Mansa"],
+      "districts": [
+        "Faridkot",
+        "Fazilka",
+        "Ferozepur",
+        "Pathankot",
+        "Hoshiarpur",
+        "Mansa"
+      ],
       "focus": "International border districts and SC-dominated rural villages",
       "color": "#0ea5e9"
     },
@@ -47,31 +72,85 @@
       "base": "IIT Mandi, Kamand",
       "hubContact": {
         "person": "Dr. Harshad Kulkarni",
-        "phone": "+91 7018308782",
-        "instagram": ""
+        "instagram": "",
+        "email": "scienceonwheels@plaksha.edu.in"
       },
-      "districts": ["Mandi", "Kullu", "Bilaspur", "Hamirpur", "Kangra"],
+      "districts": [
+        "Mandi",
+        "Kullu",
+        "Bilaspur",
+        "Hamirpur",
+        "Kangra"
+      ],
       "focus": "Hill villages with tribal populations and minimal hands-on science exposure",
       "color": "#10b981"
     }
   ],
   "districtCoordinates": {
-    "Rajnandgaon": { "lat": 21.0972, "lng": 81.0302 },
-    "Mungeli": { "lat": 22.0654, "lng": 81.6857 },
-    "Jashpur": { "lat": 22.8871, "lng": 84.1387 },
-    "Kanker": { "lat": 20.2719, "lng": 81.4931 },
-    "Gariyaband": { "lat": 20.6340, "lng": 82.0623 },
-    "Faridkot": { "lat": 30.6769, "lng": 74.7583 },
-    "Fazilka": { "lat": 30.4036, "lng": 74.0280 },
-    "Ferozepur": { "lat": 30.9331, "lng": 74.6225 },
-    "Pathankot": { "lat": 32.2643, "lng": 75.6421 },
-    "Hoshiarpur": { "lat": 31.5320, "lng": 75.9120 },
-    "Mansa": { "lat": 29.9995, "lng": 75.3937 },
-    "Mandi": { "lat": 31.7076, "lng": 76.9318 },
-    "Kullu": { "lat": 31.9579, "lng": 77.1095 },
-    "Bilaspur": { "lat": 31.3306, "lng": 76.7570 },
-    "Hamirpur": { "lat": 31.6895, "lng": 76.5213 },
-    "Kangra": { "lat": 32.0998, "lng": 76.2691 }
+    "Rajnandgaon": {
+      "lat": 21.0972,
+      "lng": 81.0302
+    },
+    "Mungeli": {
+      "lat": 22.0654,
+      "lng": 81.6857
+    },
+    "Jashpur": {
+      "lat": 22.8871,
+      "lng": 84.1387
+    },
+    "Kanker": {
+      "lat": 20.2719,
+      "lng": 81.4931
+    },
+    "Gariyaband": {
+      "lat": 20.634,
+      "lng": 82.0623
+    },
+    "Faridkot": {
+      "lat": 30.6769,
+      "lng": 74.7583
+    },
+    "Fazilka": {
+      "lat": 30.4036,
+      "lng": 74.028
+    },
+    "Ferozepur": {
+      "lat": 30.9331,
+      "lng": 74.6225
+    },
+    "Pathankot": {
+      "lat": 32.2643,
+      "lng": 75.6421
+    },
+    "Hoshiarpur": {
+      "lat": 31.532,
+      "lng": 75.912
+    },
+    "Mansa": {
+      "lat": 29.9995,
+      "lng": 75.3937
+    },
+    "Mandi": {
+      "lat": 31.7076,
+      "lng": 76.9318
+    },
+    "Kullu": {
+      "lat": 31.9579,
+      "lng": 77.1095
+    },
+    "Bilaspur": {
+      "lat": 31.3306,
+      "lng": 76.757
+    },
+    "Hamirpur": {
+      "lat": 31.6895,
+      "lng": 76.5213
+    },
+    "Kangra": {
+      "lat": 32.0998,
+      "lng": 76.2691
+    }
   },
   "modules": [
     {
@@ -105,23 +184,83 @@
     "year1": {
       "label": "Year 1 (Aug 2025 – Jul 2026)",
       "rows": [
-        { "state": "Chhattisgarh", "phase": "Planning", "months": "Month 1", "details": "Plan van visits to Rajnandgaon, Mungeli, Jashpur and other rural, tribal and remote districts. Finalize schools and develop materials with Block Education Officers (BEOs). Target 45–50 school engagements." },
-        { "state": "Chhattisgarh", "phase": "Execution", "months": "Months 2–4", "details": "Take the van to permitted schools in rural / SC / ST districts. Assess impact." },
-        { "state": "Himachal Pradesh", "phase": "Planning", "months": "Month 5", "details": "Plan for schools in rural, tribal and remote areas around Mandi and Kullu. Aim for 45–50 schools with district administrators and BEOs." },
-        { "state": "Himachal Pradesh", "phase": "Execution", "months": "Months 6–8", "details": "Take the van to permitted rural / tribal area schools. Assess impact." },
-        { "state": "Punjab", "phase": "Planning", "months": "Month 9", "details": "Plan visits to border, rural and remote districts such as Faridkot, Fazilka, Ferozepur. Target 45–50 school engagements with BEOs." },
-        { "state": "Punjab", "phase": "Execution", "months": "Months 10–12", "details": "Take the van to permitted remote, border and rural schools. Assess impact." }
+        {
+          "state": "Chhattisgarh",
+          "phase": "Planning",
+          "months": "Month 1",
+          "details": "Plan van visits to Rajnandgaon, Mungeli, Jashpur and other rural, tribal and remote districts. Finalize schools and develop materials with Block Education Officers (BEOs). Target 45–50 school engagements."
+        },
+        {
+          "state": "Chhattisgarh",
+          "phase": "Execution",
+          "months": "Months 2–4",
+          "details": "Take the van to permitted schools in rural / SC / ST districts. Assess impact."
+        },
+        {
+          "state": "Himachal Pradesh",
+          "phase": "Planning",
+          "months": "Month 5",
+          "details": "Plan for schools in rural, tribal and remote areas around Mandi and Kullu. Aim for 45–50 schools with district administrators and BEOs."
+        },
+        {
+          "state": "Himachal Pradesh",
+          "phase": "Execution",
+          "months": "Months 6–8",
+          "details": "Take the van to permitted rural / tribal area schools. Assess impact."
+        },
+        {
+          "state": "Punjab",
+          "phase": "Planning",
+          "months": "Month 9",
+          "details": "Plan visits to border, rural and remote districts such as Faridkot, Fazilka, Ferozepur. Target 45–50 school engagements with BEOs."
+        },
+        {
+          "state": "Punjab",
+          "phase": "Execution",
+          "months": "Months 10–12",
+          "details": "Take the van to permitted remote, border and rural schools. Assess impact."
+        }
       ]
     },
     "year2": {
       "label": "Year 2 (Aug 2026 – Jul 2027)",
       "rows": [
-        { "state": "Himachal Pradesh", "phase": "Planning", "months": "Month 1", "details": "Plan van visits to Kangra, Hamirpur, Bilaspur interiors. Visit 45–50 schools. Pre-coordinate with BEOs for seasonal accessibility." },
-        { "state": "Himachal Pradesh", "phase": "Execution", "months": "Months 2–4", "details": "Take the van to permitted schools." },
-        { "state": "Punjab", "phase": "Planning", "months": "Month 5", "details": "Prepare for Pathankot, Hoshiarpur, Mansa. Coordinate with local BEOs to schedule science sessions in 45–50 schools." },
-        { "state": "Punjab", "phase": "Execution", "months": "Months 6–8", "details": "Villages and border region outreach to SC/ST schools; science fairs and public exhibits." },
-        { "state": "Chhattisgarh", "phase": "Planning", "months": "Month 9", "details": "Plan second phase in Kanker, Gariyaband and other districts. Plan 45–50 school visits with prior BEO coordination and approval." },
-        { "state": "Chhattisgarh", "phase": "Execution", "months": "Months 10–12", "details": "Take the van to tribal-dominated, remote schools and run follow-up sessions in new districts." }
+        {
+          "state": "Himachal Pradesh",
+          "phase": "Planning",
+          "months": "Month 1",
+          "details": "Plan van visits to Kangra, Hamirpur, Bilaspur interiors. Visit 45–50 schools. Pre-coordinate with BEOs for seasonal accessibility."
+        },
+        {
+          "state": "Himachal Pradesh",
+          "phase": "Execution",
+          "months": "Months 2–4",
+          "details": "Take the van to permitted schools."
+        },
+        {
+          "state": "Punjab",
+          "phase": "Planning",
+          "months": "Month 5",
+          "details": "Prepare for Pathankot, Hoshiarpur, Mansa. Coordinate with local BEOs to schedule science sessions in 45–50 schools."
+        },
+        {
+          "state": "Punjab",
+          "phase": "Execution",
+          "months": "Months 6–8",
+          "details": "Villages and border region outreach to SC/ST schools; science fairs and public exhibits."
+        },
+        {
+          "state": "Chhattisgarh",
+          "phase": "Planning",
+          "months": "Month 9",
+          "details": "Plan second phase in Kanker, Gariyaband and other districts. Plan 45–50 school visits with prior BEO coordination and approval."
+        },
+        {
+          "state": "Chhattisgarh",
+          "phase": "Execution",
+          "months": "Months 10–12",
+          "details": "Take the van to tribal-dominated, remote schools and run follow-up sessions in new districts."
+        }
       ]
     }
   },
@@ -169,14 +308,46 @@
     ]
   },
   "partners": [
-    { "name": "NCSTC, DST, Govt. of India", "role": "Funding Agency", "logo": "graphics/NCSTC_logo.png" },
-    { "name": "Department of Science & Technology", "role": "Govt. of India", "logo": "graphics/DST_logo.png" },
-    { "name": "Plaksha University", "role": "Principal Organization", "logo": "graphics/plaksha_logo.png" },
-    { "name": "IIT Mandi", "role": "Academic Partner", "logo": "graphics/IIT_mandi_logo.png" },
-    { "name": "IDYM Foundation", "role": "Implementation Partner (ISRO's Space Tutor)", "logo": "graphics/IDYM_Logo.png" },
-    { "name": "ISRO", "role": "Space Tutor Programme", "logo": "graphics/ISRO_logo.png" },
-    { "name": "DS Brar Center for Girls and Women in STEM", "role": "Supporting Partner", "logo": "graphics/DS_BRAR_GWIST_logo.png" },
-    { "name": "Avishkaar", "role": "Robotics Partner", "logo": "graphics/avishkaar_logo.png" }
+    {
+      "name": "NCSTC, DST, Govt. of India",
+      "role": "Funding Agency",
+      "logo": "graphics/NCSTC_logo.png"
+    },
+    {
+      "name": "Department of Science & Technology",
+      "role": "Govt. of India",
+      "logo": "graphics/DST_logo.png"
+    },
+    {
+      "name": "Plaksha University",
+      "role": "Principal Organization",
+      "logo": "graphics/plaksha_logo.png"
+    },
+    {
+      "name": "IIT Mandi",
+      "role": "Academic Partner",
+      "logo": "graphics/IIT_mandi_logo.png"
+    },
+    {
+      "name": "IDYM Foundation",
+      "role": "Implementation Partner (ISRO's Space Tutor)",
+      "logo": "graphics/IDYM_Logo.png"
+    },
+    {
+      "name": "ISRO",
+      "role": "Space Tutor Programme",
+      "logo": "graphics/ISRO_logo.png"
+    },
+    {
+      "name": "DS Brar Center for Girls and Women in STEM",
+      "role": "Supporting Partner",
+      "logo": "graphics/DS_BRAR_GWIST_logo.png"
+    },
+    {
+      "name": "Avishkaar",
+      "role": "Robotics Partner",
+      "logo": "graphics/avishkaar_logo.png"
+    }
   ],
   "studentCorner": {
     "heading": "Continue Your Science Journey",
