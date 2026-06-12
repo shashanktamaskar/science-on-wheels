@@ -154,11 +154,11 @@
     ]
   },
   "partners": [
+    { "name": "NCSTC, DST, Govt. of India", "role": "Funding Agency", "logo": "graphics/NCSTC_logo.svg" },
     { "name": "Plaksha University", "role": "Principal Organization", "logo": "graphics/plaksha_logo.png" },
     { "name": "IIT Mandi", "role": "Academic Partner", "logo": "graphics/IIT_mandi_logo.png" },
     { "name": "IDYM Foundation", "role": "Implementation Partner (ISRO's Space Tutor)", "logo": "graphics/IDYM_Logo.png" },
     { "name": "ISRO", "role": "Space Tutor Programme", "logo": "graphics/ISRO_logo.png" },
-    { "name": "SCERT Punjab", "role": "State Education Partner", "logo": "graphics/Punjab_SCERT_Logo.jpg" },
     { "name": "DS Brar Center for Girls and Women in STEM", "role": "Supporting Partner", "logo": "graphics/DS_BRAR_GWIST_logo.png" },
     { "name": "Avishkaar", "role": "Robotics Partner", "logo": "graphics/avishkaar_logo.png" }
   ],
