@@ -21,6 +21,11 @@
     {
       "name": "Chhattisgarh",
       "base": "IDYM Antariksh Prayogshala, Dumar",
+      "hubContact": {
+        "person": "Mr. Ratnesh Mishra",
+        "phone": "+91 8879476341",
+        "instagram": "antarikshgyaanabhiyaan"
+      },
       "districts": ["Rajnandgaon", "Mungeli", "Jashpur", "Kanker", "Gariyaband"],
       "focus": "Tribal and forested districts with ST populations exceeding 45–60%",
       "color": "#f59e0b"
@@ -28,6 +33,11 @@
     {
       "name": "Punjab",
       "base": "Plaksha University, Mohali",
+      "hubContact": {
+        "person": "Dr. Rucha Joshi",
+        "phone": "+91 7901851024",
+        "instagram": ""
+      },
       "districts": ["Faridkot", "Fazilka", "Ferozepur", "Pathankot", "Hoshiarpur", "Mansa"],
       "focus": "International border districts and SC-dominated rural villages",
       "color": "#0ea5e9"
@@ -35,6 +45,11 @@
     {
       "name": "Himachal Pradesh",
       "base": "IIT Mandi, Kamand",
+      "hubContact": {
+        "person": "Dr. Harshad Kulkarni",
+        "phone": "+91 7018308782",
+        "instagram": ""
+      },
       "districts": ["Mandi", "Kullu", "Bilaspur", "Hamirpur", "Kangra"],
       "focus": "Hill villages with tribal populations and minimal hands-on science exposure",
       "color": "#10b981"
@@ -155,6 +170,7 @@
   },
   "partners": [
     { "name": "NCSTC, DST, Govt. of India", "role": "Funding Agency", "logo": "graphics/NCSTC_logo.png" },
+    { "name": "Department of Science & Technology", "role": "Govt. of India", "logo": "graphics/DST_logo.png" },
     { "name": "Plaksha University", "role": "Principal Organization", "logo": "graphics/plaksha_logo.png" },
     { "name": "IIT Mandi", "role": "Academic Partner", "logo": "graphics/IIT_mandi_logo.png" },
     { "name": "IDYM Foundation", "role": "Implementation Partner (ISRO's Space Tutor)", "logo": "graphics/IDYM_Logo.png" },
@@ -162,6 +178,11 @@
     { "name": "DS Brar Center for Girls and Women in STEM", "role": "Supporting Partner", "logo": "graphics/DS_BRAR_GWIST_logo.png" },
     { "name": "Avishkaar", "role": "Robotics Partner", "logo": "graphics/avishkaar_logo.png" }
   ],
+  "studentCorner": {
+    "heading": "Continue Your Science Journey",
+    "text": "Did the van visit your school? Want to keep learning robotics, space science and more? Fill the form and we will add you to a student group for continuous training and possible visits to our hubs.",
+    "formUrl": ""
+  },
   "contact": {
     "email": "scienceonwheels@plaksha.edu.in",
     "piEmail": "rucha.joshi@plaksha.edu.in",

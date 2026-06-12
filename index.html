@@ -67,6 +67,7 @@
                 <a href="#states" class="hover:text-amber-300 transition">Where We Go</a>
                 <a href="#timeline" class="hover:text-amber-300 transition">Plan</a>
                 <a href="#dashboard" class="hover:text-amber-300 transition">Dashboard</a>
+                <a href="#gallery" class="hover:text-amber-300 transition">Gallery</a>
                 <a href="#team" class="hover:text-amber-300 transition">Team</a>
                 <a href="#contact" class="hover:text-amber-300 transition">Contact</a>
                 <a href="punjab.html"
@@ -86,6 +87,7 @@
             <a href="#states" class="block py-1">Where We Go</a>
             <a href="#timeline" class="block py-1">Plan</a>
             <a href="#dashboard" class="block py-1">Dashboard</a>
+            <a href="#gallery" class="block py-1">Gallery</a>
             <a href="#team" class="block py-1">Team</a>
             <a href="#contact" class="block py-1">Contact</a>
             <a href="punjab.html" class="block py-1 text-amber-300 font-bold">Punjab 2025–26 Archive ↗</a>
@@ -248,8 +250,34 @@
         </div>
     </section>
 
+    <!-- Gallery -->
+    <section id="gallery" class="bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+            <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Gallery</h3>
+            <p class="text-slate-600 mb-8">Glimpses from our school visits — one collage per school, with a link to
+                the full photo album.</p>
+            <div id="galleryEmpty" class="bg-slate-50 border border-slate-200 rounded-xl p-8 text-center">
+                <p class="text-4xl mb-3">📸</p>
+                <p class="font-bold text-slate-800 mb-1">Photos coming soon!</p>
+                <p class="text-slate-600 text-sm">This space will fill up as the van visits schools. Until then, browse
+                    the <a href="punjab.html" class="text-blue-700 underline font-semibold">Punjab 2025–26 gallery</a>
+                    with collages from 241 schools.</p>
+            </div>
+            <div id="galleryGrid" class="hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- Student Corner -->
+    <section id="students" class="bg-gradient-to-r from-amber-400 to-orange-400 text-slate-900">
+        <div class="max-w-7xl mx-auto px-6 py-14 text-center">
+            <h3 class="text-3xl font-extrabold mb-3" id="studentHeading">Continue Your Science Journey</h3>
+            <p class="max-w-2xl mx-auto mb-6 font-medium" id="studentText"></p>
+            <div id="studentFormWrap"></div>
+        </div>
+    </section>
+
     <!-- Team -->
-    <section id="team" class="bg-white border-y border-slate-200">
+    <section id="team" class="border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-16">
             <h3 class="text-3xl font-extrabold text-slate-900 mb-10">The Team</h3>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8" id="teamGrid"></div>
@@ -278,11 +306,7 @@
             </div>
             <div class="bg-white/5 rounded-xl p-6 border border-white/10">
                 <h4 class="font-extrabold mb-3 accent">Base Hubs</h4>
-                <ul class="text-slate-300 text-sm space-y-2">
-                    <li>◆ <strong>Chhattisgarh:</strong> IDYM Antariksh Prayogshala, Dumar</li>
-                    <li>◆ <strong>Punjab:</strong> Plaksha University, Mohali</li>
-                    <li>◆ <strong>Himachal Pradesh:</strong> IIT Mandi, Kamand</li>
-                </ul>
+                <ul class="text-slate-300 text-sm space-y-4" id="hubsList"></ul>
             </div>
         </div>
     </section>
@@ -436,6 +460,48 @@
                         <td class="px-4 py-2 text-right">${fmt(r.boysCount || 0)}</td>
                     </tr>`).join('');
             }
+
+            // Gallery (collages collected from daily updates)
+            const collages = [];
+            [...updates].sort((a, b) => b.date.localeCompare(a.date)).forEach(u =>
+                (u.schools || []).forEach(sc => { if (sc.collageImage) collages.push({ date: u.date, ...sc }); }));
+            if (collages.length) {
+                document.getElementById('galleryEmpty').classList.add('hidden');
+                const grid = document.getElementById('galleryGrid');
+                grid.classList.remove('hidden');
+                grid.innerHTML = collages.map(c => `
+                    <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-200 card-hover">
+                        <img src="gallery_collages/${encodeURIComponent(c.collageImage)}" alt="${c.name}"
+                            class="w-full h-56 object-cover" loading="lazy"
+                            onerror="this.closest('div').style.display='none'">
+                        <div class="p-4">
+                            <p class="font-extrabold text-slate-900">${c.name}</p>
+                            <p class="text-xs text-slate-500 mb-2">${c.district || ''}, ${c.state || ''} · ${c.date}</p>
+                            ${c.galleryLink ? `<a href="${c.galleryLink}" target="_blank" rel="noopener"
+                                class="inline-block text-sm font-bold text-blue-700 hover:underline">View full album →</a>` : ''}
+                        </div>
+                    </div>`).join('');
+            }
+
+            // Student corner
+            if (data.studentCorner) {
+                document.getElementById('studentHeading').textContent = data.studentCorner.heading;
+                document.getElementById('studentText').textContent = data.studentCorner.text;
+                document.getElementById('studentFormWrap').innerHTML = data.studentCorner.formUrl
+                    ? `<a href="${data.studentCorner.formUrl}" target="_blank" rel="noopener"
+                        class="inline-block bg-slate-900 text-amber-300 font-extrabold px-8 py-3 rounded-lg hover:bg-slate-800 transition">📝 Fill the Student Form</a>`
+                    : `<p class="inline-block bg-white/60 px-6 py-3 rounded-lg font-bold text-sm">📝 Student sign-up form opening soon — watch this space!</p>`;
+            }
+
+            // Base hubs with contact person, phone and social handle
+            document.getElementById('hubsList').innerHTML = data.states.map(s => {
+                const h = s.hubContact || {};
+                return `<li>
+                    <p>◆ <strong class="text-white">${s.name}:</strong> ${s.base}</p>
+                    <p class="ml-4 mt-1">${h.person ? `${h.person}` : ''}${h.phone ? ` · 📞 <a class="text-amber-300 hover:underline" href="tel:${h.phone.replace(/\s/g, '')}">${h.phone}</a>` : ''}</p>
+                    ${h.instagram ? `<p class="ml-4">📷 <a class="text-amber-300 hover:underline" target="_blank" rel="noopener" href="https://instagram.com/${h.instagram}">@${h.instagram}</a></p>` : ''}
+                </li>`;
+            }).join('');
 
             // Team
             const members = [...data.teamMembers.plaksha, ...data.teamMembers.iitMandi, ...data.teamMembers.idym];
