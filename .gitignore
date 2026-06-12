@@ -20,3 +20,8 @@ desktop.ini
 
 # Logs
 *.log
+
+# Node / npm (used locally for dev tooling only)
+node_modules/
+package-lock.json
+package.json
