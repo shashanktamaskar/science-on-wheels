@@ -154,7 +154,7 @@
     ]
   },
   "partners": [
-    { "name": "NCSTC, DST, Govt. of India", "role": "Funding Agency", "logo": "graphics/NCSTC_logo.svg" },
+    { "name": "NCSTC, DST, Govt. of India", "role": "Funding Agency", "logo": "graphics/NCSTC_logo.png" },
     { "name": "Plaksha University", "role": "Principal Organization", "logo": "graphics/plaksha_logo.png" },
     { "name": "IIT Mandi", "role": "Academic Partner", "logo": "graphics/IIT_mandi_logo.png" },
     { "name": "IDYM Foundation", "role": "Implementation Partner (ISRO's Space Tutor)", "logo": "graphics/IDYM_Logo.png" },
