@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign-Up — Science on Wheels</title>
+    <meta name="description" content="Sign up to continue your science journey with Science on Wheels — training, mentoring and hub visits.">
+    <link rel="icon" type="image/png" href="graphics/Science_on_wheels_logo2.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        label { display: block; font-size: .75rem; font-weight: 700; color: #334155; margin-bottom: .25rem; text-transform: uppercase; letter-spacing: .03em; }
+        input, select, textarea { width: 100%; padding: .65rem .8rem; border: 2px solid #e2e8f0; border-radius: .5rem; font-size: .9rem; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #1e3a8a; }
+    </style>
+</head>
+
+<body class="bg-slate-100 min-h-screen">
+    <div class="max-w-2xl mx-auto px-4 py-10">
+        <a href="index.html" class="text-sm text-blue-700 hover:underline">← Back to Science on Wheels</a>
+        <div class="bg-gradient-to-r from-amber-400 to-orange-400 rounded-t-2xl px-6 py-6 mt-3">
+            <h1 class="text-2xl font-extrabold text-slate-900">🚀 Continue Your Science Journey</h1>
+            <p class="text-sm text-slate-800 mt-1 font-medium">Did the Science on Wheels van visit your school? Want
+                more robotics, space science and hands-on training — or a visit to one of our hubs? Tell us about
+                yourself and we will add you to our student group.</p>
+        </div>
+
+        <form action="https://formsubmit.co/scienceonwheels@plaksha.edu.in" method="POST"
+            class="bg-white rounded-b-2xl shadow-lg px-6 py-6 space-y-5">
+            <input type="hidden" name="_subject" value="Science on Wheels — new student sign-up">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="name">Student name *</label>
+                    <input type="text" id="name" name="Student Name" required>
+                </div>
+                <div>
+                    <label for="class">Class *</label>
+                    <select id="class" name="Class" required>
+                        <option value="">Select…</option>
+                        <option>6</option><option>7</option><option>8</option><option>9</option>
+                        <option>10</option><option>11</option><option>12</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="school">School name *</label>
+                    <input type="text" id="school" name="School" required>
+                </div>
+                <div>
+                    <label for="state">State *</label>
+                    <select id="state" name="State" required>
+                        <option value="">Select…</option>
+                        <option>Chhattisgarh</option>
+                        <option>Punjab</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="district">District *</label>
+                    <input type="text" id="district" name="District" required>
+                </div>
+                <div>
+                    <label for="phone">Contact number (parent/guardian or teacher) *</label>
+                    <input type="tel" id="phone" name="Contact Number" pattern="[0-9+ -]{10,15}" required>
+                </div>
+            </div>
+
+            <div>
+                <label for="email">Email (optional)</label>
+                <input type="email" id="email" name="Email">
+            </div>
+
+            <div>
+                <label>What interests you most? *</label>
+                <div class="grid sm:grid-cols-2 gap-2 text-sm text-slate-700">
+                    <label class="flex items-center gap-2 font-normal normal-case"><input type="checkbox"
+                            name="Interests" value="Space technology" class="w-auto"> 🚀 Space technology</label>
+                    <label class="flex items-center gap-2 font-normal normal-case"><input type="checkbox"
+                            name="Interests" value="Robotics" class="w-auto"> 🤖 Robotics</label>
+                    <label class="flex items-center gap-2 font-normal normal-case"><input type="checkbox"
+                            name="Interests" value="Water testing / environment" class="w-auto"> 💧 Water & environment</label>
+                    <label class="flex items-center gap-2 font-normal normal-case"><input type="checkbox"
+                            name="Interests" value="Sustainability" class="w-auto"> 🌱 Sustainability</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="message">Anything you'd like to tell us? (optional)</label>
+                <textarea id="message" name="Message" rows="3"
+                    placeholder="e.g., I built the water filter model and want to learn more…"></textarea>
+            </div>
+
+            <button type="submit"
+                class="w-full bg-slate-900 text-amber-300 font-extrabold py-3 rounded-lg hover:bg-slate-800 transition">Submit
+                ✉️</button>
+            <p class="text-xs text-slate-500 text-center">Your details go directly to the Science on Wheels team at
+                Plaksha University and are used only to contact you about training and events.</p>
+        </form>
+    </div>
+</body>
+
+</html>

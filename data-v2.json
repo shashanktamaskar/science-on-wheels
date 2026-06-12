@@ -72,7 +72,7 @@
       "base": "IIT Mandi, Kamand",
       "hubContact": {
         "person": "Dr. Harshad Kulkarni",
-        "instagram": "",
+        "instagram": "iit__mandi",
         "email": "scienceonwheels@plaksha.edu.in"
       },
       "districts": [
@@ -352,7 +352,7 @@
   "studentCorner": {
     "heading": "Continue Your Science Journey",
     "text": "Did the van visit your school? Want to keep learning robotics, space science and more? Fill the form and we will add you to a student group for continuous training and possible visits to our hubs.",
-    "formUrl": ""
+    "formUrl": "student-form.html"
   },
   "contact": {
     "email": "scienceonwheels@plaksha.edu.in",
