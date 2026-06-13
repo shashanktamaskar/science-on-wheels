@@ -171,8 +171,14 @@
             authorities, prioritising rural, border, remote and high SC/ST-population areas.</p>
         <div class="grid lg:grid-cols-3 gap-6 mb-8" id="statesGrid"></div>
         <div id="map" class="shadow-lg"></div>
-        <p class="text-xs text-slate-500 mt-2">◆ Base hubs · ● Target districts. Schools visited will appear on this
-            map as the mission progresses.</p>
+        <div class="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600">
+            <span class="flex items-center gap-2"><span style="display:inline-block;width:13px;height:13px;background:#fbbf24;border:2px solid #0f172a;transform:rotate(45deg);"></span> Base hub <span class="text-slate-400 text-xs">(Plaksha · IIT Mandi · IDYM)</span></span>
+            <span class="flex items-center gap-2"><span style="display:inline-block;width:14px;height:14px;border-radius:9999px;background:#f59e0b;border:2px solid #fff;box-shadow:0 0 0 1px #cbd5e1;"></span> Chhattisgarh district</span>
+            <span class="flex items-center gap-2"><span style="display:inline-block;width:14px;height:14px;border-radius:9999px;background:#0ea5e9;border:2px solid #fff;box-shadow:0 0 0 1px #cbd5e1;"></span> Punjab district</span>
+            <span class="flex items-center gap-2"><span style="display:inline-block;width:14px;height:14px;border-radius:9999px;background:#10b981;border:2px solid #fff;box-shadow:0 0 0 1px #cbd5e1;"></span> Himachal Pradesh district</span>
+            <span class="flex items-center gap-2"><span style="display:inline-block;width:12px;height:12px;border-radius:9999px;background:#dc2626;border:1px solid #fff;box-shadow:0 0 0 1px #cbd5e1;"></span> School visited</span>
+        </div>
+        <p class="text-xs text-slate-400 mt-2">Individual schools will appear as red dots on the map as the mission progresses.</p>
     </section>
 
     <!-- Methodology -->
@@ -706,7 +712,8 @@
         };
         const BASES = [
             { name: "Plaksha University, Mohali (Punjab base)", lat: 30.6346, lng: 76.7179 },
-            { name: "IIT Mandi, Kamand (Himachal base)", lat: 31.7754, lng: 76.9861 }
+            { name: "IIT Mandi, Kamand (Himachal base)", lat: 31.7754, lng: 76.9861 },
+            { name: "IDYM Antariksh Prayogshala, Dumar (Chhattisgarh base)", lat: 21.0972, lng: 81.0302 }
         ];
         const fmt = n => n.toLocaleString('en-IN');
 
@@ -725,10 +732,16 @@
                     }).addTo(map).bindPopup(`<strong>${d}</strong><br>${s.name}`);
                 });
             });
+            const baseIcon = L.divIcon({
+                className: '',
+                html: '<div style="width:18px;height:18px;background:#fbbf24;border:2.5px solid #0f172a;transform:rotate(45deg);box-shadow:0 0 0 2px #fff,0 1px 4px rgba(0,0,0,.4);"></div>',
+                iconSize: [22, 22],
+                iconAnchor: [11, 11],
+                popupAnchor: [0, -11]
+            });
             BASES.forEach(b => {
-                L.circleMarker([b.lat, b.lng], {
-                    radius: 7, color: '#0f172a', weight: 3, fillColor: '#fbbf24', fillOpacity: 1
-                }).addTo(map).bindPopup(`◆ ${b.name}`);
+                L.marker([b.lat, b.lng], { icon: baseIcon, zIndexOffset: 1000 })
+                    .addTo(map).bindPopup(`◆ <strong>Base hub</strong><br>${b.name}`);
             });
             // Visited schools
             (data.dailyUpdates || []).forEach(u => (u.schools || []).forEach(sc => {
