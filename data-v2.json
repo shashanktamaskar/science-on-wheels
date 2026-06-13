@@ -4,8 +4,8 @@
     "title": "Science on Wheels for Local to Global Impact",
     "subtitle": "Mobile Science Van Initiative across Chhattisgarh, Punjab and Himachal Pradesh",
     "phase": "Year 1 – Planning",
-    "startDate": "2025-08-01",
-    "endDate": "2027-07-31",
+    "startDate": "2026-06-01",
+    "endDate": "2028-03-31",
     "status": "active"
   },
   "mission": {
@@ -182,7 +182,7 @@
   ],
   "timeline": {
     "year1": {
-      "label": "Year 1 (Aug 2025 – Jul 2026)",
+      "label": "Year 1 (Jun 2026 – Mar 2027)",
       "rows": [
         {
           "state": "Chhattisgarh",
@@ -223,7 +223,7 @@
       ]
     },
     "year2": {
-      "label": "Year 2 (Aug 2026 – Jul 2027)",
+      "label": "Year 2 (Apr 2027 – Mar 2028)",
       "rows": [
         {
           "state": "Himachal Pradesh",
