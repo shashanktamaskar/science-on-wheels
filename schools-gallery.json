@@ -1,5 +1,6 @@
 {
-  "schools": [
+    "collageFolder": "gallery_school_collage",
+    "schools": [
     {
       "name": "GSSS-GHAROTA",
       "district": "Pathankot",
