@@ -1,6 +1,6 @@
 (function () {
     const MOUNT_ID = 'galleryCarouselMount';
-    const DATA_URL = 'schools-gallery.json';
+    const DATA_URL = 'schools-gallery-sow.json';
     const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.webp', '.JPG', '.JPEG', '.PNG', '.WEBP'];
 
     const state = {
@@ -37,7 +37,7 @@
                 <h4 class="text-xl font-extrabold text-slate-900 mb-2">${title}</h4>
                 <p class="text-slate-600 mb-5">${body}</p>
                 ${buttonText && buttonHref ? `
-                    <a href="${buttonHref}"
+                    <a href="${buttonHref}" target="_blank"
                         class="inline-flex items-center justify-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-bold text-amber-300 transition hover:bg-slate-800">
                         ${buttonText}
                     </a>` : ''}

@@ -26,5 +26,11 @@ node_modules/
 package-lock.json
 package.json
 
+# python cache
+__pycache__/
+
 # Secrets
 .env
+
+# output of generate_collage.py
+output-images
