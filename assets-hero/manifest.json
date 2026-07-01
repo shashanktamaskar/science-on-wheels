@@ -1,8 +1,9 @@
 {
   "items": [
     {
-      "src": "https://plakshauniversity1-my.sharepoint.com/:v:/g/personal/scienceonwheels_plaksha_edu_in/IQD9brC6Rk8RRaMQHFeRplwhAUP93T0sRg6fpOysAXaRTOE?e=obJn33",
+      "src": "https://plakshauniversity1-my.sharepoint.com/personal/scienceonwheels_plaksha_edu_in/_layouts/15/embed.aspx?UniqueId=bab06efd-4f46-4511-a310-1c5791a65c21&embed=%7B%22af%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
       "type": "video",
+      "mode": "iframe",
       "title": "Science on Wheels in Motion",
       "description": "The mobile science van bringing hands-on STEM to schools and communities across the region.",
       "poster": "assets-hero/Science_on_wheels_project_thumbnail.jpg"

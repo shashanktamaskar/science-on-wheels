@@ -76,6 +76,7 @@
         return {
             src: item.src,
             type: inferType(item.src, item.type),
+            mode: item.mode || '',
             title: item.title || '',
             description: item.description || '',
             poster: item.poster || '',
@@ -115,6 +116,10 @@
 
     function getVideoElement() {
         return getSlideElement()?.querySelector('video');
+    }
+
+    function getIframeElement() {
+        return getSlideElement()?.querySelector('iframe');
     }
 
     function getCounter() {
@@ -170,7 +175,7 @@
         const button = getSoundButton();
         const item = getCurrentItem();
         if (!button) return;
-        if (!item || item.type !== 'video') {
+        if (!item || item.type !== 'video' || item.mode === 'iframe' || /\/_layouts\/15\/embed\.aspx/i.test(item.src)) {
             button.classList.add('hidden');
             return;
         }
@@ -204,6 +209,10 @@
             if (source) source.removeAttribute('src');
             video.load();
         }
+        const iframe = getIframeElement();
+        if (iframe) {
+            iframe.src = 'about:blank';
+        }
     }
 
     function scheduleImageAdvance(item, token) {
@@ -231,7 +240,7 @@
 
     function toggleSound() {
         const item = getCurrentItem();
-        if (!item || item.type !== 'video') return;
+        if (!item || item.type !== 'video' || item.mode === 'iframe' || /\/_layouts\/15\/embed\.aspx/i.test(item.src)) return;
         state.soundEnabled = !state.soundEnabled;
         const video = getSlideElement()?.querySelector('video');
         if (video) {
@@ -415,7 +424,29 @@
         hidePlayButton();
         showCaptionTemporarily();
 
-        if (item.type === 'video') {
+        const useIframe = item.type === 'video' && (
+            item.mode === 'iframe' || /\/_layouts\/15\/embed\.aspx/i.test(item.src)
+        );
+
+        if (useIframe) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'absolute inset-0 bg-slate-950';
+            wrapper.innerHTML = `
+                <iframe
+                    class="hero-carousel-iframe"
+                    src="${item.src}"
+                    title="${item.title || 'Science on Wheels video'}"
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                    allowfullscreen
+                    loading="eager"
+                    scrolling="no"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            `;
+            slide.appendChild(wrapper);
+            updateSoundButton();
+            hidePlayButton();
+            clearTimer();
+        } else if (item.type === 'video') {
             const wrapper = document.createElement('div');
             wrapper.className = 'absolute inset-0';
             wrapper.innerHTML = `
