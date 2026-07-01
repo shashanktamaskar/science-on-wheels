@@ -10,15 +10,15 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 1,
+      "current": 0,
       "total": 270
     },
     "statesCovered": {
-      "current": 1,
+      "current": 0,
       "total": 3
     },
     "districtsCovered": {
-      "current": 1,
+      "current": 0,
       "total": 16
     },
     "studentsImpacted": 0,

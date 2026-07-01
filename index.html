@@ -16,12 +16,12 @@
         content="A mobile science van bringing space tech, robotics, water testing and sustainability education to schools in Chhattisgarh, Punjab and Himachal Pradesh.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shashanktamaskar.github.io/science-on-wheels/">
-    <meta property="og:image" content="https://shashanktamaskar.github.io/science-on-wheels/graphics/Science_on_wheels_project_banner.jpg">
+    <meta property="og:image" content="https://shashanktamaskar.github.io/science-on-wheels/assets-hero/Science_on_wheels_project_banner.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Science on Wheels — Local to Global Impact">
     <meta name="twitter:description"
         content="Mobile science van initiative across Chhattisgarh, Punjab and Himachal Pradesh.">
-    <meta name="twitter:image" content="https://shashanktamaskar.github.io/science-on-wheels/graphics/Science_on_wheels_project_banner.jpg">
+    <meta name="twitter:image" content="https://shashanktamaskar.github.io/science-on-wheels/assets-hero/Science_on_wheels_project_banner.jpg">
     <link rel="canonical" href="https://shashanktamaskar.github.io/science-on-wheels/">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="graphics/Science_on_wheels_logo2.png">
@@ -46,6 +46,118 @@
         .pill-execution { background: #d1fae5; color: #065f46; }
         .state-dot { display: inline-block; width: .75rem; height: .75rem; border-radius: 9999px; margin-right: .4rem; }
         .ig-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.12em; fill: currentColor; }
+        .hero-carousel-shell {
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(2, 6, 23, 0.35);
+            box-shadow: 0 30px 60px rgba(2, 6, 23, 0.35);
+        }
+        .hero-carousel-stage {
+            position: relative;
+            aspect-ratio: 16 / 10;
+            min-height: 360px;
+            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.10), transparent 48%), #020617;
+        }
+        .hero-carousel-media {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #020617;
+        }
+        .hero-carousel-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(2, 6, 23, 0.00) 0%, rgba(2, 6, 23, 0.12) 40%, rgba(2, 6, 23, 0.72) 100%);
+        }
+        .hero-carousel-controls {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 1rem;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+        .hero-carousel-nav,
+        .hero-carousel-sound,
+        .hero-carousel-play {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+        }
+        .hero-carousel-nav:hover,
+        .hero-carousel-sound:hover,
+        .hero-carousel-play:hover {
+            transform: translateY(-1px);
+        }
+        .hero-carousel-nav {
+            width: 2.75rem;
+            height: 2.75rem;
+            background: rgba(255, 255, 255, 0.92);
+            color: #0f172a;
+        }
+        .hero-carousel-sound,
+        .hero-carousel-play {
+            background: rgba(15, 23, 42, 0.75);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(10px);
+        }
+        .hero-carousel-sound {
+            gap: 0.45rem;
+            padding: 0.65rem 0.9rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+        .hero-carousel-play {
+            gap: 0.5rem;
+            padding: 0.8rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+        .hero-carousel-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1.25rem 1.25rem 4.4rem;
+            color: #fff;
+            background: linear-gradient(180deg, transparent 0%, rgba(2, 6, 23, 0.34) 30%, rgba(2, 6, 23, 0.82) 100%);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .hero-carousel-caption.is-hidden {
+            opacity: 0;
+            transform: translateY(14px);
+            pointer-events: none;
+        }
+        .hero-carousel-counter {
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 0.66rem;
+            color: rgba(255, 255, 255, 0.72);
+        }
+        .hero-carousel-dots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            align-items: center;
+        }
+        .hero-carousel-dot {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.42);
+            transition: width 0.2s ease, background-color 0.2s ease;
+        }
+        .hero-carousel-dot.is-active {
+            width: 1.8rem;
+            background: #fbbf24;
+        }
     </style>
 </head>
 
@@ -127,9 +239,14 @@
                 <p class="mt-1 text-sm font-semibold text-amber-300">Supported &amp; catalysed by NCSTC, DST, Govt. of
                     India</p>
             </div>
-            <div>
-                <img src="graphics/Science_on_wheels_project_banner.jpg" alt="Science on Wheels — Local to Global"
-                    class="rounded-xl shadow-2xl w-full">
+            <div id="heroCarouselMount" class="w-full">
+                <div class="hero-carousel-shell">
+                    <div class="hero-carousel-stage">
+                        <div class="absolute inset-0 flex items-center justify-center text-slate-300">
+                            <p class="text-sm font-medium tracking-wide uppercase">Loading hero media...</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Live stats strip -->
@@ -336,6 +453,7 @@
     </footer>
 
     <script src="scripts/gallery-carousel.js" defer></script>
+    <script src="scripts/hero-carousel.js" defer></script>
     <script>
         const STATE_FILL = {
             "Chhattisgarh": "#f59e0b",
