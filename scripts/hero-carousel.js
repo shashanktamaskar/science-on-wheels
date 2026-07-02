@@ -6,8 +6,9 @@
 
     const FALLBACK_ITEMS = [
         {
-            src: 'https://plakshauniversity1-my.sharepoint.com/:v:/g/personal/scienceonwheels_plaksha_edu_in/IQD9brC6Rk8RRaMQHFeRplwhAUP93T0sRg6fpOysAXaRTOE?e=obJn33',
+            src: 'https://youtu.be/EBS6Dvsf5_Y',
             type: 'video',
+            mode: 'iframe',
             title: 'Science on Wheels in motion',
             description: 'The mobile science van bringing hands-on STEM to schools and communities across the region.',
             poster: 'assets-hero/Science_on_wheels_project_banner.jpg'
@@ -47,6 +48,10 @@
         return /(?:sharepoint\.com|onedrive\.live\.com|1drv\.ms)/i.test(String(src || ''));
     }
 
+    function isYouTubeUrl(src) {
+        return /(?:youtube\.com|youtu\.be)/i.test(String(src || ''));
+    }
+
     function addQueryParam(url, key, value) {
         try {
             const parsed = new URL(url, window.location.href);
@@ -55,6 +60,46 @@
         } catch (error) {
             return url;
         }
+    }
+
+    function extractYouTubeId(src) {
+        const value = String(src || '');
+        try {
+            const parsed = new URL(value, window.location.href);
+            if (parsed.hostname === 'youtu.be') {
+                return parsed.pathname.replace(/^\/+/, '');
+            }
+            const v = parsed.searchParams.get('v');
+            if (v) return v;
+            const match = parsed.pathname.match(/\/shorts\/([^/?]+)/i) || parsed.pathname.match(/\/embed\/([^/?]+)/i);
+            if (match) return match[1];
+        } catch (error) {
+            const shortMatch = value.match(/youtu\.be\/([^?&#/]+)/i);
+            if (shortMatch) return shortMatch[1];
+            const queryMatch = value.match(/[?&]v=([^?&#/]+)/i);
+            if (queryMatch) return queryMatch[1];
+        }
+        return '';
+    }
+
+    function buildIframeSrc(src) {
+        if (isYouTubeUrl(src)) {
+            const videoId = extractYouTubeId(src);
+            if (!videoId) return src;
+            const embedUrl = new URL(`https://www.youtube.com/embed/${videoId}`);
+            embedUrl.searchParams.set('autoplay', '1');
+            embedUrl.searchParams.set('mute', '1');
+            embedUrl.searchParams.set('controls', '1');
+            embedUrl.searchParams.set('rel', '0');
+            embedUrl.searchParams.set('playsinline', '1');
+            embedUrl.searchParams.set('modestbranding', '1');
+            return embedUrl.toString();
+        }
+        if (/\/_layouts\/15\/embed\.aspx/i.test(src)) return src;
+        if (isOneDriveOrSharePointUrl(src)) {
+            return addQueryParam(src, 'download', '1');
+        }
+        return src;
     }
 
     function buildVideoCandidates(src) {
@@ -73,10 +118,11 @@
 
     function normalizeItem(item) {
         if (!item || !item.src) return null;
+        const inferredMode = item.mode || (isYouTubeUrl(item.src) ? 'iframe' : '');
         return {
             src: item.src,
             type: inferType(item.src, item.type),
-            mode: item.mode || '',
+            mode: inferredMode,
             title: item.title || '',
             description: item.description || '',
             poster: item.poster || '',
@@ -175,7 +221,7 @@
         const button = getSoundButton();
         const item = getCurrentItem();
         if (!button) return;
-        if (!item || item.type !== 'video' || item.mode === 'iframe' || /\/_layouts\/15\/embed\.aspx/i.test(item.src)) {
+        if (!item || item.type !== 'video' || item.mode === 'iframe' || isYouTubeUrl(item.src) || /\/_layouts\/15\/embed\.aspx/i.test(item.src)) {
             button.classList.add('hidden');
             return;
         }
@@ -240,7 +286,7 @@
 
     function toggleSound() {
         const item = getCurrentItem();
-        if (!item || item.type !== 'video' || item.mode === 'iframe' || /\/_layouts\/15\/embed\.aspx/i.test(item.src)) return;
+        if (!item || item.type !== 'video' || item.mode === 'iframe' || isYouTubeUrl(item.src) || /\/_layouts\/15\/embed\.aspx/i.test(item.src)) return;
         state.soundEnabled = !state.soundEnabled;
         const video = getSlideElement()?.querySelector('video');
         if (video) {
@@ -405,6 +451,7 @@
 
     function renderSlide() {
         const slide = getSlideElement();
+        const stage = getStage();
         const title = document.getElementById('heroCarouselTitle');
         const description = document.getElementById('heroCarouselDescription');
         if (!slide || !title || !description) return;
@@ -414,6 +461,9 @@
         const token = state.currentToken;
         const item = getCurrentItem();
         if (!item) return;
+        if (stage) {
+            delete stage.dataset.mediaMode;
+        }
 
         slide.innerHTML = '';
         title.textContent = item.title || 'Science on Wheels';
@@ -425,16 +475,20 @@
         showCaptionTemporarily();
 
         const useIframe = item.type === 'video' && (
-            item.mode === 'iframe' || /\/_layouts\/15\/embed\.aspx/i.test(item.src)
+            item.mode === 'iframe' || isYouTubeUrl(item.src) || /\/_layouts\/15\/embed\.aspx/i.test(item.src)
         );
 
         if (useIframe) {
+            if (stage) {
+                stage.dataset.mediaMode = 'iframe';
+            }
+            const iframeSrc = buildIframeSrc(item.src);
             const wrapper = document.createElement('div');
             wrapper.className = 'absolute inset-0 bg-slate-950';
             wrapper.innerHTML = `
                 <iframe
                     class="hero-carousel-iframe"
-                    src="${item.src}"
+                    src="${iframeSrc}"
                     title="${item.title || 'Science on Wheels video'}"
                     allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
                     allowfullscreen

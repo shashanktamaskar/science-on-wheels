@@ -46,6 +46,17 @@
         .pill-execution { background: #d1fae5; color: #065f46; }
         .state-dot { display: inline-block; width: .75rem; height: .75rem; border-radius: 9999px; margin-right: .4rem; }
         .ig-icon { display: inline-block; width: 1em; height: 1em; vertical-align: -0.12em; fill: currentColor; }
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        @media (min-width: 1024px) {
+            .hero-layout {
+                grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.52fr);
+            }
+        }
         .hero-carousel-shell {
             border-radius: 1rem;
             overflow: hidden;
@@ -56,7 +67,7 @@
         .hero-carousel-stage {
             position: relative;
             aspect-ratio: 16 / 9;
-            min-height: 390px;
+            min-height: clamp(430px, 44vw, 560px);
             background: radial-gradient(circle at top, rgba(255, 255, 255, 0.10), transparent 48%), #020617;
         }
         .hero-carousel-media {
@@ -79,6 +90,7 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(180deg, rgba(2, 6, 23, 0.00) 0%, rgba(2, 6, 23, 0.12) 40%, rgba(2, 6, 23, 0.72) 100%);
+            pointer-events: none;
         }
         .hero-carousel-controls {
             position: absolute;
@@ -88,7 +100,9 @@
             align-items: end;
             justify-content: space-between;
             gap: 0.75rem;
+            pointer-events: none;
         }
+        .hero-carousel-controls > * { pointer-events: auto; }
         .hero-carousel-nav,
         .hero-carousel-sound,
         .hero-carousel-play {
@@ -137,11 +151,25 @@
             color: #fff;
             background: linear-gradient(180deg, transparent 0%, rgba(2, 6, 23, 0.34) 30%, rgba(2, 6, 23, 0.82) 100%);
             transition: opacity 0.25s ease, transform 0.25s ease;
+            pointer-events: none;
         }
+        .hero-carousel-caption button { pointer-events: auto; }
         .hero-carousel-caption.is-hidden {
             opacity: 0;
             transform: translateY(14px);
             pointer-events: none;
+        }
+        .hero-carousel-stage[data-media-mode="iframe"] .hero-carousel-caption {
+            top: 0;
+            bottom: auto;
+            left: 0;
+            right: auto;
+            max-width: min(32rem, calc(100% - 1rem));
+            padding: 0.9rem 1rem 1rem;
+            background: linear-gradient(180deg, rgba(2, 6, 23, 0.78) 0%, rgba(2, 6, 23, 0.34) 55%, rgba(2, 6, 23, 0.0) 100%);
+        }
+        .hero-carousel-stage[data-media-mode="iframe"] .hero-carousel-caption.is-hidden {
+            transform: translateY(-14px);
         }
         .hero-carousel-counter {
             letter-spacing: 0.12em;
@@ -223,7 +251,7 @@
 
     <!-- Hero -->
     <header id="home" class="hero-gradient text-white">
-        <div class="max-w-7xl mx-auto px-6 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="max-w-[100rem] mx-auto px-6 py-16 lg:py-24 hero-layout">
             <div>
                 <p class="uppercase tracking-widest text-amber-300 font-bold text-sm mb-3">A mobile science van
                     initiative</p>
@@ -251,7 +279,7 @@
                 <div class="hero-carousel-shell">
                     <div class="hero-carousel-stage">
                         <div class="absolute inset-0 flex items-center justify-center text-slate-300">
-                            <p class="text-sm font-medium tracking-wide uppercase">Loading hero media...</p>
+                            <p class="text-sm font-medium tracking-wide uppercase"></p>
                         </div>
                     </div>
                 </div>
