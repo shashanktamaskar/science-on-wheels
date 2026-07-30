@@ -220,7 +220,6 @@
                 <a href="#mission" class="hover:text-amber-300 transition">Mission</a>
                 <a href="#modules" class="hover:text-amber-300 transition">Modules</a>
                 <a href="#states" class="hover:text-amber-300 transition">Where We Go</a>
-                <a href="#timeline" class="hover:text-amber-300 transition">Plan</a>
                 <a href="#dashboard" class="hover:text-amber-300 transition">Dashboard</a>
                 <a href="#gallery" class="hover:text-amber-300 transition">Gallery</a>
                 <a href="#team" class="hover:text-amber-300 transition">Team</a>
@@ -240,7 +239,6 @@
             <a href="#mission" class="block py-1">Mission</a>
             <a href="#modules" class="block py-1">Modules</a>
             <a href="#states" class="block py-1">Where We Go</a>
-            <a href="#timeline" class="block py-1">Plan</a>
             <a href="#dashboard" class="block py-1">Dashboard</a>
             <a href="#gallery" class="block py-1">Gallery</a>
             <a href="#team" class="block py-1">Team</a>
@@ -334,40 +332,6 @@
         <p class="text-xs text-slate-400 mt-2">Individual schools will appear as red dots on the map as the mission progresses.</p>
     </section>
 
-    <!-- Methodology -->
-    <section class="bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 py-16">
-            <h3 class="text-3xl font-extrabold mb-10">How a Mission Works</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-                    <p class="accent font-extrabold text-sm uppercase tracking-wide mb-2">Phase 1 · Planning (1 month per state)</p>
-                    <p class="text-slate-300 text-sm text-justify">Development of exhibits, models, tutorials and engaging content.
-                        Route and path planning across districts and blocks, school selection with BEOs, and
-                        coordination with speakers, experts and scientists.</p>
-                </div>
-                <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-                    <p class="accent font-extrabold text-sm uppercase tracking-wide mb-2">Phase 2 · Execution (3 months per state)</p>
-                    <p class="text-slate-300 text-sm text-justify">One school per day, ~15 days a month. Demos also run in public
-                        places, open grounds and child hostels, plus technical events and student fests for wider
-                        community impact.</p>
-                </div>
-                <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-                    <p class="accent font-extrabold text-sm uppercase tracking-wide mb-2">Maintenance &amp; Impact</p>
-                    <p class="text-slate-300 text-sm text-justify">After each state tour the van returns to its base (IDYM
-                        Antariksh Prayogshala in Dumar, Chhattisgarh / Plaksha / IIT Mandi) for exhibit repair and
-                        upgrades. Field assistants collect feedback and run impact analysis in every state.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline -->
-    <section id="timeline" class="max-w-7xl mx-auto px-6 py-16">
-        <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Two-Year Work Plan</h3>
-        <p class="text-slate-600 mb-8 text-sm">Months are tentative, subject to weather conditions and school
-            administrative approvals.</p>
-        <div class="grid lg:grid-cols-2 gap-8" id="timelineGrid"></div>
-    </section>
 
     <!-- Track record -->
     <section class="bg-gradient-to-r from-cyan-900 to-blue-900 text-white">
@@ -585,24 +549,6 @@
 
             // Map (skipped gracefully if Leaflet failed to load)
             try { renderMap(data); } catch (e) { console.error('Map unavailable:', e); }
-
-            // Timeline
-            const tlCard = (yr) => `
-                <div class="bg-white rounded-xl shadow border border-slate-200 overflow-hidden">
-                    <p class="bg-slate-900 text-white font-extrabold px-5 py-3">${yr.label}</p>
-                    <div class="divide-y divide-slate-100">${yr.rows.map(r => `
-                        <div class="px-5 py-4">
-                            <div class="flex items-center gap-2 mb-1 flex-wrap">
-                                <span class="state-dot" style="background:${STATE_FILL[r.state]}"></span>
-                                <span class="font-bold text-slate-900">${r.state}</span>
-                                <span class="phase-pill ${r.phase === 'Planning' ? 'pill-planning' : 'pill-execution'}">${r.phase}</span>
-                                <span class="text-xs text-slate-500">${r.months}</span>
-                            </div>
-                            <p class="text-sm text-slate-600 text-justify">${r.details}</p>
-                        </div>`).join('')}
-                    </div>
-                </div>`;
-            document.getElementById('timelineGrid').innerHTML = tlCard(data.timeline.year1) + tlCard(data.timeline.year2);
 
             // Legacy
             const lg = data.legacy;
