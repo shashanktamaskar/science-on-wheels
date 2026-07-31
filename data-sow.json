@@ -1,16 +1,69 @@
 {
-  "lastUpdated": "2026-06-10",
+  "lastUpdated": "2026-07-31",
   "projectInfo": {
     "title": "Science on Wheels for Local to Global Impact",
     "subtitle": "Mobile Science Van Initiative across Chhattisgarh, Punjab and Himachal Pradesh",
-    "phase": "Year 1 – Planning",
+    "phase": "Year 1",
     "startDate": "2026-06-01",
     "endDate": "2028-03-31",
     "status": "active"
   },
+  "dashboard": {
+    "headline": "Live Mission Updates",
+    "intro": "",
+    "highlights": [
+      {
+        "eyebrow": null,
+        "title": null,
+        "description": null
+      }
+    ],
+    "milestones": [
+      {
+        "title": null,
+        "description": null,
+        "state": null,
+        "targetDate": null,
+        "status": null
+      }
+    ],
+    "stateCoverage": [
+      {
+        "state": "Chhattisgarh",
+        "base": "IDYM Antariksh Prayogshala, Dumar",
+        "color": "#f59e0b",
+        "schools": [
+          {
+            "name": "GOVT. GIRLS HIGHER SECONDARY SCHOOL GARIABAND",
+            "district": "Gariaband",
+            "date": "2026-07-20",
+            "students": 0,
+            "mapLink": "https://maps.app.goo.gl/EeuTPaDz55CAkU7MA",
+            "mediaLink": ""
+          },
+          {
+            "name": "Swami Atmanand Utkrisht English Medium School",
+            "district": "Gariaband",
+            "date": "2026-07-25",
+            "students": 0,
+            "mapLink": "",
+            "mediaLink": ""
+          },
+          {
+            "name": "PM Swami Atmanand Utkrisht Hindi Medium School",
+            "district": "Gariaband",
+            "date": "2026-07-25",
+            "students": 0,
+            "mapLink": "",
+            "mediaLink": ""
+          }
+        ]
+      }
+    ]
+  },
   "mission": {
     "schoolsCovered": {
-      "current": 0,
+      "current": 3,
       "total": 270
     },
     "statesCovered": {
@@ -21,10 +74,10 @@
       "current": 0,
       "total": 16
     },
-    "studentsImpacted": 0,
+    "studentsImpacted": 300,
     "genderBreakdown": {
-      "girls": 0,
-      "boys": 0
+      "girls": 215,
+      "boys": 85
     },
     "distanceTravelled": 0,
     "targetAudience": "Students from Classes 6-12 in rural, border, remote and tribal areas"

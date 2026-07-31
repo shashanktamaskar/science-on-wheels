@@ -10,6 +10,29 @@ const BASES = [
 ];
 const fmt = n => n.toLocaleString('en-IN');
 
+function isNonEmptyText(value) {
+    return typeof value === 'string' ? value.trim().length > 0 : value !== null && value !== undefined;
+}
+
+function isNonEmptyArray(value) {
+    return Array.isArray(value) && value.length > 0;
+}
+
+function setHidden(el, hidden) {
+    if (!el) return;
+    el.classList.toggle('hidden', hidden);
+}
+
+function formatDate(value) {
+    const date = new Date(`${value}T00:00:00`);
+    if (Number.isNaN(date.getTime())) return value || '';
+    return new Intl.DateTimeFormat('en-IN', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+    }).format(date);
+}
+
 function renderMap(data) {
     const map = L.map('map', { scrollWheelZoom: false }).setView([26.2, 78.8], 5);
     L.tileLayer('https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
@@ -43,6 +66,184 @@ function renderMap(data) {
             radius: 5, color: '#fff', weight: 1, fillColor: '#dc2626', fillOpacity: .95
         }).addTo(map).bindPopup(`<strong>${sc.name}</strong><br>${sc.district}, ${sc.state || ''}<br>${sc.studentsReached || 0} students`);
     }));
+}
+
+function renderDashboard(data) {
+    const dashboard = data.dashboard || {};
+    const mission = data.mission || {};
+    const projectInfo = data.projectInfo || {};
+    const dailyUpdates = Array.isArray(data.dailyUpdates) ? data.dailyUpdates : [];
+
+    const phaseBadge = document.getElementById('dashboardPhaseBadge');
+    if (phaseBadge) {
+        phaseBadge.textContent = projectInfo.phase || '';
+        setHidden(phaseBadge, !isNonEmptyText(projectInfo.phase));
+    }
+
+    const headline = document.getElementById('dashboardHeadline');
+    if (headline) {
+        headline.textContent = dashboard.headline || '';
+        setHidden(headline, !isNonEmptyText(dashboard.headline));
+    }
+
+    const intro = document.getElementById('dashboardIntro');
+    if (intro) {
+        intro.textContent = dashboard.intro || '';
+        setHidden(intro, !isNonEmptyText(dashboard.intro));
+    }
+
+    const summaryCards = [
+        { label: 'States covered', value: `${mission.statesCovered?.current || 0}/${mission.statesCovered?.total || 0}` },
+        { label: 'Districts covered', value: `${mission.districtsCovered?.current || 0}/${mission.districtsCovered?.total || 0}` },
+        { label: 'Schools visited', value: fmt(mission.schoolsCovered?.current || 0) },
+        { label: 'Students reached', value: fmt(mission.studentsImpacted || 0) },
+        { label: 'Km travelled', value: fmt(mission.distanceTravelled || 0) }
+    ];
+    document.getElementById('dashboardSummary').innerHTML = summaryCards.map(card => `
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-xs font-bold uppercase tracking-wide text-slate-500">${card.label}</p>
+            <p class="mt-2 text-3xl font-extrabold text-slate-900">${card.value}</p>
+        </div>
+    `).join('');
+
+    const highlightsSection = document.getElementById('dashboardHighlightsSection');
+    const highlightsMount = document.getElementById('dashboardHighlights');
+    if (highlightsSection && highlightsMount) {
+        const highlights = (dashboard.highlights || []).filter(item =>
+            isNonEmptyText(item?.eyebrow) || isNonEmptyText(item?.title) || isNonEmptyText(item?.description)
+        );
+        if (isNonEmptyArray(highlights)) {
+            highlightsMount.innerHTML = highlights.map(item => `
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm">
+                    ${isNonEmptyText(item.eyebrow) ? `<p class="mb-2 text-xs font-bold uppercase tracking-wide text-slate-500">${item.eyebrow}</p>` : ''}
+                    <h5 class="font-extrabold text-slate-900">${item.title || ''}</h5>
+                    ${isNonEmptyText(item.description) ? `<p class="mt-2 text-sm text-slate-600 text-justify">${item.description}</p>` : ''}
+                </div>
+            `).join('');
+            setHidden(highlightsSection, false);
+        } else {
+            highlightsMount.innerHTML = '';
+            setHidden(highlightsSection, true);
+        }
+    }
+
+    const milestonesSection = document.getElementById('dashboardMilestonesSection');
+    const milestonesMount = document.getElementById('dashboardMilestones');
+    if (milestonesSection && milestonesMount) {
+        const milestones = (dashboard.milestones || []).filter(item =>
+            isNonEmptyText(item?.title) || isNonEmptyText(item?.description) || isNonEmptyText(item?.status) || isNonEmptyText(item?.state) || isNonEmptyText(item?.targetDate)
+        );
+        if (isNonEmptyArray(milestones)) {
+            milestonesMount.innerHTML = milestones.map(item => {
+                const status = item.status || '';
+                const statusClass = /planned|upcoming/i.test(status) ? 'pill-planning' : 'pill-execution';
+                return `
+                    <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <h5 class="font-extrabold text-slate-900">${item.title || ''}</h5>
+                                ${isNonEmptyText(item.state) ? `<p class="mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500">${item.state}</p>` : ''}
+                            </div>
+                            ${isNonEmptyText(status) ? `<span class="phase-pill ${statusClass}">${status}</span>` : ''}
+                        </div>
+                        ${isNonEmptyText(item.targetDate) ? `<p class="mt-3 text-xs uppercase tracking-wide text-slate-500">${formatDate(item.targetDate)}</p>` : ''}
+                        ${isNonEmptyText(item.description) ? `<p class="mt-2 text-sm text-slate-600 text-justify">${item.description}</p>` : ''}
+                    </div>
+                `;
+            }).join('');
+            setHidden(milestonesSection, false);
+        } else {
+            milestonesMount.innerHTML = '';
+            setHidden(milestonesSection, true);
+        }
+    }
+
+    const stateCoverage = (dashboard.stateCoverage || [])
+        .filter(state => isNonEmptyText(state?.state) || isNonEmptyArray(state?.schools));
+
+    const stateCoverageSection = document.getElementById('dashboardStateCoverageSection');
+    const stateProgress = document.getElementById('stateProgress');
+    if (stateProgress && stateCoverageSection) {
+        if (isNonEmptyArray(stateCoverage)) {
+            stateProgress.innerHTML = stateCoverage.slice(0, 3).map(state => {
+                const schools = (state.schools || []).filter(school =>
+                    isNonEmptyText(school?.name) ||
+                    isNonEmptyText(school?.district) ||
+                    isNonEmptyText(school?.date) ||
+                    isNonEmptyText(school?.mapLink) ||
+                    isNonEmptyText(school?.mediaLink)
+                );
+                const color = state.color || '#0f172a';
+                return `
+                    <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm card-hover">
+                        <div class="px-5 py-4 text-white" style="background: linear-gradient(135deg, ${color} 0%, ${color}CC 100%);">
+                            <div class="flex items-start justify-between gap-3">
+                                <div>
+                                    <h4 class="text-lg font-extrabold">${state.state}</h4>
+                                    ${isNonEmptyText(state.base) ? `<p class="mt-1 text-sm text-white/85">Base: ${state.base}</p>` : ''}
+                                </div>
+                                <div direction="rtl" class="rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wide w-40 text-center">
+                                    <p>${schools.length} schools</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-3 p-5">
+                            ${schools.map(school => {
+                                const actionButtons = [
+                                    isNonEmptyText(school.mapLink) ? `<a href="${school.mapLink}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-slate-700">Google Map</a>` : '',
+                                    isNonEmptyText(school.mediaLink) ? `<a href="${school.mediaLink}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-amber-400 px-3 py-1.5 text-xs font-semibold text-slate-900 transition hover:bg-amber-300">Media</a>` : ''
+                                ].filter(Boolean).join('');
+                                return `
+                                    <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                                        <div class="flex items-start justify-between gap-3">
+                                            <div>
+                                                <h5 class="font-extrabold text-slate-900">${school.name || ''}</h5>
+                                                <div class="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-slate-500">
+                                                    ${isNonEmptyText(school.district) ? `<span>${school.district}</span>` : ''}
+                                                    ${isNonEmptyText(school.date) ? `<span>${formatDate(school.date)}</span>` : ''}
+                                                    ${isNonEmptyText(school.students) ? `<span>${fmt(school.students)} students</span>` : ''}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        ${actionButtons ? `<div class="mt-3 flex flex-wrap gap-2">${actionButtons}</div>` : ''}
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </article>
+                `;
+            }).join('');
+            setHidden(stateCoverageSection, false);
+        } else {
+            stateProgress.innerHTML = '';
+            setHidden(stateCoverageSection, true);
+        }
+    }
+
+    const recentSection = document.getElementById('dashboardRecentSection');
+    const visitsTable = document.getElementById('visitsTable');
+    if (recentSection && visitsTable) {
+        if (dailyUpdates.length) {
+            const rows = [];
+            [...dailyUpdates].sort((a, b) => (b.date || '').localeCompare(a.date || '')).forEach(update =>
+                (update.schools || []).forEach(sc => rows.push({ date: update.date, ...sc })));
+            visitsTable.innerHTML = rows.slice(0, 15).map(row => `
+                <tr class="border-t border-slate-100">
+                    <td class="px-4 py-2 whitespace-nowrap">${row.date}</td>
+                    <td class="px-4 py-2 font-semibold">${row.galleryLink ? `<a class="text-blue-700 hover:underline" target="_blank" rel="noopener" href="${row.galleryLink}">${row.name}</a>` : row.name}</td>
+                    <td class="px-4 py-2">${row.district || ''}</td>
+                    <td class="px-4 py-2">${row.state || ''}</td>
+                    <td class="px-4 py-2 text-right">${fmt(row.studentsReached || 0)}</td>
+                    <td class="px-4 py-2 text-right">${fmt(row.girlsCount || 0)}</td>
+                    <td class="px-4 py-2 text-right">${fmt(row.boysCount || 0)}</td>
+                </tr>
+            `).join('');
+            setHidden(recentSection, false);
+        } else {
+            visitsTable.innerHTML = '';
+            setHidden(recentSection, true);
+        }
+    }
 }
 
 async function init() {
@@ -102,41 +303,7 @@ async function init() {
         [lg.districts, 'Districts'], [lg.distanceKm, 'Km travelled']
     ].map(([v, l]) => `<div><p class="text-4xl font-extrabold text-amber-300">${fmt(v)}</p><p class="text-xs uppercase tracking-wide text-cyan-200 mt-1">${l}</p></div>`).join('');
 
-    // Dashboard
-    const updates = data.dailyUpdates || [];
-    if (updates.length) {
-        document.getElementById('noUpdates').classList.add('hidden');
-        document.getElementById('updatesWrap').classList.remove('hidden');
-        // per-state progress
-        const byState = {};
-        updates.forEach(u => (u.schools || []).forEach(sc => {
-            const st = sc.state || 'Unknown';
-            byState[st] = byState[st] || { schools: 0, students: 0 };
-            byState[st].schools++;
-            byState[st].students += sc.studentsReached || 0;
-        }));
-        document.getElementById('stateProgress').innerHTML = data.states.map(s => {
-            const p = byState[s.name] || { schools: 0, students: 0 };
-            return `<div class="bg-white rounded-xl p-5 shadow border border-slate-200">
-                <p class="font-extrabold"><span class="state-dot" style="background:${s.color}"></span>${s.name}</p>
-                <p class="text-sm text-slate-600 mt-2">${p.schools} schools · ${fmt(p.students)} students</p>
-            </div>`;
-        }).join('');
-        // table of last 15 visits
-        const rows = [];
-        [...updates].sort((a, b) => b.date.localeCompare(a.date)).forEach(u =>
-            (u.schools || []).forEach(sc => rows.push({ date: u.date, ...sc })));
-        document.getElementById('visitsTable').innerHTML = rows.slice(0, 15).map(r => `
-            <tr class="border-t border-slate-100">
-                <td class="px-4 py-2 whitespace-nowrap">${r.date}</td>
-                <td class="px-4 py-2 font-semibold">${r.galleryLink ? `<a class="text-blue-700 hover:underline" target="_blank" rel="noopener" href="${r.galleryLink}">${r.name}</a>` : r.name}</td>
-                <td class="px-4 py-2">${r.district || ''}</td>
-                <td class="px-4 py-2">${r.state || ''}</td>
-                <td class="px-4 py-2 text-right">${fmt(r.studentsReached || 0)}</td>
-                <td class="px-4 py-2 text-right">${fmt(r.girlsCount || 0)}</td>
-                <td class="px-4 py-2 text-right">${fmt(r.boysCount || 0)}</td>
-            </tr>`).join('');
-    }
+    renderDashboard(data);
 
     // Student corner
     if (data.studentCorner) {

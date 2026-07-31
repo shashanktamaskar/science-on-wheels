@@ -185,17 +185,30 @@
     <!-- Dashboard -->
     <section id="dashboard" class="max-w-7xl mx-auto px-6 py-16">
         <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Mission Dashboard</h3>
-        <p class="text-slate-600 mb-8 text-justify" id="dashboardSubtitle">Live progress of the current phase. Updated as the van
-            rolls.</p>
-        <div id="noUpdates" class="bg-amber-50 border border-amber-200 rounded-xl p-8 text-center">
-            <p class="text-4xl mb-3">🚐</p>
-            <p class="font-bold text-slate-800 mb-1">The van is getting ready!</p>
-            <p class="text-slate-600 text-sm">School visits for the new phase will appear here once the mission starts
-                rolling. Meanwhile, see what we achieved in <a href="punjab.html"
-                    class="text-blue-700 underline font-semibold">Punjab 2025–26</a>.</p>
+        <div class="mt-4 mb-8">
+            <span id="dashboardPhaseBadge"
+                class="hidden inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-800"></span>
+            <h4 id="dashboardHeadline" class="mt-4 text-2xl font-extrabold text-slate-900 hidden"></h4>
+            <p id="dashboardIntro" class="mt-2 max-w-3xl text-slate-600 text-justify hidden"></p>
         </div>
-        <div id="updatesWrap" class="hidden">
-            <div class="grid md:grid-cols-3 gap-6 mb-8" id="stateProgress"></div>
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5 mb-4" id="dashboardSummary"></div>
+
+        <div id="dashboardHighlightsSection" class="mb-10 hidden">
+            <h4 class="font-extrabold text-slate-900 mb-4">Highlights</h4>
+            <div id="dashboardHighlights" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+
+        <div id="dashboardMilestonesSection" class="mb-10 hidden">
+            <h4 class="font-extrabold text-slate-900 mb-4">Milestones</h4>
+            <div id="dashboardMilestones" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+
+        <div id="dashboardStateCoverageSection" class="mb-10 hidden">
+            <h4 class="font-extrabold text-slate-900 mb-4">Coverage by State</h4>
+            <div class="grid md:grid-cols-3 gap-6" id="stateProgress"></div>
+        </div>
+
+        <div id="dashboardRecentSection" class="hidden">
             <h4 class="font-extrabold text-slate-900 mb-4">Recent school visits</h4>
             <div class="overflow-x-auto bg-white rounded-xl shadow border border-slate-200">
                 <table class="min-w-full text-sm">
