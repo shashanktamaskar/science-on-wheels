@@ -4,576 +4,1637 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Science on Wheels - Data Entry</title>
+    <meta name="robots" content="noindex, nofollow">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --bg: #07111f;
+            --bg-2: #10213d;
+            --panel: #0f172a;
+            --card: #ffffff;
+            --card-soft: #f8fafc;
+            --line: #dbe4ef;
+            --text: #0f172a;
+            --muted: #64748b;
+            --blue: #1d4ed8;
+            --blue-2: #2563eb;
+            --gold: #fbbf24;
+            --green: #059669;
+            --red: #dc2626;
+            --shadow: 0 20px 60px rgba(15, 23, 42, 0.18);
         }
 
+        * { box-sizing: border-box; }
+        html, body { margin: 0; min-height: 100%; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            min-height: 100vh;
+            font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(251, 191, 36, 0.15), transparent 24%),
+                radial-gradient(circle at top right, rgba(59, 130, 246, 0.20), transparent 20%),
+                linear-gradient(135deg, #08111f 0%, #10213d 45%, #15345d 100%);
+            color: var(--text);
+            padding: 24px;
         }
 
-        .container {
-            max-width: 900px;
+        .shell {
+            max-width: 1180px;
             margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            padding: 40px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-top {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            font-size: 12px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.66);
+            font-weight: 800;
         }
 
         h1 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 28px;
+            margin: 0;
+            font-size: clamp(30px, 4vw, 46px);
+            line-height: 1.05;
+            letter-spacing: -0.03em;
         }
 
-        .subtitle {
-            color: #666;
-            margin-bottom: 30px;
+        .hero-copy {
+            margin: 14px 0 0;
+            max-width: 860px;
+            color: rgba(255, 255, 255, 0.80);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .status {
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            color: rgba(255, 255, 255, 0.92);
             font-size: 14px;
         }
 
-        .section {
-            margin-bottom: 35px;
-            padding: 25px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
+        .panel {
+            margin-top: 18px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 28px;
+            padding: 22px;
+            box-shadow: var(--shadow);
         }
 
         .section-title {
-            font-size: 20px;
-            color: #667eea;
-            margin-bottom: 20px;
-            font-weight: 600;
+            margin: 0 0 8px;
+            font-size: 22px;
+            line-height: 1.2;
+            color: #0f172a;
+            letter-spacing: -0.02em;
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        .section-copy {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.6;
+            font-size: 14px;
         }
 
-        label {
+        .choice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .choice-card {
             display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        .help-text {
-            font-size: 12px;
-            color: #666;
-            margin-top: 4px;
-            font-style: italic;
-        }
-
-        input[type="text"],
-        input[type="number"],
-        input[type="date"],
-        input[type="url"],
-        select {
             width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 14px;
-            transition: border-color 0.3s;
-        }
-
-        input[type="text"]:focus,
-        input[type="number"]:focus,
-        input[type="date"]:focus,
-        input[type="url"]:focus,
-        select:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .school-entry {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 2px solid #e0e0e0;
-        }
-
-        .school-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .school-number {
-            font-weight: 600;
-            color: #667eea;
-            font-size: 16px;
-        }
-
-        .remove-btn {
-            background: #dc3545;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
+            text-align: left;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 18px;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
             cursor: pointer;
-            font-size: 12px;
-            transition: background 0.3s;
+            transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
         }
 
-        .remove-btn:hover {
-            background: #c82333;
-        }
-
-        .add-school-btn {
-            background: #28a745;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            width: 100%;
-            transition: background 0.3s;
-        }
-
-        .add-school-btn:hover {
-            background: #218838;
-        }
-
-        .row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .row-3 {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 15px;
-        }
-
-        .generate-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            width: 100%;
-            transition: transform 0.2s;
-            margin-top: 20px;
-        }
-
-        .generate-btn:hover {
+        .choice-card:hover {
             transform: translateY(-2px);
+            border-color: rgba(37, 99, 235, 0.30);
+            box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12);
         }
 
-        .output-section {
-            margin-top: 30px;
-            padding: 25px;
-            background: #f8f9fa;
-            border-radius: 10px;
+        .choice-card strong {
+            display: block;
+            font-size: 18px;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+
+        .choice-card span {
+            display: block;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .editor {
             display: none;
         }
 
-        .output-section.show {
+        .editor.show {
             display: block;
         }
 
-        .output-box {
-            background: #2d3748;
-            color: #a0aec0;
-            padding: 20px;
-            border-radius: 8px;
-            font-family: 'Courier New', monospace;
-            font-size: 12px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            max-height: 400px;
-            overflow-y: auto;
+        .editor-head {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
         }
 
-        .copy-btn {
-            background: #667eea;
-            color: white;
+        .editor-meta {
+            min-width: 240px;
+        }
+
+        .back-btn,
+        .primary-btn,
+        .secondary-btn,
+        .chip-btn {
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 14px;
+            font-weight: 800;
             cursor: pointer;
-            margin-top: 10px;
-            font-size: 14px;
+            transition: transform .15s ease, opacity .15s ease, background .15s ease;
         }
 
-        .copy-btn:hover {
-            background: #5568d3;
+        .back-btn:hover,
+        .primary-btn:hover,
+        .secondary-btn:hover,
+        .chip-btn:hover {
+            transform: translateY(-1px);
+            opacity: .95;
         }
 
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 12px;
-            border-radius: 5px;
-            margin-top: 10px;
-            display: none;
+        .back-btn {
+            background: #e2e8f0;
+            color: #0f172a;
+            padding: 12px 16px;
         }
 
-        .success-message.show {
-            display: block;
-        }
-
-        .error {
-            border-color: #dc3545 !important;
-        }
-
-        .error-message {
-            color: #dc3545;
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: #dbeafe;
+            color: #1d4ed8;
             font-size: 12px;
-            margin-top: 5px;
-            display: none;
+            font-weight: 900;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
         }
 
-        .error-message.show {
+        .editor-title {
+            margin: 0;
+            font-size: 28px;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: #0f172a;
+        }
+
+        .editor-help {
+            margin: 8px 0 0;
+            color: var(--muted);
+            line-height: 1.55;
+            font-size: 14px;
+            max-width: 880px;
+        }
+
+        .form-wrap {
+            display: grid;
+            gap: 16px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 18px;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+        }
+
+        .card.soft {
+            background: var(--card-soft);
+        }
+
+        .card h3 {
+            margin: 0 0 12px;
+            font-size: 18px;
+            color: #0f172a;
+        }
+
+        .field-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .span-2 {
+            grid-column: span 2;
+        }
+
+        .span-3 {
+            grid-column: span 3;
+        }
+
+        .field label {
             display: block;
+            margin: 0 0 6px;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            color: #334155;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 11px 12px;
+            font: inherit;
+            color: #0f172a;
+            background: #fff;
+        }
+
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+        }
+
+        .help {
+            margin-top: 6px;
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.45;
+        }
+
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+
+        .toolbar .left,
+        .toolbar .right {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 7px 11px;
+            background: #f1f5f9;
+            color: #334155;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .repeat-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .repeat-item {
+            border: 1px solid #dbe4ef;
+            border-radius: 18px;
+            background: #fff;
+            padding: 16px;
+        }
+
+        .repeat-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .repeat-top strong {
+            font-size: 16px;
+            color: #0f172a;
+        }
+
+        .mini-btn {
+            border: 1px solid #fecaca;
+            background: #fff1f2;
+            color: #b91c1c;
+            padding: 8px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        .mini-btn.alt {
+            border-color: #cbd5e1;
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        .stack {
+            display: grid;
+            gap: 14px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn {
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            color: white;
+            padding: 14px 18px;
+        }
+
+        .secondary-btn {
+            background: #e2e8f0;
+            color: #0f172a;
+            padding: 14px 18px;
+        }
+
+        .chip-btn {
+            background: #fbbf24;
+            color: #0f172a;
+            padding: 10px 14px;
+            font-size: 13px;
+        }
+
+        .preview {
+            display: none;
+            margin-top: 18px;
+        }
+
+        .preview.show {
+            display: block;
+        }
+
+        .preview-box {
+            width: 100%;
+            min-height: 320px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: #0f172a;
+            color: #dbe4ef;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 12px;
+            line-height: 1.55;
+            padding: 16px;
+            overflow: auto;
+            white-space: pre;
+        }
+
+        .notice {
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 14px; }
+            .hero, .panel { border-radius: 22px; }
+            .field-grid { grid-template-columns: 1fr; }
+            .span-2, .span-3 { grid-column: auto; }
+            .editor-title { font-size: 24px; }
+            .choice-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🚐 Science on Wheels - Data Entry Tool</h1>
-        <p class="subtitle">Enter school visit data easily - just paste Google Maps links!</p>
-
-        <form id="dataEntryForm">
-            <!-- Date Section -->
-            <div class="section">
-                <h2 class="section-title">📅 Visit Date</h2>
-                <div class="form-group">
-                    <label for="visitDate">Date of Visit *</label>
-                    <input type="date" id="visitDate" required>
+    <div class="shell">
+        <header class="hero">
+            <div class="hero-top">
+                <div>
+                    <p class="eyebrow">Science on Wheels data entry</p>
+                    <h1>Choose the content type first, then edit only what belongs there.</h1>
+                    <p class="hero-copy">
+                        Daily updates have their own flow, while titles, dashboard copy and other static values are auto-filled from
+                        <code>data-sow.json</code>. Optional links can stay empty, and the preview will only keep the fields you fill.
+                    </p>
                 </div>
+                <div class="pill">data-sow.json editor</div>
             </div>
+            <div id="loadStatus" class="status">Loading current website data…</div>
+        </header>
 
-            <!-- Schools Section -->
-            <div class="section">
-                <h2 class="section-title">🏫 Schools Visited</h2>
-                <div id="schoolsContainer"></div>
-                <button type="button" class="add-school-btn" onclick="addSchool()">+ Add School</button>
-            </div>
+        <main class="panel">
+            <section id="choiceScreen">
+                <h2 class="section-title">What do you want to edit?</h2>
+                <p class="section-copy">Pick one path. The next screen changes based on the data type, so the form stays focused.</p>
+                <div class="choice-grid">
+                    <button class="choice-card" type="button" data-mode="daily">
+                        <strong>Daily updates</strong>
+                        <span>Add a new visit or open an existing daily update to change school names, dates, totals, links or notes.</span>
+                    </button>
+                    <button class="choice-card" type="button" data-mode="static">
+                        <strong>Static content</strong>
+                        <span>Edit titles, subtitles, dashboard copy and other non-daily content that should be auto-filled first.</span>
+                    </button>
+                    <button class="choice-card" type="button" data-mode="coverage">
+                        <strong>Coverage by state</strong>
+                        <span>Maintain the three state cards with school entries, Google Map links and OneDrive media links.</span>
+                    </button>
+                    <button class="choice-card" type="button" data-mode="custom">
+                        <strong>Add new field</strong>
+                        <span>Add a new top-level field or place a value under an existing object without rewriting the whole file.</span>
+                    </button>
+                </div>
+            </section>
 
-            <!-- Route Section -->
-            <div class="section">
-                <h2 class="section-title">🗺️ Route Information</h2>
-                <div class="row">
-                    <div class="form-group">
-                        <label for="startPointName">Start Point Name *</label>
-                        <input type="text" id="startPointName" placeholder="e.g., Ludhiana" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="startPointLink">Start Point Maps Link *</label>
-                        <input type="url" id="startPointLink" placeholder="Paste Google Maps link">
-                        <div class="help-text">Paste link like: https://maps.app.goo.gl/...</div>
+            <section id="editorScreen" class="editor">
+                <div class="editor-head">
+                    <button type="button" class="back-btn" id="backBtn">← Back to choices</button>
+                    <div class="editor-meta">
+                        <div id="modeBadge" class="mode-badge"></div>
+                        <h2 id="modeTitle" class="editor-title"></h2>
+                        <p id="modeHelp" class="editor-help"></p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="form-group">
-                        <label for="endPointName">End Point Name *</label>
-                        <input type="text" id="endPointName" placeholder="e.g., Ludhiana" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="endPointLink">End Point Maps Link *</label>
-                        <input type="url" id="endPointLink" placeholder="Paste Google Maps link">
-                        <div class="help-text">Paste link like: https://maps.app.goo.gl/...</div>
-                    </div>
-                </div>
-            </div>
 
-            <button type="submit" class="generate-btn">🎯 Generate Data</button>
-        </form>
+                <form id="editorForm" class="form-wrap" autocomplete="off">
+                    <div id="formMount"></div>
+                    <div class="actions">
+                        <button type="button" class="primary-btn" id="previewBtn">Generate preview</button>
+                        <button type="button" class="secondary-btn" id="resetBtn">Reset form</button>
+                    </div>
+                </form>
 
-        <!-- Output Section -->
-        <div id="outputSection" class="output-section">
-            <h2 class="section-title">📋 Generated Data</h2>
-            <div class="output-box" id="outputBox"></div>
-            <button class="copy-btn" onclick="copyOutput()">📋 Copy to Clipboard</button>
-            <div class="success-message" id="successMessage">✅ Copied to clipboard!</div>
-        </div>
+                <section id="previewSection" class="preview">
+                    <div class="card soft">
+                        <h3>Generated JSON preview</h3>
+                        <textarea id="jsonPreview" class="preview-box" readonly></textarea>
+                        <div class="notice" id="previewNotice"></div>
+                        <div class="actions" style="margin-top: 12px;">
+                            <button type="button" class="primary-btn" id="copyBtn">Copy JSON</button>
+                            <button type="button" class="secondary-btn" id="downloadBtn">Download JSON</button>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
     </div>
 
     <script>
-        let schoolCount = 0;
+        const DATA_URL = 'data-sow.json?v=' + Date.now();
+        const TODAY = new Date().toISOString().slice(0, 10);
+        const $ = id => document.getElementById(id);
+        const fmt = value => Number.isFinite(Number(value)) ? Number(value).toLocaleString('en-IN') : '0';
 
-        // Initialize with one school
-        window.onload = function() {
-            addSchool();
-        };
+        let SOURCE = null;
+        let WORKING = null;
+        let MODE = null;
+        let SELECTED_DAILY_INDEX = null;
 
-        function addSchool() {
-            schoolCount++;
-            const container = document.getElementById('schoolsContainer');
-            const schoolDiv = document.createElement('div');
-            schoolDiv.className = 'school-entry';
-            schoolDiv.id = `school-${schoolCount}`;
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, ch => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                '\'': '&#39;'
+            }[ch]));
+        }
 
-            schoolDiv.innerHTML = `
-                <div class="school-header">
-                    <span class="school-number">School #${schoolCount}</span>
-                    ${schoolCount > 1 ? `<button type="button" class="remove-btn" onclick="removeSchool(${schoolCount})">Remove</button>` : ''}
-                </div>
+        function clone(value) {
+            return JSON.parse(JSON.stringify(value));
+        }
 
-                <div class="form-group">
-                    <label>School Name *</label>
-                    <input type="text" id="schoolName-${schoolCount}" placeholder="e.g., GSSS-KASABAD" required>
-                </div>
+        function blankData() {
+            return {
+                lastUpdated: TODAY,
+                projectInfo: { title: '', subtitle: '', phase: '', startDate: '', endDate: '', status: '' },
+                dashboard: {
+                    headline: '',
+                    intro: '',
+                    highlights: [],
+                    milestones: [],
+                    stateCoverage: []
+                },
+                mission: {
+                    schoolsCovered: { current: 0, total: 0 },
+                    statesCovered: { current: 0, total: 0 },
+                    districtsCovered: { current: 0, total: 0 },
+                    studentsImpacted: 0,
+                    genderBreakdown: { girls: 0, boys: 0 },
+                    distanceTravelled: 0
+                },
+                states: [],
+                contact: { email: '', piEmail: '', address: '', website: '' },
+                studentCorner: { heading: '', text: '', formUrl: '' },
+                dailyUpdates: [],
+                partners: []
+            };
+        }
 
-                <div class="form-group">
-                    <label>Google Maps Link *</label>
-                    <input type="url" id="schoolMapLink-${schoolCount}" placeholder="Paste Google Maps link" required>
-                    <div class="help-text">Right-click on Google Maps location → Share → Copy link</div>
-                </div>
+        function ensureObject(root, key, fallback = {}) {
+            if (!root[key] || typeof root[key] !== 'object' || Array.isArray(root[key])) {
+                root[key] = clone(fallback);
+            }
+            return root[key];
+        }
 
-                <div class="form-group">
-                    <label>District *</label>
-                    <input type="text" id="schoolDistrict-${schoolCount}" placeholder="e.g., Ludhiana" required>
-                </div>
+        function ensureArray(root, key) {
+            if (!Array.isArray(root[key])) {
+                root[key] = [];
+            }
+            return root[key];
+        }
 
-                <div class="row-3">
-                    <div class="form-group">
-                        <label>Total Students *</label>
-                        <input type="number" id="schoolStudents-${schoolCount}" min="0" required>
+        function stateOptions(selected = '') {
+            return (SOURCE?.states || []).map(state => `
+                <option value="${escapeHtml(state.name)}" ${state.name === selected ? 'selected' : ''}>${escapeHtml(state.name)}</option>
+            `).join('');
+        }
+
+        function modeCopy(mode) {
+            const map = {
+                daily: {
+                    badge: 'Daily updates',
+                    title: 'Create or edit a daily visit update',
+                    help: 'Use this for the fields that change every field day: date, school rows, students, girls, boys, map links, gallery links and notes. Existing entries can be opened and edited, so older names or dates can be corrected too.'
+                },
+                static: {
+                    badge: 'Static content',
+                    title: 'Edit titles, dashboard copy and other static values',
+                    help: 'These fields are auto-filled from the current JSON first. Change them only when the website copy, project info or dashboard text needs a refresh.'
+                },
+                coverage: {
+                    badge: 'Coverage by state',
+                    title: 'Maintain the three state coverage cards',
+                    help: 'Each state card can hold multiple school entries. Fill the school name, date, district, students and the optional Google Map and OneDrive media links. Either link may be blank.'
+                },
+                custom: {
+                    badge: 'Custom field',
+                    title: 'Add a new data field or update an existing one',
+                    help: 'Use this when the JSON needs a new top-level field or a new nested value that does not belong in the other editors.'
+                }
+            };
+            return map[mode] || map.static;
+        }
+
+        function renderDailySchoolRow(school = {}, index = 0) {
+            return `
+                <article class="repeat-item" data-daily-school-row>
+                    <div class="repeat-top">
+                        <strong>School ${index + 1}</strong>
+                        <button type="button" class="mini-btn" onclick="removeDailySchool(this)">Remove school</button>
                     </div>
-                    <div class="form-group">
-                        <label>Girls *</label>
-                        <input type="number" id="schoolGirls-${schoolCount}" min="0" required>
+                    <div class="field-grid">
+                        <div class="field span-2">
+                            <label>School name *</label>
+                            <input type="text" data-field="name" value="${escapeHtml(school.name || '')}" placeholder="e.g. Govt. Higher Secondary School, Rajnandgaon">
+                        </div>
+                        <div class="field">
+                            <label>District</label>
+                            <input type="text" data-field="district" value="${escapeHtml(school.district || '')}" placeholder="e.g. Rajnandgaon">
+                        </div>
+                        <div class="field">
+                            <label>Students reached</label>
+                            <input type="number" min="0" data-field="studentsReached" value="${escapeHtml(school.studentsReached ?? school.students ?? '')}">
+                        </div>
+                        <div class="field">
+                            <label>Girls</label>
+                            <input type="number" min="0" data-field="girlsCount" value="${escapeHtml(school.girlsCount ?? school.girls ?? '')}">
+                        </div>
+                        <div class="field">
+                            <label>Boys</label>
+                            <input type="number" min="0" data-field="boysCount" value="${escapeHtml(school.boysCount ?? school.boys ?? '')}">
+                        </div>
+                        <div class="field span-2">
+                            <label>Google Maps link</label>
+                            <input type="url" data-field="mapLink" value="${escapeHtml(school.mapLink || '')}" placeholder="Paste the Google Maps link for this school">
+                            <div class="help">Optional. If the link contains coordinates, they will be stored in the JSON for map rendering.</div>
+                        </div>
+                        <div class="field span-2">
+                            <label>Gallery link</label>
+                            <input type="url" data-field="galleryLink" value="${escapeHtml(school.galleryLink || '')}" placeholder="Optional photo gallery link">
+                        </div>
+                        <div class="field span-2">
+                            <label>Media link</label>
+                            <input type="url" data-field="mediaLink" value="${escapeHtml(school.mediaLink || '')}" placeholder="Optional OneDrive or video link">
+                        </div>
+                        <div class="field span-2">
+                            <label>Collage image filename</label>
+                            <input type="text" data-field="collageImage" value="${escapeHtml(school.collageImage || '')}" placeholder="Optional file name">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Boys *</label>
-                        <input type="number" id="schoolBoys-${schoolCount}" min="0" required>
+                </article>
+            `;
+        }
+
+        function renderCoverageSchoolRow(school = {}, index = 0, stateIndex = 0) {
+            return `
+                <article class="repeat-item" data-coverage-school-row>
+                    <div class="repeat-top">
+                        <strong>School ${index + 1}</strong>
+                        <button type="button" class="mini-btn" onclick="removeCoverageSchool(this)">Remove school</button>
+                    </div>
+                    <div class="field-grid">
+                        <div class="field span-2">
+                            <label>School name</label>
+                            <input type="text" data-field="name" value="${escapeHtml(school.name || '')}" placeholder="School visited in this state">
+                        </div>
+                        <div class="field">
+                            <label>District</label>
+                            <input type="text" data-field="district" value="${escapeHtml(school.district || '')}" placeholder="District">
+                        </div>
+                        <div class="field">
+                            <label>Date</label>
+                            <input type="date" data-field="date" value="${escapeHtml(school.date || '')}">
+                        </div>
+                        <div class="field">
+                            <label>Students</label>
+                            <input type="number" min="0" data-field="students" value="${escapeHtml(school.students ?? '')}">
+                        </div>
+                        <div class="field span-2">
+                            <label>Google Map link</label>
+                            <input type="url" data-field="mapLink" value="${escapeHtml(school.mapLink || '')}" placeholder="Optional Google Maps link">
+                        </div>
+                        <div class="field span-2">
+                            <label>OneDrive media link</label>
+                            <input type="url" data-field="mediaLink" value="${escapeHtml(school.mediaLink || '')}" placeholder="Optional media link">
+                        </div>
+                    </div>
+                </article>
+            `;
+        }
+
+        function renderHighlightRow(item = {}, index = 0) {
+            return `
+                <article class="repeat-item" data-highlight-row>
+                    <div class="repeat-top">
+                        <strong>Highlight ${index + 1}</strong>
+                        <button type="button" class="mini-btn" onclick="removeHighlight(this)">Remove highlight</button>
+                    </div>
+                    <div class="field-grid">
+                        <div class="field">
+                            <label>Eyebrow</label>
+                            <input type="text" data-field="eyebrow" value="${escapeHtml(item.eyebrow || '')}" placeholder="Optional label">
+                        </div>
+                        <div class="field">
+                            <label>Title</label>
+                            <input type="text" data-field="title" value="${escapeHtml(item.title || '')}" placeholder="Short title">
+                        </div>
+                        <div class="field span-2">
+                            <label>Description</label>
+                            <textarea data-field="description" placeholder="Short explanation">${escapeHtml(item.description || '')}</textarea>
+                        </div>
+                    </div>
+                </article>
+            `;
+        }
+
+        function renderMilestoneRow(item = {}, index = 0) {
+            return `
+                <article class="repeat-item" data-milestone-row>
+                    <div class="repeat-top">
+                        <strong>Milestone ${index + 1}</strong>
+                        <button type="button" class="mini-btn" onclick="removeMilestone(this)">Remove milestone</button>
+                    </div>
+                    <div class="field-grid">
+                        <div class="field">
+                            <label>Title</label>
+                            <input type="text" data-field="title" value="${escapeHtml(item.title || '')}" placeholder="Milestone title">
+                        </div>
+                        <div class="field">
+                            <label>State</label>
+                            <input type="text" data-field="state" value="${escapeHtml(item.state || '')}" placeholder="State name">
+                        </div>
+                        <div class="field">
+                            <label>Status</label>
+                            <input type="text" data-field="status" value="${escapeHtml(item.status || '')}" placeholder="Planned, upcoming, in progress">
+                        </div>
+                        <div class="field">
+                            <label>Target date</label>
+                            <input type="date" data-field="targetDate" value="${escapeHtml(item.targetDate || '')}">
+                        </div>
+                        <div class="field span-2">
+                            <label>Description</label>
+                            <textarea data-field="description" placeholder="Milestone notes">${escapeHtml(item.description || '')}</textarea>
+                        </div>
+                    </div>
+                </article>
+            `;
+        }
+
+        function renderStaticForm(data) {
+            const projectInfo = data.projectInfo || {};
+            const dashboard = data.dashboard || {};
+            const contact = data.contact || {};
+            const studentCorner = data.studentCorner || {};
+            const highlights = Array.isArray(dashboard.highlights) ? dashboard.highlights : [];
+            const milestones = Array.isArray(dashboard.milestones) ? dashboard.milestones : [];
+
+            return `
+                <div class="card">
+                    <h3>Project info</h3>
+                    <div class="field-grid">
+                        <div class="field span-2">
+                            <label>Title</label>
+                            <input type="text" id="projectTitle" value="${escapeHtml(projectInfo.title || '')}">
+                        </div>
+                        <div class="field span-2">
+                            <label>Subtitle</label>
+                            <input type="text" id="projectSubtitle" value="${escapeHtml(projectInfo.subtitle || '')}">
+                        </div>
+                        <div class="field">
+                            <label>Phase</label>
+                            <input type="text" id="projectPhase" value="${escapeHtml(projectInfo.phase || '')}">
+                        </div>
+                        <div class="field">
+                            <label>Status</label>
+                            <input type="text" id="projectStatus" value="${escapeHtml(projectInfo.status || '')}">
+                        </div>
+                        <div class="field">
+                            <label>Start date</label>
+                            <input type="date" id="projectStartDate" value="${escapeHtml(projectInfo.startDate || '')}">
+                        </div>
+                        <div class="field">
+                            <label>End date</label>
+                            <input type="date" id="projectEndDate" value="${escapeHtml(projectInfo.endDate || '')}">
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Gallery Link (SharePoint) *</label>
-                    <input type="url" id="schoolGallery-${schoolCount}" placeholder="SharePoint folder link" required>
+                <div class="card">
+                    <h3>Dashboard copy</h3>
+                    <div class="field-grid">
+                        <div class="field span-2">
+                            <label>Headline</label>
+                            <input type="text" id="dashboardHeadline" value="${escapeHtml(dashboard.headline || '')}">
+                        </div>
+                        <div class="field span-2">
+                            <label>Intro</label>
+                            <textarea id="dashboardIntro">${escapeHtml(dashboard.intro || '')}</textarea>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Collage Image Filename *</label>
-                    <input type="text" id="schoolCollage-${schoolCount}" placeholder="e.g., GSSS-KASABAD.jpg" required>
+                <div class="card">
+                    <div class="toolbar">
+                        <div>
+                            <h3 style="margin-bottom:6px;">Highlights</h3>
+                            <p class="section-copy">Short cards for route prep, media plans or any other non-daily updates.</p>
+                        </div>
+                        <button type="button" class="chip-btn" onclick="addHighlight()">+ Add highlight</button>
+                    </div>
+                    <div id="highlightsMount" class="repeat-list">
+                        ${highlights.length ? highlights.map((item, index) => renderHighlightRow(item, index)).join('') : renderHighlightRow({}, 0)}
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="toolbar">
+                        <div>
+                            <h3 style="margin-bottom:6px;">Milestones</h3>
+                            <p class="section-copy">Use these for planned steps, upcoming launches or status updates that are not tied to a single day.</p>
+                        </div>
+                        <button type="button" class="chip-btn" onclick="addMilestone()">+ Add milestone</button>
+                    </div>
+                    <div id="milestonesMount" class="repeat-list">
+                        ${milestones.length ? milestones.map((item, index) => renderMilestoneRow(item, index)).join('') : renderMilestoneRow({}, 0)}
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Student corner and contact</h3>
+                    <div class="field-grid">
+                        <div class="field span-2">
+                            <label>Student heading</label>
+                            <input type="text" id="studentHeading" value="${escapeHtml(studentCorner.heading || '')}">
+                        </div>
+                        <div class="field span-2">
+                            <label>Student text</label>
+                            <textarea id="studentText">${escapeHtml(studentCorner.text || '')}</textarea>
+                        </div>
+                        <div class="field">
+                            <label>Student form URL</label>
+                            <input type="text" id="studentFormUrl" value="${escapeHtml(studentCorner.formUrl || '')}">
+                        </div>
+                        <div class="field">
+                            <label>Contact email</label>
+                            <input type="email" id="contactEmail" value="${escapeHtml(contact.email || '')}">
+                        </div>
+                        <div class="field">
+                            <label>PI email</label>
+                            <input type="email" id="contactPiEmail" value="${escapeHtml(contact.piEmail || '')}">
+                        </div>
+                        <div class="field span-2">
+                            <label>Address</label>
+                            <textarea id="contactAddress">${escapeHtml(contact.address || '')}</textarea>
+                        </div>
+                        <div class="field span-2">
+                            <label>Website</label>
+                            <input type="text" id="contactWebsite" value="${escapeHtml(contact.website || '')}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card soft">
+                    <h3>Live stats note</h3>
+                    <p class="section-copy">Mission totals are usually driven by the daily update editor. This screen keeps the copy-heavy values prefilled so you can adjust them only when needed.</p>
+                    <div class="field-grid" style="margin-top: 14px;">
+                        <div class="field">
+                            <label>Schools covered current</label>
+                            <input type="number" id="missionSchoolsCurrent" min="0" value="${escapeHtml(data.mission?.schoolsCovered?.current ?? 0)}">
+                        </div>
+                        <div class="field">
+                            <label>Schools covered total</label>
+                            <input type="number" id="missionSchoolsTotal" min="0" value="${escapeHtml(data.mission?.schoolsCovered?.total ?? 0)}">
+                        </div>
+                        <div class="field">
+                            <label>States covered current</label>
+                            <input type="number" id="missionStatesCurrent" min="0" value="${escapeHtml(data.mission?.statesCovered?.current ?? 0)}">
+                        </div>
+                        <div class="field">
+                            <label>States covered total</label>
+                            <input type="number" id="missionStatesTotal" min="0" value="${escapeHtml(data.mission?.statesCovered?.total ?? 0)}">
+                        </div>
+                        <div class="field">
+                            <label>Districts covered current</label>
+                            <input type="number" id="missionDistrictsCurrent" min="0" value="${escapeHtml(data.mission?.districtsCovered?.current ?? 0)}">
+                        </div>
+                        <div class="field">
+                            <label>Districts covered total</label>
+                            <input type="number" id="missionDistrictsTotal" min="0" value="${escapeHtml(data.mission?.districtsCovered?.total ?? 0)}">
+                        </div>
+                        <div class="field">
+                            <label>Students impacted</label>
+                            <input type="number" id="missionStudents" min="0" value="${escapeHtml(data.mission?.studentsImpacted ?? 0)}">
+                        </div>
+                        <div class="field">
+                            <label>Distance travelled</label>
+                            <input type="number" id="missionDistance" min="0" value="${escapeHtml(data.mission?.distanceTravelled ?? 0)}">
+                        </div>
+                        <div class="field">
+                            <label>Girls reached</label>
+                            <input type="number" id="missionGirls" min="0" value="${escapeHtml(data.mission?.genderBreakdown?.girls ?? 0)}">
+                        </div>
+                        <div class="field">
+                            <label>Boys reached</label>
+                            <input type="number" id="missionBoys" min="0" value="${escapeHtml(data.mission?.genderBreakdown?.boys ?? 0)}">
+                        </div>
+                    </div>
                 </div>
             `;
-
-            container.appendChild(schoolDiv);
         }
 
-        function removeSchool(id) {
-            const schoolDiv = document.getElementById(`school-${id}`);
-            schoolDiv.remove();
+        function renderDailyForm(data) {
+            const entries = Array.isArray(data.dailyUpdates) ? data.dailyUpdates : [];
+            const current = SELECTED_DAILY_INDEX === null ? null : entries[SELECTED_DAILY_INDEX];
+            const daily = current || {
+                date: TODAY,
+                state: data.states?.[0]?.name || '',
+                distanceKm: '',
+                notes: '',
+                summary: '',
+                schools: [{},]
+            };
+            const schools = Array.isArray(daily.schools) && daily.schools.length ? daily.schools : [{}];
+            const selectorOptions = [
+                '<option value="new">Create a new daily update</option>',
+                ...entries.map((entry, index) => {
+                    const label = [entry.date || 'No date', entry.state || 'No state', `${Array.isArray(entry.schools) ? entry.schools.length : 0} school(s)`].join(' · ');
+                    return `<option value="${index}" ${SELECTED_DAILY_INDEX === index ? 'selected' : ''}>${escapeHtml(label)}</option>`;
+                })
+            ].join('');
+
+            return `
+                <div class="card">
+                    <h3>Open an existing update or start a new one</h3>
+                    <div class="field-grid">
+                        <div class="field span-2">
+                            <label>Daily update</label>
+                            <select id="dailySelector" onchange="loadDailyEntry(this.value)">
+                                ${selectorOptions}
+                            </select>
+                            <div class="help">Choose an existing entry if you need to correct a school name, date, district or totals.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Visit details</h3>
+                    <div class="field-grid">
+                        <div class="field">
+                            <label>Date</label>
+                            <input type="date" id="dailyDate" value="${escapeHtml(daily.date || TODAY)}">
+                        </div>
+                        <div class="field">
+                            <label>State</label>
+                            <select id="dailyState">
+                                ${stateOptions(daily.state || '')}
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Distance travelled (km)</label>
+                            <input type="number" id="dailyDistance" min="0" value="${escapeHtml(daily.distanceKm ?? '')}">
+                        </div>
+                        <div class="field">
+                            <label>Vehicle / batch</label>
+                            <input type="number" id="dailyVehicle" min="1" value="${escapeHtml(daily.vehicle || 1)}">
+                        </div>
+                        <div class="field span-2">
+                            <label>Summary note</label>
+                            <textarea id="dailySummary">${escapeHtml(daily.summary || '')}</textarea>
+                        </div>
+                        <div class="field span-2">
+                            <label>Additional notes</label>
+                            <textarea id="dailyNotes">${escapeHtml(daily.notes || '')}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="toolbar">
+                        <div>
+                            <h3 style="margin-bottom:6px;">Schools visited</h3>
+                            <p class="section-copy">Add one row per school. If a map link is present, the tool will try to store coordinates for map display.</p>
+                        </div>
+                        <button type="button" class="chip-btn" onclick="addDailySchool()">+ Add school</button>
+                    </div>
+                    <div id="dailySchoolsMount" class="repeat-list">
+                        ${schools.map((school, index) => renderDailySchoolRow(school, index)).join('')}
+                    </div>
+                </div>
+            `;
         }
 
-        // Extract coordinates from Google Maps link
-        async function extractCoordinates(mapsLink) {
-            try {
-                // Handle different Google Maps URL formats
-                let coords = null;
+        function renderCoverageForm(data) {
+            const states = Array.isArray(data.dashboard?.stateCoverage) && data.dashboard.stateCoverage.length
+                ? data.dashboard.stateCoverage
+                : (Array.isArray(data.states) ? data.states.map(state => ({
+                    state: state.name || '',
+                    base: state.base || '',
+                    color: state.color || '#0f172a',
+                    schools: []
+                })) : []);
 
-                // Format 1: https://maps.app.goo.gl/xxxxx (shortened link - needs to be expanded)
-                if (mapsLink.includes('maps.app.goo.gl') || mapsLink.includes('goo.gl')) {
-                    // Try to extract from the URL after it redirects
-                    const response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(mapsLink)}`);
-                    const text = await response.text();
-                    const match = text.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
-                    if (match) {
-                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-                    }
-                }
+            return `
+                <div class="card">
+                    <h3>State coverage cards</h3>
+                    <p class="section-copy">These are the three coverage cards shown on the dashboard. Each state can have multiple school rows, and each row can keep a map link, a media link or both.</p>
+                </div>
+                <div class="stack">
+                    ${states.map((state, stateIndex) => {
+                        const schools = Array.isArray(state.schools) && state.schools.length ? state.schools : [{}];
+                        return `
+                            <div class="card">
+                                <div class="toolbar">
+                                    <div>
+                                        <h3 style="margin-bottom:6px;">${escapeHtml(state.state || `State ${stateIndex + 1}`)}</h3>
+                                        <p class="section-copy">Fill the rows for this state. If you change the base or colour, the dashboard card updates too.</p>
+                                    </div>
+                                    <span class="pill">${schools.length} school row(s)</span>
+                                </div>
+                                <div class="field-grid">
+                                    <div class="field">
+                                        <label>State name</label>
+                                        <input type="text" data-state-field="state" data-state-index="${stateIndex}" value="${escapeHtml(state.state || '')}">
+                                    </div>
+                                    <div class="field">
+                                        <label>Base</label>
+                                        <input type="text" data-state-field="base" data-state-index="${stateIndex}" value="${escapeHtml(state.base || '')}">
+                                    </div>
+                                    <div class="field">
+                                        <label>Colour</label>
+                                        <input type="text" data-state-field="color" data-state-index="${stateIndex}" value="${escapeHtml(state.color || '')}" placeholder="#0ea5e9">
+                                    </div>
+                                </div>
+                                <div class="toolbar" style="margin-top: 14px;">
+                                    <div>
+                                        <strong>Visited schools</strong>
+                                        <div class="help">Old school names or dates can be corrected here at any time.</div>
+                                    </div>
+                                    <button type="button" class="chip-btn" onclick="addCoverageSchool(${stateIndex})">+ Add school</button>
+                                </div>
+                                <div class="repeat-list" data-coverage-schools data-state-index="${stateIndex}">
+                                    ${schools.map((school, index) => renderCoverageSchoolRow(school, index, stateIndex)).join('')}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
 
-                // Format 2: https://www.google.com/maps/place/.../@lat,lng
-                if (!coords && mapsLink.includes('@')) {
-                    const match = mapsLink.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
-                    if (match) {
-                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-                    }
-                }
+        function renderCustomForm(data) {
+            return `
+                <div class="card">
+                    <h3>Add a new field</h3>
+                    <div class="field-grid">
+                        <div class="field">
+                            <label>Target section</label>
+                            <select id="customTarget">
+                                <option value="root">Root level</option>
+                                <option value="projectInfo">projectInfo</option>
+                                <option value="dashboard">dashboard</option>
+                                <option value="mission">mission</option>
+                                <option value="contact">contact</option>
+                                <option value="studentCorner">studentCorner</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Field name</label>
+                            <input type="text" id="customFieldName" placeholder="e.g. dashboardVideoCredit">
+                        </div>
+                        <div class="field">
+                            <label>Value type</label>
+                            <select id="customFieldType">
+                                <option value="text">Text</option>
+                                <option value="number">Number</option>
+                                <option value="boolean">Boolean</option>
+                                <option value="json">JSON</option>
+                            </select>
+                        </div>
+                        <div class="field span-2">
+                            <label>Value</label>
+                            <textarea id="customFieldValue" placeholder="Enter the value here"></textarea>
+                            <div class="help">If the type is JSON, paste valid JSON. Blank fields will be ignored.</div>
+                        </div>
+                    </div>
+                </div>
 
-                // Format 3: https://www.google.com/maps?q=lat,lng
-                if (!coords && mapsLink.includes('q=')) {
-                    const match = mapsLink.match(/q=(-?\d+\.\d+),(-?\d+\.\d+)/);
-                    if (match) {
-                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-                    }
-                }
+                <div class="card soft">
+                    <h3>Prefilled context</h3>
+                    <p class="section-copy">This editor starts from the current JSON so you do not have to retype the surrounding data. Use it when a new field needs to be added without touching the whole file.</p>
+                </div>
+            `;
+        }
 
-                // Format 4: Direct coordinates in URL
-                if (!coords) {
-                    const match = mapsLink.match(/(-?\d+\.\d+),(-?\d+\.\d+)/);
-                    if (match) {
-                        coords = { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-                    }
-                }
+        function renderMode() {
+            const copy = modeCopy(MODE);
+            $('modeBadge').textContent = copy.badge;
+            $('modeTitle').textContent = copy.title;
+            $('modeHelp').textContent = copy.help;
 
-                return coords;
-            } catch (error) {
-                console.error('Error extracting coordinates:', error);
-                return null;
+            if (MODE === 'daily') {
+                $('formMount').innerHTML = renderDailyForm(WORKING);
+            } else if (MODE === 'coverage') {
+                $('formMount').innerHTML = renderCoverageForm(WORKING);
+            } else if (MODE === 'custom') {
+                $('formMount').innerHTML = renderCustomForm(WORKING);
+            } else {
+                $('formMount').innerHTML = renderStaticForm(WORKING);
             }
         }
 
-        // Manual coordinate extraction (client-side only)
-        function extractCoordinatesSync(mapsLink) {
-            // Format: https://www.google.com/maps/place/.../@lat,lng
-            let match = mapsLink.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
-            if (match) {
-                return { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-            }
-
-            // Format: https://www.google.com/maps?q=lat,lng
-            match = mapsLink.match(/q=(-?\d+\.\d+),(-?\d+\.\d+)/);
-            if (match) {
-                return { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-            }
-
-            // Format: Direct coordinates
-            match = mapsLink.match(/(-?\d+\.\d+),(-?\d+\.\d+)/);
-            if (match) {
-                return { lat: parseFloat(match[1]), lng: parseFloat(match[2]) };
-            }
-
-            return null;
+        function setPreview(json, notice = '') {
+            $('jsonPreview').value = JSON.stringify(json, null, 2);
+            $('previewNotice').textContent = notice;
+            $('previewSection').classList.add('show');
+            $('previewSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        document.getElementById('dataEntryForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
+        function syncMissionFromDaily(data) {
+            const seenSchools = new Set();
+            const seenDistricts = new Set();
+            const seenStates = new Set();
+            let students = 0;
+            let girls = 0;
+            let boys = 0;
+            let distance = 0;
 
-            const date = document.getElementById('visitDate').value;
-            const schools = [];
-
-            // Collect school data
-            const schoolDivs = document.querySelectorAll('.school-entry');
-
-            for (const schoolDiv of schoolDivs) {
-                const id = schoolDiv.id.split('-')[1];
-                const name = document.getElementById(`schoolName-${id}`).value;
-                const mapLink = document.getElementById(`schoolMapLink-${id}`).value;
-                const district = document.getElementById(`schoolDistrict-${id}`).value;
-                const students = parseInt(document.getElementById(`schoolStudents-${id}`).value);
-                const girls = parseInt(document.getElementById(`schoolGirls-${id}`).value);
-                const boys = parseInt(document.getElementById(`schoolBoys-${id}`).value);
-                const gallery = document.getElementById(`schoolGallery-${id}`).value;
-                const collage = document.getElementById(`schoolCollage-${id}`).value;
-
-                // Extract coordinates
-                const coords = extractCoordinatesSync(mapLink);
-
-                if (!coords) {
-                    alert(`⚠️ Could not extract coordinates from maps link for ${name}. Please check the link format.\n\nTip: Open the location in Google Maps, right-click, and copy the link with coordinates visible.`);
-                    return;
-                }
-
-                schools.push({
-                    name,
-                    coords,
-                    students,
-                    girls,
-                    boys,
-                    district,
-                    gallery,
-                    collage
+            (data.dailyUpdates || []).forEach(entry => {
+                distance += Number(entry.distanceKm || 0);
+                (entry.schools || []).forEach(school => {
+                    const key = `${school.name || ''}|${school.district || ''}|${school.state || ''}`;
+                    seenSchools.add(key);
+                    if (school.district) seenDistricts.add(school.district);
+                    if (school.state) seenStates.add(school.state);
+                    students += Number(school.studentsReached || 0);
+                    girls += Number(school.girlsCount || 0);
+                    boys += Number(school.boysCount || 0);
                 });
-            }
+            });
 
-            // Extract route coordinates
-            const startPointName = document.getElementById('startPointName').value;
-            const startPointLink = document.getElementById('startPointLink').value;
-            const endPointName = document.getElementById('endPointName').value;
-            const endPointLink = document.getElementById('endPointLink').value;
+            ensureObject(data, 'mission', blankData().mission);
+            ensureObject(data.mission, 'schoolsCovered', { current: 0, total: 0 });
+            ensureObject(data.mission, 'statesCovered', { current: 0, total: 0 });
+            ensureObject(data.mission, 'districtsCovered', { current: 0, total: 0 });
+            ensureObject(data.mission, 'genderBreakdown', { girls: 0, boys: 0 });
 
-            const startCoords = extractCoordinatesSync(startPointLink);
-            const endCoords = extractCoordinatesSync(endPointLink);
+            data.mission.schoolsCovered.current = seenSchools.size;
+            data.mission.districtsCovered.current = seenDistricts.size;
+            data.mission.statesCovered.current = seenStates.size;
+            data.mission.studentsImpacted = students;
+            data.mission.genderBreakdown.girls = girls;
+            data.mission.genderBreakdown.boys = boys;
+            data.mission.distanceTravelled = Math.round(distance);
+        }
 
-            if (!startCoords || !endCoords) {
-                alert('⚠️ Could not extract coordinates from route points. Please check the links.');
+        function parseCoords(link) {
+            if (!link) return null;
+            const text = String(link);
+            let match = text.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
+            if (!match) match = text.match(/[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)/);
+            if (!match) match = text.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/);
+            if (!match) match = text.match(/(-?\d+\.\d{4,}),\s*(-?\d+\.\d{4,})/);
+            if (!match) return null;
+            return { lat: Number(match[1]), lng: Number(match[2]) };
+        }
+
+        function updateDailyFieldsFromEntry(entry) {
+            $('dailyDate').value = entry.date || TODAY;
+            $('dailyState').value = entry.state || (SOURCE.states?.[0]?.name || '');
+            $('dailyDistance').value = entry.distanceKm ?? '';
+            $('dailyVehicle').value = entry.vehicle || 1;
+            $('dailySummary').value = entry.summary || '';
+            $('dailyNotes').value = entry.notes || '';
+            const mount = $('dailySchoolsMount');
+            mount.innerHTML = (Array.isArray(entry.schools) && entry.schools.length ? entry.schools : [{}])
+                .map((school, index) => renderDailySchoolRow(school, index)).join('');
+        }
+
+        function loadDailyEntry(value) {
+            if (value === 'new' || value === '' || value === null) {
+                SELECTED_DAILY_INDEX = null;
+                renderMode();
+                $('dailyDate').value = TODAY;
+                $('dailyState').value = SOURCE.states?.[0]?.name || '';
+                $('dailyDistance').value = '';
+                $('dailyVehicle').value = 1;
+                $('dailySummary').value = '';
+                $('dailyNotes').value = '';
+                $('dailySchoolsMount').innerHTML = renderDailySchoolRow({}, 0);
                 return;
             }
 
-            // Generate output
-            generateOutput(date, schools, { startPointName, startCoords, endPointName, endCoords });
-        });
+            const index = Number(value);
+            if (!Number.isInteger(index) || index < 0) return;
+            SELECTED_DAILY_INDEX = index;
+            const entry = WORKING.dailyUpdates[index] || {};
+            renderMode();
+            updateDailyFieldsFromEntry(entry);
+        }
 
-        function generateOutput(date, schools, route) {
-            const output = {
+        function removeDailySchool(button) {
+            const row = button.closest('[data-daily-school-row]');
+            if (!row) return;
+            row.remove();
+            renumberRepeaters('#dailySchoolsMount [data-daily-school-row]', 'School');
+        }
+
+        function addDailySchool(prefill = {}) {
+            const mount = $('dailySchoolsMount');
+            if (!mount) return;
+            const count = mount.querySelectorAll('[data-daily-school-row]').length;
+            mount.insertAdjacentHTML('beforeend', renderDailySchoolRow(prefill, count));
+        }
+
+        function removeCoverageSchool(button) {
+            const row = button.closest('[data-coverage-school-row]');
+            if (!row) return;
+            row.remove();
+            renumberRepeaters('[data-coverage-schools] [data-coverage-school-row]', 'School');
+        }
+
+        function addCoverageSchool(stateIndex) {
+            const mount = document.querySelector(`[data-coverage-schools][data-state-index="${stateIndex}"]`);
+            if (!mount) return;
+            const count = mount.querySelectorAll('[data-coverage-school-row]').length;
+            mount.insertAdjacentHTML('beforeend', renderCoverageSchoolRow({}, count, stateIndex));
+        }
+
+        function removeHighlight(button) {
+            const row = button.closest('[data-highlight-row]');
+            if (!row) return;
+            row.remove();
+            renumberRepeaters('#highlightsMount [data-highlight-row]', 'Highlight');
+        }
+
+        function addHighlight(prefill = {}) {
+            const mount = $('highlightsMount');
+            if (!mount) return;
+            const count = mount.querySelectorAll('[data-highlight-row]').length;
+            mount.insertAdjacentHTML('beforeend', renderHighlightRow(prefill, count));
+        }
+
+        function removeMilestone(button) {
+            const row = button.closest('[data-milestone-row]');
+            if (!row) return;
+            row.remove();
+            renumberRepeaters('#milestonesMount [data-milestone-row]', 'Milestone');
+        }
+
+        function addMilestone(prefill = {}) {
+            const mount = $('milestonesMount');
+            if (!mount) return;
+            const count = mount.querySelectorAll('[data-milestone-row]').length;
+            mount.insertAdjacentHTML('beforeend', renderMilestoneRow(prefill, count));
+        }
+
+        function renumberRepeaters(selector, label) {
+            document.querySelectorAll(selector).forEach((row, index) => {
+                const title = row.querySelector('strong');
+                if (title) title.textContent = `${label} ${index + 1}`;
+            });
+        }
+
+        function collectRepeaterValues(container, rowSelector, fieldMap) {
+            return Array.from(container.querySelectorAll(rowSelector)).map(row => {
+                const out = {};
+                Object.entries(fieldMap).forEach(([field, selector]) => {
+                    const el = row.querySelector(selector);
+                    out[field] = el ? el.value.trim() : '';
+                });
+                return out;
+            });
+        }
+
+        function asNumber(value) {
+            if (value === '' || value === null || value === undefined) return 0;
+            const number = Number(value);
+            return Number.isFinite(number) ? number : 0;
+        }
+
+        function applyStaticChanges(data) {
+            ensureObject(data, 'projectInfo', clone(blankData().projectInfo));
+            ensureObject(data, 'dashboard', clone(blankData().dashboard));
+            ensureObject(data, 'contact', clone(blankData().contact));
+            ensureObject(data, 'studentCorner', clone(blankData().studentCorner));
+            ensureObject(data, 'mission', clone(blankData().mission));
+            ensureObject(data.mission, 'schoolsCovered', { current: 0, total: 0 });
+            ensureObject(data.mission, 'statesCovered', { current: 0, total: 0 });
+            ensureObject(data.mission, 'districtsCovered', { current: 0, total: 0 });
+            ensureObject(data.mission, 'genderBreakdown', { girls: 0, boys: 0 });
+
+            data.projectInfo.title = $('projectTitle').value.trim();
+            data.projectInfo.subtitle = $('projectSubtitle').value.trim();
+            data.projectInfo.phase = $('projectPhase').value.trim();
+            data.projectInfo.status = $('projectStatus').value.trim();
+            data.projectInfo.startDate = $('projectStartDate').value;
+            data.projectInfo.endDate = $('projectEndDate').value;
+
+            data.dashboard.headline = $('dashboardHeadline').value.trim();
+            data.dashboard.intro = $('dashboardIntro').value.trim();
+
+            const highlightsMount = $('highlightsMount');
+            data.dashboard.highlights = collectRepeaterValues(highlightsMount, '[data-highlight-row]', {
+                eyebrow: '[data-field="eyebrow"]',
+                title: '[data-field="title"]',
+                description: '[data-field="description"]'
+            }).filter(item => item.eyebrow || item.title || item.description);
+
+            const milestonesMount = $('milestonesMount');
+            data.dashboard.milestones = collectRepeaterValues(milestonesMount, '[data-milestone-row]', {
+                title: '[data-field="title"]',
+                state: '[data-field="state"]',
+                status: '[data-field="status"]',
+                targetDate: '[data-field="targetDate"]',
+                description: '[data-field="description"]'
+            }).filter(item => item.title || item.state || item.status || item.targetDate || item.description);
+
+            data.studentCorner.heading = $('studentHeading').value.trim();
+            data.studentCorner.text = $('studentText').value.trim();
+            data.studentCorner.formUrl = $('studentFormUrl').value.trim();
+
+            data.contact.email = $('contactEmail').value.trim();
+            data.contact.piEmail = $('contactPiEmail').value.trim();
+            data.contact.address = $('contactAddress').value.trim();
+            data.contact.website = $('contactWebsite').value.trim();
+
+            data.mission.schoolsCovered.current = asNumber($('missionSchoolsCurrent').value);
+            data.mission.schoolsCovered.total = asNumber($('missionSchoolsTotal').value);
+            data.mission.statesCovered.current = asNumber($('missionStatesCurrent').value);
+            data.mission.statesCovered.total = asNumber($('missionStatesTotal').value);
+            data.mission.districtsCovered.current = asNumber($('missionDistrictsCurrent').value);
+            data.mission.districtsCovered.total = asNumber($('missionDistrictsTotal').value);
+            data.mission.studentsImpacted = asNumber($('missionStudents').value);
+            data.mission.distanceTravelled = asNumber($('missionDistance').value);
+            ensureObject(data.mission, 'genderBreakdown', { girls: 0, boys: 0 });
+            data.mission.genderBreakdown.girls = asNumber($('missionGirls').value);
+            data.mission.genderBreakdown.boys = asNumber($('missionBoys').value);
+        }
+
+        function applyDailyChanges(data) {
+            ensureArray(data, 'dailyUpdates');
+            const date = $('dailyDate').value || TODAY;
+            const state = $('dailyState').value.trim();
+            const distanceKm = asNumber($('dailyDistance').value);
+            const vehicle = asNumber($('dailyVehicle').value) || 1;
+            const summary = $('dailySummary').value.trim();
+            const notes = $('dailyNotes').value.trim();
+            const rows = Array.from($('dailySchoolsMount').querySelectorAll('[data-daily-school-row]'));
+
+            const schools = [];
+            rows.forEach(row => {
+                const get = field => {
+                    const el = row.querySelector(`[data-field="${field}"]`);
+                    return el ? el.value.trim() : '';
+                };
+
+                const name = get('name');
+                if (!name) return;
+                const district = get('district');
+                const mapLink = get('mapLink');
+                const galleryLink = get('galleryLink');
+                const mediaLink = get('mediaLink');
+                const collageImage = get('collageImage');
+                const studentsReached = asNumber(get('studentsReached'));
+                const girlsCount = asNumber(get('girlsCount'));
+                const boysCount = asNumber(get('boysCount'));
+                const coords = parseCoords(mapLink);
+
+                const school = {
+                    name,
+                    district,
+                    state,
+                    studentsReached: studentsReached || (girlsCount + boysCount),
+                    girlsCount,
+                    boysCount
+                };
+                if (mapLink) school.mapLink = mapLink;
+                if (galleryLink) school.galleryLink = galleryLink;
+                if (mediaLink) school.mediaLink = mediaLink;
+                if (collageImage) school.collageImage = collageImage;
+                if (coords) school.location = coords;
+                schools.push(school);
+            });
+
+            if (!schools.length) {
+                alert('Add at least one school before generating a daily update.');
+                return false;
+            }
+
+            const update = {
                 date,
-                schools: schools.map(s => ({
-                    name: s.name,
-                    coordinates: `(${s.coords.lat},${s.coords.lng})`,
-                    students: s.students,
-                    girls: s.girls,
-                    boys: s.boys,
-                    district: s.district
-                })),
-                startPoint: `${route.startPointName}(${route.startCoords.lat},${route.startCoords.lng})`,
-                endPoint: `${route.endPointName}(${route.endCoords.lat},${route.endCoords.lng})`,
-                galleryLinks: schools.map(s => ({
-                    name: s.name,
-                    url: s.gallery
-                })),
-                collageImages: schools.map(s => ({
-                    name: s.name,
-                    filename: s.collage
-                }))
+                state,
+                vehicle,
+                summary,
+                notes,
+                distanceKm,
+                schools,
+                schoolsVisited: schools.length,
+                studentsReached: schools.reduce((sum, school) => sum + Number(school.studentsReached || 0), 0)
             };
 
-            // Format output
-            let formattedOutput = `website data ${date.split('-').reverse().join('/')}\n`;
-            formattedOutput += `**Date:** ${date}\n`;
-            formattedOutput += `**Schools visited:**\n\n`;
-
-            schools.forEach(s => {
-                formattedOutput += `${s.name} - Coordinates: (${s.coords.lat},${s.coords.lng}) - Students: ${s.students} - Girls: ${s.girls} - Boys: ${s.boys} - District: ${s.district}\n`;
-            });
-
-            formattedOutput += `\n**Start Point:** ${route.startPointName}(${route.startCoords.lat},${route.startCoords.lng})\n`;
-            formattedOutput += `**End Point:** ${route.endPointName}(${route.endCoords.lat},${route.endCoords.lng})\n`;
-
-            formattedOutput += `\n**Gallery Links:**\n\n`;
-            schools.forEach(s => {
-                formattedOutput += `${s.name}: ${s.gallery}\n`;
-            });
-
-            formattedOutput += `\n**Collage Images:**\n`;
-            schools.forEach(s => {
-                formattedOutput += `${s.name}: ${s.collage}\n`;
-            });
-
-            // Display output
-            document.getElementById('outputBox').textContent = formattedOutput;
-            document.getElementById('outputSection').classList.add('show');
-
-            // Scroll to output
-            document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth' });
+            if (SELECTED_DAILY_INDEX === null) {
+                data.dailyUpdates.unshift(update);
+            } else {
+                data.dailyUpdates[SELECTED_DAILY_INDEX] = update;
+            }
+            data.dailyUpdates.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+            syncMissionFromDaily(data);
+            data.lastUpdated = date;
+            return true;
         }
 
-        function copyOutput() {
-            const outputBox = document.getElementById('outputBox');
-            const text = outputBox.textContent;
+        function applyCoverageChanges(data) {
+            ensureObject(data, 'dashboard', clone(blankData().dashboard));
+            ensureArray(data.dashboard, 'stateCoverage');
+            const cards = Array.from(document.querySelectorAll('[data-coverage-schools]')).map(container => {
+                const stateIndex = Number(container.getAttribute('data-state-index'));
+                const stateField = document.querySelector(`[data-state-field="state"][data-state-index="${stateIndex}"]`);
+                const baseField = document.querySelector(`[data-state-field="base"][data-state-index="${stateIndex}"]`);
+                const colorField = document.querySelector(`[data-state-field="color"][data-state-index="${stateIndex}"]`);
+                const stateName = stateField ? stateField.value.trim() : '';
+                const base = baseField ? baseField.value.trim() : '';
+                const color = colorField ? colorField.value.trim() : '';
 
-            navigator.clipboard.writeText(text).then(() => {
-                const successMsg = document.getElementById('successMessage');
-                successMsg.classList.add('show');
-                setTimeout(() => {
-                    successMsg.classList.remove('show');
-                }, 3000);
+                const schools = Array.from(container.querySelectorAll('[data-coverage-school-row]')).map(row => {
+                    const get = field => {
+                        const el = row.querySelector(`[data-field="${field}"]`);
+                        return el ? el.value.trim() : '';
+                    };
+                    const name = get('name');
+                    if (!name && !get('district') && !get('date') && !get('students') && !get('mapLink') && !get('mediaLink')) return null;
+                    const item = {
+                        name,
+                        district: get('district'),
+                        date: get('date'),
+                        students: asNumber(get('students'))
+                    };
+                    if (get('mapLink')) item.mapLink = get('mapLink');
+                    if (get('mediaLink')) item.mediaLink = get('mediaLink');
+                    return item;
+                }).filter(Boolean);
+
+                return {
+                    state: stateName,
+                    base,
+                    color: color || '#0f172a',
+                    schools
+                };
+            }).filter(card => card.state || card.base || card.schools.length);
+
+            data.dashboard.stateCoverage = cards;
+            const stateLookup = new Map(cards.map(card => [card.state, card]));
+            (data.states || []).forEach(state => {
+                const match = stateLookup.get(state.name);
+                if (!match) return;
+                if (match.base) state.base = match.base;
+                if (match.color) state.color = match.color;
             });
+            data.lastUpdated = TODAY;
+            return true;
         }
+
+        function applyCustomField(data) {
+            const targetName = $('customTarget').value;
+            const fieldName = $('customFieldName').value.trim();
+            const fieldType = $('customFieldType').value;
+            const rawValue = $('customFieldValue').value.trim();
+
+            if (!fieldName) {
+                alert('Enter a field name first.');
+                return false;
+            }
+            if (!rawValue) {
+                alert('Enter a value first.');
+                return false;
+            }
+
+            let value = rawValue;
+            if (fieldType === 'number') value = Number(rawValue);
+            if (fieldType === 'boolean') value = /^(true|1|yes|on)$/i.test(rawValue);
+            if (fieldType === 'json') {
+                try {
+                    value = JSON.parse(rawValue);
+                } catch (error) {
+                    alert('Invalid JSON value. Fix the value and try again.');
+                    return false;
+                }
+            }
+
+            if (targetName === 'root') {
+                data[fieldName] = value;
+            } else {
+                ensureObject(data, targetName, {});
+                data[targetName][fieldName] = value;
+            }
+            data.lastUpdated = TODAY;
+            return true;
+        }
+
+        function generatePreview() {
+            if (!WORKING) return;
+            const next = clone(WORKING);
+            let ok = true;
+
+            if (MODE === 'daily') {
+                ok = applyDailyChanges(next);
+            } else if (MODE === 'coverage') {
+                ok = applyCoverageChanges(next);
+            } else if (MODE === 'custom') {
+                ok = applyCustomField(next);
+            } else {
+                applyStaticChanges(next);
+                next.lastUpdated = TODAY;
+            }
+
+            if (!ok) return;
+            WORKING = next;
+            const notice = MODE === 'daily'
+                ? 'Daily updates were merged into the array and live mission totals were recalculated from all daily updates.'
+                : MODE === 'coverage'
+                    ? 'Coverage cards were updated. Optional map and media links stay empty if you leave them blank.'
+                    : MODE === 'custom'
+                        ? 'The custom field was added to the chosen section.'
+                        : 'Static values were updated from the current form.';
+            setPreview(next, notice);
+        }
+
+        function downloadJson() {
+            if (!WORKING) return;
+            const blob = new Blob([JSON.stringify(WORKING, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const anchor = document.createElement('a');
+            anchor.href = url;
+            anchor.download = 'data-sow.json';
+            anchor.click();
+            URL.revokeObjectURL(url);
+        }
+
+        async function copyJson() {
+            if (!WORKING) return;
+            await navigator.clipboard.writeText(JSON.stringify(WORKING, null, 2));
+            $('previewNotice').textContent = 'Copied to clipboard.';
+        }
+
+        function resetForm() {
+            if (!SOURCE || !MODE) return;
+            WORKING = clone(SOURCE);
+            SELECTED_DAILY_INDEX = null;
+            renderMode();
+            $('previewSection').classList.remove('show');
+            $('previewNotice').textContent = '';
+        }
+
+        function openMode(mode) {
+            MODE = mode;
+            WORKING = clone(SOURCE);
+            SELECTED_DAILY_INDEX = null;
+            $('choiceScreen').classList.add('hidden');
+            $('editorScreen').classList.add('show');
+            $('previewSection').classList.remove('show');
+            $('previewNotice').textContent = '';
+            renderMode();
+            if (mode === 'daily') {
+                updateDailyFieldsFromEntry({
+                    date: TODAY,
+                    state: SOURCE.states?.[0]?.name || '',
+                    schools: [{}]
+                });
+            }
+        }
+
+        function backToChoices() {
+            MODE = null;
+            $('editorScreen').classList.remove('show');
+            $('choiceScreen').classList.remove('hidden');
+            $('previewSection').classList.remove('show');
+        }
+
+        async function load() {
+            try {
+                const res = await fetch(DATA_URL);
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                SOURCE = await res.json();
+                $('loadStatus').textContent = `Loaded current data from data-sow.json. Last updated: ${SOURCE.lastUpdated || 'unknown'}.`;
+            } catch (error) {
+                SOURCE = blankData();
+                $('loadStatus').textContent = 'Could not fetch data-sow.json automatically. Open this page through a local server to prefill the current values.';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await load();
+            document.querySelectorAll('[data-mode]').forEach(button => {
+                button.addEventListener('click', () => openMode(button.dataset.mode));
+            });
+            $('backBtn').addEventListener('click', backToChoices);
+            $('previewBtn').addEventListener('click', generatePreview);
+            $('resetBtn').addEventListener('click', resetForm);
+            $('downloadBtn').addEventListener('click', downloadJson);
+            $('copyBtn').addEventListener('click', copyJson);
+        });
+
+        window.loadDailyEntry = loadDailyEntry;
+        window.addDailySchool = addDailySchool;
+        window.removeDailySchool = removeDailySchool;
+        window.addCoverageSchool = addCoverageSchool;
+        window.removeCoverageSchool = removeCoverageSchool;
+        window.addHighlight = addHighlight;
+        window.removeHighlight = removeHighlight;
+        window.addMilestone = addMilestone;
+        window.removeMilestone = removeMilestone;
     </script>
 </body>
 </html>
