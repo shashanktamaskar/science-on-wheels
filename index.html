@@ -32,6 +32,126 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        img, video, iframe, svg {
+            max-width: 100%;
+        }
+
+        @media (max-width: 640px) {
+            nav > div {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                gap: 0.75rem;
+            }
+
+            #mobileMenu {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            #home h2 {
+                font-size: 2rem !important;
+                line-height: 1.08 !important;
+            }
+
+            #home .text-lg {
+                font-size: 1rem !important;
+            }
+
+            #home .flex.flex-wrap.gap-3 a {
+                width: 100%;
+                text-align: center;
+            }
+
+            #heroCarouselMount {
+                min-width: 0;
+            }
+
+            #heroCarouselMount .hero-carousel-stage {
+                min-height: 280px;
+            }
+
+            #heroCarouselMount .hero-carousel-caption {
+                padding: 0.85rem 0.85rem 3rem;
+            }
+
+            #heroCarouselMount .hero-carousel-caption h3 {
+                font-size: 1.15rem;
+                line-height: 1.12;
+            }
+
+            #heroCarouselMount .hero-carousel-caption p {
+                font-size: 0.82rem;
+            }
+
+            #heroCarouselMount .hero-carousel-controls {
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            #heroCarouselMount .hero-carousel-dots {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+            }
+
+            #heroCarouselMount .hero-carousel-nav {
+                width: 2.35rem;
+                height: 2.35rem;
+            }
+
+            #heroCarouselMount .hero-carousel-sound,
+            #heroCarouselMount .hero-carousel-play {
+                padding: 0.55rem 0.75rem;
+                font-size: 0.76rem;
+            }
+
+            #objectivesGrid,
+            #modulesGrid,
+            #statesGrid,
+            #legacyStats,
+            #dashboardSummary,
+            #dashboardHighlights,
+            #dashboardMilestones,
+            #stateProgress,
+            #teamGrid,
+            #partnersGrid {
+                grid-template-columns: 1fr !important;
+            }
+
+            #dashboardSummary {
+                gap: 0.75rem !important;
+            }
+
+            #dashboardRecentSection table {
+                min-width: 720px;
+            }
+
+            #map {
+                height: 320px;
+            }
+
+            #mission h3,
+            #modules h3,
+            #states h3,
+            #dashboard h3,
+            #gallery h3,
+            #students h3,
+            #team h3,
+            #partners h3 {
+                font-size: 1.75rem !important;
+            }
+
+            #contact > div {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-slate-50 text-slate-800">
@@ -44,13 +164,13 @@
 
     <!-- Navigation -->
     <nav class="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
             <a href="#home" class="flex items-center gap-3">
                 <img src="graphics/Science_on_wheels_logo2.png" alt="Science on Wheels Logo"
-                    class="h-12 w-auto rounded-lg bg-white p-1">
+                    class="h-10 sm:h-12 w-auto rounded-lg bg-white p-1">
                 <div>
-                    <h1 class="text-xl font-extrabold leading-tight">Science on Wheels</h1>
-                    <p class="text-xs text-amber-300">Local to Global Impact</p>
+                    <h1 class="text-base sm:text-xl font-extrabold leading-tight">Science on Wheels</h1>
+                    <p class="text-[11px] sm:text-xs text-amber-300">Local to Global Impact</p>
                 </div>
             </a>
             <div class="hidden lg:flex items-center gap-6 text-sm">
@@ -72,7 +192,7 @@
                 </svg>
             </button>
         </div>
-        <div id="mobileMenu" class="hidden lg:hidden px-6 pb-4 space-y-2 text-sm">
+        <div id="mobileMenu" class="hidden lg:hidden px-4 sm:px-6 pb-4 space-y-2 text-sm">
             <a href="#mission" class="block py-1">Mission</a>
             <a href="#modules" class="block py-1">Modules</a>
             <a href="#states" class="block py-1">Where We Go</a>
@@ -86,24 +206,24 @@
 
     <!-- Hero -->
     <header id="home" class="hero-gradient text-white">
-        <div class="max-w-[100rem] mx-auto px-6 py-16 lg:py-24 hero-layout">
+        <div class="max-w-[100rem] mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-24 hero-layout">
             <div>
                 <p class="uppercase tracking-widest text-amber-300 font-bold text-sm mb-3">A mobile science van
                     initiative</p>
-                <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-5">Science on Wheels<br>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-5">Science on Wheels<br>
                     <span class="accent">for Local to Global Impact</span>
                 </h2>
-                <p class="text-slate-200 text-lg mb-6 text-justify">One van, four hands-on science modules, three states. We bring
+                <p class="text-slate-200 text-base sm:text-lg mb-6 text-justify">One van, four hands-on science modules, three states. We bring
                     space technology, robotics, water testing and sustainability education to children in rural,
                     border, remote and tribal areas of <strong>Chhattisgarh</strong>, <strong>Punjab</strong> and
                     <strong>Himachal Pradesh</strong>.
                 </p>
                 <div class="flex flex-wrap gap-3">
                     <a href="#states"
-                        class="bg-amber-400 text-slate-900 font-bold px-5 py-3 rounded-lg hover:bg-amber-300 transition">Explore
+                        class="w-full sm:w-auto bg-amber-400 text-slate-900 font-bold px-5 py-3 rounded-lg hover:bg-amber-300 transition text-center">Explore
                         the Route</a>
                     <a href="#mission"
-                        class="border border-white/40 px-5 py-3 rounded-lg hover:bg-white/10 transition">Our
+                        class="w-full sm:w-auto border border-white/40 px-5 py-3 rounded-lg hover:bg-white/10 transition text-center">Our
                         Objectives</a>
                 </div>
                 <p class="mt-6 text-sm text-slate-300">By Plaksha University · IIT Mandi · IDYM Foundation</p>
@@ -122,7 +242,7 @@
         </div>
         <!-- Live stats strip -->
         <div class="bg-slate-900/60 border-t border-white/10">
-            <div class="max-w-7xl mx-auto px-6 py-6 grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 text-center">
                 <div><p class="text-3xl font-extrabold accent" id="stat-states">3</p><p class="text-xs text-slate-300 uppercase tracking-wide">States</p></div>
                 <div><p class="text-3xl font-extrabold accent" id="stat-districts">16</p><p class="text-xs text-slate-300 uppercase tracking-wide">Districts</p></div>
                 <div><p class="text-3xl font-extrabold accent" id="stat-schools">0</p><p class="text-xs text-slate-300 uppercase tracking-wide">Schools visited</p></div>
@@ -133,31 +253,31 @@
     </header>
 
     <!-- Mission / Objectives -->
-    <section id="mission" class="max-w-7xl mx-auto px-6 py-16">
+    <section id="mission" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Our Mission</h3>
         <p class="text-slate-600 max-w-3xl mb-10 text-justify">Reaching these children through mobile science labs can bridge the
             exposure gap, ignite curiosity, and build foundational STEM interest in the communities that need it most.
             Over two years the van will spend four months in each state, engaging <strong>45–50 schools per state per
                 year</strong> in coordination with district administrations and Block Education Officers.</p>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="objectivesGrid"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="objectivesGrid"></div>
     </section>
 
     <!-- Modules -->
     <section id="modules" class="bg-white border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
             <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Four Modules on Wheels</h3>
             <p class="text-slate-600 mb-10 text-justify">Every school visit brings science exhibits and activities across four
                 educational components.</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="modulesGrid"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="modulesGrid"></div>
         </div>
     </section>
 
     <!-- States + Map -->
-    <section id="states" class="max-w-7xl mx-auto px-6 py-16">
+    <section id="states" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Where We Go</h3>
         <p class="text-slate-600 max-w-3xl mb-8 text-justify">Districts were identified in consultation with administrative
             authorities, prioritising rural, border, remote and high SC/ST-population areas.</p>
-        <div class="grid lg:grid-cols-3 gap-6 mb-8" id="statesGrid"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8" id="statesGrid"></div>
         <div id="map" class="shadow-lg"></div>
         <div class="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600">
             <span class="flex items-center gap-2"><span style="display:inline-block;width:13px;height:13px;background:#fbbf24;border:2px solid #0f172a;transform:rotate(45deg);"></span> Base hub <span class="text-slate-400 text-xs">(Plaksha · IIT Mandi · IDYM)</span></span>
@@ -172,10 +292,10 @@
 
     <!-- Track record -->
     <section class="bg-gradient-to-r from-cyan-900 to-blue-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
             <h3 class="text-3xl font-extrabold mb-2" id="legacyTitle">Punjab 2025–26: Our Track Record</h3>
             <p class="text-cyan-100 max-w-3xl mb-8 text-justify" id="legacyDesc"></p>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center mb-8" id="legacyStats"></div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 text-center mb-8" id="legacyStats"></div>
             <a href="punjab.html"
                 class="inline-block bg-amber-400 text-slate-900 font-bold px-6 py-3 rounded-lg hover:bg-amber-300 transition">Explore
                 the full Punjab 2025–26 website, map &amp; gallery ↗</a>
@@ -183,7 +303,7 @@
     </section>
 
     <!-- Dashboard -->
-    <section id="dashboard" class="max-w-7xl mx-auto px-6 py-16">
+    <section id="dashboard" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Mission Dashboard</h3>
         <div class="mt-4 mb-8">
             <span id="dashboardPhaseBadge"
@@ -191,21 +311,21 @@
             <h4 id="dashboardHeadline" class="mt-4 text-2xl font-extrabold text-slate-900 hidden"></h4>
             <p id="dashboardIntro" class="mt-2 max-w-3xl text-slate-600 text-justify hidden"></p>
         </div>
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-5 mb-4" id="dashboardSummary"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 mb-4" id="dashboardSummary"></div>
 
         <div id="dashboardHighlightsSection" class="mb-10 hidden">
             <h4 class="font-extrabold text-slate-900 mb-4">Highlights</h4>
-            <div id="dashboardHighlights" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+            <div id="dashboardHighlights" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
         </div>
 
         <div id="dashboardMilestonesSection" class="mb-10 hidden">
             <h4 class="font-extrabold text-slate-900 mb-4">Milestones</h4>
-            <div id="dashboardMilestones" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+            <div id="dashboardMilestones" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
         </div>
 
         <div id="dashboardStateCoverageSection" class="mb-10 hidden">
             <h4 class="font-extrabold text-slate-900 mb-4">Coverage by State</h4>
-            <div class="grid md:grid-cols-3 gap-6" id="stateProgress"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="stateProgress"></div>
         </div>
 
         <div id="dashboardRecentSection" class="hidden">
@@ -231,7 +351,7 @@
 
     <!-- Gallery -->
     <section id="gallery" class="bg-white border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
             <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between mb-6">
                 <div>
                     <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Gallery</h3>
@@ -254,7 +374,7 @@
 
     <!-- Student Corner -->
     <section id="students" class="bg-gradient-to-r from-amber-400 to-orange-400 text-slate-900">
-        <div class="max-w-7xl mx-auto px-6 py-14 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-14 text-center">
             <h3 class="text-3xl font-extrabold mb-3" id="studentHeading">Continue Your Science Journey</h3>
             <p class="max-w-2xl mx-auto mb-6 font-medium" id="studentText"></p>
             <div id="studentFormWrap"></div>
@@ -263,21 +383,21 @@
 
     <!-- Team -->
     <section id="team" class="border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
             <h3 class="text-3xl font-extrabold text-slate-900 mb-10">The Team</h3>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8" id="teamGrid"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="teamGrid"></div>
         </div>
     </section>
 
     <!-- Partners -->
-    <section id="partners" class="max-w-7xl mx-auto px-6 py-16">
+    <section id="partners" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <h3 class="text-3xl font-extrabold text-slate-900 mb-10">Partners &amp; Supporters</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center" id="partnersGrid"></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 items-center" id="partnersGrid"></div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
                 <h3 class="text-3xl font-extrabold mb-4">Contact Us</h3>
                 <p class="text-slate-300 mb-6 text-justify">Want the van to visit your district, partner with us, or support the

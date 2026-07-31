@@ -3,6 +3,7 @@
     const MANIFEST_URL = 'assets-hero/manifest.json';
     const DEFAULT_IMAGE_MS = 6000;
     const CAPTION_AUTO_HIDE_MS = 1500;
+    const SHOULD_AUTO_HIDE_CAPTION = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
     const FALLBACK_ITEMS = [
         {
@@ -207,6 +208,10 @@
 
     function scheduleCaptionHide() {
         clearCaptionTimer();
+        if (!SHOULD_AUTO_HIDE_CAPTION) {
+            setCaptionVisible(true);
+            return;
+        }
         state.captionTimer = window.setTimeout(() => {
             setCaptionVisible(false);
         }, CAPTION_AUTO_HIDE_MS);
@@ -445,6 +450,10 @@
                 if (isInsideStage(event.relatedTarget)) return;
                 scheduleCaptionHide();
             });
+            stage.addEventListener('touchstart', () => {
+                clearCaptionTimer();
+                setCaptionVisible(true);
+            }, { passive: true });
         }
         renderSlide();
     }

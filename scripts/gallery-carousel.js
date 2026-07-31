@@ -29,6 +29,11 @@
         return IMAGE_EXTENSIONS.map(ext => `${folder}/${encodeURIComponent(name)}${ext}`);
     }
 
+    function setGalleryAspectRatio(stage, image) {
+        if (!stage || !image || !image.naturalWidth || !image.naturalHeight) return;
+        stage.style.setProperty('--gallery-aspect-ratio', `${image.naturalWidth} / ${image.naturalHeight}`);
+    }
+
     function showMessage(title, body, buttonText, buttonHref) {
         const el = mount();
         if (!el) return;
@@ -54,7 +59,7 @@
         el.innerHTML = `
             <div class="rounded-2xl border border-slate-200 bg-white shadow-xl overflow-hidden">
                 <div class="relative bg-slate-100">
-                    <div id="gallerySlide" class="relative min-h-[420px]"></div>
+                    <div id="gallerySlide" class="gallery-carousel-stage"></div>
                     <button id="galleryPrev"
                         class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 text-slate-800 shadow-lg transition hover:scale-110 disabled:cursor-not-allowed disabled:opacity-40"
                         type="button" aria-label="Previous collage">
@@ -115,10 +120,10 @@
         counter.textContent = `${state.index + 1} / ${state.schools.length} school collages`;
 
         el.innerHTML = `
-            <div class="relative min-h-[420px] bg-gradient-to-br from-slate-100 to-slate-200">
+            <div class="relative bg-gradient-to-br from-slate-100 to-slate-200 gallery-carousel-stage-inner">
                 <img id="galleryImage"
                     alt="${school.name} collage"
-                    class="h-full w-full object-contain"
+                    class="gallery-carousel-image"
                     loading="eager"
                     decoding="async">
                 <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-5 md:p-6">
@@ -151,7 +156,7 @@
         if (!image) return;
         if (attemptIndex >= imagePaths.length) {
             image.outerHTML = `
-                <div class="flex min-h-[420px] items-center justify-center p-8 text-center text-slate-500">
+                <div class="flex min-h-[280px] items-center justify-center p-8 text-center text-slate-500">
                     <div>
                         <p class="text-lg font-bold text-slate-700 mb-2">Collage not available</p>
                         <p class="text-sm">The image file for this school is missing from the configured collage folder.</p>
@@ -161,6 +166,10 @@
             return;
         }
 
+        image.onload = () => {
+            const stage = document.getElementById('gallerySlide');
+            setGalleryAspectRatio(stage, image);
+        };
         image.onerror = () => loadFirstAvailableImage(image, imagePaths, attemptIndex + 1);
         image.src = imagePaths[attemptIndex];
     }

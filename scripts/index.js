@@ -182,9 +182,7 @@ function renderDashboard(data) {
                                     <h4 class="text-lg font-extrabold">${state.state}</h4>
                                     ${isNonEmptyText(state.base) ? `<p class="mt-1 text-sm text-white/85">Base: ${state.base}</p>` : ''}
                                 </div>
-                                <div direction="rtl" class="rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wide w-40 text-center">
-                                    <p>${schools.length} schools</p>
-                                </div>
+                                <span class="whitespace-nowrap rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wide">${schools.length} schools</span>
                             </div>
                         </div>
                         <div class="space-y-3 p-5">
