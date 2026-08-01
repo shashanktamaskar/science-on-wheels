@@ -129,7 +129,7 @@
                 <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-5 md:p-6">
                     <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                         <div>
-                            <h4 class="text-2xl font-extrabold text-white">${school.name}</h4>
+                            <h4 class="text-2xl font-extrabold text-white">${school.school_name}</h4>
                             <p class="mt-1 text-sm font-medium text-slate-200">${school.district || ''}${school.district ? ' District' : ''}</p>
                             <p class="text-sm text-slate-300">${formatDate(school.visitDate)}</p>
                         </div>

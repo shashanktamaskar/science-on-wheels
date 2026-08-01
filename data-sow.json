@@ -34,28 +34,36 @@
         "color": "#f59e0b",
         "schools": [
           {
-            "name": "GOVT. GIRLS HIGHER SECONDARY SCHOOL GARIABAND",
+            "name": "GOVT. GIRLS HIGHER SECONDARY SCHOOL (Girls) GARIABAND",
             "district": "Gariaband",
-            "date": "2026-07-20",
-            "students": 0,
+            "date": "2026-07-28",
+            "students": 100,
             "mapLink": "https://maps.app.goo.gl/EeuTPaDz55CAkU7MA",
-            "mediaLink": ""
+            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCIkCBK_T34RLe3fA1ySm0lAUrT4Jwr2TuyB-F87yARG3g"
           },
           {
-            "name": "Swami Atmanand Utkrisht English Medium School",
+            "name": "Swami Aatmanand Govt English Medium school Gariaband",
             "district": "Gariaband",
-            "date": "2026-07-25",
-            "students": 0,
-            "mapLink": "",
-            "mediaLink": ""
+            "date": "2026-07-29",
+            "students": 100,
+            "mapLink": "https://maps.app.goo.gl/4ZJYUagpNNjVqYHN8",
+            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAkWys69JHkSI8xP-Kb0o4bAYJXMNouXCkr_eNutl0b-Bs?e=OV2iHR"
           },
           {
-            "name": "PM Swami Atmanand Utkrisht Hindi Medium School",
+            "name": "PM Shri Swami Atmanand Utkrist Hindi medium School Gariaband",
             "district": "Gariaband",
-            "date": "2026-07-25",
-            "students": 0,
-            "mapLink": "",
-            "mediaLink": ""
+            "date": "2026-07-30",
+            "students": 100,
+            "mapLink": "https://maps.app.goo.gl/vMC815osCBC3TE2u6",
+            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAYMrdCfP91S6hE9-HGVCMNAVi-IvWoLn5mhVTLubqJmE4?e=WZJ7R8"
+          },
+          {
+            "name": "Govt. Higher Secondry School Dhawalpur",
+            "district": "Dhawalpur",
+            "date": "2026-07-31",
+            "students": 100,
+            "mapLink": "https://maps.app.goo.gl/qF8zd5zT2mwskmee8?g_st=ac",
+            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZoH4BH41BS6FJjRmy6GqfAQMYUGB4sorqjv3As71AfYQ?e=Apm962"
           }
         ]
       }
@@ -63,23 +71,22 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 3,
+      "current": 4,
       "total": 270
     },
     "statesCovered": {
-      "current": 0,
+      "current": 1,
       "total": 3
     },
     "districtsCovered": {
-      "current": 0,
+      "current": 1,
       "total": 16
     },
-    "studentsImpacted": 300,
+    "studentsImpacted": 400,
     "genderBreakdown": {
-      "girls": 215,
-      "boys": 85
+      "girls": 288,
+      "boys": 112
     },
-    "distanceTravelled": 0,
     "targetAudience": "Students from Classes 6-12 in rural, border, remote and tribal areas"
   },
   "states": [

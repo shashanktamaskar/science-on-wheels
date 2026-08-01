@@ -2,8 +2,33 @@
     "collageFolder": "gallery_collages", "schools": [
     {
       "name": "INAUGURATION",
+      "school_name": "INAUGURATION",
       "visitDate": "2026-06-14",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDQFuNsORDnR43UuRMeabujAR9aOt9sidVQnrS8cF94Mwc?e=Ro56mE"
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBfitrLMEdHSJSUoqq2UmvvAarY2QF21OW8-G2Js-ZP_Ag?e=TcrEgB"
+    },
+    {
+      "name": "GHSS_Girls_Gariaband",
+      "school_name": "GOVT. GIRLS HIGHER SECONDARY SCHOOL (Girls) GARIABAND",
+      "visitDate": "2026-07-28",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCIkCBK_T34RLe3fA1ySm0lAUrT4Jwr2TuyB-F87yARG3g"
+    },
+    {
+      "name": "SAGES_Gariaband",
+      "school_name": "Swami Aatmanand Govt English Medium school Gariaband",
+      "visitDate": "2026-07-29",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAkWys69JHkSI8xP-Kb0o4bAYJXMNouXCkr_eNutl0b-Bs?e=OV2iHR"
+    },
+    {
+      "name": "PM_SSAUHS_Gariaband",
+      "school_name": "PM Shri Swami Atmanand Utkrist Hindi medium School Gariaband",
+      "visitDate": "2026-07-30",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAYMrdCfP91S6hE9-HGVCMNAVi-IvWoLn5mhVTLubqJmE4?e=WZJ7R8"
+    },
+    {
+      "name": "GHSS_Dhawalpur",
+      "school_name": "Govt. Higher Secondry School Dhawalpur",
+      "visitDate": "2026-07-31",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZoH4BH41BS6FJjRmy6GqfAQMYUGB4sorqjv3As71AfYQ?e=Apm962"
     }
   ]
 }

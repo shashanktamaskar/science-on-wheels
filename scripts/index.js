@@ -97,7 +97,6 @@ function renderDashboard(data) {
         { label: 'Districts covered', value: `${mission.districtsCovered?.current || 0}/${mission.districtsCovered?.total || 0}` },
         { label: 'Schools visited', value: fmt(mission.schoolsCovered?.current || 0) },
         { label: 'Students reached', value: fmt(mission.studentsImpacted || 0) },
-        { label: 'Km travelled', value: fmt(mission.distanceTravelled || 0) }
     ];
     document.getElementById('dashboardSummary').innerHTML = summaryCards.map(card => `
         <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
@@ -260,7 +259,6 @@ async function init() {
     document.getElementById('stat-districts').textContent = `${data.mission.districtsCovered.current}/${data.mission.districtsCovered.total}`;
     document.getElementById('stat-schools').textContent = fmt(data.mission.schoolsCovered.current);
     document.getElementById('stat-students').textContent = fmt(data.mission.studentsImpacted);
-    document.getElementById('stat-distance').textContent = fmt(data.mission.distanceTravelled);
     document.getElementById('footerUpdated').textContent = 'Last updated: ' + data.lastUpdated;
 
     // Objectives
