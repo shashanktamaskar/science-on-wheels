@@ -33,6 +33,55 @@ function formatDate(value) {
     }).format(date);
 }
 
+function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, ch => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+    })[ch]);
+}
+
+function uniqueSorted(values) {
+    return [...new Set((values || []).map(value => typeof value === 'string' ? value.trim() : '').filter(Boolean))]
+        .sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
+}
+
+function hexToRgba(hex, alpha) {
+    const clean = String(hex || '').trim().replace('#', '');
+    if (!/^[0-9a-fA-F]{6}$/.test(clean)) {
+        return `rgba(15, 23, 42, ${alpha})`;
+    }
+    const r = parseInt(clean.slice(0, 2), 16);
+    const g = parseInt(clean.slice(2, 4), 16);
+    const b = parseInt(clean.slice(4, 6), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
+function buildCoverageRows(dashboard) {
+    const rows = [];
+    (dashboard.stateCoverage || []).forEach(group => {
+        const state = group?.state || '';
+        const color = group?.color || STATE_FILL[state] || '#0f172a';
+        (group?.schools || []).forEach(school => {
+            if (!isNonEmptyText(school?.name) && !isNonEmptyText(school?.district) && !isNonEmptyText(school?.date)) {
+                return;
+            }
+            rows.push({
+                state,
+                color,
+                name: school?.name || '',
+                district: school?.district || '',
+                date: school?.date || '',
+                mapLink: school?.mapLink || '',
+                mediaLink: school?.mediaLink || ''
+            });
+        });
+    });
+    return rows;
+}
+
 function renderMap(data) {
     const map = L.map('map', { scrollWheelZoom: false }).setView([26.2, 78.8], 5);
     L.tileLayer('https://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
@@ -73,6 +122,13 @@ function renderDashboard(data) {
     const mission = data.mission || {};
     const projectInfo = data.projectInfo || {};
     const dailyUpdates = Array.isArray(data.dailyUpdates) ? data.dailyUpdates : [];
+    const coverageRows = buildCoverageRows(dashboard);
+    const coverageSection = document.getElementById('dashboardStateCoverageSection');
+    const coverageRail = document.getElementById('stateProgress');
+    const coverageEmpty = document.getElementById('coverageEmptyState');
+    const coverageLatestBtn = document.getElementById('coverageLatestBtn');
+    const coverageStateSelect = document.getElementById('coverageStateSelect');
+    const coverageDistrictSelect = document.getElementById('coverageDistrictSelect');
 
     const phaseBadge = document.getElementById('dashboardPhaseBadge');
     if (phaseBadge) {
@@ -157,63 +213,137 @@ function renderDashboard(data) {
         }
     }
 
-    const stateCoverage = (dashboard.stateCoverage || [])
-        .filter(state => isNonEmptyText(state?.state) || isNonEmptyArray(state?.schools));
+    if (coverageSection && coverageRail && coverageEmpty && coverageLatestBtn && coverageStateSelect && coverageDistrictSelect) {
+        const stateNames = uniqueSorted(coverageRows.map(row => row.state));
+        const districtsByState = new Map();
+        const allDistricts = uniqueSorted(coverageRows.map(row => row.district));
 
-    const stateCoverageSection = document.getElementById('dashboardStateCoverageSection');
-    const stateProgress = document.getElementById('stateProgress');
-    if (stateProgress && stateCoverageSection) {
-        if (isNonEmptyArray(stateCoverage)) {
-            stateProgress.innerHTML = stateCoverage.slice(0, 3).map(state => {
-                const schools = (state.schools || []).filter(school =>
-                    isNonEmptyText(school?.name) ||
-                    isNonEmptyText(school?.district) ||
-                    isNonEmptyText(school?.date) ||
-                    isNonEmptyText(school?.mapLink) ||
-                    isNonEmptyText(school?.mediaLink)
-                );
-                const color = state.color || '#0f172a';
+        coverageRows.forEach(row => {
+            if (!districtsByState.has(row.state)) {
+                districtsByState.set(row.state, new Set());
+            }
+            if (row.district) {
+                districtsByState.get(row.state).add(row.district);
+            }
+        });
+
+        const coverageFilters = {
+            state: '',
+            district: ''
+        };
+
+        const compareByName = (a, b) => (a.name || '').localeCompare(b.name || '', 'en', { sensitivity: 'base' });
+        const compareByLatest = (a, b) => {
+            const byDate = (b.date || '').localeCompare(a.date || '');
+            return byDate !== 0 ? byDate : compareByName(a, b);
+        };
+
+        const coverageOptions = (items, label) => {
+            const options = [`<option value="">${escapeHtml(label)}</option>`];
+            items.forEach(item => {
+                options.push(`<option value="${escapeHtml(item)}">${escapeHtml(item)}</option>`);
+            });
+            return options.join('');
+        };
+
+        const refreshDistrictOptions = () => {
+            const districtPool = coverageFilters.state
+                ? uniqueSorted(Array.from(districtsByState.get(coverageFilters.state) || []))
+                : allDistricts;
+            coverageDistrictSelect.innerHTML = coverageOptions(districtPool, 'All districts');
+            if (coverageFilters.district && !districtPool.includes(coverageFilters.district)) {
+                coverageFilters.district = '';
+            }
+            coverageDistrictSelect.value = coverageFilters.district;
+        };
+
+        const filteredRows = () => {
+            const isLatestMode = !coverageFilters.state && !coverageFilters.district;
+            if (isLatestMode) {
+                return [...coverageRows].sort(compareByLatest).slice(0, 4);
+            }
+            return [...coverageRows]
+                .filter(row => !coverageFilters.state || row.state === coverageFilters.state)
+                .filter(row => !coverageFilters.district || row.district === coverageFilters.district)
+                .sort(compareByName);
+        };
+
+        const renderCoverageCards = () => {
+            const activeRows = filteredRows();
+            const isLatestMode = !coverageFilters.state && !coverageFilters.district;
+            coverageLatestBtn.classList.toggle('is-active', isLatestMode);
+            coverageRail.innerHTML = activeRows.map(row => {
+                const hasLinks = isNonEmptyText(row.mapLink) || isNonEmptyText(row.mediaLink);
                 return `
-                    <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm card-hover">
-                        <div class="px-5 py-4 text-white" style="background: linear-gradient(135deg, ${color} 0%, ${color}CC 100%);">
-                            <div class="flex items-start justify-between gap-3">
-                                <div>
-                                    <h4 class="text-lg font-extrabold">${state.state}</h4>
-                                    ${isNonEmptyText(state.base) ? `<p class="mt-1 text-sm text-white/85">Base: ${state.base}</p>` : ''}
+                    <article class="coverage-card card-hover">
+                        <div class="coverage-card-shell">
+                            <div class="coverage-card-head">
+                                <div class="flex items-center justify-between gap-3">
+                                    <h5 class="min-w-0 flex-1 truncate text-sm font-extrabold leading-tight text-slate-900">${escapeHtml(row.name || 'School visit')}</h5>
+                                    <span class="whitespace-nowrap rounded-full bg-slate-100 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-slate-500">${escapeHtml(formatDate(row.date) || 'Date pending')}</span>
                                 </div>
-                                <span class="whitespace-nowrap rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wide">${schools.length} schools</span>
                             </div>
-                        </div>
-                        <div class="space-y-3 p-5">
-                            ${schools.map(school => {
-                                const actionButtons = [
-                                    isNonEmptyText(school.mapLink) ? `<a href="${school.mapLink}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-slate-900 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-slate-700">Google Map</a>` : '',
-                                    isNonEmptyText(school.mediaLink) ? `<a href="${school.mediaLink}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-amber-400 px-3 py-1.5 text-xs font-semibold text-slate-900 transition hover:bg-amber-300">Media</a>` : ''
-                                ].filter(Boolean).join('');
-                                return `
-                                    <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                                        <div class="flex items-start justify-between gap-3">
-                                            <div>
-                                                <h5 class="font-extrabold text-slate-900">${school.name || ''}</h5>
-                                                <div class="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-slate-500">
-                                                    ${isNonEmptyText(school.district) ? `<span>${school.district}</span>` : ''}
-                                                    ${isNonEmptyText(school.date) ? `<span>${formatDate(school.date)}</span>` : ''}
-                                                    ${isNonEmptyText(school.students) ? `<span>${fmt(school.students)} students</span>` : ''}
-                                                </div>
-                                            </div>
+                            <div class="space-y-2.5 p-3">
+                                <div class="flex flex-wrap gap-2 text-[0.7rem] font-semibold text-slate-600">
+                                    <span class="coverage-tag">${escapeHtml(row.state)}</span>
+                                    ${isNonEmptyText(row.district) ? `<span class="coverage-tag">${escapeHtml(row.district)}</span>` : ''}
+                                </div>
+                                <div class="flex items-center justify-between gap-3">
+                                    ${hasLinks ? `
+                                        <div class="flex flex-wrap justify-end gap-2">
+                                            ${isNonEmptyText(row.mapLink) ? `<a href="${escapeHtml(row.mapLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-slate-900 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-slate-700">Map</a>` : ''}
+                                            ${isNonEmptyText(row.mediaLink) ? `<a href="${escapeHtml(row.mediaLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-sky-600 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-sky-500">Media</a>` : ''}
                                         </div>
-                                        ${actionButtons ? `<div class="mt-3 flex flex-wrap gap-2">${actionButtons}</div>` : ''}
-                                    </div>
-                                `;
-                            }).join('')}
+                                    ` : ''}
+                                </div>
+                            </div>
                         </div>
                     </article>
                 `;
             }).join('');
-            setHidden(stateCoverageSection, false);
+
+            if (activeRows.length) {
+                setHidden(coverageEmpty, true);
+                coverageEmpty.textContent = '';
+            } else {
+                coverageRail.innerHTML = '';
+                coverageEmpty.textContent = coverageFilters.state || coverageFilters.district
+                    ? 'No schools match the selected state or district.'
+                    : 'Coverage data is not available yet.';
+                setHidden(coverageEmpty, false);
+            }
+        };
+
+        coverageStateSelect.innerHTML = coverageOptions(stateNames, 'All states');
+        refreshDistrictOptions();
+
+        coverageLatestBtn.addEventListener('click', () => {
+            coverageFilters.state = '';
+            coverageFilters.district = '';
+            coverageStateSelect.value = '';
+            refreshDistrictOptions();
+            renderCoverageCards();
+        });
+
+        coverageStateSelect.addEventListener('change', () => {
+            coverageFilters.state = coverageStateSelect.value;
+            refreshDistrictOptions();
+            renderCoverageCards();
+        });
+
+        coverageDistrictSelect.addEventListener('change', () => {
+            coverageFilters.district = coverageDistrictSelect.value;
+            renderCoverageCards();
+        });
+
+        if (coverageRows.length) {
+            setHidden(coverageSection, false);
+            renderCoverageCards();
         } else {
-            stateProgress.innerHTML = '';
-            setHidden(stateCoverageSection, true);
+            coverageRail.innerHTML = '';
+            coverageEmpty.textContent = 'Coverage data is not available yet.';
+            setHidden(coverageEmpty, false);
+            setHidden(coverageSection, true);
         }
     }
 

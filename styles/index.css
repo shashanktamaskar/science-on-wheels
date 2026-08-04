@@ -192,6 +192,114 @@ html { scroll-behavior: smooth; }
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
+.coverage-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.6rem;
+}
+
+.coverage-filter-button,
+.coverage-filter-select {
+    min-height: 2.55rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.96);
+    color: #0f172a;
+    font-size: 0.82rem;
+    font-weight: 700;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+.coverage-filter-button {
+    padding: 0.6rem 1rem;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.coverage-filter-button:hover {
+    transform: translateY(-1px);
+}
+
+.coverage-filter-button.is-active {
+    border-color: transparent;
+    background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+    color: #fff;
+}
+
+.coverage-filter-select {
+    flex: 0 0 10.75rem;
+    min-width: 10.75rem;
+    padding: 0.55rem 2.35rem 0.55rem 0.95rem;
+    appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #64748b 50%),
+        linear-gradient(135deg, #64748b 50%, transparent 50%);
+    background-position:
+        calc(100% - 16px) calc(50% - 2px),
+        calc(100% - 10px) calc(50% - 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+.coverage-rail {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding: 0.25rem 0.25rem 0.9rem;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+}
+
+.coverage-rail::-webkit-scrollbar {
+    height: 0.68rem;
+}
+
+.coverage-rail::-webkit-scrollbar-thumb {
+    background: rgba(15, 23, 42, 0.16);
+    border-radius: 9999px;
+}
+
+.coverage-card {
+    flex: 0 0 clamp(12.5rem, 56vw, 15.25rem);
+    scroll-snap-align: start;
+}
+
+.coverage-card-shell {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.07);
+}
+
+.coverage-card-head {
+    position: relative;
+    padding: 0.7rem 0.8rem 0.65rem 0.9rem;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+}
+
+.coverage-card-head::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0.18rem;
+    background: #94a3b8;
+}
+
+.coverage-tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.4rem;
+    padding: 0.14rem 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: rgba(248, 250, 252, 0.96);
+    color: #475569;
+}
+
 @media (max-width: 1023px) {
     #map { height: 400px; }
     .hero-carousel-stage {
@@ -259,5 +367,28 @@ html { scroll-behavior: smooth; }
 
     .gallery-carousel-stage {
         max-height: min(78vh, 680px);
+    }
+
+    .coverage-card {
+        flex-basis: clamp(12.25rem, 64vw, 14.5rem);
+    }
+}
+
+@media (max-width: 640px) {
+    .coverage-filter-bar {
+        justify-content: flex-start;
+    }
+
+    .coverage-filter-button,
+    .coverage-filter-select {
+        width: 100%;
+    }
+
+    .coverage-filter-select {
+        min-width: 0;
+    }
+
+    .coverage-card {
+        flex-basis: 78vw;
     }
 }

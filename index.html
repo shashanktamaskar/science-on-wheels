@@ -118,7 +118,6 @@
             #dashboardSummary,
             #dashboardHighlights,
             #dashboardMilestones,
-            #stateProgress,
             #teamGrid,
             #partnersGrid {
                 grid-template-columns: 1fr !important;
@@ -290,7 +289,7 @@
 
     <!-- Dashboard -->
     <section id="dashboard" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Mission Dashboard</h3>
+        <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Dashboard</h3>
         <div class="mt-4 mb-8">
             <span id="dashboardPhaseBadge"
                 class="hidden inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-amber-800"></span>
@@ -310,8 +309,21 @@
         </div>
 
         <div id="dashboardStateCoverageSection" class="mb-10 hidden">
-            <h4 class="font-extrabold text-slate-900 mb-4">Coverage by State</h4>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="stateProgress"></div>
+            <div class="mb-4 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+                <div>
+                    <h4 class="font-extrabold text-slate-900">Coverage by State</h4>
+                    <p class="mt-1 text-sm text-slate-500">Latest visits by default. Filter by state or district when needed.</p>
+                </div>
+                <div class="coverage-filter-bar">
+                    <button id="coverageLatestBtn" type="button" class="coverage-filter-button is-active">Latest</button>
+                    <label class="sr-only" for="coverageStateSelect">State</label>
+                    <select id="coverageStateSelect" class="coverage-filter-select"></select>
+                    <label class="sr-only" for="coverageDistrictSelect">District</label>
+                    <select id="coverageDistrictSelect" class="coverage-filter-select"></select>
+                </div>
+            </div>
+            <div id="stateProgress" class="coverage-rail" aria-live="polite"></div>
+            <p id="coverageEmptyState" class="hidden mt-4 rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-500"></p>
         </div>
 
         <div id="dashboardRecentSection" class="hidden">
