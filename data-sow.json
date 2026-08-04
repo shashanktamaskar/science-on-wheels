@@ -64,6 +64,30 @@
             "students": 100,
             "mapLink": "https://maps.app.goo.gl/qF8zd5zT2mwskmee8?g_st=ac",
             "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZoH4BH41BS6FJjRmy6GqfAQMYUGB4sorqjv3As71AfYQ?e=Apm962"
+          },
+          {
+            "name": "Swami Atmanand English Medium School Naumuda Mainpur",
+            "district": "Mainpur",
+            "date": "2026-08-01",
+            "students": 100,
+            "mapLink": "https://maps.app.goo.gl/nrQgvmTq5pY9RJAR7",
+            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNcmoeGQtUQqZK8u3pZ88MAX66QnaiGunULHo6zRetVXY?e=gmpB0p"
+          },
+          {
+            "name": "EMRS-Kosambuda(chhura), Gariaband",
+            "district": "Gariaband",
+            "date": "2026-08-03",
+            "students": 100,
+            "mapLink": "https://goo.gl/maps/DdcVxjSJ6QXracho9",
+            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAVwtX2G3JzTK7AIOsGIQGaAUVNv2ilAR9F4E1ACLR3n6M?e=ehWI6M"
+          },
+          {
+            "name": "Swami Atmanand govt. English Medium School Chhura",
+            "district": "Chhura",
+            "date": "2026-08-04",
+            "students": 100,
+            "mapLink": "https://maps.app.goo.gl/JiGE4GgJyRBP5A3a6",
+            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCgpwflXEyoT6uPb33zP2lNASvb3spkrdqzuOzfTxT1roc?e=oPSMkW"
           }
         ]
       }
@@ -71,7 +95,7 @@
   },
   "mission": {
     "schoolsCovered": {
-      "current": 4,
+      "current": 7,
       "total": 270
     },
     "statesCovered": {
@@ -79,13 +103,13 @@
       "total": 3
     },
     "districtsCovered": {
-      "current": 1,
+      "current": 3,
       "total": 16
     },
     "studentsImpacted": 400,
     "genderBreakdown": {
-      "girls": 288,
-      "boys": 112
+      "girls": 438,
+      "boys": 262
     },
     "targetAudience": "Students from Classes 6-12 in rural, border, remote and tribal areas"
   },
