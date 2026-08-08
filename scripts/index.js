@@ -285,13 +285,13 @@ function renderDashboard(data) {
                             </div>
                             <div class="space-y-2.5 p-3">
                                 <div class="flex flex-wrap gap-2 text-[0.7rem] font-semibold text-slate-600">
-                                    <span class="coverage-tag">${escapeHtml(row.state)}</span>
                                     ${isNonEmptyText(row.district) ? `<span class="coverage-tag">${escapeHtml(row.district)}</span>` : ''}
+                                    <span class="coverage-tag">${escapeHtml(row.state)}</span>
                                 </div>
                                 <div class="flex items-center justify-between gap-3">
                                     ${hasLinks ? `
                                         <div class="flex flex-wrap justify-end gap-2">
-                                            ${isNonEmptyText(row.mapLink) ? `<a href="${escapeHtml(row.mapLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-slate-900 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-slate-700">Map</a>` : ''}
+                                            ${isNonEmptyText(row.mapLink) ? `<a href="${escapeHtml(row.mapLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-slate-900 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-slate-700">Location</a>` : ''}
                                             ${isNonEmptyText(row.mediaLink) ? `<a href="${escapeHtml(row.mediaLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-sky-600 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-sky-500">Media</a>` : ''}
                                         </div>
                                     ` : ''}
