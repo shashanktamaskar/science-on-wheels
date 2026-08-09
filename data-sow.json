@@ -26,90 +26,17 @@
         "targetDate": null,
         "status": null
       }
-    ],
-    "stateCoverage": [
-      {
-        "state": "Chhattisgarh",
-        "base": "IDYM Antariksh Prayogshala, Dumar",
-        "color": "#f59e0b",
-        "schools": [
-          {
-            "name": "GOVT. GIRLS HIGHER SECONDARY SCHOOL (Girls) GARIABAND",
-            "district": "Gariaband",
-            "date": "2026-07-28",
-            "students": 100,
-            "mapLink": "https://maps.app.goo.gl/EeuTPaDz55CAkU7MA",
-            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCIkCBK_T34RLe3fA1ySm0lAUrT4Jwr2TuyB-F87yARG3g"
-          },
-          {
-            "name": "Swami Aatmanand Govt English Medium school Gariaband",
-            "district": "Gariaband",
-            "date": "2026-07-29",
-            "students": 100,
-            "mapLink": "https://maps.app.goo.gl/4ZJYUagpNNjVqYHN8",
-            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAkWys69JHkSI8xP-Kb0o4bAYJXMNouXCkr_eNutl0b-Bs?e=OV2iHR"
-          },
-          {
-            "name": "PM Shri Swami Atmanand Utkrist Hindi medium School Gariaband",
-            "district": "Gariaband",
-            "date": "2026-07-30",
-            "students": 100,
-            "mapLink": "https://maps.app.goo.gl/vMC815osCBC3TE2u6",
-            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAYMrdCfP91S6hE9-HGVCMNAVi-IvWoLn5mhVTLubqJmE4?e=WZJ7R8"
-          },
-          {
-            "name": "Govt. Higher Secondry School Dhawalpur",
-            "district": "Dhawalpur",
-            "date": "2026-07-31",
-            "students": 100,
-            "mapLink": "https://maps.app.goo.gl/qF8zd5zT2mwskmee8?g_st=ac",
-            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZoH4BH41BS6FJjRmy6GqfAQMYUGB4sorqjv3As71AfYQ?e=Apm962"
-          },
-          {
-            "name": "Swami Atmanand English Medium School Naumuda Mainpur",
-            "district": "Mainpur",
-            "date": "2026-08-01",
-            "students": 100,
-            "mapLink": "https://maps.app.goo.gl/nrQgvmTq5pY9RJAR7",
-            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNcmoeGQtUQqZK8u3pZ88MAX66QnaiGunULHo6zRetVXY?e=gmpB0p"
-          },
-          {
-            "name": "EMRS-Kosambuda(chhura), Gariaband",
-            "district": "Gariaband",
-            "date": "2026-08-03",
-            "students": 100,
-            "mapLink": "https://goo.gl/maps/DdcVxjSJ6QXracho9",
-            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAVwtX2G3JzTK7AIOsGIQGaAUVNv2ilAR9F4E1ACLR3n6M?e=ehWI6M"
-          },
-          {
-            "name": "Swami Atmanand govt. English Medium School Chhura",
-            "district": "Chhura",
-            "date": "2026-08-04",
-            "students": 100,
-            "mapLink": "https://maps.app.goo.gl/JiGE4GgJyRBP5A3a6",
-            "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCgpwflXEyoT6uPb33zP2lNASvb3spkrdqzuOzfTxT1roc?e=oPSMkW"
-          }
-        ]
-      }
     ]
   },
   "mission": {
     "schoolsCovered": {
-      "current": 7,
       "total": 270
     },
     "statesCovered": {
-      "current": 1,
       "total": 3
     },
     "districtsCovered": {
-      "current": 3,
       "total": 16
-    },
-    "studentsImpacted": 400,
-    "genderBreakdown": {
-      "girls": 438,
-      "boys": 262
     },
     "targetAudience": "Students from Classes 6-12 in rural, border, remote and tribal areas"
   },
@@ -170,72 +97,6 @@
       "color": "#10b981"
     }
   ],
-  "districtCoordinates": {
-    "Rajnandgaon": {
-      "lat": 21.0972,
-      "lng": 81.0302
-    },
-    "Mungeli": {
-      "lat": 22.0654,
-      "lng": 81.6857
-    },
-    "Jashpur": {
-      "lat": 22.8871,
-      "lng": 84.1387
-    },
-    "Kanker": {
-      "lat": 20.2719,
-      "lng": 81.4931
-    },
-    "Gariyaband": {
-      "lat": 20.634,
-      "lng": 82.0623
-    },
-    "Faridkot": {
-      "lat": 30.6769,
-      "lng": 74.7583
-    },
-    "Fazilka": {
-      "lat": 30.4036,
-      "lng": 74.028
-    },
-    "Ferozepur": {
-      "lat": 30.9331,
-      "lng": 74.6225
-    },
-    "Pathankot": {
-      "lat": 32.2643,
-      "lng": 75.6421
-    },
-    "Hoshiarpur": {
-      "lat": 31.532,
-      "lng": 75.912
-    },
-    "Mansa": {
-      "lat": 29.9995,
-      "lng": 75.3937
-    },
-    "Mandi": {
-      "lat": 31.7076,
-      "lng": 76.9318
-    },
-    "Kullu": {
-      "lat": 31.9579,
-      "lng": 77.1095
-    },
-    "Bilaspur": {
-      "lat": 31.3306,
-      "lng": 76.757
-    },
-    "Hamirpur": {
-      "lat": 31.6895,
-      "lng": 76.5213
-    },
-    "Kangra": {
-      "lat": 32.0998,
-      "lng": 76.2691
-    }
-  },
   "modules": [
     {
       "name": "Space Tech Education",
@@ -444,5 +305,119 @@
     "address": "Plaksha University, Alpha Sector 101, IT City Road, S.A.S. Nagar, Punjab 140306",
     "website": "www.plaksha.edu.in"
   },
-  "dailyUpdates": []
+  "dailyUpdates": [],
+  "galleryFolder": "gallery_collages",
+  "schools": [
+    {
+      "state": "Chhattisgarh",
+      "district": "Gariaband",
+      "visitDate": "2026-07-28",
+      "name": "GHSS_Girls_Gariaband",
+      "school_name": "GOVT. GIRLS HIGHER SECONDARY SCHOOL (Girls) GARIABAND",
+      "mapLink": "https://maps.app.goo.gl/EeuTPaDz55CAkU7MA",
+      "coordinates": {
+        "lat": 20.633401734234017,
+        "lng": 82.06072332362163
+      },
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCIkCBK_T34RLe3fA1ySm0lAUrT4Jwr2TuyB-F87yARG3g",
+      "imageName": "GHSS_Girls_Gariaband.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCIkCBK_T34RLe3fA1ySm0lAUrT4Jwr2TuyB-F87yARG3g",
+      "girlsCount": 50,
+      "boysCount": 50
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Gariaband",
+      "visitDate": "2026-07-29",
+      "name": "SAGES_Gariaband",
+      "school_name": "Swami Aatmanand Govt English Medium school Gariaband",
+      "mapLink": "https://maps.app.goo.gl/4ZJYUagpNNjVqYHN8",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAkWys69JHkSI8xP-Kb0o4bAYJXMNouXCkr_eNutl0b-Bs?e=OV2iHR",
+      "imageName": "SAGES_Gariaband.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAkWys69JHkSI8xP-Kb0o4bAYJXMNouXCkr_eNutl0b-bs?e=OV2iHR",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 21.118891917818743,
+        "lng": 82.10023747589459
+      }
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Gariaband",
+      "visitDate": "2026-07-30",
+      "name": "PM_SSAUHS_Gariaband",
+      "school_name": "PM Shri Swami Atmanand Utkrist Hindi medium School Gariaband",
+      "mapLink": "https://maps.app.goo.gl/vMC815osCBC3TE2u6",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAYMrdCfP91S6hE9-HGVCMNAVi-IvWoLn5mhVTLubqJmE4?e=WZJ7R8",
+      "imageName": "PM_SSAUHS_Gariaband.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAYMrdCfP91S6hE9-HGVCMNAVi-IvWoLn5mhVTLubqJmE4?e=WZJ7R8",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 20.63390023231373,
+        "lng": 82.05762621534497
+      }
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Dhawalpur",
+      "visitDate": "2026-07-31",
+      "name": "GHSS_Dhawalpur",
+      "school_name": "Govt. Higher Secondry School Dhawalpur",
+      "mapLink": "https://maps.app.goo.gl/qF8zd5zT2mwskmee8?g_st=ac",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZoH4BH41BS6FJjRmy6GqfAQMYUGB4sorqjv3As71AfYQ?e=Apm962",
+      "imageName": "GHSS_Dhawalpur.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZoH4BH41BS6FJjRmy6GqfAQMYUGB4sorqjv3As71AfYQ?e=Apm962",
+      "girlsCount": 50,
+      "boysCount": 50
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Mainpur",
+      "visitDate": "2026-08-01",
+      "name": "SAGES_Mainpur",
+      "school_name": "Swami Atmanand English Medium School Naumuda Mainpur",
+      "mapLink": "https://maps.app.goo.gl/nrQgvmTq5pY9RJAR7",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNcmoeGQtUQqZK8u3pZ88MAX66QnaiGunULHo6zRetVXY?e=gmpB0p",
+      "imageName": "SAGES_Mainpur.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNcmoeGQtUQqZK8u3pZ88MAX66QnaiGunULHo6zRetVXY?e=gmpB0p",
+      "girlsCount": 20.290544776322736,
+      "boysCount": 82.25227525767248
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Gariaband",
+      "visitDate": "2026-08-03",
+      "name": "Eklavya_school",
+      "school_name": "Eklavya Vidyalay kosambuda",
+      "mapLink": "https://goo.gl/maps/DdcVxjSJ6QXracho9",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAVwtX2G3JzTK7AIOsGIQGaAUVNv2ilAR9F4E1ACLR3n6M?e=ehWI6M",
+      "imageName": "Eklavya_school.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAVwtX2G3JzTK7AIOsGIQGaAUVNv2ilAR9F4E1ACLR3n6M?e=ehWI6M",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 20.83390645922963,
+        "lng": 82.22192491129475
+      }
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Chhura",
+      "visitDate": "2026-08-04",
+      "name": "SAGES_Chhura",
+      "school_name": "Swami Atmanand govt. English Medium School Chhura",
+      "mapLink": "https://maps.app.goo.gl/JiGE4GgJyRBP5A3a6",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCgpwflXEyoT6uPb33zP2lNASvb3spkrdqzuOzfTxT1roc?e=oPSMkW",
+      "imageName": "SAGES_Chhura.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCgpwflXEyoT6uPb33zP2lNASvb3spkrdqzuOzfTxT1roc?e=oPSMkW",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 20.806343014850288,
+        "lng": 82.2051564171987
+      }
+    }
+  ]
 }

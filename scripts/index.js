@@ -59,15 +59,83 @@ function hexToRgba(hex, alpha) {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
-function buildCoverageRows(dashboard) {
+function readCoordinate(point) {
+    const lat = Number(point?.lat);
+    const lng = Number(point?.lng);
+    if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+        return null;
+    }
+    return { lat, lng };
+}
+
+function buildSchoolPopup(school) {
+    const title = escapeHtml(school?.school_name || school?.name || 'School visit');
+    const state = escapeHtml(school?.state || '');
+    const district = escapeHtml(school?.district || '');
+    const visitDate = escapeHtml(formatDate(school?.visitDate || school?.date || '') || '');
+    const mapLink = isNonEmptyText(school?.mapLink) ? String(school.mapLink) : '';
+    const mediaLink = isNonEmptyText(school?.mediaLink) ? String(school.mediaLink) : '';
+
+    return `
+        <div style="min-width:220px;max-width:280px">
+            <div style="font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#64748b;margin-bottom:6px">School visit</div>
+            <div style="font-size:15px;font-weight:800;line-height:1.3;color:#0f172a">${title}</div>
+            <div style="margin-top:6px;font-size:13px;color:#475569">${district}${state ? `, ${state}` : ''}</div>
+            ${visitDate ? `<div style="margin-top:4px;font-size:12px;color:#64748b">${visitDate}</div>` : ''}
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
+                ${mapLink ? `<a href="${escapeHtml(mapLink)}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;border-radius:9999px;background:#0f172a;color:#fff;padding:6px 10px;font-size:12px;font-weight:700;text-decoration:none">Open map</a>` : ''}
+                ${mediaLink ? `<a href="${escapeHtml(mediaLink)}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;border-radius:9999px;background:#0ea5e9;color:#fff;padding:6px 10px;font-size:12px;font-weight:700;text-decoration:none">View media</a>` : ''}
+            </div>
+        </div>
+    `;
+}
+
+function buildCoverageRows(data) {
     const rows = [];
-    (dashboard.stateCoverage || []).forEach(group => {
+    const directSchools = Array.isArray(data?.schools) ? data.schools : [];
+    if (directSchools.length) {
+        directSchools.forEach(school => {
+            const state = school?.state || '';
+            const district = school?.district || '';
+            const date = school?.visitDate || school?.date || '';
+            const name = school?.school_name || school?.name || '';
+            if (!isNonEmptyText(name) && !isNonEmptyText(district) && !isNonEmptyText(date)) {
+                return;
+            }
+            const girls = Number(school?.girlsCount ?? school?.girls ?? school?.counts?.girls ?? NaN);
+            const boys = Number(school?.boysCount ?? school?.boys ?? school?.counts?.boys ?? NaN);
+            const students = Number(school?.students ?? school?.studentsReached ?? NaN);
+            const normalizedGirls = Number.isFinite(girls) ? girls : (Number.isFinite(students) ? Math.floor(students / 2) : 0);
+            const normalizedBoys = Number.isFinite(boys) ? boys : (Number.isFinite(students) ? students - normalizedGirls : 0);
+            rows.push({
+                state,
+                name,
+                district,
+                date,
+                mapLink: school?.location?.mapLink || school?.mapLink || '',
+                mediaLink: school?.media?.link || school?.mediaLink || '',
+                girlsCount: normalizedGirls,
+                boysCount: normalizedBoys,
+                students: normalizedGirls + normalizedBoys,
+                imageName: school?.gallery?.imageName || school?.imageName || '',
+                folderUrl: school?.gallery?.folderUrl || school?.folderUrl || ''
+            });
+        });
+        return rows;
+    }
+
+    (data?.dashboard?.stateCoverage || []).forEach(group => {
         const state = group?.state || '';
         const color = group?.color || STATE_FILL[state] || '#0f172a';
         (group?.schools || []).forEach(school => {
             if (!isNonEmptyText(school?.name) && !isNonEmptyText(school?.district) && !isNonEmptyText(school?.date)) {
                 return;
             }
+            const girls = Number(school?.girlsCount ?? school?.girls ?? NaN);
+            const boys = Number(school?.boysCount ?? school?.boys ?? NaN);
+            const students = Number(school?.students ?? school?.studentsReached ?? NaN);
+            const normalizedGirls = Number.isFinite(girls) ? girls : (Number.isFinite(students) ? Math.floor(students / 2) : 0);
+            const normalizedBoys = Number.isFinite(boys) ? boys : (Number.isFinite(students) ? students - normalizedGirls : 0);
             rows.push({
                 state,
                 color,
@@ -75,11 +143,39 @@ function buildCoverageRows(dashboard) {
                 district: school?.district || '',
                 date: school?.date || '',
                 mapLink: school?.mapLink || '',
-                mediaLink: school?.mediaLink || ''
+                mediaLink: school?.mediaLink || '',
+                girlsCount: normalizedGirls,
+                boysCount: normalizedBoys,
+                students: normalizedGirls + normalizedBoys
             });
         });
     });
     return rows;
+}
+
+function summarizeCoverageRows(rows, mission = {}) {
+    const states = new Set();
+    const districts = new Set();
+    let students = 0;
+    let girls = 0;
+    let boys = 0;
+
+    rows.forEach(row => {
+        if (row.state) states.add(row.state);
+        if (row.district) districts.add(row.district);
+        students += Number(row.students || 0);
+        girls += Number(row.girlsCount || 0);
+        boys += Number(row.boysCount || 0);
+    });
+
+    return {
+        schools: rows.length || mission.schoolsCovered?.current || 0,
+        states: states.size || mission.statesCovered?.current || 0,
+        districts: districts.size || mission.districtsCovered?.current || 0,
+        students: students || mission.studentsImpacted || 0,
+        girls: girls || mission.genderBreakdown?.girls || 0,
+        boys: boys || mission.genderBreakdown?.boys || 0
+    };
 }
 
 function renderMap(data) {
@@ -88,15 +184,7 @@ function renderMap(data) {
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
         attribution: '© Google Maps'
     }).addTo(map);
-    data.states.forEach(s => {
-        s.districts.forEach(d => {
-            const c = data.districtCoordinates[d];
-            if (!c) return;
-            L.circleMarker([c.lat, c.lng], {
-                radius: 9, color: '#fff', weight: 2, fillColor: s.color, fillOpacity: .9
-            }).addTo(map).bindPopup(`<strong>${d}</strong><br>${s.name}`);
-        });
-    });
+    const pointCounts = new Map();
     const baseIcon = L.divIcon({
         className: '',
         html: '<div style="width:18px;height:18px;background:#fbbf24;border:2.5px solid #0f172a;transform:rotate(45deg);box-shadow:0 0 0 2px #fff,0 1px 4px rgba(0,0,0,.4);"></div>',
@@ -107,6 +195,24 @@ function renderMap(data) {
     BASES.forEach(b => {
         L.marker([b.lat, b.lng], { icon: baseIcon, zIndexOffset: 1000 })
             .addTo(map).bindPopup(`◆ <strong>Base hub</strong><br>${b.name}`);
+    });
+    (data.schools || []).forEach(school => {
+        const c = readCoordinate(school?.coordinates);
+        if (!c) return;
+        const pointKey = `${c.lat.toFixed(6)},${c.lng.toFixed(6)}`;
+        const count = pointCounts.get(pointKey) || 0;
+        pointCounts.set(pointKey, count + 1);
+        const offsetAngle = (count % 6) * (Math.PI / 3);
+        const offsetDistance = 0.035 + (Math.floor(count / 6) * 0.012);
+        const lat = c.lat + Math.cos(offsetAngle) * offsetDistance;
+        const lng = c.lng + Math.sin(offsetAngle) * offsetDistance;
+        L.circleMarker([lat, lng], {
+            radius: 5,
+            color: '#ffffff',
+            weight: 1.5,
+            fillColor: '#dc2626',
+            fillOpacity: 0.95
+        }).addTo(map).bindPopup(buildSchoolPopup(school));
     });
     // Visited schools
     (data.dailyUpdates || []).forEach(u => (u.schools || []).forEach(sc => {
@@ -122,7 +228,8 @@ function renderDashboard(data) {
     const mission = data.mission || {};
     const projectInfo = data.projectInfo || {};
     const dailyUpdates = Array.isArray(data.dailyUpdates) ? data.dailyUpdates : [];
-    const coverageRows = buildCoverageRows(dashboard);
+    const coverageRows = buildCoverageRows(data);
+    const coverageSummary = summarizeCoverageRows(coverageRows, mission);
     const coverageSection = document.getElementById('dashboardStateCoverageSection');
     const coverageRail = document.getElementById('stateProgress');
     const coverageEmpty = document.getElementById('coverageEmptyState');
@@ -149,10 +256,10 @@ function renderDashboard(data) {
     }
 
     const summaryCards = [
-        { label: 'States covered', value: `${mission.statesCovered?.current || 0}/${mission.statesCovered?.total || 0}` },
-        { label: 'Districts covered', value: `${mission.districtsCovered?.current || 0}/${mission.districtsCovered?.total || 0}` },
-        { label: 'Schools visited', value: fmt(mission.schoolsCovered?.current || 0) },
-        { label: 'Students reached', value: fmt(mission.studentsImpacted || 0) },
+        { label: 'States covered', value: `${coverageSummary.states}/${mission.statesCovered?.total || 0}` },
+        { label: 'Districts covered', value: `${coverageSummary.districts}/${mission.districtsCovered?.total || 0}` },
+        { label: 'Schools visited', value: fmt(coverageSummary.schools) },
+        { label: 'Students reached', value: fmt(coverageSummary.students) },
     ];
     document.getElementById('dashboardSummary').innerHTML = summaryCards.map(card => `
         <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
@@ -385,10 +492,11 @@ async function init() {
     }
 
     // Stats strip
-    document.getElementById('stat-states').textContent = `${data.mission.statesCovered.current}/${data.mission.statesCovered.total}`;
-    document.getElementById('stat-districts').textContent = `${data.mission.districtsCovered.current}/${data.mission.districtsCovered.total}`;
-    document.getElementById('stat-schools').textContent = fmt(data.mission.schoolsCovered.current);
-    document.getElementById('stat-students').textContent = fmt(data.mission.studentsImpacted);
+    const coverageSummary = summarizeCoverageRows(buildCoverageRows(data), data.mission || {});
+    document.getElementById('stat-states').textContent = `${coverageSummary.states}/${data.mission.statesCovered?.total || 0}`;
+    document.getElementById('stat-districts').textContent = `${coverageSummary.districts}/${data.mission.districtsCovered?.total || 0}`;
+    document.getElementById('stat-schools').textContent = fmt(coverageSummary.schools);
+    document.getElementById('stat-students').textContent = fmt(coverageSummary.students);
     document.getElementById('footerUpdated').textContent = 'Last updated: ' + data.lastUpdated;
 
     // Objectives

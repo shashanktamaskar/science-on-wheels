@@ -1,7 +1,6 @@
 (function () {
     const MOUNT_ID = 'galleryCarouselMount';
-    const DATA_URL = 'schools-gallery-sow.json';
-    const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.webp', '.JPG', '.JPEG', '.PNG', '.WEBP'];
+    const DATA_URL = 'data-sow.json';
 
     const state = {
         collageFolder: '',
@@ -24,9 +23,9 @@
         }).format(date);
     }
 
-    function buildImagePaths(name) {
+    function buildImagePath(imageName) {
         const folder = state.collageFolder.replace(/\/+$/, '');
-        return IMAGE_EXTENSIONS.map(ext => `${folder}/${encodeURIComponent(name)}${ext}`);
+        return `${folder}/${encodeURI(imageName)}`;
     }
 
     function setGalleryAspectRatio(stage, image) {
@@ -115,14 +114,15 @@
         if (!el || !counter) return;
 
         const school = state.schools[state.index];
-        const imagePaths = buildImagePaths(school.name);
+        const imageName = school.gallery?.imageName || school.imageName || school.name;
+        const imagePath = buildImagePath(imageName);
 
         counter.textContent = `${state.index + 1} / ${state.schools.length} school collages`;
 
         el.innerHTML = `
             <div class="relative bg-gradient-to-br from-slate-100 to-slate-200 gallery-carousel-stage-inner">
                 <img id="galleryImage"
-                    alt="${school.name} collage"
+                    alt="${school.school_name || school.name} collage"
                     class="gallery-carousel-image"
                     loading="eager"
                     decoding="async">
@@ -146,15 +146,19 @@
         `;
 
         const image = document.getElementById('galleryImage');
-        loadFirstAvailableImage(image, imagePaths, 0);
+        loadImage(image, imagePath);
 
         updateControls();
         updateDots();
     }
 
-    function loadFirstAvailableImage(image, imagePaths, attemptIndex) {
+    function loadImage(image, imagePath) {
         if (!image) return;
-        if (attemptIndex >= imagePaths.length) {
+        image.onload = () => {
+            const stage = document.getElementById('gallerySlide');
+            setGalleryAspectRatio(stage, image);
+        };
+        image.onerror = () => {
             image.outerHTML = `
                 <div class="flex min-h-[280px] items-center justify-center p-8 text-center text-slate-500">
                     <div>
@@ -163,15 +167,8 @@
                     </div>
                 </div>
             `;
-            return;
-        }
-
-        image.onload = () => {
-            const stage = document.getElementById('gallerySlide');
-            setGalleryAspectRatio(stage, image);
         };
-        image.onerror = () => loadFirstAvailableImage(image, imagePaths, attemptIndex + 1);
-        image.src = imagePaths[attemptIndex];
+        image.src = imagePath;
     }
 
     function updateControls() {
@@ -216,16 +213,16 @@
         try {
             const response = await fetch(`${DATA_URL}?v=${Date.now()}`);
             const data = await response.json();
-            state.collageFolder = data.collageFolder || '';
+            state.collageFolder = data.galleryFolder || data.gallery?.collageFolder || '';
             state.schools = Array.isArray(data.schools) ? data.schools
-                .filter(s => s && s.name)
+                .filter(s => s && (s.gallery?.imageName || s.imageName || s.name))
                 .slice()
-                .sort((a, b) => new Date(b.visitDate) - new Date(a.visitDate)) : [];
+                .sort((a, b) => new Date((b.visitDate || b.date || '1970-01-01')) - new Date((a.visitDate || a.date || '1970-01-01'))) : [];
 
             if (!state.collageFolder) {
                 showMessage(
                     'Gallery folder not configured',
-                    'Add a collageFolder value to schools-gallery.json so the index carousel knows where to load images from.'
+                    'Add a galleryFolder value to data-sow.json so the index carousel knows where to load images from.'
                 );
                 return;
             }
@@ -245,7 +242,7 @@
             console.error('Failed to load index gallery data', error);
             showMessage(
                 'Gallery unavailable',
-                'The gallery data file could not be loaded. Check schools-gallery.json and the collage folder path.'
+                'The gallery data file could not be loaded. Check data-sow.json and the collage folder path.'
             );
         }
     }
