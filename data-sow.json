@@ -422,6 +422,74 @@
         "lat": 20.806343014850288,
         "lng": 82.2051564171987
       }
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Chhura",
+      "visitDate": "2026-08-05",
+      "name": "GHSSS_Akalwara",
+      "school_name": "Govt. Higher secondar school Akalwara",
+      "mapLink": "https://maps.app.goo.gl/7g6k1v5Z9X8y3J2F9",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBT3SMnD9s-RbXnARcfqQBrAbPBHf0vV6hShiew2igI30k?e=03ak45",
+      "imageName": "GHSSS_Akalwara.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBT3SMnD9s-RbXnARcfqQBrAbPBHf0vV6hShiew2igI30k?e=03ak45",
+      "girlsCount": 41,
+      "boysCount": 64,
+      "coordinates": {
+        "lat": 20.909713590587344,
+        "lng": 82.14160654232754
+      }
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Fingeshwar",
+      "visitDate": "2026-08-06",
+      "name": "SAGES_Fingeshwar",
+      "school_name": "Swami Atmanand Gov. English School Fingeshwar",
+      "mapLink": "https://maps.app.goo.gl/CeFrPS8WcBYeigeb9",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBPVTuj1WQvT7PbF0dz2u1fAXKxoYa9FCBoC31QaSVjcmA?e=eIwQ2x",
+      "imageName": "SAGES_Fingeshwar.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBPVTuj1WQvT7PbF0dz2u1fAXKxoYa9FCBoC31QaSVjcmA?e=eIwQ2x",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 21.125306971278842,
+        "lng": 82.10073051872592
+      }
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Fingeshwar",
+      "visitDate": "2026-08-07",
+      "name": "GHSSS_Fingeshwar",
+      "school_name": "GOVT. Thakur Dalganjan Singh Gov. Higher secondary school , fingeshwa",
+      "mapLink": "https://maps.app.goo.gl/ThhVt4YGYCjvPQ4s8",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgD4IjCjJlATQZQaBoQq9-gAAbuDOi0bGLYZLnw4Y84HyFY?e=0Q17wx",
+      "imageName": "GHSSS_Fingeshwar.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgD4IjCjJlATQZQaBoQq9-gAAbuDOi0bGLYZLnw4Y84HyFY?e=0Q17wx",
+      "girlsCount": 40,
+      "boysCount": 75,
+      "coordinates": {
+        "lat": 20.968246864334517,
+        "lng": 82.03435094351202
+      }
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Fingeshwar",
+      "visitDate": "2026-08-08",
+      "name": "GHSS_Borsi",
+      "school_name": "Govt higher Secondary school Borsi",
+      "mapLink": "https://maps.app.goo.gl/TNPtyyYLTKdi3YQJ6?g_st=aw",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgD4IjCjJlATQZQaBoQq9-gAAbuDOi0bGLYZLnw4Y84HyFY?e=0Q17wx",
+      "imageName": "GHSS_Borsi.jpg",
+      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgD4IjCjJlATQZQaBoQq9-gAAbuDOi0bGLYZLnw4Y84HyFY?e=0Q17wx",
+      "girlsCount": 38,
+      "boysCount": 62,
+      "coordinates": {
+        "lat": 20.956984430255428,
+        "lng": 81.98317727116374
+      }
     }
   ]
 }
