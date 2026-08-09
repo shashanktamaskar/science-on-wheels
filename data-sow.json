@@ -322,8 +322,8 @@
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCIkCBK_T34RLe3fA1ySm0lAUrT4Jwr2TuyB-F87yARG3g",
       "imageName": "GHSS_Girls_Gariaband.jpg",
       "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCIkCBK_T34RLe3fA1ySm0lAUrT4Jwr2TuyB-F87yARG3g",
-      "girlsCount": 50,
-      "boysCount": 50
+      "girlsCount": 100,
+      "boysCount": 0
     },
     {
       "state": "Chhattisgarh",
@@ -335,8 +335,8 @@
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAkWys69JHkSI8xP-Kb0o4bAYJXMNouXCkr_eNutl0b-Bs?e=OV2iHR",
       "imageName": "SAGES_Gariaband.jpg",
       "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAkWys69JHkSI8xP-Kb0o4bAYJXMNouXCkr_eNutl0b-bs?e=OV2iHR",
-      "girlsCount": 50,
-      "boysCount": 50,
+      "girlsCount": 65,
+      "boysCount": 35,
       "coordinates": {
         "lat": 21.118891917818743,
         "lng": 82.10023747589459
@@ -369,8 +369,8 @@
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZoH4BH41BS6FJjRmy6GqfAQMYUGB4sorqjv3As71AfYQ?e=Apm962",
       "imageName": "GHSS_Dhawalpur.jpg",
       "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZoH4BH41BS6FJjRmy6GqfAQMYUGB4sorqjv3As71AfYQ?e=Apm962",
-      "girlsCount": 50,
-      "boysCount": 50
+      "girlsCount": 73,
+      "boysCount": 27
     },
     {
       "state": "Chhattisgarh",
@@ -382,8 +382,12 @@
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNcmoeGQtUQqZK8u3pZ88MAX66QnaiGunULHo6zRetVXY?e=gmpB0p",
       "imageName": "SAGES_Mainpur.jpg",
       "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNcmoeGQtUQqZK8u3pZ88MAX66QnaiGunULHo6zRetVXY?e=gmpB0p",
-      "girlsCount": 20.290544776322736,
-      "boysCount": 82.25227525767248
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 20.83390645922963,
+        "lng": 82.22192491129475
+      }
     },
     {
       "state": "Chhattisgarh",
