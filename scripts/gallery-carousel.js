@@ -114,7 +114,7 @@
         if (!el || !counter) return;
 
         const school = state.schools[state.index];
-        const imageName = school.gallery?.imageName || school.imageName || school.name;
+        const imageName = school.gallery?.imageName || school.imageName || '';
         const imagePath = buildImagePath(imageName);
 
         counter.textContent = `${state.index + 1} / ${state.schools.length} school collages`;
@@ -122,22 +122,22 @@
         el.innerHTML = `
             <div class="relative bg-gradient-to-br from-slate-100 to-slate-200 gallery-carousel-stage-inner">
                 <img id="galleryImage"
-                    alt="${school.school_name || school.name} collage"
+                    alt="${school.school_name || 'School'} collage"
                     class="gallery-carousel-image"
                     loading="eager"
                     decoding="async">
                 <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-5 md:p-6">
                     <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                         <div>
-                            <h4 class="text-2xl font-extrabold text-white">${school.school_name}</h4>
+                            <h4 class="text-2xl font-extrabold text-white">${school.school_name || 'School visit'}</h4>
                             <p class="mt-1 text-sm font-medium text-slate-200">${school.district || ''}${school.district ? ' District' : ''}</p>
                             <p class="text-sm text-slate-300">${formatDate(school.visitDate)}</p>
                         </div>
                         <div class="flex flex-wrap gap-3">
-                            ${school.folderUrl ? `
-                                <a href="${school.folderUrl}" target="_blank" rel="noopener"
+                            ${school.mediaLink ? `
+                                <a href="${school.mediaLink}" target="_blank" rel="noopener"
                                     class="inline-flex items-center justify-center rounded-lg bg-cyan-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-cyan-700">
-                                    See this visit only
+                                    Open media
                                 </a>` : ''}
                         </div>
                     </div>
@@ -215,7 +215,7 @@
             const data = await response.json();
             state.collageFolder = data.galleryFolder || data.gallery?.collageFolder || '';
             state.schools = Array.isArray(data.schools) ? data.schools
-                .filter(s => s && (s.gallery?.imageName || s.imageName || s.name))
+                .filter(s => s && (s.gallery?.imageName || s.imageName || s.school_name))
                 .slice()
                 .sort((a, b) => new Date((b.visitDate || b.date || '1970-01-01')) - new Date((a.visitDate || a.date || '1970-01-01'))) : [];
 

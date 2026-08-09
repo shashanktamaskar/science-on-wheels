@@ -312,184 +312,162 @@
       "state": "Chhattisgarh",
       "district": "Gariaband",
       "visitDate": "2026-07-28",
-      "name": "GHSS_Girls_Gariaband",
       "school_name": "GOVT. GIRLS HIGHER SECONDARY SCHOOL (Girls) GARIABAND",
-      "mapLink": "https://maps.app.goo.gl/EeuTPaDz55CAkU7MA",
       "coordinates": {
         "lat": 20.633401734234017,
         "lng": 82.06072332362163
       },
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCIkCBK_T34RLe3fA1ySm0lAUrT4Jwr2TuyB-F87yARG3g",
       "imageName": "GHSS_Girls_Gariaband.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCIkCBK_T34RLe3fA1ySm0lAUrT4Jwr2TuyB-F87yARG3g",
       "girlsCount": 100,
-      "boysCount": 0
+      "boysCount": 0,
+      "locationLink": "https://maps.app.goo.gl/EeuTPaDz55CAkU7MA"
     },
     {
       "state": "Chhattisgarh",
       "district": "Gariaband",
       "visitDate": "2026-07-29",
-      "name": "SAGES_Gariaband",
       "school_name": "Swami Aatmanand Govt English Medium school Gariaband",
-      "mapLink": "https://maps.app.goo.gl/4ZJYUagpNNjVqYHN8",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAkWys69JHkSI8xP-Kb0o4bAYJXMNouXCkr_eNutl0b-Bs?e=OV2iHR",
       "imageName": "SAGES_Gariaband.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAkWys69JHkSI8xP-Kb0o4bAYJXMNouXCkr_eNutl0b-bs?e=OV2iHR",
       "girlsCount": 65,
       "boysCount": 35,
       "coordinates": {
         "lat": 21.118891917818743,
         "lng": 82.10023747589459
-      }
+      },
+      "locationLink": "https://maps.app.goo.gl/4ZJYUagpNNjVqYHN8"
     },
     {
       "state": "Chhattisgarh",
       "district": "Gariaband",
       "visitDate": "2026-07-30",
-      "name": "PM_SSAUHS_Gariaband",
       "school_name": "PM Shri Swami Atmanand Utkrist Hindi medium School Gariaband",
-      "mapLink": "https://maps.app.goo.gl/vMC815osCBC3TE2u6",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAYMrdCfP91S6hE9-HGVCMNAVi-IvWoLn5mhVTLubqJmE4?e=WZJ7R8",
       "imageName": "PM_SSAUHS_Gariaband.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAYMrdCfP91S6hE9-HGVCMNAVi-IvWoLn5mhVTLubqJmE4?e=WZJ7R8",
       "girlsCount": 50,
       "boysCount": 50,
       "coordinates": {
         "lat": 20.63390023231373,
         "lng": 82.05762621534497
-      }
+      },
+      "locationLink": "https://maps.app.goo.gl/vMC815osCBC3TE2u6"
     },
     {
       "state": "Chhattisgarh",
       "district": "Dhawalpur",
       "visitDate": "2026-07-31",
-      "name": "GHSS_Dhawalpur",
       "school_name": "Govt. Higher Secondry School Dhawalpur",
-      "mapLink": "https://maps.app.goo.gl/qF8zd5zT2mwskmee8?g_st=ac",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZoH4BH41BS6FJjRmy6GqfAQMYUGB4sorqjv3As71AfYQ?e=Apm962",
       "imageName": "GHSS_Dhawalpur.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZoH4BH41BS6FJjRmy6GqfAQMYUGB4sorqjv3As71AfYQ?e=Apm962",
       "girlsCount": 73,
-      "boysCount": 27
+      "boysCount": 27,
+      "locationLink": "https://maps.app.goo.gl/qF8zd5zT2mwskmee8?g_st=ac"
     },
     {
       "state": "Chhattisgarh",
       "district": "Mainpur",
       "visitDate": "2026-08-01",
-      "name": "SAGES_Mainpur",
       "school_name": "Swami Atmanand English Medium School Naumuda Mainpur",
-      "mapLink": "https://maps.app.goo.gl/nrQgvmTq5pY9RJAR7",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNcmoeGQtUQqZK8u3pZ88MAX66QnaiGunULHo6zRetVXY?e=gmpB0p",
       "imageName": "SAGES_Mainpur.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNcmoeGQtUQqZK8u3pZ88MAX66QnaiGunULHo6zRetVXY?e=gmpB0p",
       "girlsCount": 50,
       "boysCount": 50,
       "coordinates": {
         "lat": 20.83390645922963,
         "lng": 82.22192491129475
-      }
+      },
+      "locationLink": "https://maps.app.goo.gl/nrQgvmTq5pY9RJAR7"
     },
     {
       "state": "Chhattisgarh",
       "district": "Gariaband",
       "visitDate": "2026-08-03",
-      "name": "Eklavya_school",
       "school_name": "Eklavya Vidyalay kosambuda",
-      "mapLink": "https://goo.gl/maps/DdcVxjSJ6QXracho9",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAVwtX2G3JzTK7AIOsGIQGaAUVNv2ilAR9F4E1ACLR3n6M?e=ehWI6M",
       "imageName": "Eklavya_school.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAVwtX2G3JzTK7AIOsGIQGaAUVNv2ilAR9F4E1ACLR3n6M?e=ehWI6M",
       "girlsCount": 50,
       "boysCount": 50,
       "coordinates": {
         "lat": 20.83390645922963,
         "lng": 82.22192491129475
-      }
+      },
+      "locationLink": "https://goo.gl/maps/DdcVxjSJ6QXracho9"
     },
     {
       "state": "Chhattisgarh",
       "district": "Chhura",
       "visitDate": "2026-08-04",
-      "name": "SAGES_Chhura",
       "school_name": "Swami Atmanand govt. English Medium School Chhura",
-      "mapLink": "https://maps.app.goo.gl/JiGE4GgJyRBP5A3a6",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCgpwflXEyoT6uPb33zP2lNASvb3spkrdqzuOzfTxT1roc?e=oPSMkW",
       "imageName": "SAGES_Chhura.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCgpwflXEyoT6uPb33zP2lNASvb3spkrdqzuOzfTxT1roc?e=oPSMkW",
       "girlsCount": 50,
       "boysCount": 50,
       "coordinates": {
         "lat": 20.806343014850288,
         "lng": 82.2051564171987
-      }
+      },
+      "locationLink": "https://maps.app.goo.gl/JiGE4GgJyRBP5A3a6"
     },
     {
       "state": "Chhattisgarh",
       "district": "Chhura",
       "visitDate": "2026-08-05",
-      "name": "GHSSS_Akalwara",
       "school_name": "Govt. Higher secondar school Akalwara",
-      "mapLink": "https://maps.app.goo.gl/7g6k1v5Z9X8y3J2F9",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBT3SMnD9s-RbXnARcfqQBrAbPBHf0vV6hShiew2igI30k?e=03ak45",
       "imageName": "GHSSS_Akalwara.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBT3SMnD9s-RbXnARcfqQBrAbPBHf0vV6hShiew2igI30k?e=03ak45",
       "girlsCount": 41,
       "boysCount": 64,
       "coordinates": {
         "lat": 20.909713590587344,
         "lng": 82.14160654232754
-      }
+      },
+      "locationLink": "https://maps.app.goo.gl/7g6k1v5Z9X8y3J2F9"
     },
     {
       "state": "Chhattisgarh",
       "district": "Fingeshwar",
       "visitDate": "2026-08-06",
-      "name": "SAGES_Fingeshwar",
       "school_name": "Swami Atmanand Gov. English School Fingeshwar",
-      "mapLink": "https://maps.app.goo.gl/CeFrPS8WcBYeigeb9",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBPVTuj1WQvT7PbF0dz2u1fAXKxoYa9FCBoC31QaSVjcmA?e=eIwQ2x",
       "imageName": "SAGES_Fingeshwar.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBPVTuj1WQvT7PbF0dz2u1fAXKxoYa9FCBoC31QaSVjcmA?e=eIwQ2x",
       "girlsCount": 50,
       "boysCount": 50,
       "coordinates": {
         "lat": 21.125306971278842,
         "lng": 82.10073051872592
-      }
+      },
+      "locationLink": "https://maps.app.goo.gl/CeFrPS8WcBYeigeb9"
     },
     {
       "state": "Chhattisgarh",
       "district": "Fingeshwar",
       "visitDate": "2026-08-07",
-      "name": "GHSSS_Fingeshwar",
       "school_name": "GOVT. Thakur Dalganjan Singh Gov. Higher secondary school , fingeshwa",
-      "mapLink": "https://maps.app.goo.gl/ThhVt4YGYCjvPQ4s8",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgD4IjCjJlATQZQaBoQq9-gAAbuDOi0bGLYZLnw4Y84HyFY?e=0Q17wx",
       "imageName": "GHSSS_Fingeshwar.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgD4IjCjJlATQZQaBoQq9-gAAbuDOi0bGLYZLnw4Y84HyFY?e=0Q17wx",
       "girlsCount": 40,
       "boysCount": 75,
       "coordinates": {
         "lat": 20.968246864334517,
         "lng": 82.03435094351202
-      }
+      },
+      "locationLink": "https://maps.app.goo.gl/ThhVt4YGYCjvPQ4s8"
     },
     {
       "state": "Chhattisgarh",
       "district": "Fingeshwar",
       "visitDate": "2026-08-08",
-      "name": "GHSS_Borsi",
       "school_name": "Govt higher Secondary school Borsi",
-      "mapLink": "https://maps.app.goo.gl/TNPtyyYLTKdi3YQJ6?g_st=aw",
-      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgD4IjCjJlATQZQaBoQq9-gAAbuDOi0bGLYZLnw4Y84HyFY?e=0Q17wx",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCZQy_VqPw-SrzflI1GfplqAQZG9fXrBaQQvohsTCKSQ5c?e=fMlwat",
       "imageName": "GHSS_Borsi.jpg",
-      "folderUrl": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgD4IjCjJlATQZQaBoQq9-gAAbuDOi0bGLYZLnw4Y84HyFY?e=0Q17wx",
       "girlsCount": 38,
       "boysCount": 62,
       "coordinates": {
         "lat": 20.956984430255428,
         "lng": 81.98317727116374
-      }
+      },
+      "locationLink": "https://maps.app.goo.gl/TNPtyyYLTKdi3YQJ6?g_st=aw"
     }
   ]
 }

@@ -69,11 +69,11 @@ function readCoordinate(point) {
 }
 
 function buildSchoolPopup(school) {
-    const title = escapeHtml(school?.school_name || school?.name || 'School visit');
+    const title = escapeHtml(school?.school_name || 'School visit');
     const state = escapeHtml(school?.state || '');
     const district = escapeHtml(school?.district || '');
     const visitDate = escapeHtml(formatDate(school?.visitDate || school?.date || '') || '');
-    const mapLink = isNonEmptyText(school?.mapLink) ? String(school.mapLink) : '';
+    const locationLink = isNonEmptyText(school?.locationLink) ? String(school.locationLink) : '';
     const mediaLink = isNonEmptyText(school?.mediaLink) ? String(school.mediaLink) : '';
 
     return `
@@ -83,7 +83,7 @@ function buildSchoolPopup(school) {
             <div style="margin-top:6px;font-size:13px;color:#475569">${district}${state ? `, ${state}` : ''}</div>
             ${visitDate ? `<div style="margin-top:4px;font-size:12px;color:#64748b">${visitDate}</div>` : ''}
             <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
-                ${mapLink ? `<a href="${escapeHtml(mapLink)}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;border-radius:9999px;background:#0f172a;color:#fff;padding:6px 10px;font-size:12px;font-weight:700;text-decoration:none">Open map</a>` : ''}
+                ${locationLink ? `<a href="${escapeHtml(locationLink)}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;border-radius:9999px;background:#0f172a;color:#fff;padding:6px 10px;font-size:12px;font-weight:700;text-decoration:none">Open location</a>` : ''}
                 ${mediaLink ? `<a href="${escapeHtml(mediaLink)}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;border-radius:9999px;background:#0ea5e9;color:#fff;padding:6px 10px;font-size:12px;font-weight:700;text-decoration:none">View media</a>` : ''}
             </div>
         </div>
@@ -98,7 +98,7 @@ function buildCoverageRows(data) {
             const state = school?.state || '';
             const district = school?.district || '';
             const date = school?.visitDate || school?.date || '';
-            const name = school?.school_name || school?.name || '';
+            const name = school?.school_name || '';
             if (!isNonEmptyText(name) && !isNonEmptyText(district) && !isNonEmptyText(date)) {
                 return;
             }
@@ -107,18 +107,18 @@ function buildCoverageRows(data) {
             const students = Number(school?.students ?? school?.studentsReached ?? NaN);
             const normalizedGirls = Number.isFinite(girls) ? girls : (Number.isFinite(students) ? Math.floor(students / 2) : 0);
             const normalizedBoys = Number.isFinite(boys) ? boys : (Number.isFinite(students) ? students - normalizedGirls : 0);
+            const locationLink = school?.locationLink || '';
             rows.push({
                 state,
                 name,
                 district,
                 date,
-                mapLink: school?.location?.mapLink || school?.mapLink || '',
+                locationLink,
                 mediaLink: school?.media?.link || school?.mediaLink || '',
                 girlsCount: normalizedGirls,
                 boysCount: normalizedBoys,
                 students: normalizedGirls + normalizedBoys,
-                imageName: school?.gallery?.imageName || school?.imageName || '',
-                folderUrl: school?.gallery?.folderUrl || school?.folderUrl || ''
+                imageName: school?.gallery?.imageName || school?.imageName || ''
             });
         });
         return rows;
@@ -142,7 +142,7 @@ function buildCoverageRows(data) {
                 name: school?.name || '',
                 district: school?.district || '',
                 date: school?.date || '',
-                mapLink: school?.mapLink || '',
+                locationLink: school?.locationLink || '',
                 mediaLink: school?.mediaLink || '',
                 girlsCount: normalizedGirls,
                 boysCount: normalizedBoys,
@@ -380,7 +380,7 @@ function renderDashboard(data) {
             const isLatestMode = !coverageFilters.state && !coverageFilters.district;
             coverageLatestBtn.classList.toggle('is-active', isLatestMode);
             coverageRail.innerHTML = activeRows.map(row => {
-                const hasLinks = isNonEmptyText(row.mapLink) || isNonEmptyText(row.mediaLink);
+                const hasLinks = isNonEmptyText(row.locationLink) || isNonEmptyText(row.mediaLink);
                 return `
                     <article class="coverage-card card-hover">
                         <div class="coverage-card-shell">
@@ -398,7 +398,7 @@ function renderDashboard(data) {
                                 <div class="flex items-center justify-between gap-3">
                                     ${hasLinks ? `
                                         <div class="flex flex-wrap justify-end gap-2">
-                                            ${isNonEmptyText(row.mapLink) ? `<a href="${escapeHtml(row.mapLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-slate-900 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-slate-700">Location</a>` : ''}
+                                            ${isNonEmptyText(row.locationLink) ? `<a href="${escapeHtml(row.locationLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-slate-900 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-slate-700">Location</a>` : ''}
                                             ${isNonEmptyText(row.mediaLink) ? `<a href="${escapeHtml(row.mediaLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-sky-600 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-sky-500">Media</a>` : ''}
                                         </div>
                                     ` : ''}
