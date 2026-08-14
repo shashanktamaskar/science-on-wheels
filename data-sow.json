@@ -321,7 +321,7 @@
       "imageName": "GHSS_Girls_Gariaband.jpg",
       "girlsCount": 100,
       "boysCount": 0,
-      "locationLink": "https://maps.app.goo.gl/EeuTPaDz55CAkU7MA"
+      "locationLink": "https://maps.app.goo.gl/4ZJYUagpNNjVqYHN8"
     },
     {
       "state": "Chhattisgarh",
@@ -468,6 +468,51 @@
         "lng": 81.98317727116374
       },
       "locationLink": "https://maps.app.goo.gl/TNPtyyYLTKdi3YQJ6?g_st=aw"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Fingeshwar",
+      "visitDate": "2026-08-10",
+      "school_name": "Govt Higher Secondary School Basin",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBgrVos5ko7TKiW-i39G_E5AYvu-vgu3NnhSfvP-N7gggQ?e=SARIsm",
+      "imageName": "GHSS_Basin.jpg",
+      "girlsCount": 65,
+      "boysCount": 39,
+      "coordinates": {
+        "lat": 20.991987670708003,
+        "lng": 81.98782858677
+      },
+      "locationLink": "https://maps.app.goo.gl/vjAfQ46kfMpzsWQf7?g_st=ac"
+    },
+        {
+      "state": "Chhattisgarh",
+      "district": "Fingeshwar",
+      "visitDate": "2026-08-11",
+      "school_name": "Govt.Ram Bishal Pandey Eng. Medium School Rajim",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAaO2LfH4eiTo-h1p6rS4VHAQmx-GrmoKDBQp4zYSdv8AY?e=Z7xrgE",
+      "imageName": "SAGES_Rajim.jpg",
+      "girlsCount": 72,
+      "boysCount": 48,
+      "coordinates": {
+        "lat": 20.967953275969442,
+        "lng": 81.87977391296566
+      },
+      "locationLink": "https://maps.app.goo.gl/XZDSXg9zca3veNJLA?g_st=ac"
+    },
+        {
+      "state": "Chhattisgarh",
+      "district": "Fingeshwar",
+      "visitDate": "2026-08-13",
+      "school_name": "Govt.Higher Secondary School Kaundkera ",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAewWEDdcUSTYp33kP-1sCoAbOMIFoKXB5VIH-M1PHMymE?e=WB6ep9",
+      "imageName": "GHSS_Kaundkera.jpg",
+      "girlsCount": 75,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 20.9097980,
+        "lng": 81.9759530
+      },
+      "locationLink": "https://maps.app.goo.gl/HAkfocTTybHpykTP9?g_st=ac"
     }
   ]
 }
