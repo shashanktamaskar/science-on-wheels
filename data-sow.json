@@ -499,7 +499,7 @@
       },
       "locationLink": "https://maps.app.goo.gl/XZDSXg9zca3veNJLA?g_st=ac"
     },
-        {
+    {
       "state": "Chhattisgarh",
       "district": "Fingeshwar",
       "visitDate": "2026-08-13",
@@ -513,6 +513,36 @@
         "lng": 81.9759530
       },
       "locationLink": "https://maps.app.goo.gl/HAkfocTTybHpykTP9?g_st=ac"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Fingeshwar",
+      "visitDate": "2026-08-14",
+      "school_name": "Govt.Higher Secondary School Kopra",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCwb1X25oiETJgSTx0UWtkyAaWxNc-xUhrByLSVvov3_rk?e=d7eOlg",
+      "imageName": "GSS_Kopra.jpg",
+      "girlsCount": 64,
+      "boysCount": 36,
+      "coordinates": {
+        "lat": 20.835874339473726,
+        "lng": 81.92923911349126
+      },
+      "locationLink": "https://maps.app.goo.gl/koqwDjnfQ1AuHaAN8?g_st=ac"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Deobhog",
+      "visitDate": "2026-08-17",
+      "school_name": "Govt.Pt.Syam Shankar Mishra mahavidhyalay",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgA_Mn8FJXkiS6ZT7ZWs9Nl-ASRmiod2qhakNnT3GZJEhV0?e=XS4tAK",
+      "imageName": "SAGES_Devbhog.jpg",
+      "girlsCount": 49,
+      "boysCount": 31,
+      "coordinates": {
+        "lat": 19.89591792503612,
+        "lng": 82.66560342883623
+      },
+      "locationLink": "https://maps.app.goo.gl/GUweCHchkogvo8vJ7"
     }
   ]
 }
