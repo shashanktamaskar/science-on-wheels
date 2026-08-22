@@ -543,6 +543,51 @@
         "lng": 82.66560342883623
       },
       "locationLink": "https://maps.app.goo.gl/GUweCHchkogvo8vJ7"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Mainpur",
+      "visitDate": "2026-08-18",
+      "school_name": "Govt.Higher Secondary School Goharapadar",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAUOaYaBGxpRKbEBVNFXb5wAYNkPYAZYrLsMONfeC-o6Bk?e=6oKrbJ",
+      "imageName": "",
+      "girlsCount": 56,
+      "boysCount": 44,
+      "coordinates": {
+        "lat": 19.976322808296107,
+        "lng": 82.5033907557372
+      },
+      "locationLink": "https://maps.app.goo.gl/rHwD6CXzAojXDvBz9"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Fingeshwar",
+      "visitDate": "2026-08-19",
+      "school_name": "Jawahar Novodaya Vidyalaya, Panduka",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAYNYVSmmxuS4V6FNrubSHdAR7Nn7wxpsAWlpgiE1VG8yA?e=MCZFqc",
+      "imageName": "",
+      "girlsCount": 45,
+      "boysCount": 55,
+      "coordinates": {
+        "lat": 20.779872572300278,
+        "lng": 81.94504181349349
+      },
+      "locationLink": "https://maps.app.goo.gl/mT2HcZLYPzN6wPnp7?g_st=ac"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Fingeshwar",
+      "visitDate": "2026-08-20",
+      "school_name": "Govt.Higher Secondary School Panduka",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCsHiVdhnkLQbT7dVohC6LRAVyZSDe4tVCafbSMJv56YU0?e=hiOcpb",
+      "imageName": "",
+      "girlsCount": 25,
+      "boysCount": 75,
+      "coordinates": {
+        "lat": 20.779852510440982,
+        "lng": 81.94499889815147
+      },
+      "locationLink": "https://maps.app.goo.gl/mT2HcZLYPzN6wPnp7?g_st=ac"
     }
   ]
 }
