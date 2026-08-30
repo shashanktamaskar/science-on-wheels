@@ -588,6 +588,66 @@
         "lng": 81.94499889815147
       },
       "locationLink": "https://maps.app.goo.gl/mT2HcZLYPzN6wPnp7?g_st=ac"
+    },
+    {
+      "state": "Punjab",
+      "district": "Mansa",
+      "visitDate": "2026-08-24",
+      "school_name": "GSSS Kishangarh",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDnd_N0AShURotY6cTM2muBAbWEja5EcRpUiUHcS9Wkpo8?e=xLl7ln",
+      "imageName": "GSSS_Kishangarh.jpg",
+      "girlsCount": 45,
+      "boysCount": 55,
+      "coordinates": {
+        "lat": 29.906929851119376,
+        "lng": 75.73388151534496
+      },
+      "locationLink": "https://maps.app.goo.gl/xbn37fw5ZFyEXq6a9"
+    },
+    {
+      "state": "Punjab",
+      "district": "Mansa",
+      "visitDate": "2026-08-25",
+      "school_name": "GSSSS khiala kalan",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDixNxPeqXNQrEZ5FN7tJqNATTPu3-yV9yMObix9Icqzgs?e=vh2JrH",
+      "imageName": "GSSS_Khiala.jpg",
+      "girlsCount": 100,
+      "boysCount": 0,
+      "coordinates": {
+        "lat": 30.041322395431543,
+        "lng": 75.43147464418122
+      },
+      "locationLink": "https://maps.app.goo.gl/A2Qbcv9YGuCWd4Sx5?g_st=ac"
+    },
+    {
+      "state": "Punjab",
+      "district": "Mansa",
+      "visitDate": "2026-08-26",
+      "school_name": "GSSS Kotra Kalan",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgD64K4wD-UBSoDhLezu3Mc9AVuxehXYOLrThqQobpC1-Hs?e=O0CUGP",
+      "imageName": "GSSS_Kotra.jpg",
+      "girlsCount": 60,
+      "boysCount": 40,
+      "coordinates": {
+        "lat": 30.053424072171,
+        "lng": 75.49223554418121
+      },
+      "locationLink": "https://maps.app.goo.gl/ECk9xEkjeJcvDfLu8"
+    },
+    {
+      "state": "Punjab",
+      "district": "Mansa",
+      "visitDate": "2026-08-29",
+      "school_name": "Govt. Sen. Sec Smart School, Kulrian",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgAgZdRD2kHxQLX900ALIa0qARw9XCAKEcOjeBL_uZIY0rk?e=XYVKby",
+      "imageName": "GSSS_Kulrian.jpg",
+      "girlsCount": 48,
+      "boysCount": 56,
+      "coordinates": {
+        "lat": 29.803003351770897,
+        "lng": 75.68197268465502
+      },
+      "locationLink": "https://maps.app.goo.gl/NMP1ehgJeHHwbGVu9?g_st=aw"
     }
   ]
 }
