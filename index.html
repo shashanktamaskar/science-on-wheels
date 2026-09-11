@@ -293,7 +293,7 @@
             <h4 id="dashboardHeadline" class="mt-4 text-2xl font-extrabold text-slate-900 hidden"></h4>
             <p id="dashboardIntro" class="mt-2 max-w-3xl text-slate-600 text-justify hidden"></p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 mb-4" id="dashboardSummary"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 mb-4" id="dashboardSummary"></div>
 
         <div id="dashboardHighlightsSection" class="mb-10 hidden">
             <h4 class="font-extrabold text-slate-900 mb-4">Highlights</h4>
@@ -309,10 +309,10 @@
             <div class="mb-4 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
                 <div>
                     <h4 class="font-extrabold text-slate-900">Coverage by State</h4>
-                    <p class="mt-1 text-sm text-slate-500">Latest visits by default. Filter by state or district when needed.</p>
+                    <p class="mt-1 text-sm text-slate-500">Latest visits are shown by default. Toggle to show all schools, or filter by state or district when needed.</p>
                 </div>
                 <div class="coverage-filter-bar">
-                    <button id="coverageLatestBtn" type="button" class="coverage-filter-button is-active">Latest</button>
+                    <button id="coverageLatestBtn" type="button" class="coverage-filter-button is-active">Latest: On</button>
                     <label class="sr-only" for="coverageStateSelect">State</label>
                     <select id="coverageStateSelect" class="coverage-filter-select"></select>
                     <label class="sr-only" for="coverageDistrictSelect">District</label>

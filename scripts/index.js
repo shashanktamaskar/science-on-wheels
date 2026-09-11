@@ -260,6 +260,8 @@ function renderDashboard(data) {
         { label: 'Districts covered', value: `${coverageSummary.districts}/${mission.districtsCovered?.total || 0}` },
         { label: 'Schools visited', value: fmt(coverageSummary.schools) },
         { label: 'Students reached', value: fmt(coverageSummary.students) },
+        { label: 'Girls reached', value: fmt(coverageSummary.girls) },
+        { label: 'Boys reached', value: fmt(coverageSummary.boys) },
     ];
     document.getElementById('dashboardSummary').innerHTML = summaryCards.map(card => `
         <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
@@ -338,6 +340,7 @@ function renderDashboard(data) {
             state: '',
             district: ''
         };
+        let coverageLatestOnly = true;
 
         const compareByName = (a, b) => (a.name || '').localeCompare(b.name || '', 'en', { sensitivity: 'base' });
         const compareByLatest = (a, b) => {
@@ -365,8 +368,8 @@ function renderDashboard(data) {
         };
 
         const filteredRows = () => {
-            const isLatestMode = !coverageFilters.state && !coverageFilters.district;
-            if (isLatestMode) {
+            const useLatestMode = coverageLatestOnly && !coverageFilters.state && !coverageFilters.district;
+            if (useLatestMode) {
                 return [...coverageRows].sort(compareByLatest).slice(0, 4);
             }
             return [...coverageRows]
@@ -377,8 +380,9 @@ function renderDashboard(data) {
 
         const renderCoverageCards = () => {
             const activeRows = filteredRows();
-            const isLatestMode = !coverageFilters.state && !coverageFilters.district;
-            coverageLatestBtn.classList.toggle('is-active', isLatestMode);
+            coverageLatestBtn.classList.toggle('is-active', coverageLatestOnly);
+            coverageLatestBtn.textContent = coverageLatestOnly ? 'Latest: On' : 'Latest: Off';
+            coverageLatestBtn.setAttribute('aria-pressed', String(coverageLatestOnly));
             coverageRail.innerHTML = activeRows.map(row => {
                 const hasLinks = isNonEmptyText(row.locationLink) || isNonEmptyText(row.mediaLink);
                 return `
@@ -425,10 +429,7 @@ function renderDashboard(data) {
         refreshDistrictOptions();
 
         coverageLatestBtn.addEventListener('click', () => {
-            coverageFilters.state = '';
-            coverageFilters.district = '';
-            coverageStateSelect.value = '';
-            refreshDistrictOptions();
+            coverageLatestOnly = !coverageLatestOnly;
             renderCoverageCards();
         });
 
