@@ -1,287 +1,146 @@
 # Collage Generation Guide
 
-This repo now has a local `generate_collage.py` script that does two separate jobs:
+`generate_collage.py` now works in batches from a master directory.
 
-1. Select the most representative images from a raw photo folder using Gemini.
-2. Build a tighter collage from any images already inside a folder, with no API call.
+## Expected Folder Layout
 
-That split is deliberate:
-- Use Gemini once to pick a good base set.
-- Copy those selected images into a reusable folder inside `output-images/`.
-- Add or remove extra images manually in that folder.
-- Rebuild the collage as many times as needed without calling Gemini again.
+For selection or `both` mode, the master directory should contain one folder per school. Each school folder must contain a `Photos/` folder:
 
-## Output Structure
+```text
+master-directory/
+  School One/
+    Photos/
+      image1.jpg
+      image2.jpg
+  School Two/
+    Photos/
+      image1.jpg
+      image2.jpg
+```
 
-The script writes files under `output-images/` by default:
+Selection output is written to `output-images/`, using the school folder name with spaces replaced by underscores:
 
 ```text
 output-images/
-  <run-name>/
-    selected-images/
-      selection-manifest.json
-      <selected image files>
-    collage/
-      <run-name>.jpg
+  School_One/
+    selection-manifest.json
+    image1.jpg
+    image2.jpg
+  School_Two/
+    selection-manifest.json
+    image1.jpg
+    image2.jpg
 ```
 
-You can change the root folder with `--output_root`, or point the script at a different selected-image folder with `--selected_dir`.
+Collage output is written to `gallery_collages/`:
+
+```text
+gallery_collages/
+  School_One.jpg
+  School_Two.jpg
+```
 
 ## Modes
 
-### `both`
-Default mode.
+`select`:
+Runs Gemini selection for every school under `--master_dir`, reading from each school’s `Photos/` folder and writing selected images to `output-images/<School_Name>/`.
 
-- Runs Gemini selection on the source folder.
-- Copies the selected images into `selected-images/`.
-- Builds the final collage from that folder immediately.
+`collage`:
+Skips Gemini. Uses `--master_dir` as the selected-image root, normally `output-images/`, and writes final collages to `gallery_collages/`.
 
-### `select`
+`both`:
+Runs selection from the original master directory and immediately builds collages from the selected images created in that run.
 
-- Runs Gemini selection only.
-- Copies the chosen images into `selected-images/`.
-- Does not build the collage.
+## Examples
 
-Use this when you want to prepare a reusable image set first, then add extra images by hand later.
-
-### `collage`
-
-- Skips Gemini completely.
-- Builds a collage from the images already inside `--collage_input_dir`.
-
-Use this after you manually add extra images into the selected-image folder and want a fresh collage without another API call.
-
-## Command Examples
-
-### 1. Select and build in one step
-
-```bash
-python3 generate_collage.py \
-  --mode both \
-  --input_dir "/path/to/downloads/folder" \
-  --school_name "GSSS-KASABAD" \
-  --district "Ludhiana" \
-  --date "2026-06-25" \
-  --api_key "YOUR_GEMINI_API_KEY"
-```
-
-### 2. Select only, then edit the folder manually
+Select images for all schools:
 
 ```bash
 python3 generate_collage.py \
   --mode select \
-  --input_dir "/path/to/downloads/folder" \
-  --school_name "GSSS-KASABAD" \
+  --master_dir "/path/to/master-directory" \
   --api_key "YOUR_GEMINI_API_KEY"
 ```
 
-After this runs, open:
-
-```text
-output-images/GSSS-KASABAD/selected-images/
-```
-
-Add any extra images you want to include, then run collage mode.
-
-### 3. Rebuild collage without Gemini
+Build collages from selected images without API calls:
 
 ```bash
 python3 generate_collage.py \
   --mode collage \
-  --collage_input_dir "output-images/GSSS-KASABAD/selected-images" \
-  --output "output-images/GSSS-KASABAD/collage/GSSS-KASABAD.jpg"
+  --master_dir "output-images"
 ```
 
-This uses every supported image inside the folder you point to. No API key is needed for collage-only mode.
+Select and build collages in one command:
+
+```bash
+python3 generate_collage.py \
+  --mode both \
+  --master_dir "/path/to/master-directory" \
+  --api_key "YOUR_GEMINI_API_KEY"
+```
+
+Use a different photo folder name:
+
+```bash
+python3 generate_collage.py \
+  --mode select \
+  --master_dir "/path/to/master-directory" \
+  --photos_dir_name "photos" \
+  --api_key "YOUR_GEMINI_API_KEY"
+```
 
 ## Command Options
 
-### `--mode`
-Controls what the script does.
+`--mode`:
+Choose `select`, `collage`, or `both`. Default is `both`.
 
-- `select`: choose images only
-- `collage`: build collage only
-- `both`: do both in one run
+`--master_dir`:
+Required. In `select` and `both`, this is the original school master folder. In `collage`, this should usually be `output-images`.
 
-### `--input_dir`
-Source folder containing the raw event images.
+`--photos_dir_name`:
+Name of the image folder inside each school folder. Default is `Photos`.
 
-Required for `select` and `both`.
+`--output_root`:
+Where selected images are written. Default is `output-images`.
 
-The script searches this folder recursively and accepts:
-- `.jpg`
-- `.jpeg`
-- `.png`
-- `.webp`
+`--collage_output_dir`:
+Where finished collages are written. Default is `gallery_collages`.
 
-### `--collage_input_dir`
-Folder to use when building the final collage.
+`--api_key`:
+Google AI Studio / Gemini API key. Required for `select` and `both`. Not needed for `collage`.
 
-If omitted:
-- `both` uses the generated `selected-images` folder
-- `collage` also defaults to the selected-images folder under `output-images/`
+`--model`:
+Gemini model used for image selection. Default is `gemini-2.5-flash`.
 
-Use this when you want to rebuild a collage from a folder you edited manually.
+`--district`:
+Optional district context passed to Gemini during selection.
 
-### `--output`
-Final collage file path.
+`--date`:
+Optional event date context passed to Gemini during selection.
 
-If you do not pass this, the script saves the collage to:
+`--selected_count`:
+How many images Gemini should choose per school. Default is `6`.
 
-```text
-output-images/<run-name>/collage/<run-name>.jpg
-```
+`--max_retries`:
+Maximum Gemini selection attempts per school. Default is `3`.
 
-### `--output_root`
-Base directory for generated output.
+`--target_score`:
+Stop retrying once Gemini returns this score or higher. Default is `9.0`.
 
-Default:
+`--page_size`:
+How many thumbnails are packed into each Gemini contact-sheet page. Default is `12`.
 
-```text
-output-images
-```
+`--seed`:
+Base random seed for repeatable selection attempts.
 
-This is where the run folder, selected images folder, and collage folder are created.
+`--clear_selected_dir`:
+Before copying a new selection, remove existing image files from each `output-images/<School_Name>/` folder.
 
-### `--selected_dir`
-Custom folder where the selected images are copied.
+## Manual Edit Workflow
 
-By default, the script uses:
+1. Run `select` on the original master directory.
+2. Open the relevant folder under `output-images/`.
+3. Add or remove images manually.
+4. Run `collage` with `--master_dir output-images`.
 
-```text
-output-images/<run-name>/selected-images
-```
-
-Override this if you want to keep multiple curated sets in different places.
-
-### `--api_key`
-Google AI Studio / Gemini API key.
-
-Required for:
-- `select`
-- `both`
-
-Not needed for:
-- `collage`
-
-You can also set the environment variable `GEMINI_API_KEY` instead of passing this flag.
-
-### `--model`
-Gemini model used for the selection step.
-
-Default:
-
-```text
-gemini-2.5-flash
-```
-
-You can override this if you want to test a different model.
-
-### `--school_name`
-Optional label used for naming the output folders and files.
-
-If omitted, the script falls back to the source folder name.
-
-### `--district`
-Optional context passed into Gemini so selection is better aligned with the event.
-
-### `--date`
-Optional event date passed into Gemini.
-
-Use ISO format:
-
-```text
-2026-06-25
-```
-
-### `--selected_count`
-How many images Gemini should choose for the base set.
-
-Default:
-
-```text
-6
-```
-
-If the source folder has fewer images than this, the script uses what is available.
-
-### `--max_retries`
-How many Gemini selection attempts to try.
-
-Default:
-
-```text
-3
-```
-
-The script keeps the best-scoring attempt and stops early if the target score is reached.
-
-### `--target_score`
-Target selection score.
-
-Default:
-
-```text
-9.0
-```
-
-If Gemini returns a score at or above this value, the script stops retrying.
-
-### `--page_size`
-How many thumbnails are packed into each Gemini contact-sheet page.
-
-Default:
-
-```text
-12
-```
-
-This is only used during the selection step.
-
-### `--seed`
-Base random seed for the selection retries.
-
-Use this if you want repeatable selection attempts from the same source set.
-
-### `--clear_selected_dir`
-Clears existing supported image files from the selected-images folder before copying the newly selected set.
-
-Use this when you want the selected folder to contain only the latest Gemini selection.
-
-## What Changed in the Collage Output
-
-The final collage now:
-- does **not** print file names on the image tiles
-- uses much tighter spacing between images
-- crops images more aggressively so the collage feels less padded and more focused
-
-That makes the collage read as a visual summary instead of a labeled contact sheet.
-
-## Manifest File
-
-Every selection run writes a small manifest:
-
-```text
-output-images/<run-name>/selected-images/selection-manifest.json
-```
-
-This records:
-- the mode used
-- source folder
-- collage input folder
-- selected image names
-- Gemini score and reason, if selection was used
-
-## Suggested Workflow
-
-1. Run `--mode select` or `--mode both` on the raw downloads folder.
-2. Open the generated `selected-images/` folder.
-3. Add any extra images you want to include.
-4. Run `--mode collage` pointing at that same folder.
-5. Repeat step 4 any time you want a new collage without another API call.
-
-## Practical Notes
-
-- Keep the source photos in a normal folder, preferably with 10+ images if you want Gemini to make a better representative selection.
-- If you manually add images to the selected-images folder, they will be included the next time you run collage mode.
-- For the website, keep the collage output filename aligned with the school name convention used in the repo.
+This rebuilds the collages from the edited selected-image folders without another Gemini call.

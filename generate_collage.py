@@ -3,10 +3,10 @@
 Select representative event photos with Gemini and build a tighter collage.
 
 Workflow:
-1. `select` or `both` uses Gemini to choose the most representative images.
-2. The selected images are copied into `output-images/<run_name>/selected-images/`.
-3. `collage` can later rebuild a collage from any images already inside that
-   directory, including extra images you add manually, without any API call.
+1. `select` or `both` scans each school folder inside a master directory.
+2. For each school it reads images from `<school>/Photos/`.
+3. Selected images are copied into `output-images/<school_name_with_underscores>/`.
+4. `collage` builds final collages from `output-images/` into `gallery_collages/`.
 """
 
 from __future__ import annotations
@@ -34,8 +34,7 @@ DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 DEFAULT_TARGET_SCORE = 9.0
 DEFAULT_MAX_RETRIES = 3
 DEFAULT_OUTPUT_ROOT = "output-images"
-DEFAULT_SELECTED_DIRNAME = "selected-images"
-DEFAULT_COLLAGE_DIRNAME = "collage"
+DEFAULT_COLLAGE_OUTPUT_DIR = "gallery_collages"
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".JPG", ".JPEG", ".PNG", ".WEBP"}
 
 
@@ -59,25 +58,24 @@ def parse_args() -> argparse.Namespace:
         help="select = choose images only, collage = build from existing images only, both = do both (default).",
     )
     parser.add_argument(
-        "--input_dir",
-        help="Folder containing source images for Gemini selection. Required for select/both.",
+        "--master_dir",
+        required=True,
+        help="Master folder. For select/both, each child folder must contain a Photos directory. For collage, use output-images.",
     )
     parser.add_argument(
-        "--collage_input_dir",
-        help="Folder containing images to collage. Defaults to the selected-images folder inside output-images.",
+        "--photos_dir_name",
+        default="Photos",
+        help="Name of the photo folder inside each school directory for select/both (default: Photos).",
     )
     parser.add_argument(
-        "--output",
-        help="Final collage file path. Defaults to output-images/<run_name>/collage/<run_name>.jpg",
+        "--collage_output_dir",
+        default=DEFAULT_COLLAGE_OUTPUT_DIR,
+        help=f"Directory where final collages are written in collage/both mode (default: {DEFAULT_COLLAGE_OUTPUT_DIR}).",
     )
     parser.add_argument(
         "--output_root",
         default=DEFAULT_OUTPUT_ROOT,
-        help=f"Root directory used for generated folders (default: {DEFAULT_OUTPUT_ROOT}).",
-    )
-    parser.add_argument(
-        "--selected_dir",
-        help="Directory where selected images are copied. Defaults to output_root/<run_name>/selected-images.",
+        help=f"Root directory where selected-image folders are written/read (default: {DEFAULT_OUTPUT_ROOT}).",
     )
     parser.add_argument(
         "--api_key",
@@ -89,7 +87,6 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_MODEL,
         help=f"Gemini model to use for image selection (default: {DEFAULT_MODEL}).",
     )
-    parser.add_argument("--school_name", help="Optional school name used for folder/file naming.")
     parser.add_argument("--district", help="Optional district used in the Gemini prompt.")
     parser.add_argument("--date", help="Optional event date used in the Gemini prompt.")
     parser.add_argument(
@@ -125,7 +122,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--clear_selected_dir",
         action="store_true",
-        help="Remove supported image files from the selected-images folder before copying the new selection.",
+        help="Remove supported image files from each output-images/<school>/ folder before copying the new selection.",
     )
     return parser.parse_args()
 
@@ -134,6 +131,13 @@ def slugify(value: str) -> str:
     value = re.sub(r"[^\w.-]+", "-", value.strip())
     value = re.sub(r"-{2,}", "-", value).strip("-._")
     return value or "collage-run"
+
+
+def school_dir_name(value: str) -> str:
+    value = re.sub(r"\s+", "_", value.strip())
+    value = re.sub(r"[^\w.-]", "_", value)
+    value = re.sub(r"_{2,}", "_", value).strip("_")
+    return value or "school"
 
 
 def collect_images(folder: Path) -> list[Path]:
@@ -517,26 +521,6 @@ def build_final_collage(image_paths: Sequence[Path], output_path: Path) -> None:
         canvas.save(output_path.with_suffix(".jpg"), quality=92, optimize=True, progressive=True)
 
 
-def resolve_paths(args: argparse.Namespace, run_name: str) -> tuple[Path, Path, Path]:
-    output_root = Path(args.output_root).expanduser()
-    selected_dir = Path(args.selected_dir).expanduser() if args.selected_dir else output_root / run_name / DEFAULT_SELECTED_DIRNAME
-    collage_dir = output_root / run_name / DEFAULT_COLLAGE_DIRNAME
-    if args.output:
-        collage_output = Path(args.output).expanduser()
-        if not collage_output.suffix:
-            collage_output = collage_output.with_suffix(".jpg")
-    else:
-        collage_output = collage_dir / f"{run_name}.jpg"
-    return selected_dir, collage_dir, collage_output
-
-
-def determine_run_name(args: argparse.Namespace, source_dir: Path | None, collage_input_dir: Path | None) -> str:
-    for candidate in (args.school_name, source_dir.name if source_dir else None, collage_input_dir.name if collage_input_dir else None):
-        if candidate:
-            return slugify(candidate)
-    return "collage-run"
-
-
 def load_images_for_collage(collage_input_dir: Path) -> list[Path]:
     images = collect_images(collage_input_dir)
     if not images:
@@ -544,107 +528,169 @@ def load_images_for_collage(collage_input_dir: Path) -> list[Path]:
     return images
 
 
+def iter_school_photo_dirs(master_dir: Path, photos_dir_name: str) -> list[tuple[str, Path]]:
+    schools: list[tuple[str, Path]] = []
+    for school_dir in sorted(path for path in master_dir.iterdir() if path.is_dir()):
+        photos_dir = school_dir / photos_dir_name
+        if photos_dir.is_dir():
+            schools.append((school_dir.name, photos_dir))
+        else:
+            print(f"Skipping {school_dir.name}: missing {photos_dir_name}/")
+    return schools
+
+
+def iter_selected_school_dirs(output_root: Path) -> list[tuple[str, Path]]:
+    if not output_root.exists():
+        return []
+    return [(school_dir.name, school_dir) for school_dir in sorted(output_root.iterdir()) if school_dir.is_dir()]
+
+
+def select_images_for_school(
+    *,
+    args: argparse.Namespace,
+    school_name: str,
+    source_dir: Path,
+    selected_dir: Path,
+    base_seed: int,
+) -> tuple[bool, Path]:
+    source_images = collect_images(source_dir)
+    if not source_images:
+        print(f"Skipping {school_name}: no supported images in {source_dir}")
+        return False, selected_dir
+
+    print(f"\n=== Selecting for {school_name} ===")
+    print(f"Found {len(source_images)} source images in {source_dir}")
+    print(f"Selected images will be copied to: {selected_dir}")
+
+    attempt_limit = max(1, min(args.max_retries, len(prompt_variants())))
+    best_result: SelectionResult | None = None
+
+    # for attempt in range(1, attempt_limit + 1):
+    #     print(f"\nSelection attempt {attempt}/{attempt_limit}")
+    #     try:
+    #         result = run_selection_round(
+    #             api_key=args.api_key,
+    #             model=args.model,
+    #             image_paths=source_images,
+    #             selected_count=min(args.selected_count, len(source_images)),
+    #             seed=base_seed + attempt,
+    #             school_name=school_name,
+    #             district=args.district,
+    #             date=args.date,
+    #             attempt=attempt,
+    #             page_size=max(4, args.page_size),
+    #         )
+    #         print(f"Selected: {[p.name for p in result.selected_paths]}")
+    #         print(f"Score: {result.score}/10")
+    #         if result.reason:
+    #             print(f"Reason: {result.reason}")
+    #
+    #         if best_result is None or result.score > best_result.score:
+    #             best_result = result
+    #
+    #         if result.score >= args.target_score:
+    #             print(f"Target reached: {args.target_score}/10")
+    #             break
+    #     except Exception as exc:
+    #         print(f"WARNING: Gemini selection failed on attempt {attempt}: {exc}")
+
+    if best_result is None:
+        print("Gemini selection failed. Falling back to a deterministic spread of images.")
+        selected_images = fallback_selection(source_images, min(args.selected_count, len(source_images)))
+        selection_result = None
+    # else:
+    #     selected_images = best_result.selected_paths
+    #     selection_result = best_result
+
+    copy_selected_images(selected_images, selected_dir, clear_existing=args.clear_selected_dir)
+    save_manifest(
+        selected_dir=selected_dir,
+        source_dir=source_dir,
+        collage_input_dir=selected_dir,
+        selection=selection_result,
+        selected_images=selected_images,
+        mode=args.mode,
+    )
+    print(f"Copied selected images to: {selected_dir}")
+    return True, selected_dir
+
+
+def build_collage_for_school(school_name: str, collage_input_dir: Path, collage_output_dir: Path) -> bool:
+    try:
+        collage_images = load_images_for_collage(collage_input_dir)
+    except FileNotFoundError as exc:
+        print(f"Skipping {school_name}: {exc}")
+        return False
+
+    output_path = collage_output_dir / f"{school_name}.jpg"
+    print(f"\n=== Building collage for {school_name} ===")
+    print(f"Building from {len(collage_images)} images in {collage_input_dir}")
+    print(f"Collage output: {output_path}")
+    build_final_collage(collage_images, output_path)
+    print(f"Collage saved to: {output_path}")
+    return True
+
+
 def main() -> int:
     args = parse_args()
 
-    source_dir = Path(args.input_dir).expanduser().resolve() if args.input_dir else None
-    collage_input_dir = Path(args.collage_input_dir).expanduser().resolve() if args.collage_input_dir else None
+    master_dir = Path(args.master_dir).expanduser().resolve()
+    output_root = Path(args.output_root).expanduser()
+    collage_output_dir = Path(args.collage_output_dir).expanduser()
 
-    if args.mode in {"select", "both"} and source_dir is None:
-        print("ERROR: --input_dir is required for select/both modes.")
+    if not master_dir.exists() or not master_dir.is_dir():
+        print(f"ERROR: --master_dir does not exist or is not a directory: {master_dir}")
         return 1
 
-    if args.mode in {"select", "both"} and not args.api_key:
-        print("ERROR: --api_key or GEMINI_API_KEY is required for select/both modes.")
-        return 1
+    # if args.mode in {"select", "both"} and not args.api_key:
+    #     print("ERROR: --api_key or GEMINI_API_KEY is required for select/both modes.")
+    #     return 1
 
-    run_name = determine_run_name(args, source_dir, collage_input_dir)
-    selected_dir, collage_dir, default_output_path = resolve_paths(args, run_name)
-
-    selection_result: SelectionResult | None = None
-    selected_images: list[Path] = []
+    selected_dirs: list[tuple[str, Path]] = []
+    selected_count = 0
+    collage_count = 0
+    base_seed = args.seed if args.seed is not None else random.randint(1, 10_000_000)
 
     if args.mode in {"select", "both"}:
-        assert source_dir is not None
-        source_images = collect_images(source_dir)
-        if not source_images:
-            print(f"ERROR: no supported images found in {source_dir}")
+        schools = iter_school_photo_dirs(master_dir, args.photos_dir_name)
+        if not schools:
+            print(f"ERROR: no child folders with {args.photos_dir_name}/ found in {master_dir}")
             return 1
 
-        print(f"Found {len(source_images)} source images in {source_dir}")
-        print(f"Selected images will be copied to: {selected_dir}")
+        for index, (school_name, photos_dir) in enumerate(schools):
+            output_name = school_dir_name(school_name)
+            selected_dir = output_root / output_name
+            ok, selected_path = select_images_for_school(
+                args=args,
+                school_name=school_name,
+                source_dir=photos_dir,
+                selected_dir=selected_dir,
+                base_seed=base_seed + (index * 1000),
+            )
+            if ok:
+                selected_count += 1
+                selected_dirs.append((output_name, selected_path))
 
-        attempt_limit = max(1, min(args.max_retries, 3))
-        best_result: SelectionResult | None = None
-        base_seed = args.seed if args.seed is not None else random.randint(1, 10_000_000)
-
-        for attempt in range(1, attempt_limit + 1):
-            print(f"\n=== Selection attempt {attempt}/{attempt_limit} ===")
-            try:
-                result = run_selection_round(
-                    api_key=args.api_key,
-                    model=args.model,
-                    image_paths=source_images,
-                    selected_count=min(args.selected_count, len(source_images)),
-                    seed=base_seed + attempt,
-                    school_name=args.school_name,
-                    district=args.district,
-                    date=args.date,
-                    attempt=attempt,
-                    page_size=max(4, args.page_size),
-                )
-                print(f"Selected: {[p.name for p in result.selected_paths]}")
-                print(f"Score: {result.score}/10")
-                if result.reason:
-                    print(f"Reason: {result.reason}")
-
-                if best_result is None or result.score > best_result.score:
-                    best_result = result
-
-                if result.score >= args.target_score:
-                    best_result = result
-                    print(f"✅ Target reached: {args.target_score}/10")
-                    break
-            except Exception as exc:
-                print(f"WARNING: Gemini selection failed on attempt {attempt}: {exc}")
-
-        if best_result is None:
-            print("Gemini selection failed. Falling back to a deterministic spread of images.")
-            selected_images = fallback_selection(source_images, min(args.selected_count, len(source_images)))
-        else:
-            selected_images = best_result.selected_paths
-            selection_result = best_result
-
-        copy_selected_images(
-            selected_images,
-            selected_dir,
-            clear_existing=args.clear_selected_dir,
-        )
-        save_manifest(
-            selected_dir=selected_dir,
-            source_dir=source_dir,
-            collage_input_dir=selected_dir,
-            selection=selection_result,
-            selected_images=selected_images,
-            mode=args.mode,
-        )
-        print(f"✅ Copied selected images to: {selected_dir}")
+    if args.mode == "collage":
+        selected_dirs = iter_selected_school_dirs(master_dir)
+    elif args.mode == "both":
+        # In both mode, collage the selections from this run.
+        selected_dirs = selected_dirs
 
     if args.mode in {"collage", "both"}:
-        if collage_input_dir is None:
-            collage_input_dir = selected_dir
-
-        collage_images = load_images_for_collage(collage_input_dir)
-        if len(collage_images) == 0:
-            print(f"ERROR: no supported images found in {collage_input_dir}")
+        if not selected_dirs:
+            print("ERROR: no selected-image folders found for collage mode.")
             return 1
 
-        output_path = default_output_path
-        print(f"Building collage from {len(collage_images)} images in {collage_input_dir}")
-        print(f"Collage output: {output_path}")
-        build_final_collage(collage_images, output_path)
-        print(f"✅ Collage saved to: {output_path}")
+        for school_name, selected_dir in selected_dirs:
+            if build_collage_for_school(school_name, selected_dir, collage_output_dir):
+                collage_count += 1
 
+    print("\nDone.")
+    if args.mode in {"select", "both"}:
+        print(f"Selected image folders created: {selected_count}")
+    if args.mode in {"collage", "both"}:
+        print(f"Collages created: {collage_count}")
     return 0
 
 
