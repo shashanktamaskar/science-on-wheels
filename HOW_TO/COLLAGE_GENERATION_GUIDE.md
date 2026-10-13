@@ -1,38 +1,66 @@
 # Collage Generation Guide
 
-`generate_collage.py` now works in batches from a master directory.
+Use `generate_collage.py` to make one collage per school from a master folder.
 
-## Expected Folder Layout
+## 1. What To Prepare
 
-For selection or `both` mode, the master directory should contain one folder per school. Each school folder must contain a `Photos/` folder:
+Download multi schools folders from [OneDrive](https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBZxdO4AHe1TodsPUfqVni0AYtNPuCQT63H7LFsEpm9k0E). After unzipping, the folder should look like this:
 
 ```text
-master-directory/
+master-folder/
   School One/
     Photos/
-      image1.jpg
-      image2.jpg
+      photo1.jpg
+      photo2.jpg
   School Two/
     Photos/
-      image1.jpg
-      image2.jpg
+      photo1.jpg
+      photo2.jpg
 ```
 
-Selection output is written to `output-images/`, using the school folder name with spaces replaced by underscores:
+Supported photo types: `.jpg`, `.jpeg`, `.png`, `.webp`.
+
+## 2. Select images
+
+Run this from the project folder:
+
+```bash
+python3 generate_collage.py --mode select --master_dir "/path/to/master-folder" --output_root output-images
+```
+
+1. `master_dir` stores the images like demonstrated in `1. What to Prepare` exactly.
+2. `output_root` stores the selected images. Use `output-images` unless you have a reason to use another folder.
+3. This selects up to 6 images per school and stores them in `output_root`.
+4. Review the selected images once. Replace any weak image before making the collage.
+
+### Output Folders
+
+Selected photos are copied to `output-images/`.
 
 ```text
 output-images/
   School_One/
     selection-manifest.json
-    image1.jpg
-    image2.jpg
-  School_Two/
-    selection-manifest.json
-    image1.jpg
-    image2.jpg
+    photo1.jpg
+    photo2.jpg
 ```
 
-Collage output is written to `gallery_collages/`:
+
+## 3. Review And Make Collage
+
+If a collage needs different photos:
+
+1. Open that school's folder inside `output-images/`.
+2. Add or remove photos there.
+3. Build collages with:
+
+```bash
+python3 generate_collage.py --mode collage --master_dir output-images
+```
+
+This does not reselect photos. It only builds collages from the edited `output-images/` folders.
+
+Final collages are saved in `gallery_collages/`.
 
 ```text
 gallery_collages/
@@ -40,107 +68,32 @@ gallery_collages/
   School_Two.jpg
 ```
 
-## Modes
+School folder names are cleaned for file names. For example, `School One` becomes `School_One`.
 
-`select`:
-Runs Gemini selection for every school under `--master_dir`, reading from each school’s `Photos/` folder and writing selected images to `output-images/<School_Name>/`.
+## Useful Options
 
-`collage`:
-Skips Gemini. Uses `--master_dir` as the selected-image root, normally `output-images/`, and writes final collages to `gallery_collages/`.
+`--selected_count 8`:
+Choose up to 8 photos per school instead of the default 6.
 
-`both`:
-Runs selection from the original master directory and immediately builds collages from the selected images created in that run.
-
-## Examples
-
-Select images for all schools:
-
-```bash
-python3 generate_collage.py \
-  --mode select \
-  --master_dir "/path/to/master-directory" \
-  --api_key "YOUR_GEMINI_API_KEY"
-```
-
-Build collages from selected images without API calls:
-
-```bash
-python3 generate_collage.py \
-  --mode collage \
-  --master_dir "output-images"
-```
-
-Select and build collages in one command:
-
-```bash
-python3 generate_collage.py \
-  --mode both \
-  --master_dir "/path/to/master-directory" \
-  --api_key "YOUR_GEMINI_API_KEY"
-```
-
-Use a different photo folder name:
-
-```bash
-python3 generate_collage.py \
-  --mode select \
-  --master_dir "/path/to/master-directory" \
-  --photos_dir_name "photos" \
-  --api_key "YOUR_GEMINI_API_KEY"
-```
-
-## Command Options
-
-`--mode`:
-Choose `select`, `collage`, or `both`. Default is `both`.
-
-`--master_dir`:
-Required. In `select` and `both`, this is the original school master folder. In `collage`, this should usually be `output-images`.
-
-`--photos_dir_name`:
-Name of the image folder inside each school folder. Default is `Photos`.
-
-`--output_root`:
-Where selected images are written. Default is `output-images`.
-
-`--collage_output_dir`:
-Where finished collages are written. Default is `gallery_collages`.
-
-`--api_key`:
-Google AI Studio / Gemini API key. Required for `select` and `both`. Not needed for `collage`.
-
-`--model`:
-Gemini model used for image selection. Default is `gemini-2.5-flash`.
-
-`--district`:
-Optional district context passed to Gemini during selection.
-
-`--date`:
-Optional event date context passed to Gemini during selection.
-
-`--selected_count`:
-How many images Gemini should choose per school. Default is `6`.
-
-`--max_retries`:
-Maximum Gemini selection attempts per school. Default is `3`.
-
-`--target_score`:
-Stop retrying once Gemini returns this score or higher. Default is `9.0`.
-
-`--page_size`:
-How many thumbnails are packed into each Gemini contact-sheet page. Default is `12`.
-
-`--seed`:
-Base random seed for repeatable selection attempts.
+`--photos_dir_name "photos"`:
+Use this if the photo folder is named `photos` instead of `Photos`.
 
 `--clear_selected_dir`:
-Before copying a new selection, remove existing image files from each `output-images/<School_Name>/` folder.
+Remove old photos from each school's `output-images/` folder before copying the new selection. Use this when rerunning selection for the same schools.
 
-## Manual Edit Workflow
+`--output_root "my-selected-photos"`:
+Change where selected photos are saved. Default: `output-images`.
 
-1. Run `select` on the original master directory.
-2. Open the relevant folder under `output-images/`.
-3. Add or remove images manually.
-4. Run `collage` with `--master_dir output-images`.
+`--collage_output_dir "my-collages"`:
+Change where final collages are saved. Default: `gallery_collages`.
 
-This rebuilds the collages from the edited selected-image folders without another Gemini call.
+`--seed 123`:
+Use the same automatic selection each time.
+
+## Notes
+
+The current script uses automatic selection, not Gemini selection. No API key is needed.
+
+Folders without a `Photos` folder are skipped. Schools with no supported photos are also skipped.
+
+Each selected-photo folder includes `selection-manifest.json`. It records when the folder was created, where the photos came from, and which photos were selected.
