@@ -101,6 +101,7 @@
             object-fit: contain;
         }
     </style>
+    <link rel="stylesheet" href="styles/gallery-access.css">
 </head>
 
 <body class="min-h-screen bg-gray-50">
@@ -439,6 +440,7 @@
         </div>
     </footer>
 
+    <script src="scripts/gallery-access.js"></script>
     <script>
         let projectData = null;
         let map = null;
@@ -622,7 +624,7 @@
                 if (galleryData && galleryData.schools) {
                     const gallerySchool = galleryData.schools.find(g => g.name === school.name);
                     if (gallerySchool && gallerySchool.folderUrl) {
-                        galleryButton = `<div style="margin-top: 12px;"><a href="${gallerySchool.folderUrl}" target="_blank" style="display: inline-block; padding: 8px 16px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#2563eb'">View Gallery →</a></div>`;
+                        galleryButton = `<div style="margin-top: 12px;"><a href="#gallery" data-gallery-url="${gallerySchool.folderUrl}" target="_blank" style="display: inline-block; padding: 8px 16px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#1d4ed8'" onmouseout="this.style.backgroundColor='#2563eb'">View Gallery →</a></div>`;
                     }
                 }
 
@@ -1285,7 +1287,7 @@
                                 <p class="text-lg text-gray-200">${school.district} District</p>
                                 <p class="text-sm text-gray-300">${formatDate(school.visitDate)}</p>
                             </div>
-                            <a href="${school.folderUrl}"
+                            <a href="#gallery" data-gallery-url="${school.folderUrl}"
                                target="_blank"
                                rel="noopener noreferrer"
                                class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-6 rounded-lg transition inline-flex items-center gap-2">
@@ -1385,7 +1387,7 @@
                         ${school.district}
                     </td>
                     <td class="px-6 py-4 text-center">
-                        <a href="${school.folderUrl}"
+                        <a href="#gallery" data-gallery-url="${school.folderUrl}"
                            target="_blank"
                            rel="noopener noreferrer"
                            class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition">

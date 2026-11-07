@@ -1,0 +1,16 @@
+.gallery-access { max-width: 28rem; margin: 1.5rem auto; padding: 2rem; border: 1px solid #cbd5e1; border-radius: 1rem; background: #f8fafc; color: #0f172a; box-shadow: 0 4px 12px #0f172a0a; }
+.gallery-access h3 { margin: 0 0 .75rem; font-size: 1.5rem; font-weight: 800; }
+.gallery-access p { margin: 0 0 1.25rem; }
+.gallery-access label { display: block; margin-bottom: .5rem; font-weight: 600; }
+.gallery-access input { display: block; box-sizing: border-box; width: 100%; padding: .75rem; border: 1px solid #64748b; border-radius: .5rem; background: white; font: inherit; }
+.gallery-access button { width: 100%; padding: .75rem 1rem; border: 0; border-radius: .5rem; background: #0f172a; color: #fcd34d; font: inherit; font-weight: 700; cursor: pointer; }
+.gallery-access button:hover { background: #1e293b; }
+.gallery-access button:disabled { opacity: .6; cursor: wait; }
+.gallery-access input:focus-visible, .gallery-access button:focus-visible { outline: 3px solid #0891b2; outline-offset: 3px; }
+.gallery-access .gallery-access-error { min-height: 1.5em; margin: .5rem 0; color: #b91c1c; }
+
+.gallery-access-dialog { width: min(32rem, calc(100% - 2rem)); max-height: calc(100% - 2rem); padding: 1rem; border: 0; border-radius: 1rem; background: white; }
+.gallery-access-dialog::backdrop { background: rgb(15 23 42 / .65); }
+.gallery-access-dialog .gallery-access { margin: .75rem 0 0; }
+.gallery-access-close { display: block; margin-left: auto; padding: .5rem .75rem; color: #0f172a; cursor: pointer; }
+.gallery-access-open { display: block; padding: .75rem; border-radius: .5rem; background: #0f172a; color: #fcd34d; text-align: center; font-weight: 700; }
