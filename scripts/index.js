@@ -84,7 +84,7 @@ function buildSchoolPopup(school) {
             ${visitDate ? `<div style="margin-top:4px;font-size:12px;color:#64748b">${visitDate}</div>` : ''}
             <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
                 ${locationLink ? `<a href="${escapeHtml(locationLink)}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;border-radius:9999px;background:#0f172a;color:#fff;padding:6px 10px;font-size:12px;font-weight:700;text-decoration:none">Open location</a>` : ''}
-                ${mediaLink ? `<a href="${escapeHtml(mediaLink)}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;border-radius:9999px;background:#0ea5e9;color:#fff;padding:6px 10px;font-size:12px;font-weight:700;text-decoration:none">View media</a>` : ''}
+                ${mediaLink ? `<a href="#gallery" data-gallery-url="${escapeHtml(mediaLink)}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;border-radius:9999px;background:#0ea5e9;color:#fff;padding:6px 10px;font-size:12px;font-weight:700;text-decoration:none">View media</a>` : ''}
             </div>
         </div>
     `;
@@ -403,7 +403,7 @@ function renderDashboard(data) {
                                     ${hasLinks ? `
                                         <div class="flex flex-wrap justify-end gap-2">
                                             ${isNonEmptyText(row.locationLink) ? `<a href="${escapeHtml(row.locationLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-slate-900 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-slate-700">Location</a>` : ''}
-                                            ${isNonEmptyText(row.mediaLink) ? `<a href="${escapeHtml(row.mediaLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-sky-600 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-sky-500">Media</a>` : ''}
+                                            ${isNonEmptyText(row.mediaLink) ? `<a href="#gallery" data-gallery-url="${escapeHtml(row.mediaLink)}" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-sky-600 px-2.5 py-1.5 text-[0.72rem] font-semibold text-white transition hover:bg-sky-500">Media</a>` : ''}
                                         </div>
                                     ` : ''}
                                 </div>
@@ -465,7 +465,7 @@ function renderDashboard(data) {
             visitsTable.innerHTML = rows.slice(0, 15).map(row => `
                 <tr class="border-t border-slate-100">
                     <td class="px-4 py-2 whitespace-nowrap">${row.date}</td>
-                    <td class="px-4 py-2 font-semibold">${row.galleryLink ? `<a class="text-blue-700 hover:underline" target="_blank" rel="noopener" href="${row.galleryLink}">${row.name}</a>` : row.name}</td>
+                    <td class="px-4 py-2 font-semibold">${row.galleryLink ? `<a class="text-blue-700 hover:underline" target="_blank" rel="noopener" href="#gallery" data-gallery-url="${row.galleryLink}">${row.name}</a>` : row.name}</td>
                     <td class="px-4 py-2">${row.district || ''}</td>
                     <td class="px-4 py-2">${row.state || ''}</td>
                     <td class="px-4 py-2 text-right">${fmt(row.studentsReached || 0)}</td>

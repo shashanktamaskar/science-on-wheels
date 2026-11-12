@@ -135,7 +135,7 @@
                         </div>
                         <div class="flex flex-wrap gap-3">
                             ${school.mediaLink ? `
-                                <a href="${school.mediaLink}" target="_blank" rel="noopener"
+                                <a href="#gallery" data-gallery-url="${school.mediaLink}" target="_blank" rel="noopener"
                                     class="inline-flex items-center justify-center rounded-lg bg-cyan-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-cyan-700">
                                     Open media
                                 </a>` : ''}
