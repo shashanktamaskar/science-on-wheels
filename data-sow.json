@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-31",
+  "lastUpdated": "2026-08-04",
   "projectInfo": {
     "title": "Science on Wheels for Local to Global Impact",
     "subtitle": "Mobile Science Van Initiative across Chhattisgarh, Punjab and Himachal Pradesh",
@@ -30,15 +30,24 @@
   },
   "mission": {
     "schoolsCovered": {
-      "total": 270
+      "total": 270,
+      "current": 36
     },
     "statesCovered": {
-      "total": 3
+      "total": 3,
+      "current": 2
     },
     "districtsCovered": {
-      "total": 16
+      "total": 16,
+      "current": 10
     },
-    "targetAudience": "Students from Classes 6-12 in rural, border, remote and tribal areas"
+    "targetAudience": "Students from Classes 6-12 in rural, border, remote and tribal areas",
+    "studentsImpacted": 3683,
+    "genderBreakdown": {
+      "girls": 2037,
+      "boys": 1646
+    },
+    "distanceTravelled": 0
   },
   "states": [
     {
@@ -381,6 +390,36 @@
     },
     {
       "state": "Chhattisgarh",
+      "district": "Mainpur",
+      "visitDate": "2026-08-01",
+      "school_name": "SAGES Mainpur Gariaband",
+      "mediaLink": "https://1drv.ms/f/c/47983367fecce40c/IgDI-FllKR1_RI0SoPS-YXNEAbO9C4a20fTOkmnRdcYGs6c?e=LHx0Po",
+      "imageName": "SAGES_Gariaband",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 20.2925679,
+        "lng": 82.2455799
+      },
+      "locationLink": "https://www.google.com/maps/place/Swami+Atmanand+English+Medium+School+Naumuda+Mainpur/@20.2925679,82.2455799,13.69z/data=!4m6!3m5!1s0x3a2587aff716af77:0xab692f1f02639f28!8m2!3d20.2901976!4d82.2522538!16s%2Fg%2F11tfvr_3hs?entry=ttu&g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Gariyaband",
+      "visitDate": "2026-08-01",
+      "school_name": "SAGES Mainpur Gariaband",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBNcmoeGQtUQqZK8u3pZ88MAX66QnaiGunULHo6zRetVXY?e=UqazWw",
+      "imageName": "SAGES_Mainpur.jpg",
+      "girlsCount": 50,
+      "boysCount": 73,
+      "coordinates": {
+        "lat": 20.2901976,
+        "lng": 82.2522538
+      },
+      "locationLink": "https://www.google.com/maps/place/Swami+Atmanand+English+Medium+School+Naumuda+Mainpur/@20.2901976,82.2522538,17z/data=!3m1!4b1!4m6!3m5!1s0x3a2587aff716af77:0xab692f1f02639f28!8m2!3d20.2901976!4d82.2522538!16s%2Fg%2F11tfvr_3hs?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
       "district": "Gariaband",
       "visitDate": "2026-08-03",
       "school_name": "Eklavya Vidyalay kosambuda",
@@ -396,6 +435,21 @@
     },
     {
       "state": "Chhattisgarh",
+      "district": "Gariyaband",
+      "visitDate": "2026-08-03",
+      "school_name": "Eklavya Model Residential School (EMRS)-Kosambuda(chhura), Gariaband",
+      "mediaLink": "https://www.google.com/maps/place/Eklavya+Vidyalay+kosambuda(+b)+%E0%A4%8F%E0%A4%95%E0%A4%B2%E0%A4%B5%E0%A5%8D%E0%A4%AF+%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF+%E0%A4%95%E0%A5%8B%E0%A4%B8%E0%A4%AE%E0%A4%AC%E0%A5%81%E0%A4%A1%E0%A4%BE+(%E0%A4%AC)/@20.833731,82.2193071,17z/data=!4m12!1m5!3m4!2zMjDCsDUwJzAxLjQiTiA4MsKwMTMnMTguOCJF!8m2!3d20.833731!4d82.221882!3m5!1s0x3a25ffb72bfe1713:0xc8db3d57ba5d828f!8m2!3d20.8344039!4d82.2238415!16s%2Fg%2F11srzx16jn?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D",
+      "imageName": "DAY_06_Eklavya_school_Chhura.jpg",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 20.833731,
+        "lng": 82.2193071
+      },
+      "locationLink": "https://www.google.com/maps/place/Eklavya+Vidyalay+kosambuda(+b)+%E0%A4%8F%E0%A4%95%E0%A4%B2%E0%A4%B5%E0%A5%8D%E0%A4%AF+%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A4%AF+%E0%A4%95%E0%A5%8B%E0%A4%B8%E0%A4%AE%E0%A4%AC%E0%A5%81%E0%A4%A1%E0%A4%BE+(%E0%A4%AC)/@20.833731,82.2193071,17z/data=!4m12!1m5!3m4!2zMjDCsDUwJzAxLjQiTiA4MsKwMTMnMTguOCJF!8m2!3d20.833731!4d82.221882!3m5!1s0x3a25ffb72bfe1713:0xc8db3d57ba5d828f!8m2!3d20.8344039!4d82.2238415!16s%2Fg%2F11srzx16jn?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
       "district": "Chhura",
       "visitDate": "2026-08-04",
       "school_name": "Swami Atmanand govt. English Medium School Chhura",
@@ -408,6 +462,21 @@
         "lng": 82.2051564171987
       },
       "locationLink": "https://maps.app.goo.gl/JiGE4GgJyRBP5A3a6"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "",
+      "visitDate": "2026-08-04",
+      "school_name": "Swami Atmanand govt. English Medium School Chhura",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=qas7Vl",
+      "imageName": "SAGES_Chhura.jpg",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 20.8060973,
+        "lng": 82.2050384
+      },
+      "locationLink": "https://www.google.com/maps/place/Swami+Atmanand+English+Medium+School,+Chhura/@20.8060973,82.2050384,17z/data=!4m6!3m5!1s0x3a2f5769b1e3be27:0x1c47fe8130c74b2b!8m2!3d20.8060991!4d82.2050369!16s%2Fg%2F11rvb_kbgd?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       "state": "Chhattisgarh",
@@ -484,7 +553,7 @@
       },
       "locationLink": "https://maps.app.goo.gl/vjAfQ46kfMpzsWQf7?g_st=ac"
     },
-        {
+    {
       "state": "Chhattisgarh",
       "district": "Fingeshwar",
       "visitDate": "2026-08-11",
@@ -509,8 +578,8 @@
       "girlsCount": 75,
       "boysCount": 50,
       "coordinates": {
-        "lat": 20.9097980,
-        "lng": 81.9759530
+        "lat": 20.909798,
+        "lng": 81.975953
       },
       "locationLink": "https://maps.app.goo.gl/HAkfocTTybHpykTP9?g_st=ac"
     },
@@ -667,21 +736,6 @@
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "visitDate": "2026-09-1",
-      "school_name": "SBS GSSS Sabuana",
-      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCTEnEI-BMoSZZ8tu4ErM9BAQr5-_9AgoM65edWJKs_Mis?e=j6Npjb",
-      "imageName": "Day_06_GSSS_sabuana.jpg",
-      "girlsCount": 49,
-      "boysCount": 51,
-      "coordinates": {
-        "lat": 30.511091273471113,
-        "lng": 74.0085182828002
-      },
-      "locationLink": "https://maps.app.goo.gl/kN2NgiGwqouVGa7c8"
-    },
-    {
-      "state": "Punjab",
-      "district": "Fazilka",
       "visitDate": "2026-09-02",
       "school_name": "Govt. Sen Sec School(Boys), Abohar",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBvGj15FTRxRr_HSaVg4eQEAQZnwhfqVCOf7KADFcerkXg?e=ZjhAt6",
@@ -738,6 +792,21 @@
         "lng": 74.0963978558191
       },
       "locationLink": "https://maps.app.goo.gl/TmKM6f7g2uwJeGLt8"
+    },
+    {
+      "state": "Punjab",
+      "district": "Fazilka",
+      "visitDate": "2026-09-1",
+      "school_name": "SBS GSSS Sabuana",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgCTEnEI-BMoSZZ8tu4ErM9BAQr5-_9AgoM65edWJKs_Mis?e=j6Npjb",
+      "imageName": "Day_06_GSSS_sabuana.jpg",
+      "girlsCount": 49,
+      "boysCount": 51,
+      "coordinates": {
+        "lat": 30.511091273471113,
+        "lng": 74.0085182828002
+      },
+      "locationLink": "https://maps.app.goo.gl/kN2NgiGwqouVGa7c8"
     },
     {
       "state": "Punjab",
