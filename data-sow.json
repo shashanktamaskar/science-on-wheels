@@ -840,6 +840,36 @@
     },
     {
       "state": "Punjab",
+      "district": "Pathalguon",
+      "visitDate": "2026-09-12",
+      "school_name": "PM Shree Sages Kotba",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDxKIvAWE3yQ7JJKYJOccYHAWddU1sOxYiF6ZWZ2PWVdRA?e=jjDJKc",
+      "imageName": "",
+      "girlsCount": 68,
+      "boysCount": 32,
+      "coordinates": {
+        "lat": 22.5551229,
+        "lng": 83.4616703
+      },
+      "locationLink": "https://www.google.com/maps/place/S.S.M.School,Pattalgaon/@22.5551229,83.4616703,739m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3989fcf4532c16f5:0xd7823b1e195fbf88!8m2!3d22.5551229!4d83.4616703!16s%2Fg%2F11c6cg2g87?entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Punjab",
+      "district": "Fharsabhar",
+      "visitDate": "2026-09-14",
+      "school_name": "EMRS Fharsabhar",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgDxKIvAWE3yQ7JJKYJOccYHAWddU1sOxYiF6ZWZ2PWVdRA?e=jjDJKc",
+      "imageName": "",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 22.5110272,
+        "lng": 83.8578068
+      },
+      "locationLink": "https://www.google.com/maps/place/Emrs+farsabahar/@22.5110272,83.8578068,17z/data=!3m1!4b1!4m6!3m5!1s0x398a0b003c0f67b9:0x46cb6baa21376a4!8m2!3d22.5110272!4d83.8578068!16s%2Fg%2F11vrkdzvsx!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Punjab",
       "district": "Patiala",
       "visitDate": "2026-09-16",
       "school_name": "Saheed Sandeep sing S. S. S. school mangewal",
