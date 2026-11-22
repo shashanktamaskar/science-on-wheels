@@ -1140,6 +1140,66 @@
     },
     {
       "state": "Chhattisgarh",
+      "district": "Bagicha",
+      "visitDate": "2026-09-05",
+      "school_name": "Govt High School Saraipani",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 26,
+      "boysCount": 56,
+      "coordinates": {
+        "lat": 22.7941323,
+        "lng": 83.3677435
+      },
+      "locationLink": "https://www.google.com/maps/place/Saraipani+school/@22.7941323,83.3677435,47231m/data=!3m1!1e3!4m10!1m2!2m1!1sGovt+High+School+Saraipani,+!3m6!1s0x398a1fb8b025df7b:0x6edea69fc0f84c05!8m2!3d22.7941323!4d83.6726141!15sChtHb3Z0IEhpZ2ggU2Nob29sIFNhcmFpcGFuaSySARFlbGVtZW50YXJ5X3NjaG9vbOABAA!16s%2Fg%2F11p0666_sb?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Bagicha",
+      "visitDate": "2026-09-05",
+      "school_name": "KGBV Mahadevdand",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 26,
+      "boysCount": 56,
+      "coordinates": {
+        "lat": 22.8515361,
+        "lng": 83.6560495
+      },
+      "locationLink": "https://www.google.com/maps/place/High+School+Mahadevdand,+Kurrog/@22.8515361,83.6560495,369m/data=!3m1!1e3!4m10!1m2!2m1!1sGovt+Hihgh+School+Mahadevdand+!3m6!1s0x398a1fc802a02755:0x4f35aed8b4d6ac87!8m2!3d22.8515361!4d83.6584313!15sChxHb3Z0IEhpZ2ggU2Nob29sIE1haGFkZXZkYW5kkgELaGlnaF9zY2hvb2zgAQA!16s%2Fg%2F11fmc_wy3p?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Bagicha",
+      "visitDate": "2026-09-05",
+      "school_name": "Govt High School Pasiya",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 26,
+      "boysCount": 56,
+      "coordinates": {
+        "lat": 22.8742217,
+        "lng": 83.6090714
+      },
+      "locationLink": "https://www.google.com/maps/place/GOVT.+P.s.pasiya/@22.8742217,83.6090714,17z/data=!3m1!4b1!4m6!3m5!1s0x398a21003d6afb3f:0xb8869421d82660cf!8m2!3d22.8742168!4d83.6116463!16s%2Fg%2F11vyrbwlh1?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Bagicha",
+      "visitDate": "2026-09-05",
+      "school_name": "Govt High School Ghughri",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 26,
+      "boysCount": 56,
+      "coordinates": {
+        "lat": 22.8219254,
+        "lng": 83.7007059
+      },
+      "locationLink": "https://www.google.com/maps/place/Govt.+High+School+Ghughri/@22.8219254,83.7007059,17z/data=!3m1!4b1!4m6!3m5!1s0x398a19bb3a30ace9:0xf9c7418a9967442f!8m2!3d22.8219205!4d83.7032808!16s%2Fg%2F11rn75xq5l?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
       "district": "Kansabel",
       "visitDate": "2026-09-07",
       "school_name": "Govt Girls Higher Secondry School",
@@ -1152,6 +1212,21 @@
         "lng": 83.7414253
       },
       "locationLink": "https://www.google.com/maps/place/Girls+Hs+School+Kansabel/@22.6360951,83.7414253,17z/data=!3m1!4b1!4m6!3m5!1s0x398a059f592a4b79:0x2e5be843a42891fe!8m2!3d22.6360951!4d83.7414253!16s%2Fg%2F11gglrml4c!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkwOC4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Kansabel",
+      "visitDate": "2026-09-07",
+      "school_name": "KGBV Kansabel",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 100,
+      "boysCount": 0,
+      "coordinates": {
+        "lat": 22.6339567,
+        "lng": 83.7419373
+      },
+      "locationLink": "https://www.google.com/maps/place/KGBV+KANSABEL/@22.6339567,83.7419373,17z/data=!3m1!4b1!4m6!3m5!1s0x398a05e440329cf1:0xdc3df475417a4e36!8m2!3d22.6339518!4d83.7445122!16s%2Fg%2F11t6_tmbcx?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       "state": "Chhattisgarh",
@@ -1170,6 +1245,36 @@
     },
     {
       "state": "Chhattisgarh",
+      "district": "Kunkuri",
+      "visitDate": "2026-09-08",
+      "school_name": "Govt High School Barangjor",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 46,
+      "boysCount": 54,
+      "coordinates": {
+        "lat": 22.6927409,
+        "lng": 83.9079037
+      },
+      "locationLink": "https://www.google.com/maps/place/Govt.+High+School+barangjor+kunkuri/@22.6927409,83.9079037,739m/data=!3m2!1e3!4b1!4m6!3m5!1s0x398a0dfe4b7d2a43:0xa5b14635194129ad!8m2!3d22.6927409!4d83.9079037!16s%2Fg%2F11rhygprv5?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Kunkuri",
+      "visitDate": "2026-09-08",
+      "school_name": "Govt High School Korwandogri",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 46,
+      "boysCount": 54,
+      "coordinates": {
+        "lat": 22.7379685,
+        "lng": 83.9504686
+      },
+      "locationLink": "https://www.google.com/maps/place/Korwabahri/@22.7379685,83.9504686,138m/data=!3m1!1e3!4m6!3m5!1s0x398a6dd89360d8fb:0x42153807898223b0!8m2!3d22.7380856!4d83.9509534!16s%2Fg%2F11s8c0q8fk?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
       "district": "Kansabel",
       "visitDate": "2026-09-09",
       "school_name": "Govt High School Buldega",
@@ -1182,6 +1287,21 @@
         "lng": 83.7015057
       },
       "locationLink": "https://www.google.com/maps/place/Govt.+High+School,Buldega/@22.4218647,83.7015057,740m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3a20a943c75349e1:0x6a1a04b6403634e3!8m2!3d22.4218647!4d83.7015057!16s%2Fg%2F11f08zf_d2?entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Kansabel",
+      "visitDate": "2026-09-09",
+      "school_name": "Govt High School Bagiya",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 34,
+      "boysCount": 66,
+      "coordinates": {
+        "lat": 22.6700344,
+        "lng": 83.8643201
+      },
+      "locationLink": "https://www.google.com/maps/place/Bagiya,+Chhattisgarh+496223/@22.6700344,83.8643201,18.17z/data=!4m6!3m5!1s0x398a0db7005a26bb:0xa59c97be71164c8d!8m2!3d22.6698576!4d83.8645637!16s%2Fg%2F12jlm_f4l?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       "state": "Chhattisgarh",
@@ -1201,6 +1321,51 @@
     {
       "state": "Chhattisgarh",
       "district": "Farshabhar",
+      "visitDate": "2026-09-10",
+      "school_name": "Govt High School Singibahar",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 58,
+      "boysCount": 40,
+      "coordinates": {
+        "lat": 22.5678255,
+        "lng": 83.9553523
+      },
+      "locationLink": "https://www.google.com/maps/place/Govt+high+school+singibahar/@22.5678255,83.9553523,17z/data=!3m1!4b1!4m6!3m5!1s0x398a758d8539f8f1:0x4c592bfc9130af8d!8m2!3d22.5678206!4d83.9579272!16s%2Fg%2F11h3mvxr32?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Farshabhar",
+      "visitDate": "2026-09-10",
+      "school_name": "Govt High School Sunduru",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 58,
+      "boysCount": 40,
+      "coordinates": {
+        "lat": 22.4524833,
+        "lng": 83.9932953
+      },
+      "locationLink": "https://www.google.com/maps/place/Sundru,+Chhattisgarh/@22.4524833,83.9932953,5919m/data=!3m2!1e3!4b1!4m16!1m8!3m7!1s0x3a209e83008325b7:0x764f9cfae350f9cc!2sSundru,+Chhattisgarh!3b1!8m2!3d22.4524659!4d84.0140984!16s%2Fg%2F12hlyfycx!3m6!1s0x3a209e83008325b7:0x764f9cfae350f9cc!8m2!3d22.4524659!4d84.0140984!15sChRzaHVuZHJ1IGNoaGF0dGlzZ2FyaJIBCGxvY2FsaXR54AEA!16s%2Fg%2F12hlyfycx?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Farshabhar",
+      "visitDate": "2026-09-10",
+      "school_name": "Govt High School Puarainabandha",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 58,
+      "boysCount": 40,
+      "coordinates": {
+        "lat": 22.4538976,
+        "lng": 83.9663726
+      },
+      "locationLink": "https://www.google.com/maps/place/Purainban,+Chhattisgarh+496227/@22.4538976,83.9663726,717m/data=!3m1!1e3!4m6!3m5!1s0x3a209ee34228567d:0xb5e7b29e9063467b!8m2!3d22.4565691!4d83.9544345!16s%2Fg%2F12hpl_zj_?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Farshabhar",
       "visitDate": "2026-09-11",
       "school_name": "Sages fharsabhar",
       "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
@@ -1212,6 +1377,81 @@
         "lng": 83.8558303
       },
       "locationLink": "https://www.google.com/maps/place/SWAMI+ATMANAND+GOVERNMENT+EXCELLENCE+ENGLISH+MEDIUM+SCHOOL+FARSABAHAR/@22.5100188,83.8558303,740m/data=!3m1!1e3!4m6!3m5!1s0x398a0ba2f8269f45:0x240a4581b67330d7!8m2!3d22.5100141!4d83.8558302!16s%2Fg%2F11rvhmwsgw?hl=en&entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Farshabhar",
+      "visitDate": "2026-09-11",
+      "school_name": "Sages Fharsabhar",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 50,
+      "boysCount": 48,
+      "coordinates": {
+        "lat": 22.461147,
+        "lng": 83.8089378
+      },
+      "locationLink": "https://www.google.com/maps/place/GOVT.+HIGHER+SECONDARY+SCHOOL+MENDARBAHAR/@22.461147,83.8089378,11836m/data=!3m1!1e3!4m10!1m2!2m1!1sGovt+High+School+Mendarbhar+!3m6!1s0x3a20a0febd7842d7:0x760148581c4e3285!8m2!3d22.461147!4d83.8851555!15sChtHb3Z0IEhpZ2ggU2Nob29sIE1lbmRhcmJoYXKSARBzZWNvbmRhcnlfc2Nob29s4AEA!16s%2Fg%2F11f3p0yqyd?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Farshabhar",
+      "visitDate": "2026-09-11",
+      "school_name": "Govt Boys High School Pradaripani",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 0,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 22.5024039,
+        "lng": 83.8266458
+      },
+      "locationLink": "https://www.google.com/maps/place/High+boys+school+pandripani/@22.5024039,83.8266458,17z/data=!3m1!4b1!4m6!3m5!1s0x398a09e1d0e23893:0xdbe967e3627da6c3!8m2!3d22.502399!4d83.8292207!16s%2Fg%2F11f040jhqx?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Farshabhar",
+      "visitDate": "2026-09-11",
+      "school_name": "Govt Girls' High School Pradaripani",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 50,
+      "boysCount": 0,
+      "coordinates": {
+        "lat": 22.5036538,
+        "lng": 83.8197009
+      },
+      "locationLink": "https://www.google.com/maps/place/Girls+HSS+pandripani/@22.5036538,83.8197009,17z/data=!4m10!1m2!2m1!1sGirls+Boys+High+School+Pradaripani+!3m6!1s0x398a09dfbeab18dd:0x6b9efdcc16e770c7!8m2!3d22.5036538!4d83.8244645!15sCiFHaXJscyBCb3lzIEhpZ2ggU2Nob29sIFBhbmRyaXBhbmmSARZnaXJsc19zZWNvbmRhcnlfc2Nob29s4AEA!16s%2Fg%2F11g6rm6lbr?entry=ttu&g_ep=EgoyMDI2MDkxNC4wIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Farshabhar",
+      "visitDate": "2026-09-11",
+      "school_name": "Govt High School Banguon",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 22.530443,
+        "lng": 83.849183
+      },
+      "locationLink": "https://www.google.com/maps/place/Bangaon,+Chhattisgarh+496242/@22.530443,83.849183,1479m/data=!3m1!1e3!4m10!1m2!2m1!1sbanguon,+Pradaripani+!3m6!1s0x398a0a3a27b33f41:0xe31924d78d8a1d0f!8m2!3d22.5298728!4d83.8513679!15sChRiYW5ndW9uLCBQcmFkYXJpcGFuaZIBCGxvY2FsaXR54AEA!16s%2Fg%2F12hqvvc0l?authuser=0&entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "state": "Chhattisgarh",
+      "district": "Farshabhar",
+      "visitDate": "2026-09-11",
+      "school_name": "Govt High School Kandaibhar",
+      "mediaLink": "https://plakshauniversity1-my.sharepoint.com/:f:/g/personal/scienceonwheels_plaksha_edu_in/IgBCui2tFC2-Rpkt37hOb563AQ0qp8cGoQSVXJRIP2yZBqA?e=nk3gjO",
+      "imageName": "",
+      "girlsCount": 50,
+      "boysCount": 50,
+      "coordinates": {
+        "lat": 22.5072331,
+        "lng": 83.5679086
+      },
+      "locationLink": "https://www.google.com/maps/place/Govt.+Higher+Secondary+School+Kandaibahar/@22.5072331,83.5679086,47330m/data=!3m1!1e3!4m10!1m2!2m1!1sGovt+High+School+Kandaibhar!3m6!1s0x3a20a06ff6dac42f:0x9e53afa644ea83e!8m2!3d22.4917205!4d83.9005817!15sChtHb3Z0IEhpZ2ggU2Nob29sIEthbmRhaWJoYXKSARBzZWNvbmRhcnlfc2Nob29s4AEA!16s%2Fg%2F11dylxnf67?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
     },
     {
       "state": "Chhattisgarh",
